@@ -1,0 +1,256 @@
+{
+  "id": "story_arc",
+  "name": "The Shape of History",
+  "description": "The high-level story graph across all eras. Eras are defined by dominant tension, not fixed time. Player choices determine which era shape emerges. Every path is valid. Every path has cost.",
+  "design_notes": "This is Layer 1 — the skeleton. Everything else (Layer 2: factions/figures per state, Layer 3: character threads, Layer 4: trait variations) hangs on this structure. Map this completely before writing more content.",
+
+  "eras": [
+    {
+      "id": "era_1",
+      "name": "The Foundation",
+      "runs": "1-4",
+      "years": "0-80",
+      "defining_tension": "Civilizations forming. Gods establishing. First contact between cultures.",
+      "player_role": "Learning. Weak god, ordinary vessels. The player is discovering the world — which factions matter, where threats grow, how the power system works.",
+      "default_trajectory": "The strongest cultures survive by default. Weaker ones are absorbed or marginalized. The Ashfield god grows unchecked. Trade is resentful. Philosophy becomes tribalism.",
+      "axes": ["southern_offer", "ash_cough", "philosophical_split"],
+      "transition_trigger": "The defining tensions resolve or fail to resolve (~60-80 years). The accumulated state of trade, plague, philosophy determines what Era 2 looks like.",
+      "god_tier": "1 (Reputation). The player-god is barely a whisper.",
+      "status": "DETAILED — first_era.json has full axis mapping, 22 events authored, 5 cultures, 7 places, 3 factions."
+    },
+    {
+      "id": "era_2",
+      "name": "The Contact / The Consequence",
+      "runs": "4-7",
+      "years": "80-200",
+      "defining_tension": "The consequences of Era 1 choices arrive. New cultures meet. Alliances form or fracture. The first real power blocs emerge.",
+      "player_role": "Influencing. The god has enough power to see more during vessel selection. Divine interventions become available. The player starts seeing consequences from early runs.",
+      "default_trajectory": "Without player bridges, cultures clash. Wars of consolidation. The strongest faction absorbs the rest through military or economic pressure. The Ashfield god reaches Stage 3-4.",
+      "possible_shapes": [
+        {
+          "id": "era_2_trade_age",
+          "name": "Age of Exchange",
+          "condition": "Trade opened + plague managed + philosophy thriving",
+          "tension": "Prosperity brings new problems. Wealth inequality. Cultural dilution. Who benefits from the exchange? The merchant class rises. Old identities erode.",
+          "new_factions": ["merchant_guilds", "cultural_preservationists"],
+          "new_threats": ["wealth_concentration", "identity_crisis"]
+        },
+        {
+          "id": "era_2_cold_war",
+          "name": "Age of Walls",
+          "condition": "Trade rejected or conditional + quarantine + Iron Doctrine dominant",
+          "tension": "Isolation bred strength but also paranoia. Thornwall is a fortress-state. Solmare is a knowledge-empire. The Rootwalkers are caught between. Everyone is armed. Nobody is talking.",
+          "new_factions": ["the_true_forge", "the_wall_keepers"],
+          "new_threats": ["mutual_escalation", "cultural_stagnation"]
+        },
+        {
+          "id": "era_2_theological_crisis",
+          "name": "Age of Questions",
+          "condition": "Unworship path taken OR Ashfield investigated",
+          "tension": "The discovery that gods can be made and unmade changes everything. If worship creates gods, who controls worship controls reality. Every faction wants that power. The gods themselves are afraid.",
+          "new_factions": ["the_unworshippers", "divine_conservators"],
+          "new_threats": ["weaponized_belief", "divine_instability"]
+        },
+        {
+          "id": "era_2_default",
+          "name": "Age of Stagnation",
+          "condition": "No player engagement across Era 1",
+          "tension": "Nothing was solved. Everything got worse slowly. Endemic plague. Resentful trade. Tribal philosophy. Not apocalyptic — just less. The world that got older without getting wiser.",
+          "new_threats": ["chronic_decline", "ashfield_stage_4"]
+        }
+      ],
+      "axes": [
+        {
+          "id": "power_consolidation",
+          "name": "Who Rises?",
+          "description": "Which faction or coalition emerges as the dominant power? Military strength, economic leverage, or cultural influence?",
+          "outcomes": ["forge_dominance", "senate_hegemony", "rootwalker_network", "balanced_tension", "no_dominant_power"]
+        },
+        {
+          "id": "divine_politics",
+          "name": "The Gods Notice",
+          "description": "The player-god is now visible to the existing pantheon. Concept gods have opinions. The Ashfield god may have matured. How do the gods react to a new player?",
+          "outcomes": ["divine_alliance", "divine_rivalry", "divine_indifference", "divine_war"]
+        },
+        {
+          "id": "cultural_evolution",
+          "name": "What Survived Contact?",
+          "description": "Which cultures merged, which split, which went underground? The new cultural landscape determines who the player can embody.",
+          "outcomes": ["blended_cultures", "purist_resistance", "diaspora_cultures", "cultural_extinction"]
+        }
+      ],
+      "transition_trigger": "A crisis too large for any single faction to solve alone. The factions must cooperate or collapse. The player's bridges (or lack thereof) determine whether cooperation is possible.",
+      "god_tier": "2-3 (Historical Figure → Power). The world starts to know the player's name.",
+      "status": "SKELETON — shapes defined, axes outlined, needs detailed branching like Era 1."
+    },
+    {
+      "id": "era_3",
+      "name": "The Crucible",
+      "runs": "7-12",
+      "years": "200-400",
+      "defining_tension": "The world's first existential test. Multiple threats converge. The accumulated bridges and fractures from Eras 1-2 determine whether the world holds together or shatters.",
+      "player_role": "Shaping. Major world-changing actions become possible. The god has enough worship to grant powerful blessings. But unintended consequences stack up.",
+      "default_trajectory": "Mutual escalation. Factions that armed during Era 2 now point those weapons at each other. The external threats (Ashfield god, something from the Oldwood, something across the sea) grow while everyone is distracted. The Cold War goes hot.",
+      "possible_shapes": [
+        {
+          "id": "era_3_great_war",
+          "name": "The Great War",
+          "condition": "High faction tension + low trust + multiple armed powers",
+          "tension": "The war everyone saw coming and nobody stopped. Not two sides — three or four, shifting alliances, betrayal. The player must choose who to save and who to let burn. Every alliance has a cost.",
+          "endgame_tendency": "Dominance or Mutual Destruction"
+        },
+        {
+          "id": "era_3_divine_reckoning",
+          "name": "The Divine Reckoning",
+          "condition": "Theological crisis unresolved + multiple empowered gods",
+          "tension": "The gods go to war — not directly (mutually assured diminishment) but through champions, competing worshippers, and domain interference. Mortal factions become proxies. The player-god must navigate divine politics while their vessels fight mortal battles.",
+          "endgame_tendency": "External Threat or Fragmentation"
+        },
+        {
+          "id": "era_3_convergence",
+          "name": "The Convergence",
+          "condition": "High trust + multiple bridges + shared threats recognized",
+          "tension": "The factions can see the threat. They're trying to cooperate. But cooperation requires sacrifice — someone has to give up power, territory, or pride. The player has built the bridges. Now they have to convince people to walk across them.",
+          "endgame_tendency": "Alliance (with cost) or Genuine Peace"
+        },
+        {
+          "id": "era_3_slow_collapse",
+          "name": "The Long Decline",
+          "condition": "Stagnation from Era 2 + no major player intervention",
+          "tension": "Not a dramatic crisis — a slow erosion. Institutions decay. Knowledge is lost. The Ashfield god becomes background radiation. People forget there was ever a different way. The world doesn't end with a bang but with a shrug.",
+          "endgame_tendency": "Default or Fragmentation"
+        }
+      ],
+      "axes": [
+        {
+          "id": "survival_or_ambition",
+          "name": "Survival vs Ambition",
+          "description": "Are the factions fighting to survive or fighting to dominate? The distinction determines whether cooperation is possible.",
+          "outcomes": ["collective_survival", "competitive_ambition", "desperate_survival", "exhausted_stalemate"]
+        },
+        {
+          "id": "divine_integration",
+          "name": "Gods and Mortals",
+          "description": "How integrated are the divine and mortal worlds? Do mortals worship freely, resist worship, or weaponize it?",
+          "outcomes": ["worship_as_partnership", "worship_as_control", "unworship_movement", "divine_withdrawal"]
+        },
+        {
+          "id": "legacy_weight",
+          "name": "The Weight of History",
+          "description": "Do the factions remember what happened in Eras 1-2? Are old grudges fuel or lessons? Does the player's legacy help or haunt?",
+          "outcomes": ["history_as_wisdom", "history_as_weapon", "history_forgotten", "history_mythologized"]
+        }
+      ],
+      "transition_trigger": "The crucible resolves — either through victory, treaty, collapse, or exhaustion. What remains becomes the final era.",
+      "god_tier": "3-4 (Power → Deity). The player-god is a known entity. Gods approach with offers, threats, or curiosity.",
+      "status": "SKELETON — shapes defined, needs detailed axis branching."
+    },
+    {
+      "id": "era_4",
+      "name": "The Reckoning",
+      "runs": "12-20+",
+      "years": "400-600+",
+      "defining_tension": "The final question: what kind of world did you build? The accumulated weight of every choice across every era determines the shape of the ending.",
+      "player_role": "The god's own story. The world knows about the player-god. Past characters are legends. The question shifts from 'how do I survive?' to 'what have I become?' Domain crystallizes.",
+      "default_trajectory": "Mediocrity. A world that could have been more. Not tragedy — just less. The quietest and heaviest ending.",
+      "endgame_states": [
+        {
+          "id": "dominance",
+          "name": "Dominance",
+          "description": "One faction achieved supremacy. The dominant faction's nature determines the world's character. Not good or bad — depends on who and how.",
+          "requires": "One faction significantly more powerful than others across multiple eras."
+        },
+        {
+          "id": "alliance_with_cost",
+          "name": "Alliance (With Cost)",
+          "description": "Two or more factions found common ground — at the expense of a third. The marginalized become permanent underclass, resistance, or diaspora.",
+          "requires": "Trust between two+ factions, at least one faction excluded. The most historically common outcome."
+        },
+        {
+          "id": "genuine_peace",
+          "name": "Genuine Peace",
+          "description": "The rarest outcome. Requires bridges built across MULTIPLE eras — trade, philosophy, mixed cultures, trust earned through repeated cooperation. Fragile. Imperfect. Real.",
+          "requires": "High trust across all major factions. Multiple eras of cooperation. Mixed cultures. Shared philosophy. The hardest and most rewarding path."
+        },
+        {
+          "id": "mutual_destruction",
+          "name": "Mutual Destruction",
+          "description": "The Cold War outcome. Nobody wanted it. Everybody caused it. Escalation reached its logical endpoint. New cultures emerge from rubble.",
+          "requires": "High tension + low trust + armed factions + no bridges. The most devastating playthrough. The most motivating restart."
+        },
+        {
+          "id": "external_threat",
+          "name": "External Threat Unaddressed",
+          "description": "While factions escalated, something else grew. The Ashfield god. Something from the Oldwood. The factions had enough power to save the world. They were too busy pointing it at each other.",
+          "requires": "Major threat ignored across multiple eras while factions focused on each other."
+        },
+        {
+          "id": "fragmentation",
+          "name": "Fragmentation",
+          "description": "No faction wins. No faction loses. The world breaks into small pieces. City-states. Tribal zones. Safe from apocalypse, vulnerable to everything else.",
+          "requires": "No faction strong enough to dominate, no trust strong enough for alliance."
+        },
+        {
+          "id": "specialist",
+          "name": "The Specialist Ending",
+          "description": "One faction is magnificent — rich, detailed, shaped by centuries of divine attention. Everything else is a question mark. The ambiguity IS the ending.",
+          "requires": "Player spent every life in one faction. Beautiful detail, unknown costs."
+        },
+        {
+          "id": "default",
+          "name": "The Default World",
+          "description": "Couldn't engage. Died too young, too often. Resentful compromises. Endemic problems. Not tragedy — mediocrity. A world that could have been more.",
+          "requires": "Low player engagement across all eras."
+        }
+      ],
+      "domain_crystallization": "The god's nature takes shape from accumulated choices. Mercy/Justice, Knowledge/Action, Connection/Independence, Creation/Destruction, Order/Freedom. The name the world gives you is the game's final statement about who you are.",
+      "god_tier": "4-5 (Deity → Concept God). The player has become part of the world's fabric.",
+      "status": "SKELETON — endgame states defined in design doc, needs per-state content planning."
+    }
+  ],
+
+  "throughlines": {
+    "description": "Themes and systems that persist across all eras, accumulating weight.",
+    "threads": [
+      {
+        "id": "the_ashfield_god",
+        "name": "The Ashfield Awakening",
+        "arc": "Era 1: newborn, breathing plague. Era 2: growing, possibly understood. Era 3: mature, a force to reckon with. Era 4: either resolved, weaponized, or the thing that ends everything.",
+        "player_agency": "Treat (manage symptoms), Investigate (understand), Quarantine (contain), Unworship (transform), Ignore (it grows)."
+      },
+      {
+        "id": "worship_economics",
+        "name": "The Worship Economy",
+        "arc": "Era 1: worship is invisible, instinctive. Era 2: someone figures out the mechanism. Era 3: worship becomes strategic (currency, weapon, tool). Era 4: the world must decide what worship means.",
+        "player_agency": "The player-god IS a participant in the worship economy. Every vessel that spreads the god's name changes the equation."
+      },
+      {
+        "id": "the_trade_question",
+        "name": "Open vs Closed",
+        "arc": "Era 1: first contact, first trade. Era 2: trade enriches or exploits. Era 3: economic power becomes military power. Era 4: who controls the supply lines controls the world.",
+        "player_agency": "Every trade decision has cultural consequences. Prosperity is never free."
+      },
+      {
+        "id": "knowledge_vs_tradition",
+        "name": "The Scholar's Dilemma",
+        "arc": "Era 1: three philosophies compete. Era 2: one (or none) becomes dominant. Era 3: dominant philosophy shapes institutions. Era 4: institutions calcify or adapt.",
+        "player_agency": "Ideas you amplify become structures. Structures become constraints. The answer that saved Era 1 might be the cage of Era 3."
+      },
+      {
+        "id": "the_player_god",
+        "name": "Who Are You Becoming?",
+        "arc": "Era 1: forgotten, learning. Era 2: noticed, influencing. Era 3: known, shaping. Era 4: named, defined. The domain crystallizes from what you kept choosing to care about.",
+        "player_agency": "This IS the player's story. The world is the evidence."
+      }
+    ]
+  },
+
+  "design_principles": [
+    "Every era must be playable standalone (a player who dies in Era 1 forever still has a complete experience).",
+    "The default trajectory is always worse than engagement, but never unplayable.",
+    "No era has a 'correct' path. Every resolution creates the next era's tension.",
+    "The player can't be everywhere. Choosing to focus on one region means another declines. Incompleteness is the theme.",
+    "Bridges built in early eras pay off in late eras. This is the core long-term reward loop.",
+    "The endgame is not a boss fight. It's a summary. 'Here is the world you built. Was it enough?'"
+  ]
+}

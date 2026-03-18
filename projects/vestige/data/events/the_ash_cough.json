@@ -22,7 +22,30 @@
         "trait_gain": "plague_healer",
         "world_state": "grey_cough_treated"
       },
-      "consequence_text": "You organize the Bond-attuned into shifts. It's brutal work — each healer absorbs the patient's fear temporarily, carries it in their own chest for hours, then releases it through meditation. Some healers break. The fear is too much. They become patients themselves.\n\nBut the ones who hold — the ones who've learned to carry terror without drowning in it — they discover something. The fear has a frequency. A specific vibration, like a note in a song. And if you can match it — resonate with it instead of fighting it — you can drain it.\n\nThe Ash Cough doesn't disappear. But the death rate drops from one in three to one in twenty. You've found a treatment, not a cure. The disease is still fed by the Ashfield god's growing awareness. Treating the symptom doesn't stop the source.\n\nBut the children stop dying with terror on their faces. That's enough. For now."
+      "consequence_text": "You organize the Bond-attuned into shifts. It's brutal work — each healer absorbs the patient's fear temporarily, carries it in their own chest for hours, then releases it through meditation. Some healers break. The fear is too much. They become patients themselves.\n\nBut the ones who hold — the ones who've learned to carry terror without drowning in it — they discover something. The fear has a frequency. A specific vibration, like a note in a song. And if you can match it — resonate with it instead of fighting it — you can drain it.\n\nThe Ash Cough doesn't disappear. But the death rate drops from one in three to one in twenty. You've found a treatment, not a cure. The disease is still fed by the Ashfield god's growing awareness. Treating the symptom doesn't stop the source.\n\nBut the children stop dying with terror on their faces. That's enough. For now.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_fear_drainers",
+            "delay": "years",
+            "description": "The Bond healers who treated the Ash Cough have formed a guild. They're the only ones who can manage the disease, and that power is changing them. Some charge fees the poor can't pay. Others are burning out — absorbing too much fear, becoming patients themselves. You helped build this. Now it needs you to keep it honest."
+          },
+          {
+            "id": "the_healers_price",
+            "delay": "years",
+            "description": "A healer you trained has discovered something: the fear she drains doesn't disappear. It goes somewhere. She's been tracking where, and what she's found is that the fear flows back to the Ashfield. The treatment is feeding the god. Every patient saved makes the next outbreak worse."
+          }
+        ],
+        "characters": [
+          {
+            "id": "lead_fear_drainer",
+            "description": "The best of the Bond healers you organized. She's carried more fear than anyone alive. It's aged her twenty years in five. She knows the treatment is feeding the Ashfield god and she does it anyway, because the children are still dying."
+          }
+        ],
+        "world_changes": [
+          "The Fear-Drainers' Guild forms in Thornwall. Ash Cough death rate stabilizes but never reaches zero."
+        ]
+      }
     },
     {
       "text": "Go to the source. The Ashfield is breeding this. Someone needs to go there and find out what's happening.",
@@ -37,7 +60,24 @@
         "knowledge_gain": "ashfield_god_nature",
         "world_state": "ashfield_investigated"
       },
-      "consequence_text": "The Ashfield is three days through dead ground that no one willingly walks. You walk it.\n\nWhat you find at the center changes everything you understand about gods and worship. The volcanic vents have coalesced into a shape — not a body, not yet, but a suggestion of one. A face made of heat-shimmer. Hands made of ash currents. And around it, feeding it, a haze of dread so thick you can taste it on your tongue like metal.\n\nThe god doesn't see you. It doesn't have eyes yet. But it knows you're afraid, because everything near it is afraid, and your fear is food.\n\nYou learn the crucial thing: this god isn't causing the plague out of malice. It's breathing. The Ash Cough is its BREATH — the natural emission of a being made of fear. It doesn't know it's killing people. It doesn't know people exist. It's a newborn, and its crying is a plague.\n\nYou return with knowledge that makes the problem both simpler and more impossible: to stop the plague, you'd need to stop a god from breathing."
+      "consequence_text": "The Ashfield is three days through dead ground that no one willingly walks. You walk it.\n\nWhat you find at the center changes everything you understand about gods and worship. The volcanic vents have coalesced into a shape — not a body, not yet, but a suggestion of one. A face made of heat-shimmer. Hands made of ash currents. And around it, feeding it, a haze of dread so thick you can taste it on your tongue like metal.\n\nThe god doesn't see you. It doesn't have eyes yet. But it knows you're afraid, because everything near it is afraid, and your fear is food.\n\nYou learn the crucial thing: this god isn't causing the plague out of malice. It's breathing. The Ash Cough is its BREATH — the natural emission of a being made of fear. It doesn't know it's killing people. It doesn't know people exist. It's a newborn, and its crying is a plague.\n\nYou return with knowledge that makes the problem both simpler and more impossible: to stop the plague, you'd need to stop a god from breathing.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_ashfield_debate",
+            "delay": "years",
+            "description": "Your discovery — that the Ashfield god is a newborn breathing plague without malice — has split the scholars. Half want to destroy it before it grows. Half say destroying a newborn god is murder. The Ash Tenders say they've been saying this for years. Nobody listened when it wasn't fashionable to care."
+          },
+          {
+            "id": "the_gods_first_word",
+            "delay": "next_era",
+            "description": "The Ashfield god speaks. Not in words — in a feeling that everyone within a day's walk experiences simultaneously. It's not fear this time. It's confusion. The newborn god has become aware enough to be confused by its own existence. The theological implications are staggering."
+          }
+        ],
+        "world_changes": [
+          "Knowledge of the Ashfield god's true nature spreads through scholarly circles. The concept of accidental divinity enters theological discourse."
+        ]
+      }
     },
     {
       "text": "Quarantine. Seal the mountain passes. Nobody in, nobody out. Survive this the way the Holds survive everything — by enduring.",
@@ -55,7 +95,30 @@
         },
         "world_state": "grey_cough_quarantine"
       },
-      "consequence_text": "The passes close. The trade route — if it existed — goes silent. Thornwall turns inward, as it always has, as the old masters always said it should.\n\nThe quarantine works, in the brutal way that quarantines work: the disease can't spread beyond the mountain. But it also can't leave. The people already infected are trapped with their fear, and the fear feeds the Ashfield god, and the god's breath makes more ash, and the cycle tightens like a fist.\n\nPeople die. Fewer than without the quarantine — but the ones who die, die alone, because the quarantine means nobody goes to the infected quarter. The healers can't keep up. The healthy watch from behind sealed doors and feel something they'll never forgive themselves for: relief that it's not them.\n\nThornwall survives. The Iron Holds survive. But the trust between the forge quarter and the upper town — between the sick and the well — takes a generation to rebuild. Some walls, once built, don't come down when the crisis ends."
+      "consequence_text": "The passes close. The trade route — if it existed — goes silent. Thornwall turns inward, as it always has, as the old masters always said it should.\n\nThe quarantine works, in the brutal way that quarantines work: the disease can't spread beyond the mountain. But it also can't leave. The people already infected are trapped with their fear, and the fear feeds the Ashfield god, and the god's breath makes more ash, and the cycle tightens like a fist.\n\nPeople die. Fewer than without the quarantine — but the ones who die, die alone, because the quarantine means nobody goes to the infected quarter. The healers can't keep up. The healthy watch from behind sealed doors and feel something they'll never forgive themselves for: relief that it's not them.\n\nThornwall survives. The Iron Holds survive. But the trust between the forge quarter and the upper town — between the sick and the well — takes a generation to rebuild. Some walls, once built, don't come down when the crisis ends.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_wall_between",
+            "delay": "years",
+            "description": "The quarantine walls are still standing. The plague is gone but the walls aren't. The forge quarter and the upper town have become separate neighborhoods with separate identities. Someone has started calling the boundary 'the Fear Line.' A generation of children is growing up on one side who've never crossed to the other."
+          },
+          {
+            "id": "the_quarantine_breaker",
+            "delay": "years",
+            "description": "A smith from the forge quarter has been smuggling food to families in the quarantine zone. She says the walls were supposed to be temporary. The Forge Council says the walls are keeping them safe. You know both things are true and neither is the whole truth."
+          }
+        ],
+        "factions": [
+          {
+            "id": "the_wall_keepers",
+            "description": "An informal group that maintains the quarantine barriers long after the plague ended. They say it's about safety. It's about control. Some of them believe their own justification. That's the dangerous part."
+          }
+        ],
+        "world_changes": [
+          "Thornwall fractures into upper town and forge quarter. The quarantine walls become permanent features."
+        ]
+      }
     },
     {
       "text": "Send word to the Rootwalkers. Their riversongs encode knowledge about the Ashfield that predates any settled memory.",
@@ -70,7 +133,30 @@
         "knowledge_gain": "riversong_ashfield",
         "world_state": "grey_cough_rootwalker_knowledge"
       },
-      "consequence_text": "The Rootwalkers don't want to help. Three of their riversongs — centuries of accumulated knowledge about the Ashfield crossing, the safe paths, the seasonal patterns — were abandoned when they rerouted to avoid the plague. Asking them to remember is asking them to reopen a wound.\n\nBut an elder comes. She's old enough to have learned the Ashfield songs from her grandmother, who learned them from hers. She sings them in the Forge Council hall — the first Rootwalker song ever heard in Thornwall — and the hall goes quiet, because the songs contain something nobody expected.\n\nThe Ashfield wasn't always feared. The oldest songs describe it as a place of renewal — where the earth shed its old skin and grew new. The fear is recent. Generations of travelers projecting dread onto a place they didn't understand, until the dread became a thing with a face.\n\nThe elder says: 'You built this god with your fear. Every traveler who cursed the Ashfield, every parent who told their child to stay away, every campfire story about the burning ground — you were praying. You just didn't know it.'\n\nThe solution, if there is one, isn't medical. It's theological. You need to change what people believe about the Ashfield. You need to unworship a god.\n\nNobody knows how to do that. But now, at least, you know it needs to be done."
+      "consequence_text": "The Rootwalkers don't want to help. Three of their riversongs — centuries of accumulated knowledge about the Ashfield crossing, the safe paths, the seasonal patterns — were abandoned when they rerouted to avoid the plague. Asking them to remember is asking them to reopen a wound.\n\nBut an elder comes. She's old enough to have learned the Ashfield songs from her grandmother, who learned them from hers. She sings them in the Forge Council hall — the first Rootwalker song ever heard in Thornwall — and the hall goes quiet, because the songs contain something nobody expected.\n\nThe Ashfield wasn't always feared. The oldest songs describe it as a place of renewal — where the earth shed its old skin and grew new. The fear is recent. Generations of travelers projecting dread onto a place they didn't understand, until the dread became a thing with a face.\n\nThe elder says: 'You built this god with your fear. Every traveler who cursed the Ashfield, every parent who told their child to stay away, every campfire story about the burning ground — you were praying. You just didn't know it.'\n\nThe solution, if there is one, isn't medical. It's theological. You need to change what people believe about the Ashfield. You need to unworship a god.\n\nNobody knows how to do that. But now, at least, you know it needs to be done.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_first_unworship",
+            "delay": "years",
+            "description": "Someone tries it. A group of Ash Tenders and Rootwalker elders gather at the Ashfield's edge and deliberately think differently about it — not with fear, but with curiosity. With welcome. The Ashfield god shudders. Nobody knows what that means. But the plague cases drop by a third that month. And then rise again when the effort can't be sustained."
+          },
+          {
+            "id": "the_unworship_heresy",
+            "delay": "years",
+            "description": "The Senate has declared unworship a dangerous heresy. If you can change a god's nature by changing belief, what stops someone from weaponizing that? What stops a faction from deliberately creating a god of war through coordinated belief? The tool that could save the world could also end it. You opened this door. Now everyone is arguing about who gets to walk through."
+          }
+        ],
+        "characters": [
+          {
+            "id": "ossa_apprentice",
+            "description": "A young Ash Tender trained by Ossa, carrying the old woman's knowledge of the Ashfield into a generation that might actually use it. She understands the god better than anyone except Ossa herself. She's terrified of what the Senate will do with unworship if they learn to control it."
+          }
+        ],
+        "world_changes": [
+          "The concept of unworship becomes known. A radical theological movement begins forming around the idea that belief can be redirected."
+        ]
+      }
     }
   ],
   "cascade_notes": "Each outcome branches the Ashfield Awakening threat differently. Treated = Stage 2 slowed, but not stopped. Investigated = knowledge unlocked for future runs. Quarantine = Thornwall fractures internally, trust damage. Rootwalker knowledge = the unworship path opens (unique endgame possibility). Players across different runs may reach different solutions, creating different worlds.",

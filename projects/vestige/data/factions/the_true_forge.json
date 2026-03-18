@@ -1,0 +1,17 @@
+{
+  "name": "The True Forge",
+  "type": "guild",
+  "era": "era_2",
+  "condition": "trade_open",
+  "goal": "Preserve the original craft traditions that Thornwall abandoned when it opened the passes. The True Forge keeps the old ways — oral transmission only, no written techniques, no outsiders, no compromise.",
+  "territory": ["the_deep_mountains"],
+  "leadership": "Three elder masters who left Thornwall when the trade quarter opened. They chose exile over what they call 'dilution.' Decisions are unanimous or don't happen.",
+  "resources": "The deepest ore veins in the mountains. Master-level techniques that predate the Forge Council itself. Complete self-sufficiency — they need nothing from anyone, which is both their strength and their prison.",
+  "worship_generates": "Reverence for purity. The True Forge is becoming a symbol — not just a guild but an idea. People who've never held a hammer pray toward the deep mountains when they feel the world changing too fast.",
+  "description": "When Thornwall opened the passes, most smiths adapted. Some couldn't. Not because they were stubborn — because they genuinely believed that writing down the sacred techniques would kill something that lived only in the act of teaching. The hammer-to-hand transmission wasn't tradition for its own sake. It was a belief that craft carries meaning that text cannot hold.\n\nThey walked into the deep mountains with their tools and their certainty. They built forges in places nobody else would go. And they made the finest weapons in the world for nobody.\n\nThe True Forge's steel is better than Thornwall's. Everyone knows this. The True Forge doesn't trade. Everyone knows this too. Occasionally a blade appears in a market — stolen, or gifted by a master to someone who earned it through years of silent apprenticeship. These blades are worth more than houses. Not because of the steel. Because of what they represent: that someone, somewhere, refused to change.\n\nThe tragedy of the True Forge is that they're right about the craft and wrong about the world. Writing down techniques doesn't kill them — it changes them. The True Forge chose death over change, and they're dying beautifully, and nobody can convince them that there's a third option.",
+  "internal_divisions": "The eldest master wants to take one apprentice from outside — just one, to prove the craft can survive contact. The other two consider this betrayal. The youngest smiths (born in the mountains, never saw Thornwall) don't understand the argument and just want to forge.",
+  "acknowledged_flaw": "Chose purity over survival. Making the finest weapons in the world matters less if the world forgets you exist.",
+  "tags": ["northern", "craft", "purist", "exile", "second_era", "conditional_trade_open"],
+  "id": "the_true_forge",
+  "created": "2026-03-18T23:00:00"
+}

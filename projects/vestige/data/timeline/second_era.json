@@ -1,0 +1,197 @@
+{
+  "id": "second_era_timeline",
+  "name": "Second Era — The Consequence",
+  "description": "The consequences of Era 1 arrive. Cultures that met for the first time now have opinions about each other. Power blocs form. The gods take notice. The player's early choices echo forward — some as bridges, some as walls.",
+  "era": "era_2",
+  "depends_on": "first_era_timeline",
+  "years": "80-200",
+  "runs": "4-7",
+
+  "axes": [
+    {
+      "id": "power_consolidation",
+      "name": "Who Rises?",
+      "description": "The first era's factions competed for ideas. Now they compete for territory, trade, and influence. Which faction or coalition becomes the dominant power shapes everything that follows.",
+      "outcomes": [
+        {
+          "id": "forge_dominance",
+          "name": "The Iron Ascendancy",
+          "short": "Forge dominant",
+          "description": "The Forge Council leveraged craft supremacy into political power. Their steel is the best. Their walls are the strongest. Their philosophy — you are what you make — became the metric for worth. Non-makers are second-class.",
+          "condition": "Iron Doctrine dominant + trade open or conditional (ore access maintained)",
+          "second_era_result": "A meritocracy of craft. Genuinely excellent infrastructure. But artists, scholars, healers, and traders are valued only by what they physically produce. The Rootwalkers, who make nothing permanent, are invisible.",
+          "spawns_tensions": ["craft_meritocracy", "invisible_populations"],
+          "faction_impact": {"the_forge_council": "ruling_power", "the_solmari_senate": "subordinate_partner", "the_river_tongue": "marginalized"}
+        },
+        {
+          "id": "senate_hegemony",
+          "name": "The Solmari Reach",
+          "short": "Senate dominant",
+          "description": "The Senate's knowledge-as-authority approach won. Their scholars mapped the crisis, their medicine eased the plague, their diplomats brokered the treaties. Now they believe they should lead because they understand best.",
+          "condition": "Consul's Proposition dominant + trade open (information flows freely)",
+          "second_era_result": "A technocracy. Genuinely better medicine, law, engineering. But 'understanding' becomes 'controlling.' The Senate funds research that serves Senate interests. Knowledge is currency — hoarded at the top.",
+          "spawns_tensions": ["knowledge_hoarding", "technocratic_overreach"],
+          "faction_impact": {"the_solmari_senate": "ruling_power", "the_forge_council": "valued_supplier", "the_river_tongue": "studied_subjects"}
+        },
+        {
+          "id": "rootwalker_network",
+          "name": "The River Web",
+          "short": "Rootwalker ascent",
+          "description": "The Rootwalkers didn't conquer. They connected. Their river routes became the only reliable trade network. Their songs carry news faster than riders. Their philosophy of movement became the era's common sense.",
+          "condition": "Song dominant + plague managed (Rootwalker routes stayed open)",
+          "second_era_result": "A network state — no capital, no borders, just routes and relationships. Incredibly resilient, nearly impossible to attack conventionally. But the Rootwalkers never wanted to lead. Leadership was imposed by necessity, and it doesn't fit their culture.",
+          "spawns_tensions": ["reluctant_leadership", "network_vulnerability"],
+          "spawns_cultures": ["settled_rootwalkers"],
+          "faction_impact": {"the_river_tongue": "central_power", "the_forge_council": "dependent_on_routes", "the_solmari_senate": "bypassed"}
+        },
+        {
+          "id": "balanced_tension",
+          "name": "The Triad",
+          "short": "Three-way balance",
+          "description": "No faction dominates. The Forge Council, the Senate, and the River Tongue hold roughly equal power through different means — military, knowledge, and trade respectively. A cold peace.",
+          "condition": "Conditional trade + no single philosophy dominant",
+          "second_era_result": "Stability through mutual dependency. Nobody can afford war because everybody needs what the other two have. But stability isn't trust. Every faction is quietly preparing for the day the balance breaks.",
+          "spawns_tensions": ["arms_race", "false_peace"],
+          "faction_impact": {"the_forge_council": "armed_neutral", "the_solmari_senate": "informed_neutral", "the_river_tongue": "connected_neutral"}
+        },
+        {
+          "id": "no_dominant_power",
+          "name": "The Vacuum",
+          "short": "No clear power",
+          "description": "Nobody rose. The crisis weakened everyone equally. Local strongmen, bandit lords, and opportunistic merchants fill the gaps where institutions should be.",
+          "condition": "Default outcomes across Era 1 + low player engagement",
+          "second_era_result": "Fragmentation. Not dramatic collapse — just slow unraveling. The Forge Council governs Thornwall and nothing else. The Senate governs Solmare and nothing else. Between them: lawless territory where the desperate make their own rules.",
+          "spawns_tensions": ["power_vacuum", "bandit_kingdoms"],
+          "spawns_cultures": ["the_lawless_belt"],
+          "faction_impact": {"the_forge_council": "local_only", "the_solmari_senate": "local_only", "the_river_tongue": "scattered"}
+        }
+      ]
+    },
+    {
+      "id": "divine_politics",
+      "name": "The Gods Take Notice",
+      "description": "The player-god has risen to Tier 2-3. The existing gods — concept gods born from the world's fabric, worship gods born from accumulated belief — now have opinions about the newcomer. The divine ecosystem mirrors mortal anxiety with amplification.",
+      "outcomes": [
+        {
+          "id": "divine_alliance",
+          "name": "The Covenant",
+          "short": "Gods cooperate",
+          "description": "The player-god finds allies among the existing pantheon. Shared interests — stability, worship, order — create a divine alliance. The Weave god offers connection. The Silence god offers information. The cost: you owe them. Gods remember debts.",
+          "condition": "Player vessels consistently served existing god interests",
+          "second_era_result": "A cooperative pantheon. Divine blessings flow more freely. Worship is organized, efficient, predictable. But the alliance constrains — the player can't act against allied gods' interests without breaking the covenant.",
+          "spawns_tensions": ["divine_obligation", "constrained_freedom"]
+        },
+        {
+          "id": "divine_rivalry",
+          "name": "The Contested Sky",
+          "short": "Gods compete",
+          "description": "The player-god's domain overlaps with existing gods. A new god of protection threatens the Burn's domain of destruction. A new god of knowledge threatens the Silence's domain of secrets. Worship is finite — every prayer to you is a prayer not to them.",
+          "condition": "Player domain overlaps with established gods",
+          "second_era_result": "Divine cold war. Gods compete through mortal proxies — your worshippers vs theirs. Factions align with different gods. The mortal political landscape becomes a shadow of divine politics.",
+          "spawns_tensions": ["worship_competition", "proxy_conflicts"]
+        },
+        {
+          "id": "divine_indifference",
+          "name": "The Quiet Pantheon",
+          "short": "Gods uninvolved",
+          "description": "The existing gods don't care — yet. The player is too small to matter. The concept gods think in millennia. The worship gods are preoccupied with their own believers. You're a ripple in an ocean that doesn't notice ripples.",
+          "condition": "Player-god still Tier 1-2 + no domain overlap",
+          "second_era_result": "Freedom to act without divine interference. But also: no divine allies when you need them. When the Crucible comes, you face it without the pantheon's support.",
+          "spawns_tensions": ["divine_isolation"]
+        },
+        {
+          "id": "divine_awakening",
+          "name": "The Ashfield Matures",
+          "short": "New god rises",
+          "description": "The Ashfield god grows beyond newborn. Whether treated, investigated, quarantined, or unworship-attempted — it survived, and it's learning. The first new concept god in living memory. The existing pantheon is alarmed. A god born from fear is everyone's problem.",
+          "condition": "Ashfield threat not fully resolved in Era 1",
+          "second_era_result": "A theological crisis layered on every political one. The gods that were indifferent are now worried. The question isn't just mortal politics — it's whether the divine ecosystem can absorb a new member without shattering.",
+          "spawns_tensions": ["new_god_crisis", "divine_ecosystem_stress"]
+        }
+      ]
+    },
+    {
+      "id": "cultural_evolution",
+      "name": "What Survived Contact?",
+      "description": "Era 1's cultures met, traded, fought, and bled into each other. Now the second generation grows up in the aftermath. Who they are depends on what the first generation built or destroyed.",
+      "outcomes": [
+        {
+          "id": "blended_cultures",
+          "name": "The Bridge Children",
+          "short": "Cultures merge",
+          "description": "The children of the trade quarter speak both languages. They forge in the morning and read in the afternoon. They've absorbed the best of both traditions and invented things neither parent culture imagined.",
+          "condition": "Trade open + conditional treaty generation + no quarantine",
+          "second_era_result": "A genuinely new culture — not northern, not southern, but both. Creative, adaptable, distrusted by purists on every side. The Bridge Folk become the era's innovators and its most vulnerable population.",
+          "spawns_cultures": ["bridge_folk_evolved"],
+          "spawns_tensions": ["hybrid_identity", "purist_backlash"]
+        },
+        {
+          "id": "purist_resistance",
+          "name": "The Hardening",
+          "short": "Cultures entrench",
+          "description": "Contact made cultures more themselves, not less. The Iron Holds doubled down on tradition. Solmare doubled down on knowledge. The Rootwalkers doubled down on movement. Each culture defined itself against the others.",
+          "condition": "Trade rejected or quarantine + Iron Doctrine or Song dominant",
+          "second_era_result": "Strong identities, deep divisions. Each culture is richer internally but poorer in empathy. Cross-cultural understanding is rare and politically dangerous. The bridges that could prevent the Crucible aren't being built.",
+          "spawns_tensions": ["cultural_entrenchment", "empathy_deficit"]
+        },
+        {
+          "id": "diaspora_cultures",
+          "name": "The Scattered",
+          "short": "Displaced peoples",
+          "description": "War, plague, or economic collapse displaced entire communities. Ash Cough refugees. Trade-route orphans. Forge quarter exiles. People who belong nowhere and carry fragments of everywhere.",
+          "condition": "Quarantine + any conflict + power vacuum",
+          "second_era_result": "Diaspora cultures — adaptive, resilient, carrying knowledge from places that no longer exist. They're the living archive of what was lost. Some settled communities welcome them. Most don't.",
+          "spawns_cultures": ["the_displaced"],
+          "spawns_tensions": ["refugee_crisis", "lost_knowledge"]
+        },
+        {
+          "id": "cultural_extinction",
+          "name": "The Silence",
+          "short": "A culture dies",
+          "description": "One of the Era 1 cultures didn't survive contact. Not through genocide — through absorption, irrelevance, or the slow leak of young people to brighter opportunities elsewhere. The last elder dies. The songs aren't sung anymore.",
+          "condition": "One faction marginalized across multiple Era 1 axes + default trajectory",
+          "second_era_result": "A wound that never heals. The world is smaller. Whatever that culture knew — its songs, its craft, its way of seeing — is gone. Fragments survive in other cultures like fossils in sediment. The player may not realize what was lost until they find an artifact from a people nobody remembers.",
+          "spawns_tensions": ["cultural_grief", "irreversible_loss"]
+        }
+      ]
+    }
+  ],
+
+  "notable_combinations": [
+    {
+      "axes": ["forge_dominance", "divine_rivalry", "blended_cultures"],
+      "name": "The Iron Renaissance",
+      "summary": "The Forge Council rules through craft supremacy while divine politics fracture the pantheon. But the Bridge Children — the blended culture — are inventing things the purist forge never could. The tension: does the dominant power absorb the innovators or crush them?"
+    },
+    {
+      "axes": ["senate_hegemony", "divine_alliance", "purist_resistance"],
+      "name": "The Ordered World",
+      "summary": "The Senate governs. The gods cooperate. Cultures entrench. Everything is stable, organized, understood, and deeply unhappy. The order is real but it was imposed, not grown. When the Crucible comes, this world has the tools to survive but not the will."
+    },
+    {
+      "axes": ["rootwalker_network", "divine_indifference", "diaspora_cultures"],
+      "name": "The Moving World",
+      "summary": "Nobody rules from a throne. The River Web connects everything. The displaced carry knowledge between settlements. The gods don't care. It's the most free and most fragile era — held together by routes and relationships, not walls and laws."
+    },
+    {
+      "axes": ["balanced_tension", "divine_awakening", "blended_cultures"],
+      "name": "The Pressure Cooker",
+      "summary": "Three factions in cold peace. A new god rising. Hybrid cultures that could be the bridge or the flashpoint. Everything is balanced on a knife's edge. The Crucible will tip it. The question is which direction."
+    },
+    {
+      "axes": ["no_dominant_power", "divine_awakening", "cultural_extinction"],
+      "name": "The Dark Age",
+      "summary": "No power. A new god feeding on fear. A culture gone silent. This is the worst non-default outcome — not stagnation but active decline. The world is coming apart. The player-god is the only thing that might hold it together, and they might not be strong enough."
+    }
+  ],
+
+  "emerging_cultures": [
+    {"id": "settled_rootwalkers", "name": "The Settled River Folk", "condition": "rootwalker_network", "description": "Rootwalkers who stopped moving to manage the network's hubs. They kept the songs but built houses. Neither fully Rootwalker nor fully settled. The elders don't know what to call them."},
+    {"id": "the_lawless_belt", "name": "The Belt", "condition": "no_dominant_power", "description": "The territory between Thornwall and Solmare where no faction governs. A culture of pragmatism and violence. They don't have a philosophy. They have rules, and the rules change when someone strong enough says so."},
+    {"id": "bridge_folk_evolved", "name": "The New Forgers", "condition": "blended_cultures", "description": "Bridge Folk who combined northern metalwork with southern scholarship. They write down the sacred techniques. The True Forge considers this heresy. The Senate considers it progress. The New Forgers consider it obvious."},
+    {"id": "the_displaced", "name": "The Wandering Archive", "condition": "diaspora_cultures", "description": "Refugees who carried their culture in their heads. They trade in knowledge — songs, techniques, histories — because knowledge weighs nothing and feeds you everywhere. The living memory of what was lost."},
+    {"id": "the_fear_adapted", "name": "The Ash Children", "condition": "divine_awakening + plague not fully resolved", "description": "A generation born in the shadow of the Ashfield god. They grew up with low-grade fear as background noise. They're resistant to it — and to other emotions too. Calm, competent, and slightly terrifying to everyone who remembers what warmth felt like."}
+  ],
+
+  "transition_to_era_3": "The Second Era ends when a crisis emerges that no single faction can handle alone. The nature of the crisis depends on what was built: if factions armed, the crisis is war. If the Ashfield grew, the crisis is divine. If trust was built, the crisis might be navigable. If nothing was built, the crisis is the slow realization that nothing will be."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "friend_critical_priest",
+  "name": "The Original Words (Priest Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["priest_s_apprentice"],
+  "callback_detail": "The restricted shelf. The torn spine. Page forty-three. The original words before the edits.",
+  "text": "Sera reads page forty-three aloud in the refectory during evening meal.\n\nNot the whole page. Three sentences. The original Litany — the words as they were before the Keepers revised them, the version that's been sitting behind turned spines in the night library for longer than either of you has been alive.\n\nShe reads them in the same voice she uses for the standard recitation. No drama. No trembling courage. She simply substitutes the original phrasing for the revised, mid-prayer, and keeps going.\n\nMost of the apprentices don't notice. The words are close enough. But Brother Aldric notices. You can tell because he stops eating, and Brother Aldric never stops eating.\n\nThe silence that follows isn't the silence of the library at midnight with a stolen candle between you. That silence was yours. This silence belongs to thirty people and a stone room and the specific weight of a thing that can't be unsaid.\n\n'Where did you read that?' Aldric asks. His voice is careful. Careful is worse than angry.\n\nSera looks at you. Not for help. Not even for solidarity. She looks at you the way she looked at you the night you first read page forty-three together — checking whether the ground is still solid under both of you, or just under her.\n\nAldric is waiting.\n\nThe book with the torn spine is still behind the histories, behind the commentaries on the commentaries, with its title turned inward. If Sera tells him where, they'll move it. Or burn it. If she doesn't tell him, the punishment falls on her alone.\n\nIf you tell him you read it too, the punishment splits. But then both of you are marked.",
+  "choices": [
+    {
+      "text": "\"I've read it too. We found it together.\"",
+      "requires": {"trait_any": ["brave", "honor_bound"]},
+      "effects": {"relationship_change": {"friend": 20}, "trait_gain": "shared_heresy"},
+      "consequence_text": "Aldric looks at you. He doesn't blink for a long time.\n\nThe punishment is three months of copying — the revised Litany, by hand, one hundred times each. It's meant to overwrite what you read with what you're supposed to believe. It doesn't work. You can't unread page forty-three. You can only know both versions and carry the difference.\n\nSera copies next to you, every evening, in the same alcove where you first whispered about what the original words meant. She never says thank you. She doesn't need to. You split the weight. That's what the original Litany actually said, before someone decided it needed improving: that the burden is meant to be shared."
+    },
+    {
+      "text": "Stay silent. Let Sera handle what Sera started.",
+      "effects": {"relationship_change": {"friend": -15}, "trait_gain": "prudent_silence"},
+      "consequence_text": "You say nothing. Sera watches your nothing, and her face changes — not into anger, which you could handle, but into understanding, which you can't.\n\nShe tells Aldric she found the text in the market. A trader's copy. She doesn't mention the restricted shelf. She doesn't mention you.\n\nThe punishment is light — a week of kitchen duty, a lecture about unverified sources. The book behind the histories stays hidden. Sera goes back to the night library alone, twice more, and doesn't wake you.\n\nThe alcove conversations stop. Not dramatically — she doesn't refuse to speak to you. The whispers just don't happen anymore. The pause that was indefinite becomes permanent."
+    },
+    {
+      "text": "\"Brother Aldric — have you read them? The original words? You changed the subject when you mentioned them in class.\"",
+      "requires": {"trait_any": ["perceptive", "curious"]},
+      "effects": {"relationship_change": {"friend": 15}, "knowledge_gain": "litany_revision_history", "trait_gain": "questioner"},
+      "consequence_text": "The refectory goes quiet. Aldric's careful expression cracks — just for a moment, just enough for you to see that the careful wasn't about Sera. It was about himself.\n\nHe's read them. He's always known.\n\n'After the meal,' he says. 'Both of you. My study.'\n\nIn his study, with the door closed, Aldric tells you things that aren't in any curriculum. The revision happened eighty years ago. The reasons were political, not theological. Three Keepers dissented. Their names were removed from the archive. The book with the torn spine is torn because someone tried to destroy it and someone else stopped them.\n\n'The original words are better,' Aldric says. 'That's why they're hidden. Better words are dangerous to people who've built their authority on the edited ones.'\n\nSera sits next to you, and her shoulder is against yours, and the stolen candle is replaced by lamplight but the feeling is the same: two people reading something true in a room where truth is rationed."
+    }
+  ],
+  "tags": ["relationship", "childhood_friend", "critical", "priest", "sera", "heresy", "forbidden_knowledge", "callback_torn_spine", "institutional_doubt"]
+}

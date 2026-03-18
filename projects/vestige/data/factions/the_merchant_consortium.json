@@ -1,0 +1,17 @@
+{
+  "name": "The Merchant Consortium",
+  "type": "guild",
+  "era": "era_2",
+  "world_state": "age_of_exchange",
+  "goal": "Control the trade routes between Thornwall and Solmare. Not through force — through leverage. They own the warehouses, the caravans, the credit lines. The old factions need them more than they need the old factions.",
+  "territory": ["the_trade_road", "solmare", "thornwall"],
+  "leadership": "No single leader. A rotating council of the seven wealthiest merchants, with voting weight proportional to trade volume. They call this 'meritocracy.' Others call it 'whoever has the most gold decides.'",
+  "resources": "Trade route monopoly, warehousing, credit networks, information (they know what's moving where before anyone else), hired guards from both cultures",
+  "worship_generates": "Quiet but growing Devotion toward the concept of 'the deal' — the handshake, the contract, the weight of a promise backed by coin. A commerce god is forming in the spaces between transactions, and the Consortium doesn't even know they're building it.",
+  "description": "They started as middlemen. When the trade routes opened between Thornwall and Solmare, someone had to handle the logistics — the warehouses at either end, the guards for the road, the letters of credit that let a Thornwall smith sell steel in Solmare without carrying it there himself.\n\nThe Consortium filled that gap. Quietly. Competently. And then the gap became a chokepoint, and the middlemen became the muscle.\n\nNow the Forge Council can't sell ore without Consortium logistics. The Senate can't import northern steel without Consortium credit. The Rootwalkers use Consortium river barges because their own canoes can't carry enough. Everyone depends on the Consortium and nobody voted for them.\n\nThey're not evil. They provide a genuine service. The trade road is safer than it's ever been because the Consortium pays for guards. Prices are stable because the Consortium absorbs fluctuations. Both cultures are richer because the Consortium makes exchange efficient.\n\nBut efficiency serves the efficient. Every optimization benefits the Consortium slightly more than it benefits anyone else. Over decades, 'slightly more' becomes 'most of it.' The Consortium's acknowledged flaw is that they've confused creating value with capturing it. They build the bridge and charge the toll and eventually the toll costs more than the crossing is worth.",
+  "internal_divisions": "Old-money merchants who remember when trade was about relationships vs new-money operators who see only margins. A quiet faction of merchants who trade with the Rootwalkers on fairer terms and are considered soft by the rest. A single member who's realized the commerce god is forming and is terrified of what that means.",
+  "acknowledged_flaw": "Confuses creating value with capturing value. The toll becomes the bridge. The service becomes the dependency.",
+  "tags": ["trade", "economic", "political", "guild", "second_era", "age_of_exchange", "commerce_god"],
+  "id": "the_merchant_consortium",
+  "created": "2026-03-18T23:45:00"
+}

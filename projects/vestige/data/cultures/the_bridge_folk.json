@@ -1,0 +1,16 @@
+{
+  "name": "The Bridge Folk",
+  "era": "era_2",
+  "world_state": "age_of_exchange",
+  "values": ["pragmatism", "bilingualism", "innovation", "adaptability"],
+  "naming_pool": "mixed_northern_southern",
+  "archetype_tendencies": ["blacksmith_s_child", "criminal_s_heir", "wanderer_s_child"],
+  "trait_tendencies": ["curious", "cunning", "silver_tongued"],
+  "worship_tendency": ["the_weave", "commerce_god_forming"],
+  "technology": "early_industrial",
+  "description": "The children of the trade quarter speak both languages. They forge in the morning and read in the afternoon. Their grandparents were northern smiths or southern scholars. They are neither.\n\nThe Bridge Folk didn't choose their name — the purists on both sides gave it to them, and it was meant as an insult. A bridge belongs to neither bank. But the Bridge Folk took the name and made it theirs, the way they take everything and make it theirs — northern techniques refined with southern theory, southern art forged in northern steel.\n\nThey're the most creative culture in the world and the most distrusted. The True Forge considers them traitors who sold the sacred techniques. The Senate considers them useful but unpolished. The Rootwalkers find them confusing — settled people who act like they're still moving.\n\nWhat the Bridge Folk actually are: the proof that contact doesn't have to mean conquest. Two cultures collided and produced a third that neither parent imagined. Their innovations — written metallurgy, alloyed philosophy, hybrid architecture — are genuinely new. Not northern. Not southern. Bridge.\n\nTheir flaw is rootlessness. They belong to both worlds and neither. In a crisis, who do the Bridge Folk fight for? They don't know. That uncertainty is their freedom and their vulnerability.",
+  "knowledge_system": "Written and oral. They write down the northern techniques (heresy to the True Forge) and practice the southern theories with their hands (unusual for the Senate). The combination produces insights neither tradition alone could reach.",
+  "tags": ["second_era", "age_of_exchange", "hybrid", "innovative", "trade_quarter", "bridge"],
+  "id": "the_bridge_folk",
+  "created": "2026-03-18T23:50:00"
+}

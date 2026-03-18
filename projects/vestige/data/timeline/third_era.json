@@ -1,0 +1,190 @@
+{
+  "id": "third_era_timeline",
+  "name": "Third Era — The Crucible",
+  "description": "The world's existential test. Multiple threats converge. The bridges and fractures accumulated across two eras determine whether the world holds together or shatters. This is where the player's long game pays off — or doesn't.",
+  "era": "era_3",
+  "depends_on": "second_era_timeline",
+  "years": "200-400",
+  "runs": "7-12",
+
+  "axes": [
+    {
+      "id": "the_crisis",
+      "name": "What Breaks?",
+      "description": "The Crucible is triggered by a crisis too large for any single faction. But the nature of that crisis depends on what was built. Armed factions produce war. Unresolved theology produces divine conflict. Neglect produces slow collapse. Trust — if enough exists — produces a chance.",
+      "outcomes": [
+        {
+          "id": "great_war",
+          "name": "The Great War",
+          "short": "Factions at war",
+          "description": "The cold peace shatters. Not two sides — three or four, with shifting alliances and betrayal. The Forge Council's armies meet the Senate's mages meet the River Tongue's guerrilla networks. Nobody planned it. Everybody armed for it. Rational self-defense became mutual destruction in increments too small to notice.",
+          "condition": "High faction tension + mutual escalation from Era 2 + no dominant trust-builder",
+          "how_it_starts": "A border incident. A trade route seized. A diplomat found dead. The specific trigger doesn't matter — by the time it happens, everyone has been waiting for it.",
+          "player_role": "Choose who to fight for, broker impossible truces, or try to end it before it ends everything. Every alliance costs a betrayal. Every victory creates tomorrow's enemy.",
+          "endgame_tendency": "Dominance or Mutual Destruction",
+          "spawns_tensions": ["total_war", "refugee_waves", "technological_arms_race"]
+        },
+        {
+          "id": "divine_reckoning",
+          "name": "The Divine Reckoning",
+          "short": "Gods at war",
+          "description": "The divine ecosystem fractures. The Ashfield god has matured into something that can't be ignored. Existing gods compete for worshippers. The player-god is caught between — too powerful to be ignored, too new to dictate terms. Mortal factions become divine proxies.",
+          "condition": "Ashfield unresolved + divine rivalry from Era 2 + unworship movement active",
+          "how_it_starts": "Two gods claim the same territory. Not land — belief. A city that worshipped the Burn starts praying to the Ashfield god instead. The Burn doesn't take this well. The ground shakes. The sky changes color. Mortals realize the gods are afraid.",
+          "player_role": "Navigate divine politics while your vessels fight mortal battles. Broker divine truces. Or choose a side in a war between beings that think in centuries.",
+          "endgame_tendency": "External Threat or Fragmentation",
+          "spawns_tensions": ["divine_proxy_war", "worship_refugees", "mortal_caught_between"]
+        },
+        {
+          "id": "the_convergence",
+          "name": "The Convergence",
+          "short": "Cooperation tested",
+          "description": "The factions can see the threat — all of them, from different angles. They're trying to cooperate. The bridges exist: trade routes, mixed cultures, shared philosophy, diplomatic channels. But cooperation requires sacrifice. Someone has to give up power, territory, or pride. Nobody wants to go first.",
+          "condition": "High trust across at least 2 factions + shared threat recognized + bridges built in Era 2",
+          "how_it_starts": "Not with a bang but with a meeting. The first joint council in history. Three factions in one room. Everyone armed. Everyone listening. The player-god's vessels may have brokered this. Now they have to make it work.",
+          "player_role": "The diplomat. The bridge. The person who tells the Forge Council to accept southern medicine, tells the Senate to share knowledge freely, tells the Rootwalkers that settling — just for now — isn't betrayal. Every compromise costs trust somewhere.",
+          "endgame_tendency": "Alliance (with cost) or Genuine Peace",
+          "spawns_tensions": ["sacrifice_negotiations", "trust_testing", "the_holdouts"]
+        },
+        {
+          "id": "the_long_decline",
+          "name": "The Long Decline",
+          "short": "Slow erosion",
+          "description": "Not a dramatic crisis. A slow unraveling. Institutions decay from within. Knowledge is lost because nobody maintains the archives. Trade routes close because nobody repairs the roads. The Ashfield god becomes background radiation. People forget there was ever a different way.",
+          "condition": "Stagnation from Era 2 + no dominant power + low player engagement",
+          "how_it_starts": "It doesn't start. It continues. The same problems from Era 1, compounded. The same resentments, calcified. The moment when someone realizes 'this is all there is' — not with rage, but with a shrug.",
+          "player_role": "The last spark. Can you reignite what's gone cold? Or is it too late — has the world settled into a shape that doesn't want to change? The hardest Crucible: not fighting a war but convincing people to care.",
+          "endgame_tendency": "Default or Fragmentation",
+          "spawns_tensions": ["institutional_decay", "cultural_amnesia", "apathy_as_enemy"]
+        },
+        {
+          "id": "the_outside",
+          "name": "Something From Beyond",
+          "short": "External threat",
+          "description": "While the factions argued among themselves, something grew in the places nobody watches. The deep Oldwood. The far coast. Under the Ashfield. Something that isn't a faction, isn't a god in the familiar sense, isn't interested in negotiation. Something that makes the factions' petty wars look like children squabbling while the house burns.",
+          "condition": "Major threat ignored for 2+ eras + something uncharted in the world",
+          "how_it_starts": "Scouts don't come back. Then patrols don't come back. Then a village on the border goes silent. Not destroyed — empty. Everyone walked into the forest and didn't come out. The factions send investigators. The investigators don't come back either.",
+          "player_role": "The only one who's lived long enough (across vessels) to see the pattern. The god's accumulated knowledge is the only weapon. You know what's coming because you've been watching for centuries. Nobody else has.",
+          "endgame_tendency": "External Threat Unaddressed or Alliance (if factions unite against it)",
+          "spawns_tensions": ["the_unknown", "forced_alliance", "knowledge_as_salvation"]
+        }
+      ]
+    },
+    {
+      "id": "response_to_crisis",
+      "name": "How Do They Respond?",
+      "description": "The crisis is one thing. How the factions respond is another. Do they fight each other for survival, cooperate grudgingly, sacrifice for the common good, or turn inward and hope it passes?",
+      "outcomes": [
+        {
+          "id": "collective_survival",
+          "name": "The Alliance Holds",
+          "short": "United front",
+          "description": "The bridges held. Factions that traded, talked, and bled together find they can also fight together. The alliance is imperfect — nobody fully trusts anyone — but it's enough. Together they're stronger than any single threat.",
+          "condition": "Convergence crisis + high trust + player-brokered alliances",
+          "cost": "The alliance demands concessions. The Forge Council shares sacred techniques. The Senate opens its archives. The Rootwalkers settle — temporarily — to hold the line. Everyone gives up something they swore they never would."
+        },
+        {
+          "id": "competitive_ambition",
+          "name": "Everyone for Themselves",
+          "short": "Faction survival",
+          "description": "Each faction fights for its own survival. Alliances are temporary, transactional, and betrayed the moment they're inconvenient. The crisis becomes an opportunity — whoever emerges strongest from the wreckage rules what's left.",
+          "condition": "Great War or Divine Reckoning + low trust + competitive power dynamics",
+          "cost": "The weak are sacrificed. The Rootwalkers — who can't hold territory — are the first to be abandoned. Whoever 'wins' rules over ruins and resentment."
+        },
+        {
+          "id": "desperate_survival",
+          "name": "The Retreat",
+          "short": "Hunker down",
+          "description": "Nobody can win. Nobody can cooperate. Everyone retreats to their strongholds and waits. Thornwall seals its gates. Solmare raises its walls. The Rootwalkers scatter. The world between becomes no-man's-land.",
+          "condition": "Any crisis + low trust + no dominant power",
+          "cost": "Everything outside the walls is lost. Trade dies. Knowledge fragments. Cultures that depended on connection — the Bridge Folk, the Rootwalkers — are devastated. The world contracts."
+        },
+        {
+          "id": "sacrifice_play",
+          "name": "Someone Pays the Price",
+          "short": "Noble sacrifice",
+          "description": "One faction, one leader, one vessel makes a choice that saves the others at the cost of themselves. The Forge Council opens its forges to everyone and loses its monopoly forever. A god absorbs the Ashfield god and is changed by it. The player-god spends everything they've built to buy the world more time.",
+          "condition": "Any crisis + at least one faction or character willing to sacrifice",
+          "cost": "Irreversible loss. Whatever was sacrificed is gone. The world is saved, and the scar is permanent, and everyone remembers who paid."
+        }
+      ]
+    },
+    {
+      "id": "what_remains",
+      "name": "What Survives the Crucible?",
+      "description": "After the crisis resolves — through victory, treaty, collapse, or exhaustion — what's left? The answer determines the shape of the final era.",
+      "outcomes": [
+        {
+          "id": "stronger_together",
+          "name": "Forged Stronger",
+          "short": "Unified world",
+          "description": "The crisis united them. The alliance that formed under pressure persists afterward — not because it's comfortable, but because everyone remembers what almost happened. Trust was tested and held. The final era begins with genuine hope.",
+          "condition": "Alliance holds + collective survival + sacrifice acknowledged",
+          "era_4_shape": "Genuine Peace is possible. Alliance (with cost) is likely. The hardest work is behind them — but maintaining peace is its own challenge."
+        },
+        {
+          "id": "one_standing",
+          "name": "Last Faction Standing",
+          "short": "Victor emerges",
+          "description": "One faction survived the Crucible by being harder, smarter, or more ruthless than the rest. They rule what's left. Whether that's salvation or tyranny depends on who they are and what the crisis cost them.",
+          "condition": "Competitive ambition + one faction significantly stronger",
+          "era_4_shape": "Dominance. The nature of the dominant faction determines whether the world heals or stagnates under their rule."
+        },
+        {
+          "id": "broken_pieces",
+          "name": "Shattered",
+          "short": "World fragments",
+          "description": "Nobody won. The crisis broke everything into pieces. City-states. Tribal zones. The Belt grows. The routes die. People survive in small communities that don't trust the next valley over. The gods are confused. The player-god persists but over a world that's lost its shape.",
+          "condition": "Desperate survival or mutual destruction",
+          "era_4_shape": "Fragmentation or Default. The final era is about whether anything can be rebuilt from rubble."
+        },
+        {
+          "id": "transformed",
+          "name": "Changed Forever",
+          "short": "New paradigm",
+          "description": "The crisis didn't just break or forge — it transformed. The divine ecosystem is different. The worship economy works differently. A new understanding of gods and mortals emerged from the pressure. The world that enters the final era isn't the world that entered the Crucible.",
+          "condition": "Divine Reckoning resolved + unworship or divine integration",
+          "era_4_shape": "Unpredictable. The rules changed. The final era is genuinely new territory — even the player-god's accumulated knowledge is partly obsolete."
+        }
+      ]
+    }
+  ],
+
+  "notable_combinations": [
+    {
+      "axes": ["great_war", "competitive_ambition", "one_standing"],
+      "name": "The Conqueror's Era",
+      "summary": "War. Winners take all. One faction emerges dominant over the rest. The world enters the final era under a single banner — but banners won from war carry the blood of everyone who lost. The dominant faction's nature determines whether this is salvation or empire."
+    },
+    {
+      "axes": ["the_convergence", "collective_survival", "stronger_together"],
+      "name": "The Hard-Won Peace",
+      "summary": "The best outcome. Factions cooperated through crisis. Trust was tested and held. Sacrifices were made and remembered. The world enters the final era with genuine hope — but hope is fragile, and the scars from the Crucible don't disappear because the crisis ended."
+    },
+    {
+      "axes": ["divine_reckoning", "sacrifice_play", "transformed"],
+      "name": "The Theological Revolution",
+      "summary": "The gods went to war. Someone — mortal or divine — made a sacrifice that changed the rules. The worship economy is rewritten. The relationship between gods and mortals is fundamentally different. The final era is uncharted territory for everyone, including the player-god."
+    },
+    {
+      "axes": ["the_outside", "desperate_survival", "broken_pieces"],
+      "name": "The Dark After",
+      "summary": "Something came from beyond and the factions couldn't unite against it. The world retreated behind walls. What survived is scattered, diminished, haunted by what's still out there. The final era is a dark age — but dark ages are where new things grow, if someone plants them."
+    },
+    {
+      "axes": ["the_long_decline", "desperate_survival", "broken_pieces"],
+      "name": "The Quiet End",
+      "summary": "No dramatic crisis. Just the slow realization that nobody built anything worth defending. The world fragments not with a war but with a shrug. The final era's question isn't 'what did you build?' — it's 'why didn't you?'"
+    }
+  ],
+
+  "emerging_cultures": [
+    {"id": "the_war_children", "name": "The War Children", "condition": "great_war", "description": "Born during the Great War. They don't remember peace. They're practical, ruthless, and startlingly kind to each other — because they learned early that kindness between survivors is the only thing that isn't a weapon."},
+    {"id": "the_god_touched", "name": "The Touched", "condition": "divine_reckoning", "description": "People caught in the crossfire of divine conflict. Their attunements were warped, amplified, or inverted. They see the world differently — literally. Some see worship flows like rivers of light. Some hear the gods breathing. None of them sleep well."},
+    {"id": "the_new_covenant", "name": "Covenant Folk", "condition": "the_convergence + collective_survival", "description": "People who grew up in the alliance — children of mixed-faction marriages, students of combined academies, traders who work all three routes. They don't understand why anyone would go back to separation. The older generation finds them naive. They find the older generation exhausting."},
+    {"id": "the_deep_dwellers", "name": "The Below", "condition": "the_outside", "description": "Communities that went underground when the surface became dangerous. They found things down there — old things, from before the First Era. They came back changed. They don't talk about what they found. They don't need to. You can see it in their eyes."},
+    {"id": "the_rememberers", "name": "The Archive", "condition": "the_long_decline + cultural_extinction from Era 2", "description": "People who made it their purpose to remember what was lost. They carry songs, techniques, and histories from dead cultures. They're the world's immune system — the memory that prevents the same mistakes. If anyone listens."}
+  ],
+
+  "transition_to_era_4": "The Crucible resolves. What remains — unity, dominion, fragments, or transformation — becomes the ground the final era stands on. The player-god's domain crystallizes. The world gives them a name. The last question approaches: was it enough?"
+}

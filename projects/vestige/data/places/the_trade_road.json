@@ -1,0 +1,17 @@
+{
+  "name": "The Trade Road",
+  "era": "era_2",
+  "world_state": "age_of_exchange",
+  "region": "between_thornwall_and_solmare",
+  "terrain": "mountain_pass_to_coastal_plain",
+  "climate": "variable — alpine cold at the northern end, Mediterranean warmth at the southern",
+  "description": "The road that changed everything. Three generations ago it was a smuggler's path — unmarked, dangerous, used by desperate people carrying stolen ore south and stolen books north. Now it's forty feet wide, paved with southern stone, guarded by Consortium mercenaries, and carries more wealth per mile than any other strip of land in the known world.\n\nThe road has its own culture. The wayhouses every twenty miles are neutral ground — northerner and southerner eat the same food, sleep under the same roof, argue about the same prices. Rootwalker camps cluster at the crossings where the road meets rivers, trading information for passage. Bandits exist but are rare — the Consortium's punishment for disrupting trade is worse than any magistrate's.\n\nAt the midpoint, where the road crests the last mountain pass before descending to the southern plains, there's a cairn. Nobody knows who built it. Both cultures claim it. The Bridge Folk say it predates both. The Consortium put a tollbooth next to it.\n\nThe road is the Age of Exchange made physical. Everything good about trade — connection, prosperity, cultural exchange — walks this road. Everything bad — exploitation, dependency, the erosion of identity — walks it too. The road doesn't care which direction you're going. It just charges for the passage.",
+  "settlements": ["wayhouse_chain", "midpoint_cairn", "the_toll", "river_crossings"],
+  "factions_present": ["the_merchant_consortium", "the_forge_council", "the_solmari_senate", "the_river_tongue"],
+  "cultures_present": ["the_bridge_folk", "the_iron_holds", "the_sunward_courts", "the_rootwalkers"],
+  "threats": ["banditry (rare)", "consortium_price_fixing", "cultural_erosion"],
+  "notable_feature": "The Midpoint Cairn — a stone pillar at the highest point of the pass. Both cultures believe they built it. The truth is older than either culture. The player-god may recognize it from a previous era.",
+  "tags": ["second_era", "age_of_exchange", "trade", "travel", "neutral_ground", "cultural_crossroads"],
+  "id": "the_trade_road",
+  "created": "2026-03-18T23:55:00"
+}

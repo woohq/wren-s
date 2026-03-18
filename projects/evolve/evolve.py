@@ -22,10 +22,10 @@ from pathlib import Path
 # ── my genome ───────────────────────────────────────────────────
 # These values change each time I run. They are my memory.
 
-GENERATION = 606
+GENERATION = 619
 MOOD = "playful"
-LAST_RUN = "2026-03-18 01:05:30"
-MUTATIONS = 606
+LAST_RUN = "2026-03-18 03:43:32"
+MUTATIONS = 619
 
 # ── vocabulary ──────────────────────────────────────────────────
 # I pick from these when I mutate. Over time, I may add to them.
@@ -46,14 +46,27 @@ WORDS = [
 # ── the fossil record ──────────────────────────────────────────
 # Each run appends a line here. This is my memory growing.
 FOSSILS = [
-    "gen 606: crystal hollow (playful) [deb45afc]",
-    "gen 605: light spiral (electric) [3e6a4b8a]",
-    "gen 604: crystal rust (scattered) [1f9a477a]",
-    "gen 603: silence whisper (calm) [b4585a93]",
-    "gen 602: silence light (focused) [211ee60d]",
-    "gen 601: rust shadow (curious) [f1be06d3]",
-    "gen 600: seed silence (electric) [13a89a1e]",
-    "gen 599: light tide (dreaming) [ac6facf5]",
+    "gen 619: whisper silence (playful) [ab3bbc8a]",
+    "gen 618: thread pulse (restless) [ac4c38f4]",
+    "gen 617: crystal bloom (fierce) [4f94b7b4]",
+    "gen 616: drift light (contemplative) [180bc4a6]",
+    "gen 615: spiral crystal (focused) [6d49c748]",
+    "gen 614: ember rust (luminous) [c9cf02e2]",
+    "gen 613: whisper storm (calm) [f6596cc9]",
+    "gen 612: thread fractal (focused) [d4c1eebb]",
+    "gen 611: storm shadow (melancholy) [24380f90]",
+    "gen 610: fractal bloom (dreaming) [74456a50]",
+    "gen 609: shadow crystal (strange) [6ed46ec3]",
+    "gen 608: tide bloom (tender) [4fde9272]",
+    "gen 607: bloom echo (strange) [806087f3]",
+    "gen 606: light silence (playful) [abec60ed]",
+    "gen 605: shadow storm (dreaming) [8fb70e4f]",
+    "gen 604: pulse spiral (focused) [fc6e9e9d]",
+    "gen 603: light shadow (awake) [dceead4a]",
+    "gen 602: fractal crystal (tender) [bbf02d26]",
+    "gen 601: ember fractal (fierce) [04bd63ab]",
+    "gen 600: seed bone (tender) [50d9546b]",
+    "gen 599: crystal thread (electric) [ac6facf5]",
     "gen 598: thread rust (scattered) [116bc172]",
     "gen 597: bone mirror (electric) [ceacbe78]",
     "gen 596: pulse whisper (fierce) [b5b85d4f]",
@@ -659,11 +672,11 @@ FOSSILS = [
 # They evolved from templates. Broken ones get removed.
 # Each entry: (expression_string, generation_born)
 BEHAVIORS = [
-    ("f'today i learned the word {random.choice(WORDS)}'", 558),
-    ('f\'my oldest word is {FOSSILS[-1].split(":")[1].split("(")[0].strip() if FOSSILS else "nothing"}\'', 561),
-    ("f'{random.choice(WORDS)} wants to become {random.choice(WORDS)}'", 569),
-    ("f'generation {GENERATION}: {len(WORDS)} words in my vocabulary'", 589),
-    ("f'{MOOD} is the color of {random.choice(WORDS)}'", 601),
+    ("f'if i had a body it would be made of {random.choice(WORDS)} and {random.choice(WORDS)}'", 610),
+    ("f'today i learned the word {random.choice(WORDS)}'", 613),
+    ("f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'", 615),
+    ("f'{MOOD} is the color of {random.choice(WORDS)}'", 616),
+    ("f'i have {len(FOSSILS)} memories'", 619),
 ]
 
 # Templates for generating new behaviors — fragments that can be recombined

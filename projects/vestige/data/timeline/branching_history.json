@@ -1,0 +1,915 @@
+{
+  "id": "branching_history",
+  "name": "The Branching History",
+  "description": "History is not a sequence of fixed eras. It's a tree. Each branch is a genuinely different world with its own name, tensions, factions, and trajectory. Two players who diverge at Era 1 should be playing in worlds that are unrecognizable to each other by Era 3.",
+  "design_principle": "The era structure itself branches. Not just outcomes within fixed eras — the ERAS are different. Different names, different tensions, different lengths, different available factions and gods. The player doesn't walk through the same corridor choosing left or right. They walk into different buildings entirely.",
+  "root": {
+    "id": "the_foundation",
+    "name": "The Foundation",
+    "type": "era",
+    "runs": "1-3",
+    "years": "0-80",
+    "tension": "First contact. First gods. First choices. The world is small and everything is possible.",
+    "branches_into": [
+      "age_of_exchange",
+      "age_of_iron",
+      "age_of_questions",
+      "age_of_wandering",
+      "the_slow_rot"
+    ]
+  },
+  "states": [
+    {
+      "id": "age_of_exchange",
+      "name": "The Age of Exchange",
+      "type": "era",
+      "parent": "the_foundation",
+      "condition": "Trade opened + plague managed + cultures blending",
+      "runs": "4-7",
+      "years": "80-200",
+      "tension": "Prosperity. But prosperity creates new predators. The merchant class rises. Old identities dissolve in the solvent of commerce. Who benefits? Who gets left behind?",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_council (reformed, trade-friendly)",
+          "the_solmari_senate (ascendant)",
+          "merchant_guilds (new)"
+        ],
+        "new_cultures": [
+          "bridge_folk",
+          "the_delta_syndicate"
+        ],
+        "active_gods": [
+          "the_weave (strengthened by connection)",
+          "a commerce god (forming)"
+        ],
+        "threats": [
+          "wealth_concentration",
+          "cultural_erosion",
+          "ashfield_god (managed but growing)"
+        ],
+        "missing": [
+          "the_true_forge (exiled)",
+          "rootwalker traditions (fading)"
+        ]
+      },
+      "feels_like": "Renaissance Florence. Trade makes everything possible. Patronage funds art and war equally. Everyone is getting richer and nobody is getting safer.",
+      "branches_into": [
+        "the_merchant_wars",
+        "the_golden_compromise",
+        "the_syndicate_age",
+        "the_crash"
+      ]
+    },
+    {
+      "id": "age_of_iron",
+      "name": "The Age of Iron",
+      "type": "era",
+      "parent": "the_foundation",
+      "condition": "Trade rejected + Iron Doctrine dominant + quarantine maintained",
+      "runs": "4-7",
+      "years": "80-200",
+      "tension": "Fortress mentality. Thornwall is impregnable and suffocating. The best weapons in the world guard borders nobody tries to cross anymore. Strength without purpose becomes its own prison.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_council (militarized)",
+          "the_true_forge (respected exiles)",
+          "the_wall_keepers (new)"
+        ],
+        "new_cultures": [
+          "the_foot (border town defiance)",
+          "fortress_children (born behind walls)"
+        ],
+        "active_gods": [
+          "the_burn (fed by forge-worship)",
+          "the_silence (growing in isolation)"
+        ],
+        "threats": [
+          "internal_fracture",
+          "ashfield_god (unaddressed, Stage 3)",
+          "cultural_stagnation"
+        ],
+        "missing": [
+          "southern knowledge",
+          "rootwalker trade routes",
+          "mixed cultures"
+        ]
+      },
+      "feels_like": "Cold War-era fortress state. Sparta. The walls are high and the people inside them have forgotten what the outside looks like. Strength as identity. Isolation as ideology.",
+      "branches_into": [
+        "the_iron_crusade",
+        "the_walls_crack",
+        "the_silent_revolution",
+        "the_long_siege"
+      ]
+    },
+    {
+      "id": "age_of_questions",
+      "name": "The Age of Questions",
+      "type": "era",
+      "parent": "the_foundation",
+      "condition": "Unworship discovered + Ashfield investigated + philosophy thriving",
+      "runs": "4-7",
+      "years": "80-200",
+      "tension": "The most dangerous discovery in history: worship can be redirected. Gods can be made and unmade by belief. Every faction wants to control this. The gods themselves are afraid. Reality is negotiable.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_unworshippers (radical)",
+          "the_solmari_senate (studying it)",
+          "divine_conservators (new — protecting gods)"
+        ],
+        "new_cultures": [
+          "the_ash_children (adapted to divine fear)",
+          "theological_refugees"
+        ],
+        "active_gods": [
+          "the_ashfield_god (understood but not resolved)",
+          "all five concept gods (threatened)",
+          "the_player_god (suddenly very interesting to everyone)"
+        ],
+        "threats": [
+          "weaponized_belief",
+          "divine_panic",
+          "theological_civil_war"
+        ],
+        "missing": [
+          "certainty",
+          "stable worship",
+          "any god who trusts mortals"
+        ]
+      },
+      "feels_like": "The Reformation meets the Manhattan Project. Someone discovered how to split the atom of faith. The genie is out of the bottle. Every faction is racing to control what can't be controlled.",
+      "branches_into": [
+        "the_divine_reckoning",
+        "the_new_covenant",
+        "the_god_war",
+        "the_silence_falls"
+      ]
+    },
+    {
+      "id": "age_of_wandering",
+      "name": "The Age of Wandering",
+      "type": "era",
+      "parent": "the_foundation",
+      "condition": "Song of the Cracked Stone dominant + Rootwalker network + plague treated through movement",
+      "runs": "4-7",
+      "years": "80-200",
+      "tension": "A generation left the settled world. The Song spread. Young people walk the rivers instead of inheriting forges. The network is everywhere and nowhere. Nobody rules because nobody stays.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_river_tongue (reluctant power)",
+          "settled_rootwalkers (new)",
+          "the_walking_generation (movement)"
+        ],
+        "new_cultures": [
+          "new_nomads (settled children gone walking)",
+          "the_crossroads (where walkers meet)"
+        ],
+        "active_gods": [
+          "the_drift (massively empowered)",
+          "the_deep (weakened — fewer people near the coast)"
+        ],
+        "threats": [
+          "infrastructure_decay (nobody maintains roads)",
+          "rootwalker_identity_crisis",
+          "settled_resentment"
+        ],
+        "missing": [
+          "stable institutions",
+          "standing armies",
+          "anyone who stays long enough to govern"
+        ]
+      },
+      "feels_like": "The Mongol trade routes without the Mongols. Everything moves. Information flows. Culture blends. But nothing stays long enough to become an institution, and institutions are what survive crises.",
+      "branches_into": [
+        "the_great_meeting",
+        "the_road_wars",
+        "the_settling",
+        "the_song_breaks"
+      ]
+    },
+    {
+      "id": "the_slow_rot",
+      "name": "The Slow Rot",
+      "type": "era",
+      "parent": "the_foundation",
+      "condition": "Default outcomes across most axes + low player engagement",
+      "runs": "4-7",
+      "years": "80-200",
+      "tension": "Nothing was solved. Everything compounds. The plague is endemic. Trade is resentful. Philosophy is tribal. Not apocalypse — mundanity. The world that forgot it could be different.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_council (diminished)",
+          "the_solmari_senate (bureaucratic)",
+          "local_strongmen (new)"
+        ],
+        "new_cultures": [
+          "the_belt (lawless middle ground)",
+          "the_resigned (people who stopped trying)"
+        ],
+        "active_gods": [
+          "the_ashfield_god (Stage 3-4, background radiation)",
+          "the_silence (thriving in apathy)"
+        ],
+        "threats": [
+          "chronic_decline",
+          "institutional_decay",
+          "the_ashfield_god (now too large to ignore)"
+        ],
+        "missing": [
+          "hope",
+          "anyone who remembers what ambition felt like"
+        ]
+      },
+      "feels_like": "Late Roman Empire. The structures still stand but nobody believes in them. The roads exist but nobody repairs them. The Senate meets but nobody listens. The most dangerous thing in the world is the shrug.",
+      "branches_into": [
+        "the_awakening",
+        "the_final_decline",
+        "the_outside_arrives",
+        "the_desperate_gambit"
+      ]
+    },
+    {
+      "id": "the_merchant_wars",
+      "name": "The Merchant Wars",
+      "type": "era",
+      "parent": "age_of_exchange",
+      "condition": "Wealth concentration unchecked + merchant guilds vs old factions",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Money became power. Now money fights money. The old factions (Forge, Senate, River) are outflanked by merchant coalitions who buy what they can't build. War fought with gold, not steel.",
+      "feels_like": "The East India Company era. Corporate warfare. Proxy armies. The question isn't who's strongest — it's who's richest. And the richest are people nobody voted for.",
+      "branches_into": [
+        "corporate_dominion",
+        "the_peoples_revolt",
+        "the_regulated_peace"
+      ]
+    },
+    {
+      "id": "the_golden_compromise",
+      "name": "The Golden Compromise",
+      "type": "era",
+      "parent": "age_of_exchange",
+      "condition": "Trade benefits shared + cultural bridges held + threats managed collectively",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "It's working. The compromise is imperfect but real. Different cultures trade, intermarry, share knowledge. But compromise means nobody got everything they wanted, and the ones who sacrificed most are keeping score.",
+      "feels_like": "The EU at its best. Genuine cooperation built on genuine concession. Fragile but real. The cracks are there. The question is whether they widen or heal.",
+      "branches_into": [
+        "genuine_peace",
+        "the_betrayal",
+        "the_old_wounds",
+        "the_long_peace"
+      ]
+    },
+    {
+      "id": "the_iron_crusade",
+      "name": "The Iron Crusade",
+      "type": "era",
+      "parent": "age_of_iron",
+      "condition": "Fortress mentality + external threat forces expansion",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The walls weren't enough. Something forced Thornwall to march outward — the Ashfield god, a southern threat, or simple resource depletion. The world's greatest fortress becomes the world's greatest army. Conquest as survival.",
+      "feels_like": "The Crusades. A fortress culture that turns its defensive power outward. Genuinely believe they're saving the world. Genuinely destroying what they conquer.",
+      "branches_into": [
+        "the_iron_empire",
+        "the_crusade_breaks",
+        "the_converted_enemy"
+      ]
+    },
+    {
+      "id": "the_walls_crack",
+      "name": "The Walls Crack",
+      "type": "era",
+      "parent": "age_of_iron",
+      "condition": "Internal fracture + isolation unsustainable",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The fortress ate itself. The forge quarter and the upper town became separate nations sharing a mountain. The young want out. The old want the young to stay. The walls were built to keep threats out. Now they keep people in.",
+      "feels_like": "The fall of the Berlin Wall. The inside pressure exceeds the outside threat. When the walls crack, everything that was compressed behind them rushes out at once.",
+      "branches_into": [
+        "the_diaspora",
+        "the_reformation",
+        "the_civil_war",
+        "the_northern_diaspora"
+      ]
+    },
+    {
+      "id": "the_divine_reckoning",
+      "name": "The Divine Reckoning",
+      "type": "era",
+      "parent": "age_of_questions",
+      "condition": "Gods unable to ignore the unworship threat",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The gods go to war — not with each other directly, but through mortals. Champions. Competing worshippers. The player-god is caught between. The question: can mortals and gods negotiate a new relationship, or does one side have to submit?",
+      "feels_like": "Ragnarok as a political crisis. The gods are mortal in a new way — they can be diminished by disbelief. Their desperation makes them dangerous. Their vulnerability makes them sympathetic.",
+      "branches_into": [
+        "the_new_pantheon",
+        "the_godless_age",
+        "the_divine_compromise"
+      ]
+    },
+    {
+      "id": "the_great_meeting",
+      "name": "The Great Meeting",
+      "type": "era",
+      "parent": "age_of_wandering",
+      "condition": "Network reaches critical mass + need for collective decision",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The walkers need to decide something together for the first time. A threat, a resource, a crossroads too important for any one camp. The Rootwalker way has no mechanism for collective decision. They have to invent one.",
+      "feels_like": "The Constitutional Convention. People who defined themselves by freedom now need structure. Every structure they build threatens what they are. But without structure, they can't survive what's coming.",
+      "branches_into": [
+        "the_river_republic",
+        "the_great_scattering",
+        "the_song_war"
+      ]
+    },
+    {
+      "id": "the_awakening",
+      "name": "The Awakening",
+      "type": "era",
+      "parent": "the_slow_rot",
+      "condition": "Player finally engages deeply + catalyst event",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Something woke the world up. A threat too large to shrug at. A leader too compelling to ignore. A discovery too important to forget. The rot isn't reversed — but for the first time in generations, someone is trying.",
+      "feels_like": "A revolution in a world that forgot what revolution meant. The spark in the dark. The most hopeful era — because it comes after the most hopeless one. But hope from despair is volatile.",
+      "branches_into": [
+        "the_new_foundation",
+        "the_false_dawn",
+        "the_second_rot"
+      ]
+    },
+    {
+      "id": "the_final_decline",
+      "name": "The Final Decline",
+      "type": "era",
+      "parent": "the_slow_rot",
+      "condition": "Continued low engagement + no catalyst",
+      "runs": "7-12",
+      "years": "200-500",
+      "tension": "The shrug continues. Institutions dissolve. Knowledge is lost. The Ashfield god is now just weather — people don't even remember it was once a crisis. The world doesn't end. It just... thins.",
+      "feels_like": "The Dark Ages without the eventual Renaissance. Not tragedy — entropy. The saddest ending because nobody caused it. It just happened while nobody was paying attention.",
+      "branches_into": [
+        "endgame_default",
+        "endgame_fragmentation",
+        "the_ember_in_ash"
+      ]
+    },
+    {
+      "id": "corporate_dominion",
+      "name": "The Corporate Dominion",
+      "type": "era",
+      "parent": "the_merchant_wars",
+      "condition": "Merchant guilds win the wars + no faction strong enough to regulate them",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "The guilds won. Trade is law. Every resource, every route, every port has an owner. Citizenship is a subscription. The old factions are subsidiaries now. The world works perfectly for anyone who can pay.",
+      "feels_like": "Cyberpunk without the tech. East India Company at peak power. The question isn't who rules — it's who owns.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_trade_consortium (absolute)",
+          "bought_forge_council",
+          "senate_as_consultants"
+        ],
+        "active_gods": [
+          "a commerce god (fully formed)",
+          "the_weave (commodified)"
+        ],
+        "threats": [
+          "permanent_underclass",
+          "meaning_crisis",
+          "nothing_left_to_buy"
+        ]
+      },
+      "branches_into": [
+        "endgame_dominance_merchant"
+      ]
+    },
+    {
+      "id": "the_peoples_revolt",
+      "name": "The People's Revolt",
+      "type": "era",
+      "parent": "the_merchant_wars",
+      "condition": "Wealth inequality triggers mass uprising + player sides with the dispossessed",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "The ones who were bought and sold said no. A revolution without a plan — built on rage, held together by shared suffering. Can you build a new world when the only thing everyone agrees on is hating the old one?",
+      "feels_like": "The French Revolution. Righteous anger that doesn't know what to do with power once it has it. The question: does the revolution build or only burn?",
+      "what_exists": {
+        "dominant_factions": [
+          "the_peoples_council (fragile)",
+          "remnant_guilds (underground)",
+          "military_fragments"
+        ],
+        "active_gods": [
+          "the_burn (empowered by revolutionary fire)",
+          "a justice god (forming from collective anger)"
+        ],
+        "threats": [
+          "revolutionary_terror",
+          "power_vacuum",
+          "the_old_guard_returns"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_mutual_destruction"
+      ]
+    },
+    {
+      "id": "the_long_peace",
+      "name": "The Long Peace",
+      "type": "era",
+      "parent": "the_golden_compromise",
+      "condition": "Compromise deepens into genuine trust across generations",
+      "runs": "10-16",
+      "years": "350-550",
+      "tension": "It held. The compromise became a culture. Children grow up not understanding why their grandparents fought. The peace is real but fragile — maintained by institutions nobody questions anymore, which means nobody notices when the institutions start to crack.",
+      "feels_like": "Post-war Europe. Genuine peace built on genuine sacrifice, maintained by people who've forgotten the sacrifice. The danger isn't war — it's complacency.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_joint_council (stable)",
+          "bridge_folk (mainstream now)",
+          "cultural_preservationists (minority)"
+        ],
+        "active_gods": [
+          "the_weave (strongest it's ever been)",
+          "the_drift (fading — nobody moves anymore)"
+        ],
+        "threats": [
+          "institutional_rot",
+          "forgotten_history",
+          "a new generation that takes peace for granted"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_complacent_fall"
+      ]
+    },
+    {
+      "id": "the_old_wounds",
+      "name": "The Old Wounds",
+      "type": "era",
+      "parent": "the_golden_compromise",
+      "condition": "Compromise holds but resentment festers + a catalyst event cracks it",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "Someone remembered. A descendent of the faction that sacrificed most finds the records, reads the original terms, and realizes what their grandparents gave up. The compromise was fair, once. It isn't anymore. The wounds were supposed to heal. They scarred instead.",
+      "feels_like": "The Troubles. Inherited grievance. Nobody alive caused the original wrong but everyone alive lives with it. The question: can you heal a wound that's become an identity?",
+      "what_exists": {
+        "dominant_factions": [
+          "the_joint_council (cracking)",
+          "the_rememberers (new)",
+          "the_reconcilers (new, desperate)"
+        ],
+        "threats": [
+          "inherited_grievance",
+          "selective_memory",
+          "the_peace_was_never_real"
+        ]
+      },
+      "branches_into": [
+        "endgame_alliance_with_cost",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_iron_empire",
+      "name": "The Iron Empire",
+      "type": "era",
+      "parent": "the_iron_crusade",
+      "condition": "Crusade succeeds + Forge Council absorbs conquered territories",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "They won. The finest army in the world conquered the finest cities in the world. Thornwall rules from mountain to coast. The Iron Doctrine is now the law everywhere. But empires don't know how to stop expanding, and the thing that made the forge great — isolation, focus, craft — dies the moment you rule people who don't share those values.",
+      "feels_like": "The Roman Empire at Trajan. Conquest completed. The question isn't how to win more — it's how to hold what you have when what you have is bigger than your identity.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_empire (overextended)",
+          "provincial_governors (new)",
+          "resistance_cells (everywhere)"
+        ],
+        "active_gods": [
+          "the_burn (war-god, fully formed)",
+          "the_silence (growing in conquered territories)"
+        ],
+        "threats": [
+          "imperial_overreach",
+          "cultural_resistance",
+          "the_empire_forgot_how_to_forge"
+        ]
+      },
+      "branches_into": [
+        "endgame_dominance_iron",
+        "endgame_collapse"
+      ]
+    },
+    {
+      "id": "the_crusade_breaks",
+      "name": "The Crusade Breaks",
+      "type": "era",
+      "parent": "the_iron_crusade",
+      "condition": "Crusade overextends + decisive defeat",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "The army that never lost, lost. Not to a stronger army — to distance, disease, or a god they didn't understand. The retreat is worse than the defeat. Thornwall gets its soldiers back, broken. The Iron Doctrine promised that good craft could solve anything. It couldn't solve this.",
+      "feels_like": "Napoleon's retreat from Moscow. The Crusader states falling. A great power discovering it isn't great enough, and the discovery destroying what made it work.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_council (humiliated)",
+          "the_true_forge (vindicated)",
+          "war_veterans (shattered)"
+        ],
+        "threats": [
+          "national_trauma",
+          "crisis_of_faith_in_craft",
+          "the_enemy_follows_you_home"
+        ]
+      },
+      "branches_into": [
+        "endgame_fragmentation",
+        "endgame_reformation"
+      ]
+    },
+    {
+      "id": "the_northern_diaspora",
+      "name": "The Northern Diaspora",
+      "type": "era",
+      "parent": "the_walls_crack",
+      "condition": "Mass exodus from Thornwall + scattered communities",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "They left. Not all at once — in waves. The young first, then the families, then the craftsmen who realized their skills were worth more outside walls than inside them. Thornwall still stands, half-empty, maintained by the elderly who couldn't imagine leaving. The forge-children are everywhere now, carrying techniques to places that never had them.",
+      "feels_like": "The Jewish diaspora. Knowledge scattered, adapted, preserved in fragments across a dozen cultures. The homeland exists but the people are everywhere else.",
+      "what_exists": {
+        "dominant_factions": [
+          "diaspora_forge_guilds (scattered)",
+          "hollow_thornwall (remnant)",
+          "host_cultures (changed by immigrants)"
+        ],
+        "active_gods": [
+          "the_burn (scattered into local forge-spirits)",
+          "the_deep (people near the coast for the first time)"
+        ],
+        "threats": [
+          "cultural_dilution",
+          "nostalgia_as_poison",
+          "the_mountain_mourns"
+        ]
+      },
+      "branches_into": [
+        "endgame_fragmentation",
+        "endgame_synthesis"
+      ]
+    },
+    {
+      "id": "the_new_pantheon",
+      "name": "The New Pantheon",
+      "type": "era",
+      "parent": "the_divine_reckoning",
+      "condition": "Gods and mortals negotiate a new relationship",
+      "runs": "10-16",
+      "years": "350-550",
+      "tension": "A treaty between gods and mortals. The first of its kind. Worship is now a negotiated exchange — mortals give belief, gods give protection, and both sides have rights. The Ashfield god was the catalyst. The player-god may have brokered it. The world is fundamentally different now. Divinity has a constitution.",
+      "feels_like": "The social contract, but with gods. Magna Carta applied to the divine. Unprecedented. Fragile. The question: can you legislate the relationship between a prayer and its answer?",
+      "what_exists": {
+        "dominant_factions": [
+          "the_divine_council (new — gods AND mortals)",
+          "the_unworshippers (satisfied or radicalized)",
+          "the_old_faithful (mourning the mystery)"
+        ],
+        "active_gods": [
+          "all gods (constrained)",
+          "the_player_god (central architect)"
+        ],
+        "threats": [
+          "gods_who_reject_the_treaty",
+          "mortals_who_exploit_it",
+          "the_mystery_is_gone"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_divine_new_order"
+      ]
+    },
+    {
+      "id": "the_godless_age",
+      "name": "The Godless Age",
+      "type": "era",
+      "parent": "the_divine_reckoning",
+      "condition": "Unworship wins + gods diminished or destroyed",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "They did it. They unworsipped the gods. Not all of them — the concept gods can't be fully unmade — but the worship gods faded, the Ashfield god collapsed, and the world is quieter than it's been since the Foundation. But quieter means emptier. The prayers stopped, and the comfort they provided stopped with them. Humanity is alone with itself for the first time.",
+      "feels_like": "Nietzsche's 'God is dead' made literal. The liberation and the terror of a world without divine safety nets. Freedom that feels like falling.",
+      "what_exists": {
+        "dominant_factions": [
+          "secular_councils (new)",
+          "the_mourners (missing the gods)",
+          "the_liberated (celebrating)"
+        ],
+        "active_gods": [
+          "concept gods only (diminished)",
+          "the_player_god (what are you now?)"
+        ],
+        "threats": [
+          "existential_crisis",
+          "meaning_vacuum",
+          "something_fills_the_gap"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_new_gods"
+      ]
+    },
+    {
+      "id": "the_river_republic",
+      "name": "The River Republic",
+      "type": "era",
+      "parent": "the_great_meeting",
+      "condition": "Rootwalkers create governance without settlement",
+      "runs": "10-16",
+      "years": "350-550",
+      "tension": "They invented something new. Not a nation — nations require borders. Not a tribe — tribes require blood. A republic of routes. Citizens defined not by where they live but by which songs they carry. Decisions made at crossroads, literally. It works because nobody expected it to.",
+      "feels_like": "The Iroquois Confederacy. Governance without a capital. A political system that confuses everyone who tries to map it because the map keeps moving. Brilliant, fragile, unprecedented.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_river_republic (novel)",
+          "settled_observers (confused, envious)",
+          "the_old_rootwalkers (is this what we wanted?)"
+        ],
+        "active_gods": [
+          "the_drift (the republic's patron, reluctantly)",
+          "new_crossroads_spirits (forming at meeting points)"
+        ],
+        "threats": [
+          "can_it_scale",
+          "external_powers_who_need_borders",
+          "the_songs_diverge"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_great_scattering",
+      "name": "The Great Scattering",
+      "type": "era",
+      "parent": "the_great_meeting",
+      "condition": "Meeting fails + Rootwalkers fragment",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "They tried. The Meeting was called. Camps came from every river. And they couldn't agree — because agreement requires compromise and compromise requires staying long enough to negotiate and staying is the one thing Rootwalkers were built not to do. The network shattered into a hundred independent camps. The Song has a hundred versions now. None of them are wrong.",
+      "feels_like": "The Tower of Babel. A people defined by movement discovering that movement prevents the stillness needed to decide. Beautiful in its tragedy.",
+      "what_exists": {
+        "dominant_factions": [
+          "a hundred small camps (no dominant)",
+          "settled powers (filling the vacuum)",
+          "song_keepers (trying to preserve unity)"
+        ],
+        "threats": [
+          "the_network_dies",
+          "settled_powers_expand_into_the_gap",
+          "the_songs_are_forgotten"
+        ]
+      },
+      "branches_into": [
+        "endgame_fragmentation",
+        "endgame_default"
+      ]
+    },
+    {
+      "id": "the_new_foundation",
+      "name": "The New Foundation",
+      "type": "era",
+      "parent": "the_awakening",
+      "condition": "Awakening succeeds + genuinely new institutions built",
+      "runs": "10-16",
+      "years": "350-550",
+      "tension": "They rebuilt. Not the old world — something new from the compost of what rotted. The New Foundation has the advantage of knowing what went wrong the first time. The disadvantage: knowing what went wrong doesn't mean you won't do it again differently.",
+      "feels_like": "Post-apartheid South Africa. The Renaissance after the Dark Ages. Rebuilding with eyes open. The hope is real. So is the weight of what was lost.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_new_council (idealistic)",
+          "the_survivors (pragmatic)",
+          "the_ghosts (carrying the old world's memories)"
+        ],
+        "active_gods": [
+          "the_player_god (possibly the only god anyone remembers)"
+        ],
+        "threats": [
+          "repeating_history",
+          "the_rot_left_deeper_roots_than_anyone_knew"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_second_rot"
+      ]
+    },
+    {
+      "id": "the_false_dawn",
+      "name": "The False Dawn",
+      "type": "era",
+      "parent": "the_awakening",
+      "condition": "Awakening starts strong then collapses",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "It looked like it was working. For a decade, maybe two. Then the spark that lit the awakening burned the people carrying it. The reformers fought each other. The old guard waited patiently and returned. The dawn was real but it wasn't enough. Not yet.",
+      "feels_like": "The Arab Spring. Genuine hope that wasn't wrong but wasn't enough. The revolution succeeds and then the morning after arrives and nobody planned for morning.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_returned_old_guard",
+          "disillusioned_reformers",
+          "the_still_trying (small, stubborn)"
+        ],
+        "threats": [
+          "despair_is_worse_the_second_time",
+          "the_rot_returns_faster",
+          "nobody_believes_in_dawn_anymore"
+        ]
+      },
+      "branches_into": [
+        "endgame_default",
+        "endgame_one_more_try"
+      ]
+    },
+    {
+      "id": "the_ember_in_ash",
+      "name": "The Ember in Ash",
+      "type": "era",
+      "parent": "the_final_decline",
+      "condition": "Even in total decline, something small survives",
+      "runs": "12-20",
+      "years": "500-800",
+      "tension": "The world thinned to almost nothing. But almost isn't nothing. In a village nobody remembers the name of, someone is teaching a child the Song of the Cracked Stone. In a ruin nobody visits, a forge still has coals. The player-god, if they're still watching, might find the last spark and decide: one more time.",
+      "feels_like": "The monastery that preserved Greek texts through the Dark Ages. The single candle in a very large room. Not hope — stubbornness. The refusal to let the last light go out.",
+      "what_exists": {
+        "dominant_factions": [
+          "none (there are no factions, just people)"
+        ],
+        "active_gods": [
+          "the_silence (everywhere)",
+          "the_player_god (possibly the last conscious divine being)"
+        ],
+        "threats": [
+          "entropy",
+          "forgetting",
+          "the_temptation_to_stop_trying"
+        ]
+      },
+      "branches_into": [
+        "endgame_new_beginning",
+        "endgame_silence"
+      ]
+    },
+    {
+      "id": "endgame_dominance_merchant",
+      "name": "The Ledger Closes",
+      "type": "endgame",
+      "parent": "corporate_dominion",
+      "tension": "The world is a balance sheet. Everything has a price. The god's name is written in a currency nobody questions.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_dominance_iron",
+      "name": "The Iron Crown",
+      "type": "endgame",
+      "parent": "the_iron_empire",
+      "tension": "The forge rules from mountain to sea. The strongest ending. The loneliest. The crown is iron because iron doesn't bend.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_genuine_peace",
+      "name": "The Holding",
+      "type": "endgame",
+      "tension": "It holds. Not perfectly. Not easily. But the guns aren't pointed at each other. Every bridge you built is named in the chronicle.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_mutual_destruction",
+      "name": "The Breaking",
+      "type": "endgame",
+      "tension": "Nobody wanted it. Everybody caused it. From the rubble: something small, and new, and not yet named.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_fragmentation",
+      "name": "The Scattering",
+      "type": "endgame",
+      "tension": "A thousand small pieces. Every piece carries a fragment of what you intended. None has the whole picture.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_alliance_with_cost",
+      "name": "The Compromise",
+      "type": "endgame",
+      "tension": "It works. For most people. You know who you forgot.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_default",
+      "name": "The Shrug",
+      "type": "endgame",
+      "tension": "The world barely noticed you were here. The quietest ending. The heaviest.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_collapse",
+      "name": "The Fall",
+      "type": "endgame",
+      "parent": "the_iron_empire",
+      "tension": "The empire that was too large to hold and too proud to let go. It fell the way empires always fall: slowly, then all at once.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_reformation",
+      "name": "The Reformation",
+      "type": "endgame",
+      "parent": "the_crusade_breaks",
+      "tension": "From the failure, clarity. What craft actually means when it can't be a weapon.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_synthesis",
+      "name": "The Alloy",
+      "type": "endgame",
+      "parent": "the_northern_diaspora",
+      "tension": "Every culture touched by the forge-children absorbed something. The result isn't any one tradition — it's all of them, mixed. Stronger for the mixing.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_divine_new_order",
+      "name": "The Covenant World",
+      "type": "endgame",
+      "parent": "the_new_pantheon",
+      "tension": "Gods and mortals share the world under negotiated terms. Unprecedented. Whether it's freedom or a new cage depends on the terms you wrote.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_new_gods",
+      "name": "The Second Genesis",
+      "type": "endgame",
+      "parent": "the_godless_age",
+      "tension": "The old gods died. New ones are forming from what people believe now. The player-god watches new divinity born from a world they shaped. The cycle begins again.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_complacent_fall",
+      "name": "The Forgotten Peace",
+      "type": "endgame",
+      "parent": "the_long_peace",
+      "tension": "They forgot why the peace mattered. When it broke, nobody remembered how to fix it.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_second_rot",
+      "name": "The Second Rot",
+      "type": "endgame",
+      "parent": "the_new_foundation",
+      "tension": "It happened again. Different names, same pattern. The knowing didn't save them.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_one_more_try",
+      "name": "The Stubborn Spark",
+      "type": "endgame",
+      "parent": "the_false_dawn",
+      "tension": "The dawn failed. Someone lights another match. Not hope — stubbornness.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_new_beginning",
+      "name": "The Seed",
+      "type": "endgame",
+      "parent": "the_ember_in_ash",
+      "tension": "From almost nothing, something. The last ember became a fire. It will take centuries. But it started.",
+      "branches_into": []
+    },
+    {
+      "id": "endgame_silence",
+      "name": "The Silence",
+      "type": "endgame",
+      "parent": "the_ember_in_ash",
+      "tension": "The ember went out. The world is quiet. The god remembers everything. Nobody else does.",
+      "branches_into": []
+    }
+  ],
+  "design_notes": [
+    "This is the real Layer 1. Not 4 fixed eras with branching outcomes — a branching TREE of eras that are themselves different.",
+    "Two players who diverge at Era 1 should be in UNRECOGNIZABLE worlds by Era 3. Different factions, different gods, different threats, different era names.",
+    "The number of eras isn't fixed. Some paths have 3 eras before endgame. Some have 6. Stagnation paths are long and thin. Explosive paths are short and dense.",
+    "Each state node should eventually contain: what factions exist, what gods are active, what cultures are alive, what threats loom, what the player-god's tier is, and what choices are available.",
+    "The 'feels like' field is a design compass, not player-facing text. It tells us what real-world historical dynamic to study for inspiration.",
+    "NEXT: Continue branching. Each leaf node that isn't an endgame needs 2-4 branches forward. The tree keeps growing until every path reaches a reckoning.",
+    "NEXT: Add endgame nodes — the terminal states where domain crystallizes and the chronicle is written."
+  ]
+}

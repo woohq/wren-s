@@ -1,0 +1,28 @@
+{
+  "id": "friend_critical_wanderer",
+  "name": "The Other Side (Wanderer Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["wanderer_s_child"],
+  "callback_detail": "The wrong side of the river. His fire. The Song of the Reed Bend. His terrible pitch. The rain.",
+  "text": "Kael has built a house.\n\nNot a shelter. Not a camp. A house — with walls and a door and a hearth where a fire burns the same way every night because nobody moves it. It's on the eastern bank of the Senn, three miles upriver from the last crossing, in a clearing he must have spent weeks preparing.\n\nYour mother's camp is on the western bank. You see the smoke from his chimney while gathering kindling. It's a permanent smoke — not the thin blue of a traveler's fire that means someone is passing through, but the thick grey of someone who's staying.\n\nYou cross the river to look. He's there.\n\nHe's taller now. Still carries too much on his back. The pack is different — better made, heavier, full of tools instead of food. He's planted something near the door. It's too early to tell what it will become.\n\n'I got work at the mill,' he says, as if you'd asked. 'They needed someone who could carry. I could carry.'\n\nHe says it the way he said 'my father left' — flat, worn smooth. But the house says something different. The house is loud. The house is a sentence that took him years to build: I am not going anywhere.\n\nYou sit by his fire. It doesn't move the way yours moves. Rootwalker fires are built to be scattered — small, fast, gone by morning. His fire is built to last. The coals are deep. The stones are placed for heat, not portability.\n\nYour mother's camp will move in three days. The river will carry you south. Kael will stay. This is the thing you've both known since the night he showed up on the wrong side of the river and you taught him the Song of the Reed Bend and the rain didn't stop either of you.\n\nHe can't follow you. You can't follow him. The river and the house are different grammars.\n\n'You could stay,' he says. He's been practicing the sentence. You can hear the rehearsal in it. 'There's work. The mill owner doesn't care where you're from.'\n\nOutside, through the door he built, you can see the Senn. On the other side, your mother's fire — thin, blue, temporary.",
+  "choices": [
+    {
+      "text": "\"Teach me the Song of the Reed Bend again,\" he said once. Teach him one more thing: that some people leave and it isn't leaving.",
+      "effects": {"relationship_change": {"friend": 15}, "trait_gain": "honest_goodbye"},
+      "consequence_text": "You stay for the night. You teach him the full Song of the Reed Bend — all twelve verses, not just the first four you taught him in the rain. His pitch is still terrible. He tries anyway.\n\nIn the morning, you cross the river. You don't look back. Looking back is not a Rootwalker habit — it's a settled one, built for people whose things stay where they left them.\n\nBut you come back. Three months later, the next time the camp passes the eastern Senn. His chimney smoke is still there. The planted thing near his door has become a squash vine. He's on the bank, and he doesn't wave, because waving is for arrivals. You were never gone. You were just moving."
+    },
+    {
+      "text": "\"I could stay.\" Say it. See how the word sounds in your mouth.",
+      "effects": {"relationship_change": {"friend": 20}, "trait_gain": "between_worlds"},
+      "consequence_text": "You stay for a week. The mill work is simple — lifting, carrying, the kind of work that empties your head instead of filling it. Kael's fire burns the same way every night. You wake up in the same place you fell asleep. The disorientation is profound.\n\nOn the seventh day, your mother's camp is gone. They moved south without you. She left your pack at the last crossing with a single riversong tied to it — the Song of Return, which every Rootwalker child learns and hopes never to use.\n\nYou stand at the crossing holding the song and looking at Kael's chimney smoke and the gap between them is exactly the width of who you're going to become."
+    },
+    {
+      "text": "\"No.\" Say it simply. Don't decorate the grief.",
+      "effects": {"relationship_change": {"friend": 5}, "trait_gain": "river_loyalty"},
+      "consequence_text": "He nods. He expected it. The house was the asking, and the house took weeks, and he built it knowing you'd probably say no. He built it anyway. That's its own kind of song.\n\nYou cross the river in the morning. Your mother doesn't ask where you were. She knows. Rootwalkers always know when someone is deciding whether to stop moving.\n\nKael's chimney smoke stays visible for half a day as the camp moves south. Then the river bends, and the smoke is behind you, and the Song of the Reed Bend is still in your mouth, and his terrible pitch is still in your ears, and neither of those things goes away."
+    }
+  ],
+  "tags": ["relationship", "childhood_friend", "critical", "wanderer", "kael_friend", "river", "settling_vs_moving", "callback_rain_song", "identity_choice"]
+}

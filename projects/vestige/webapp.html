@@ -676,6 +676,428 @@ body {
   color: var(--text-faint);
   margin-top: 2px;
 }
+/* ─── Timeline View ────────────────────────────────────────────── */
+.timeline-view {
+  padding: 32px 40px;
+  overflow-y: auto;
+  max-height: calc(100vh - 52px);
+}
+
+.timeline-era {
+  margin-bottom: 48px;
+}
+
+.timeline-era-header {
+  margin-bottom: 24px;
+}
+
+.timeline-era-header h2 {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-bottom: 6px;
+}
+
+.timeline-era-header p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.timeline-axes {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-axis {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timeline-axis-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.timeline-axis-header h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ember);
+  margin-bottom: 4px;
+}
+
+.timeline-axis-header p {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: var(--font-body);
+}
+
+.timeline-outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+
+.timeline-outcome {
+  background: var(--bg-main);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.timeline-outcome:hover {
+  background: var(--bg-hover);
+}
+
+.timeline-outcome.selected {
+  background: var(--bg-hover);
+  border-left: 3px solid var(--ember);
+}
+
+.timeline-outcome-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+
+.timeline-outcome-short {
+  font-size: 11px;
+  color: var(--ember-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.timeline-outcome-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.timeline-outcome-result {
+  font-size: 13px;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.timeline-outcome-result strong {
+  color: var(--ember-dim);
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline-impact {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-impact-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+.timeline-section {
+  margin-top: 40px;
+}
+
+.timeline-section h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-bright);
+  font-family: var(--font-body);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.timeline-combos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.timeline-combo {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+.timeline-combo-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ember);
+  margin-bottom: 4px;
+}
+
+.timeline-combo-axes {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.timeline-combo-summary {
+  font-size: 13px;
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.timeline-cultures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.timeline-culture {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.timeline-culture-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--drift);
+  margin-bottom: 2px;
+}
+
+.timeline-culture-condition {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.timeline-culture-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  line-height: 1.4;
+}
+
+.timeline-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.timeline-figure {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.timeline-figure-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--silence);
+  margin-bottom: 8px;
+}
+
+.timeline-figure-fate {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.timeline-figure-fate .fate-condition {
+  color: var(--ember-dim);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.timeline-figure-fate .fate-text {
+  color: var(--text-dim);
+  font-family: var(--font-body);
+}
+
+/* ─── Timeline Map View ───────────────────────────────────────── */
+.timeline-mode-toggle {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0;
+  padding: 8px 12px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-main);
+}
+
+.timeline-mode-btn {
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: all 0.15s;
+}
+
+.timeline-mode-btn:hover { color: var(--text); }
+.timeline-mode-btn.active { color: var(--ember); background: var(--bg-surface); border-color: var(--border); }
+
+.timeline-map-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 37px);
+  overflow: hidden;
+}
+
+.timeline-map-container canvas {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.timeline-map-container canvas:active { cursor: grabbing; }
+
+.timeline-breadcrumb {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.timeline-breadcrumb span {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.timeline-breadcrumb span:hover { color: var(--ember); }
+.timeline-breadcrumb .bc-sep { color: var(--text-faint); cursor: default; }
+.timeline-breadcrumb .bc-current { color: var(--text); cursor: default; }
+
+.timeline-detail-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 100%;
+  background: var(--bg-main);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 20px 24px;
+  z-index: 4;
+  transform: translateX(100%);
+  transition: transform 0.25s ease-out;
+}
+
+.timeline-detail-panel.open { transform: translateX(0); }
+
+.timeline-detail-panel h3 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+
+.timeline-detail-panel .detail-short {
+  font-size: 11px;
+  color: var(--ember-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.timeline-detail-panel .detail-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.timeline-detail-panel .detail-section {
+  margin-bottom: 14px;
+}
+
+.timeline-detail-panel .detail-label {
+  font-size: 10px;
+  color: var(--ember-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.timeline-detail-panel .detail-body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.timeline-detail-panel .detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.timeline-detail-panel .detail-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+.timeline-detail-panel .detail-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.timeline-detail-panel .detail-close:hover { color: var(--text); }
+
+.timeline-map-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 11px;
+  color: var(--text-faint);
+  z-index: 3;
+  pointer-events: none;
+}
+
 </style>
 </head>
 <body>
@@ -690,6 +1112,7 @@ body {
       <button class="nav-tab" data-view="graph">Graph</button>
       <button class="nav-tab" data-view="stats">Stats</button>
       <button class="nav-tab" data-view="coverage">Coverage</button>
+      <button class="nav-tab" data-view="timeline">Timeline</button>
     </div>
     <div class="stats-bar" id="headerStats"></div>
   </div>
@@ -736,6 +1159,24 @@ body {
     <!-- Coverage view -->
     <div class="view" id="view-coverage">
       <div class="coverage-view" id="coverageContent"></div>
+    </div>
+
+    <!-- Timeline view -->
+    <div class="view" id="view-timeline">
+      <div class="timeline-mode-toggle">
+        <button class="timeline-mode-btn active" data-mode="list" onclick="switchTimelineMode('list')">List</button>
+        <button class="timeline-mode-btn" data-mode="map" onclick="switchTimelineMode('map')">Map</button>
+      </div>
+      <div class="timeline-view" id="timelineContent"></div>
+      <div class="timeline-map-container" id="timelineMapContainer" style="display:none">
+        <canvas id="timelineCanvas"></canvas>
+        <div class="timeline-breadcrumb" id="timelineBreadcrumb"></div>
+        <div class="timeline-detail-panel" id="timelineDetailPanel">
+          <button class="detail-close" onclick="closeTimelineDetail()">&times;</button>
+          <div id="timelineDetailContent"></div>
+        </div>
+        <div class="timeline-map-hint" id="timelineMapHint">Click an era to explore · Scroll to zoom · Drag to pan</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1128,6 +1569,7 @@ function switchView(view) {
   if (view === 'graph' && !state.graphData) loadGraph();
   if (view === 'stats') loadStats();
   if (view === 'coverage') loadCoverage();
+  if (view === 'timeline') loadTimeline();
 }
 
 // ─── Graph ──────────────────────────────────────────────────────────────────
@@ -1519,6 +1961,1326 @@ async function loadCoverage() {
   html += `</div></div>`;
 
   container.innerHTML = html;
+}
+
+// ─── Timeline ───────────────────────────────────────────────────────────────
+async function loadTimeline() {
+  const timelines = await api('timeline');
+  const container = document.getElementById('timelineContent');
+
+  if (!timelines || timelines.length === 0) {
+    container.innerHTML = `<div class="empty-state"><p>No timeline data yet. Add JSON files to data/timeline/.</p></div>`;
+    return;
+  }
+
+  let html = '';
+
+  for (const tl of timelines) {
+    html += `<div class="timeline-era">`;
+    html += `<div class="timeline-era-header">`;
+    html += `<h2>${esc(tl.name)}</h2>`;
+    html += `<p>${esc(tl.description)}</p>`;
+    html += `</div>`;
+
+    // Branching axes
+    html += `<div class="timeline-axes">`;
+    for (const axis of tl.axes || []) {
+      html += `<div class="timeline-axis">`;
+      html += `<div class="timeline-axis-header">`;
+      html += `<h3>${esc(axis.name)}</h3>`;
+      html += `<p>${esc(axis.description)}</p>`;
+      html += `</div>`;
+
+      html += `<div class="timeline-outcomes">`;
+      for (const outcome of axis.outcomes || []) {
+        html += `<div class="timeline-outcome" data-outcome="${esc(outcome.id)}">`;
+        html += `<div class="timeline-outcome-short">${esc(outcome.short)}</div>`;
+        html += `<div class="timeline-outcome-name">${esc(outcome.name)}</div>`;
+        html += `<div class="timeline-outcome-desc">${esc(outcome.description)}</div>`;
+
+        if (outcome.second_era_result) {
+          html += `<div class="timeline-outcome-result">`;
+          html += `<strong>Second Era</strong>`;
+          html += esc(outcome.second_era_result);
+          html += `</div>`;
+        }
+
+        // Impact tags
+        const impacts = [];
+        for (const c of outcome.spawns_cultures || []) impacts.push(c.replace(/_/g, ' '));
+        for (const t of outcome.spawns_tensions || []) impacts.push(t.replace(/_/g, ' '));
+        if (outcome.faction_impact) {
+          for (const [fac, effect] of Object.entries(outcome.faction_impact)) {
+            impacts.push(`${fac.replace(/_/g, ' ')}: ${effect.replace(/_/g, ' ')}`);
+          }
+        }
+        if (impacts.length > 0) {
+          html += `<div class="timeline-impact">`;
+          for (const imp of impacts) {
+            html += `<span class="timeline-impact-tag">${esc(imp)}</span>`;
+          }
+          html += `</div>`;
+        }
+
+        html += `</div>`; // outcome
+      }
+      html += `</div>`; // outcomes
+      html += `</div>`; // axis
+    }
+    html += `</div>`; // axes
+
+    // Notable combinations
+    if (tl.notable_combinations && tl.notable_combinations.length > 0) {
+      html += `<div class="timeline-section">`;
+      html += `<h3>Notable World State Combinations</h3>`;
+      html += `<div class="timeline-combos">`;
+      for (const combo of tl.notable_combinations) {
+        html += `<div class="timeline-combo">`;
+        html += `<div class="timeline-combo-name">${esc(combo.name)}</div>`;
+        html += `<div class="timeline-combo-axes">${combo.axes.map(a => a.replace(/_/g, ' ')).join(' + ')}</div>`;
+        html += `<div class="timeline-combo-summary">${esc(combo.summary)}</div>`;
+        html += `</div>`;
+      }
+      html += `</div></div>`;
+    }
+
+    // Emerging cultures
+    if (tl.emerging_cultures && tl.emerging_cultures.length > 0) {
+      html += `<div class="timeline-section">`;
+      html += `<h3>Cultures That May Emerge</h3>`;
+      html += `<div class="timeline-cultures">`;
+      for (const culture of tl.emerging_cultures) {
+        html += `<div class="timeline-culture">`;
+        html += `<div class="timeline-culture-name">${esc(culture.name)}</div>`;
+        html += `<div class="timeline-culture-condition">Requires: ${esc(culture.condition.replace(/_/g, ' '))}</div>`;
+        html += `<div class="timeline-culture-desc">${esc(culture.description)}</div>`;
+        html += `</div>`;
+      }
+      html += `</div></div>`;
+    }
+
+    // Historical figure fates
+    if (tl.historical_figures_fate && tl.historical_figures_fate.length > 0) {
+      html += `<div class="timeline-section">`;
+      html += `<h3>Historical Figures Across Branches</h3>`;
+      html += `<div class="timeline-figures">`;
+      for (const figure of tl.historical_figures_fate) {
+        html += `<div class="timeline-figure">`;
+        html += `<div class="timeline-figure-name">${esc(figure.name)}</div>`;
+        for (const [condition, fate] of Object.entries(figure.fates)) {
+          html += `<div class="timeline-figure-fate">`;
+          html += `<span class="fate-condition">${condition.replace(/_/g, ' ')}: </span>`;
+          html += `<span class="fate-text">${esc(fate)}</span>`;
+          html += `</div>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div></div>`;
+    }
+
+    // Story arc format: eras array with possible_shapes
+    if (tl.eras && tl.eras.length > 0) {
+      for (const era of tl.eras) {
+        html += `<div class="timeline-axis" style="margin-bottom:24px">`;
+        html += `<div class="timeline-axis-header">`;
+        html += `<h3>${esc(era.name)}</h3>`;
+        html += `<p>${esc(era.defining_tension)}</p>`;
+
+        // Meta info
+        const meta = [];
+        if (era.runs) meta.push(`Runs ${era.runs}`);
+        if (era.years) meta.push(`Years ${era.years}`);
+        if (era.god_tier) meta.push(`God tier: ${era.god_tier}`);
+        if (era.status) meta.push(era.status);
+        if (meta.length) html += `<div style="margin-top:8px;font-size:11px;color:var(--text-faint)">${meta.join(' · ')}</div>`;
+        html += `</div>`;
+
+        // Player role
+        if (era.player_role) {
+          html += `<div style="padding:12px 20px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-dim);font-family:var(--font-body)">`;
+          html += `<strong style="color:var(--ember-dim);font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px">Player Role</strong>`;
+          html += esc(era.player_role);
+          html += `</div>`;
+        }
+
+        // Default trajectory
+        if (era.default_trajectory) {
+          html += `<div style="padding:12px 20px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-dim);font-family:var(--font-body)">`;
+          html += `<strong style="color:var(--forge);font-size:10px;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px">Default (No Intervention)</strong>`;
+          html += esc(era.default_trajectory);
+          html += `</div>`;
+        }
+
+        // Possible shapes
+        if (era.possible_shapes && era.possible_shapes.length > 0) {
+          html += `<div class="timeline-outcomes">`;
+          for (const shape of era.possible_shapes) {
+            html += `<div class="timeline-outcome">`;
+            html += `<div class="timeline-outcome-short">${esc(shape.condition || '')}</div>`;
+            html += `<div class="timeline-outcome-name">${esc(shape.name)}</div>`;
+            html += `<div class="timeline-outcome-desc">${esc(shape.tension)}</div>`;
+            const impacts = [];
+            for (const f of shape.new_factions || []) impacts.push(f.replace(/_/g, ' '));
+            for (const t of shape.new_threats || []) impacts.push(t.replace(/_/g, ' '));
+            if (shape.endgame_tendency) impacts.push('→ ' + shape.endgame_tendency);
+            if (impacts.length) {
+              html += `<div class="timeline-impact">`;
+              for (const imp of impacts) html += `<span class="timeline-impact-tag">${esc(imp)}</span>`;
+              html += `</div>`;
+            }
+            html += `</div>`;
+          }
+          html += `</div>`;
+        }
+
+        // Endgame states
+        if (era.endgame_states && era.endgame_states.length > 0) {
+          html += `<div class="timeline-outcomes">`;
+          for (const state of era.endgame_states) {
+            html += `<div class="timeline-outcome">`;
+            html += `<div class="timeline-outcome-name">${esc(state.name)}</div>`;
+            html += `<div class="timeline-outcome-desc">${esc(state.description)}</div>`;
+            if (state.requires) {
+              html += `<div style="margin-top:8px;font-size:11px;color:var(--text-faint);font-style:italic">${esc(state.requires)}</div>`;
+            }
+            html += `</div>`;
+          }
+          html += `</div>`;
+        }
+
+        html += `</div>`; // axis (era card)
+      }
+    }
+
+    // Throughlines
+    if (tl.throughlines && tl.throughlines.threads) {
+      html += `<div class="timeline-section">`;
+      html += `<h3>Throughlines (Persist Across All Eras)</h3>`;
+      html += `<div class="timeline-combos">`;
+      for (const thread of tl.throughlines.threads) {
+        html += `<div class="timeline-combo">`;
+        html += `<div class="timeline-combo-name">${esc(thread.name)}</div>`;
+        html += `<div class="timeline-combo-summary">${esc(thread.arc)}</div>`;
+        if (thread.player_agency) {
+          html += `<div style="margin-top:8px;font-size:12px;color:var(--text-faint);font-style:italic">${esc(thread.player_agency)}</div>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div></div>`;
+    }
+
+    html += `</div>`; // era
+  }
+
+  container.innerHTML = html;
+}
+
+// ─── Timeline Map (Interactive Graph) ────────────────────────────────────────
+
+let tlMap = {
+  eras: [], axes: [], outcomes: [], combinations: [], cultures: [], throughlines: [], edges: [],
+  level: 0,          // 0=arc, 1=era detail, 2=outcome detail
+  selectedEra: null,
+  selectedOutcome: null,
+  camera: { x: 0, y: 0, zoom: 1 },
+  target: { x: 0, y: 0, zoom: 1 },
+  animating: false,
+  canvas: null, ctx: null, W: 0, H: 0, dpr: 1,
+  drag: { active: false, lastX: 0, lastY: 0 },
+  hovered: null,
+  loaded: false,
+};
+
+const ERA_COLORS = ['#d4875e', '#5a7a9a', '#ca6a4a', '#8a7aaa'];
+const OUTCOME_COLORS = {
+  default: '#7a8494',
+  conflict: '#ca6a4a',
+  growth: '#6a9a7a',
+  knowledge: '#5a7a9a',
+  divine: '#8a7aaa',
+  decline: '#9a6a5a',
+  peace: '#6a9a7a',
+  destruction: '#aa5a5a',
+  balance: '#aa8a6a',
+};
+
+function classifyOutcome(o) {
+  const t = ((o.short || '') + ' ' + (o.name || '') + ' ' + (o.endgame_tendency || '')).toLowerCase();
+  if (t.includes('war') || t.includes('conflict') || t.includes('destroy') || t.includes('conquest')) return 'conflict';
+  if (t.includes('peace') || t.includes('alliance') || t.includes('cooperat') || t.includes('united') || t.includes('mercy')) return 'peace';
+  if (t.includes('knowledge') || t.includes('scholar') || t.includes('wisdom') || t.includes('senate') || t.includes('question')) return 'knowledge';
+  if (t.includes('divine') || t.includes('god') || t.includes('worship') || t.includes('unworship')) return 'divine';
+  if (t.includes('decline') || t.includes('stagnation') || t.includes('default') || t.includes('vacuum') || t.includes('fragment')) return 'decline';
+  if (t.includes('growth') || t.includes('trade') || t.includes('exchange') || t.includes('bridge') || t.includes('creation') || t.includes('hearth')) return 'growth';
+  if (t.includes('balance') || t.includes('triad') || t.includes('between') || t.includes('synthesis')) return 'balance';
+  if (t.includes('destruction') || t.includes('ending') || t.includes('entropy')) return 'destruction';
+  return 'default';
+}
+
+function switchTimelineMode(mode) {
+  document.querySelectorAll('.timeline-mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  document.getElementById('timelineContent').style.display = mode === 'list' ? '' : 'none';
+  document.getElementById('timelineMapContainer').style.display = mode === 'map' ? '' : 'none';
+  if (mode === 'map' && !tlMap.loaded) initTimelineMap();
+}
+
+async function initTimelineMap() {
+  const timelines = await api('timeline');
+  buildTimelineGraph(timelines);
+  setupTimelineCanvas();
+  tlMap.loaded = true;
+  goToLevel0();
+}
+
+function buildTimelineGraph(timelines) {
+  // Find the story_arc for throughlines + era meta
+  const arc = timelines.find(t => t.eras);
+  // Find detailed era files
+  const eraFiles = timelines.filter(t => t.axes && t.axes.length && typeof t.axes[0] === 'object' && t.axes[0].outcomes);
+
+  // Sort era files by era order
+  const eraOrder = {'first': 0, 'second': 1, 'third': 2, 'fourth': 3};
+  eraFiles.sort((a, b) => {
+    const ai = Object.entries(eraOrder).find(([k]) => a.id?.includes(k) || a.name?.toLowerCase().includes(k));
+    const bi = Object.entries(eraOrder).find(([k]) => b.id?.includes(k) || b.name?.toLowerCase().includes(k));
+    return (ai ? ai[1] : 99) - (bi ? bi[1] : 99);
+  });
+
+  tlMap.eras = [];
+  tlMap.axes = [];
+  tlMap.outcomes = [];
+  tlMap.combinations = [];
+  tlMap.cultures = [];
+  tlMap.edges = [];
+  tlMap.states = []; // World states (combinations) as navigable tree nodes
+  tlMap.stateEdges = []; // Connections between states across eras
+
+  eraFiles.forEach((ef, ei) => {
+    const arcEra = arc?.eras?.[ei];
+    const era = {
+      id: ef.id || `era_${ei}`,
+      name: ef.name,
+      index: ei,
+      description: ef.description,
+      years: ef.years || arcEra?.years || '',
+      runs: ef.runs || arcEra?.runs || '',
+      god_tier: arcEra?.god_tier || '',
+      player_role: arcEra?.player_role || '',
+      default_trajectory: arcEra?.default_trajectory || '',
+      axisIds: [],
+      combinationIds: [],
+      cultureIds: [],
+    };
+    tlMap.eras.push(era);
+
+    // Add era→era edges
+    if (ei > 0) tlMap.edges.push({ from: tlMap.eras[ei-1].id, to: era.id, type: 'era_flow' });
+
+    // Process axes
+    (ef.axes || []).forEach((ax, ai) => {
+      const axis = {
+        id: `${era.id}_axis_${ai}`,
+        name: ax.name,
+        description: ax.description,
+        eraId: era.id,
+        eraIndex: ei,
+        axisIndex: ai,
+        outcomeIds: [],
+      };
+      era.axisIds.push(axis.id);
+      tlMap.axes.push(axis);
+
+      // Process outcomes
+      (ax.outcomes || []).forEach((o, oi) => {
+        const outcome = {
+          id: o.id || `${axis.id}_out_${oi}`,
+          name: o.name,
+          short: o.short || '',
+          description: o.description || '',
+          condition: o.condition || '',
+          result: o.second_era_result || o.how_it_manifests || o.what_the_player_sees || '',
+          cost: o.the_cost || o.cost || '',
+          final_line: o.final_line || '',
+          endgame_tendency: o.endgame_tendency || '',
+          how_it_starts: o.how_it_starts || '',
+          player_role: o.player_role || '',
+          spawns_cultures: o.spawns_cultures || [],
+          spawns_tensions: o.spawns_tensions || [],
+          faction_impact: o.faction_impact || {},
+          era_4_shape: o.era_4_shape || '',
+          how_it_manifests: o.how_it_manifests || '',
+          axisId: axis.id,
+          eraId: era.id,
+          eraIndex: ei,
+          axisIndex: ai,
+          outcomeIndex: oi,
+          classification: classifyOutcome(o),
+        };
+        axis.outcomeIds.push(outcome.id);
+        tlMap.outcomes.push(outcome);
+        tlMap.edges.push({ from: axis.id, to: outcome.id, type: 'axis_outcome' });
+      });
+    });
+
+    // Process notable combinations
+    (ef.notable_combinations || []).forEach((c, ci) => {
+      const combo = {
+        id: `${era.id}_combo_${ci}`,
+        name: c.name,
+        summary: c.summary,
+        outcomeIds: c.axes || [],
+        eraId: era.id,
+      };
+      era.combinationIds.push(combo.id);
+      tlMap.combinations.push(combo);
+    });
+
+    // Process emerging cultures
+    (ef.emerging_cultures || []).forEach((c, ci) => {
+      const culture = {
+        id: c.id || `${era.id}_culture_${ci}`,
+        name: c.name,
+        description: c.description,
+        condition: c.condition || '',
+        eraId: era.id,
+      };
+      era.cultureIds.push(culture.id);
+      tlMap.cultures.push(culture);
+    });
+  });
+
+  // Throughlines from story arc
+  tlMap.throughlines = arc?.throughlines?.threads || [];
+
+  // Build world state tree from branching_history (preferred) or fall back to notable combinations
+  tlMap.states = [];
+  tlMap.stateEdges = [];
+
+  const branchingHistory = timelines.find(t => t.id === 'branching_history');
+
+  if (branchingHistory) {
+    // Build tree from branching_history.json
+    const stateMap = {};
+    const allNodes = [branchingHistory.root, ...(branchingHistory.states || [])];
+
+    // Assign depth levels by walking the tree
+    function assignDepth(nodeId, depth) {
+      const node = allNodes.find(n => n.id === nodeId);
+      if (!node || stateMap[nodeId]) return;
+      stateMap[nodeId] = depth;
+      (node.branches_into || []).forEach(childId => assignDepth(childId, depth + 1));
+    }
+    assignDepth(branchingHistory.root.id, 0);
+
+    // Create state nodes
+    allNodes.forEach(n => {
+      const depth = stateMap[n.id] ?? 0;
+      const we = n.what_exists || {};
+      const classification = classifyOutcome({ short: n.tension || '', name: n.name || '', endgame_tendency: '' });
+
+      tlMap.states.push({
+        id: n.id,
+        name: n.name,
+        summary: n.tension || n.feels_like || '',
+        description: n.tension || '',
+        condition: n.condition || '',
+        feels_like: n.feels_like || '',
+        what_exists: we,
+        years: n.years || '',
+        runs: n.runs || '',
+        depth,
+        parentId: n.parent || null,
+        childIds: n.branches_into || [],
+        classification,
+        radius: depth === 0 ? 34 : 26,
+        composingOutcomes: [],
+        outcomeIds: [],
+        eraIndex: depth,
+        stateIndex: 0, // will be set during layout
+      });
+    });
+
+    // Build edges from parent→child relationships
+    tlMap.states.forEach(s => {
+      (s.childIds || []).forEach(childId => {
+        if (tlMap.states.find(c => c.id === childId)) {
+          tlMap.stateEdges.push({ from: s.id, to: childId });
+        }
+      });
+    });
+
+    // Assign stateIndex per depth for layout
+    const maxDepth = Math.max(...tlMap.states.map(s => s.depth));
+    for (let d = 0; d <= maxDepth; d++) {
+      const atDepth = tlMap.states.filter(s => s.depth === d);
+      atDepth.forEach((s, i) => { s.stateIndex = i; });
+    }
+  } else {
+    // Fallback: build from notable combinations (old behavior)
+    tlMap.eras.forEach((era, ei) => {
+      const combos = tlMap.combinations.filter(c => c.eraId === era.id);
+      combos.forEach((c, ci) => {
+        const composingOutcomes = c.outcomeIds.map(oid =>
+          tlMap.outcomes.find(o => o.id === oid || o.id.endsWith('_' + oid))
+        ).filter(Boolean);
+        let classification = 'default';
+        if (composingOutcomes.length) {
+          const counts = {};
+          composingOutcomes.forEach(o => { counts[o.classification] = (counts[o.classification]||0) + 1; });
+          classification = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+        }
+        tlMap.states.push({
+          id: c.id, name: c.name, summary: c.summary, eraId: era.id,
+          eraIndex: ei, stateIndex: ci, outcomeIds: c.outcomeIds, depth: ei,
+          composingOutcomes: composingOutcomes.map(o => ({ id: o.id, name: o.name, short: o.short })),
+          classification, radius: 28, childIds: [], parentId: null,
+        });
+      });
+    });
+  }
+}
+
+function setupTimelineCanvas() {
+  const canvas = document.getElementById('timelineCanvas');
+  const container = document.getElementById('timelineMapContainer');
+  tlMap.canvas = canvas;
+  tlMap.ctx = canvas.getContext('2d');
+  tlMap.dpr = window.devicePixelRatio || 1;
+
+  function resize() {
+    const rect = container.getBoundingClientRect();
+    tlMap.W = rect.width;
+    tlMap.H = rect.height - 37; // minus toggle bar height accounted by container
+    canvas.width = tlMap.W * tlMap.dpr;
+    canvas.height = tlMap.H * tlMap.dpr;
+    canvas.style.width = tlMap.W + 'px';
+    canvas.style.height = tlMap.H + 'px';
+    tlMap.ctx.setTransform(tlMap.dpr, 0, 0, tlMap.dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', () => { resize(); });
+
+  // Mouse handlers
+  canvas.addEventListener('mousedown', tlMouseDown);
+  canvas.addEventListener('mousemove', tlMouseMove);
+  canvas.addEventListener('mouseup', tlMouseUp);
+  canvas.addEventListener('wheel', tlWheel, { passive: false });
+  canvas.addEventListener('click', tlClick);
+
+  requestAnimationFrame(tlDraw);
+}
+
+// ─── Layout Calculations ─────
+
+function layoutLevel0() {
+  // Parent map: only root + depth-1 states (the main branches)
+  const W = tlMap.W, H = tlMap.H;
+  const parentStates = tlMap.states.filter(s => s.depth <= 1);
+  const root = parentStates.find(s => s.depth === 0);
+  const branches = parentStates.filter(s => s.depth === 1);
+
+  if (root) {
+    root.tx = 150;
+    root.ty = H / 2;
+    root.radius = 40;
+  }
+
+  const spacing = Math.min(100, (H - 80) / Math.max(branches.length, 1));
+  const startY = (H - spacing * (branches.length - 1)) / 2;
+  branches.forEach((s, i) => {
+    s.tx = W * 0.55;
+    s.ty = startY + i * spacing;
+    s.radius = 34;
+  });
+
+  // Hide all deeper states off-screen
+  tlMap.states.filter(s => s.depth > 1).forEach(s => {
+    s.tx = W + 200;
+    s.ty = H / 2;
+  });
+
+  fitCameraToNodes(parentStates, W, H);
+
+  tlMap.eras.forEach((e, i) => { e.tx = -100; e.ty = -100; e.radius = 42; });
+}
+
+function layoutSubtree(rootId) {
+  // Variation view: show the selected parent and ALL its descendants
+  const W = tlMap.W, H = tlMap.H;
+  const colSpacing = 180;
+  const nodeSpacing = 56;
+
+  // Collect all descendants
+  const descendants = [];
+  function collect(id, relDepth) {
+    const node = tlMap.states.find(s => s.id === id);
+    if (!node || descendants.find(d => d.id === id)) return;
+    node._relDepth = relDepth;
+    descendants.push(node);
+    (node.childIds || []).forEach(cid => collect(cid, relDepth + 1));
+  }
+  collect(rootId, 0);
+
+  const maxRelDepth = Math.max(...descendants.map(d => d._relDepth), 0);
+
+  // Position by relative depth columns
+  for (let d = 0; d <= maxRelDepth; d++) {
+    const atDepth = descendants.filter(s => s._relDepth === d);
+    const x = 80 + d * colSpacing;
+    const totalH = atDepth.length * nodeSpacing;
+    const startY = (H - totalH) / 2 + nodeSpacing / 2;
+
+    atDepth.forEach((s, si) => {
+      s.tx = x;
+      s.ty = startY + si * nodeSpacing;
+      if (d === 0) s.radius = 34;
+      else if (s.type === 'endgame') s.radius = 20;
+      else s.radius = 26;
+    });
+  }
+
+  // Pull children toward parents (3 passes)
+  for (let pass = 0; pass < 3; pass++) {
+    for (let d = 1; d <= maxRelDepth; d++) {
+      const atDepth = descendants.filter(s => s._relDepth === d);
+      atDepth.forEach(s => {
+        const parent = descendants.find(p => p.childIds?.includes(s.id));
+        if (parent && parent.ty !== undefined) {
+          s.ty += (parent.ty - s.ty) * 0.3;
+        }
+      });
+      atDepth.sort((a, b) => a.ty - b.ty);
+      for (let i = 1; i < atDepth.length; i++) {
+        const minGap = nodeSpacing * 0.75;
+        if (atDepth[i].ty - atDepth[i-1].ty < minGap) {
+          atDepth[i].ty = atDepth[i-1].ty + minGap;
+        }
+      }
+    }
+  }
+
+  // Hide non-descendant states off-screen
+  tlMap.states.forEach(s => {
+    if (!descendants.includes(s)) {
+      s.tx = W + 200;
+      s.ty = H / 2;
+    }
+  });
+
+  fitCameraToNodes(descendants, W, H);
+}
+
+function fitCameraToNodes(nodes, W, H) {
+  const allX = nodes.map(s => s.tx).filter(x => x !== undefined && x < W + 100);
+  const allY = nodes.map(s => s.ty).filter(y => y !== undefined);
+  if (!allX.length) return;
+  const minX = Math.min(...allX) - 60, maxX = Math.max(...allX) + 60;
+  const minY = Math.min(...allY) - 60, maxY = Math.max(...allY) + 60;
+  const treeW = maxX - minX;
+  const treeH = maxY - minY;
+  const treeCX = (minX + maxX) / 2;
+  const treeCY = (minY + maxY) / 2;
+
+  const fitZoom = Math.min((W - 20) / treeW, (H - 60) / treeH, 1);
+  tlMap.target.zoom = fitZoom;
+  tlMap.camera.zoom = fitZoom;
+  tlMap.target.x = -(treeCX - W / 2) * fitZoom;
+  tlMap.camera.x = tlMap.target.x;
+  tlMap.target.y = -(treeCY - H / 2) * fitZoom;
+  tlMap.camera.y = tlMap.target.y;
+}
+
+function layoutLevel1(eraIdx) {
+  const era = tlMap.eras[eraIdx];
+  const axes = tlMap.axes.filter(a => a.eraId === era.id);
+  const W = tlMap.W, H = tlMap.H;
+  const colWidth = W / (axes.length + 1);
+
+  axes.forEach((ax, ai) => {
+    ax.tx = colWidth * (ai + 1);
+    ax.ty = 60;
+    const outcomes = tlMap.outcomes.filter(o => o.axisId === ax.id);
+    const spacing = Math.min(90, (H - 160) / Math.max(outcomes.length, 1));
+    outcomes.forEach((o, oi) => {
+      o.tx = ax.tx;
+      o.ty = 130 + oi * spacing;
+      o.radius = 18;
+    });
+  });
+
+  // Position cultures near their parent outcomes
+  const eraCultures = tlMap.cultures.filter(c => c.eraId === era.id);
+  eraCultures.forEach((c, ci) => {
+    // Find parent outcome by matching condition
+    const parent = tlMap.outcomes.find(o => c.condition && (c.condition.includes(o.id) || o.id.includes(c.condition.split('|')[0])));
+    if (parent) {
+      c.tx = parent.tx + 60;
+      c.ty = parent.ty + 15;
+    } else {
+      c.tx = 80;
+      c.ty = H - 80 - ci * 30;
+    }
+    c.radius = 8;
+  });
+}
+
+// ─── Camera & Animation ─────
+
+function goToLevel0() {
+  tlMap.level = 0;
+  tlMap.selectedEra = null;
+  tlMap.selectedOutcome = null;
+  tlMap.subtreeRoot = null;
+  layoutLevel0();
+  tlMap.eras.forEach(e => { if (e.x === undefined) { e.x = e.tx; e.y = e.ty; } });
+  tlMap.states.forEach(s => { if (s.x === undefined) { s.x = s.tx; s.y = s.ty; } });
+  closeTimelineDetail();
+  updateBreadcrumb();
+}
+
+function goToSubtree(stateId) {
+  tlMap.level = 'subtree';
+  tlMap.subtreeRoot = stateId;
+  tlMap.selectedOutcome = null;
+  layoutSubtree(stateId);
+  closeTimelineDetail();
+  updateBreadcrumb();
+}
+
+function goToLevel1(eraIdx) {
+  tlMap.level = 1;
+  tlMap.selectedEra = eraIdx;
+  tlMap.selectedOutcome = null;
+  layoutLevel1(eraIdx);
+
+  // Init positions if needed
+  const era = tlMap.eras[eraIdx];
+  const axes = tlMap.axes.filter(a => a.eraId === era.id);
+  axes.forEach(ax => { if (ax.x === undefined) { ax.x = era.x || era.tx; ax.y = era.y || era.ty; } });
+  const outcomes = tlMap.outcomes.filter(o => o.eraId === era.id);
+  outcomes.forEach(o => { if (o.x === undefined) { o.x = era.x || era.tx; o.y = era.y || era.ty; } });
+  const cultures = tlMap.cultures.filter(c => c.eraId === era.id);
+  cultures.forEach(c => { if (c.x === undefined) { c.x = era.x || era.tx; c.y = era.y || era.ty; } });
+
+  tlMap.target = { x: 0, y: 0, zoom: 1 };
+  closeTimelineDetail();
+  updateBreadcrumb();
+}
+
+function goToLevel2(outcomeId) {
+  const outcome = tlMap.outcomes.find(o => o.id === outcomeId);
+  if (!outcome) return;
+  tlMap.level = 2;
+  tlMap.selectedOutcome = outcomeId;
+  showTimelineDetail(outcome);
+  updateBreadcrumb();
+}
+
+function updateBreadcrumb() {
+  const bc = document.getElementById('timelineBreadcrumb');
+  let html = '';
+
+  // Story Arc (always present, clickable unless we're on it)
+  html += (tlMap.level === 0)
+    ? '<span class="bc-current">Story Arc</span>'
+    : '<span onclick="goToLevel0()">Story Arc</span>';
+
+  // Subtree level
+  if (tlMap.level === 'subtree') {
+    const root = tlMap.states.find(s => s.id === tlMap.subtreeRoot);
+    html += '<span class="bc-sep"> › </span>';
+    html += `<span class="bc-current">${esc(root?.name || '')}</span>`;
+  }
+
+  // Era axis level
+  if (tlMap.level === 1 || tlMap.level === 2) {
+    const era = tlMap.eras[tlMap.selectedEra];
+    html += '<span class="bc-sep"> › </span>';
+    html += tlMap.level === 1
+      ? `<span class="bc-current">${esc(era?.name || '')}</span>`
+      : `<span onclick="goToLevel1(${tlMap.selectedEra})">${esc(era?.name || '')}</span>`;
+  }
+
+  if (tlMap.level === 2) {
+    const outcome = tlMap.outcomes.find(o => o.id === tlMap.selectedOutcome);
+    html += '<span class="bc-sep"> › </span>';
+    html += `<span class="bc-current">${esc(outcome?.name || '')}</span>`;
+  }
+
+  bc.innerHTML = html;
+
+  const hint = document.getElementById('timelineMapHint');
+  if (tlMap.level === 0) hint.textContent = 'Click a branch to explore its variations · Scroll to zoom · Drag to pan';
+  else if (tlMap.level === 'subtree') hint.textContent = 'Click a state for details · Breadcrumb to go back · Scroll to zoom · Drag to pan';
+  else if (tlMap.level === 1) hint.textContent = 'Click an outcome to see details · Scroll to zoom · Drag to pan';
+  else hint.textContent = 'Detail panel open · Click another node or navigate with breadcrumbs';
+}
+
+function showTimelineDetail(outcome) {
+  const panel = document.getElementById('timelineDetailPanel');
+  const content = document.getElementById('timelineDetailContent');
+
+  let html = `<h3>${esc(outcome.name)}</h3>`;
+  if (outcome.short) html += `<div class="detail-short">${esc(outcome.short)}</div>`;
+  if (outcome.description) html += `<div class="detail-desc">${esc(outcome.description)}</div>`;
+
+  if (outcome.condition) {
+    html += `<div class="detail-section"><div class="detail-label">Condition</div><div class="detail-body">${esc(outcome.condition)}</div></div>`;
+  }
+  if (outcome.result) {
+    html += `<div class="detail-section"><div class="detail-label">Consequence</div><div class="detail-body">${esc(outcome.result)}</div></div>`;
+  }
+  if (outcome.how_it_starts) {
+    html += `<div class="detail-section"><div class="detail-label">How It Starts</div><div class="detail-body">${esc(outcome.how_it_starts)}</div></div>`;
+  }
+  if (outcome.player_role) {
+    html += `<div class="detail-section"><div class="detail-label">Player Role</div><div class="detail-body">${esc(outcome.player_role)}</div></div>`;
+  }
+  if (outcome.cost) {
+    html += `<div class="detail-section"><div class="detail-label">The Cost</div><div class="detail-body">${esc(outcome.cost)}</div></div>`;
+  }
+  if (outcome.how_it_manifests) {
+    html += `<div class="detail-section"><div class="detail-label">Manifestation</div><div class="detail-body">${esc(outcome.how_it_manifests)}</div></div>`;
+  }
+  if (outcome.era_4_shape) {
+    html += `<div class="detail-section"><div class="detail-label">Era 4 Shape</div><div class="detail-body">${esc(outcome.era_4_shape)}</div></div>`;
+  }
+  if (outcome.final_line) {
+    html += `<div class="detail-section"><div class="detail-label">Final Line</div><div class="detail-body" style="font-style:italic;color:var(--text)">${esc(outcome.final_line)}</div></div>`;
+  }
+  if (outcome.endgame_tendency) {
+    html += `<div class="detail-section"><div class="detail-label">Tends Toward</div><div class="detail-body">${esc(outcome.endgame_tendency)}</div></div>`;
+  }
+
+  // Tags
+  const tags = [
+    ...outcome.spawns_cultures.map(c => c.replace(/_/g, ' ')),
+    ...outcome.spawns_tensions.map(t => t.replace(/_/g, ' ')),
+    ...Object.entries(outcome.faction_impact).map(([f, e]) => `${f.replace(/_/g, ' ')}: ${e.replace(/_/g, ' ')}`),
+  ];
+  if (tags.length) {
+    html += `<div class="detail-section"><div class="detail-label">Impact</div><div class="detail-tags">`;
+    tags.forEach(t => html += `<span class="detail-tag">${esc(t)}</span>`);
+    html += '</div></div>';
+  }
+
+  content.innerHTML = html;
+  panel.classList.add('open');
+}
+
+function closeTimelineDetail() {
+  document.getElementById('timelineDetailPanel').classList.remove('open');
+}
+
+// ─── Rendering ─────
+
+function tlDraw() {
+  if (!tlMap.canvas) { requestAnimationFrame(tlDraw); return; }
+  const ctx = tlMap.ctx;
+  const W = tlMap.W, H = tlMap.H;
+
+  // Animate camera
+  const ease = 0.1;
+  tlMap.camera.x += (tlMap.target.x - tlMap.camera.x) * ease;
+  tlMap.camera.y += (tlMap.target.y - tlMap.camera.y) * ease;
+  tlMap.camera.zoom += (tlMap.target.zoom - tlMap.camera.zoom) * ease;
+
+  // Animate node positions
+  const lerp = 0.08;
+  [...tlMap.eras, ...tlMap.axes, ...tlMap.outcomes, ...tlMap.cultures, ...tlMap.states].forEach(n => {
+    if (n.tx !== undefined) {
+      if (n.x === undefined) { n.x = n.tx; n.y = n.ty; }
+      n.x += (n.tx - n.x) * lerp;
+      n.y += (n.ty - n.y) * lerp;
+    }
+  });
+
+  ctx.setTransform(tlMap.dpr, 0, 0, tlMap.dpr, 0, 0);
+  ctx.clearRect(0, 0, W, H);
+
+  ctx.save();
+  // Camera transform
+  const cx = W / 2, cy = H / 2;
+  ctx.translate(cx + tlMap.camera.x, cy + tlMap.camera.y);
+  ctx.scale(tlMap.camera.zoom, tlMap.camera.zoom);
+  ctx.translate(-cx, -cy);
+
+  if (tlMap.level === 0) drawLevel0(ctx, W, H);
+  else if (tlMap.level === 'subtree') drawSubtree(ctx, W, H);
+  else if (tlMap.level === 1) drawLevel1(ctx, W, H);
+
+  ctx.restore();
+  requestAnimationFrame(tlDraw);
+}
+
+function drawStateNode(ctx, s, opts = {}) {
+  if (s.x === undefined || s.tx > 1500) return; // skip off-screen
+  const isHovered = opts.isHovered || false;
+  const lineageColor = opts.lineageColor || null;
+  const r = s.radius || 28;
+  const color = lineageColor || OUTCOME_COLORS[s.classification] || OUTCOME_COLORS.default;
+  const isEndgame = s.type === 'endgame';
+
+  // Glow
+  if (isHovered) {
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, r + 5, 0, Math.PI * 2);
+    ctx.fillStyle = color + '20';
+    ctx.fill();
+  }
+
+  // Circle
+  ctx.beginPath();
+  ctx.arc(s.x, s.y, r, 0, Math.PI * 2);
+  ctx.fillStyle = isHovered ? color + '30' : color + (isEndgame ? '0c' : '15');
+  ctx.fill();
+  if (isEndgame && !isHovered) ctx.setLineDash([3, 3]);
+  ctx.strokeStyle = isHovered ? color : color + (isEndgame ? '50' : '70');
+  ctx.lineWidth = isHovered ? 2 : 1.5;
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Name
+  ctx.font = (isEndgame ? '10' : '11') + 'px -apple-system, sans-serif';
+  ctx.fillStyle = isHovered ? '#e8ecf4' : '#c8cdd8';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  const maxW = r * 2 - 8;
+  const words = s.name.split(' ');
+  let line = '';
+  const lines = [];
+  words.forEach(w => {
+    const test = line ? line + ' ' + w : w;
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
+    else line = test;
+  });
+  if (line) lines.push(line);
+  const lineH = 13;
+  const startY = s.y - ((lines.length - 1) * lineH) / 2;
+  lines.forEach((l, li) => ctx.fillText(l, s.x, startY + li * lineH));
+}
+
+function drawLevel0(ctx, W, H) {
+  // Parent map: only root + depth-1 states. Clean and simple.
+  const parentStates = tlMap.states.filter(s => s.depth <= 1 && s.tx < W + 100);
+  const root = parentStates.find(s => s.depth === 0);
+  const branches = parentStates.filter(s => s.depth === 1);
+
+  // Draw edges from root to branches
+  if (root) {
+    branches.forEach((b, i) => {
+      if (b.x === undefined || root.x === undefined) return;
+      const color = ERA_COLORS[i % ERA_COLORS.length];
+      ctx.beginPath();
+      const midX = (root.x + b.x) / 2;
+      ctx.moveTo(root.x + (root.radius || 40), root.y);
+      ctx.bezierCurveTo(midX, root.y, midX, b.y, b.x - (b.radius || 34), b.y);
+      ctx.strokeStyle = color + '40';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Arrow
+      const ax = b.x - (b.radius || 34) - 6;
+      ctx.beginPath();
+      ctx.moveTo(ax, b.y - 4);
+      ctx.lineTo(ax + 7, b.y);
+      ctx.lineTo(ax, b.y + 4);
+      ctx.fillStyle = color + '40';
+      ctx.fill();
+    });
+  }
+
+  // Draw nodes
+  parentStates.forEach((s, i) => {
+    const isHovered = tlMap.hovered?.type === 'state' && tlMap.hovered.id === s.id;
+    const color = s.depth === 0 ? '#d4875e' : ERA_COLORS[branches.indexOf(s) % ERA_COLORS.length];
+    drawStateNode(ctx, s, { isHovered, lineageColor: color });
+
+    // Child count badge
+    if (s.childIds?.length && !isHovered) {
+      ctx.font = '9px -apple-system, sans-serif';
+      ctx.fillStyle = '#4a5464';
+      ctx.textAlign = 'center';
+      // Count all descendants
+      let descCount = 0;
+      function countDesc(id) { const n = tlMap.states.find(x => x.id === id); if (n) { descCount++; (n.childIds||[]).forEach(countDesc); } }
+      (s.childIds||[]).forEach(countDesc);
+      ctx.fillText(`${descCount} states →`, s.x, s.y + (s.radius || 34) + 14);
+    }
+    if (isHovered && s.description) {
+      ctx.font = '10px -apple-system, sans-serif';
+      ctx.fillStyle = '#7a8494';
+      ctx.textAlign = 'center';
+      const desc = s.description.length > 80 ? s.description.slice(0, 77) + '...' : s.description;
+      ctx.fillText(desc, s.x, s.y + (s.radius || 34) + 14);
+    }
+  });
+}
+
+function drawSubtree(ctx, W, H) {
+  // Variation view: the selected parent's full descendant tree with lineage colors
+  const rootState = tlMap.states.find(s => s.id === tlMap.subtreeRoot);
+  if (!rootState) return;
+  const rootColor = ERA_COLORS[tlMap.states.filter(s => s.depth === 1).indexOf(rootState) % ERA_COLORS.length] || '#d4875e';
+
+  // Collect visible descendants
+  const visible = new Set();
+  function collectVisible(id) {
+    visible.add(id);
+    const n = tlMap.states.find(s => s.id === id);
+    if (n) (n.childIds || []).forEach(collectVisible);
+  }
+  collectVisible(tlMap.subtreeRoot);
+
+  // Draw edges with lineage color
+  const selectedState = tlMap.hovered?.type === 'state' ? tlMap.hovered.id : null;
+  tlMap.stateEdges.forEach(edge => {
+    if (!visible.has(edge.from) || !visible.has(edge.to)) return;
+    const src = tlMap.states.find(s => s.id === edge.from);
+    const dst = tlMap.states.find(s => s.id === edge.to);
+    if (!src || !dst || src.x === undefined || dst.x === undefined || src.tx > 1500 || dst.tx > 1500) return;
+
+    const isHighlighted = selectedState === src.id || selectedState === dst.id;
+    ctx.beginPath();
+    const midX = (src.x + dst.x) / 2;
+    ctx.moveTo(src.x + (src.radius || 26), src.y);
+    ctx.bezierCurveTo(midX, src.y, midX, dst.y, dst.x - (dst.radius || 26), dst.y);
+    ctx.strokeStyle = rootColor;
+    ctx.globalAlpha = isHighlighted ? 0.5 : 0.15;
+    ctx.lineWidth = isHighlighted ? 2.5 : 1.5;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    // Arrow
+    const ax = dst.x - (dst.radius || 26) - 6;
+    ctx.beginPath();
+    ctx.moveTo(ax, dst.y - 3);
+    ctx.lineTo(ax + 6, dst.y);
+    ctx.lineTo(ax, dst.y + 3);
+    ctx.fillStyle = rootColor;
+    ctx.globalAlpha = isHighlighted ? 0.5 : 0.15;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  });
+
+  // Draw nodes
+  tlMap.states.forEach(s => {
+    if (!visible.has(s.id) || s.tx > 1500) return;
+    const isHovered = tlMap.hovered?.type === 'state' && tlMap.hovered.id === s.id;
+    drawStateNode(ctx, s, { isHovered, lineageColor: rootColor });
+  });
+}
+
+function drawLevel1(ctx, W, H) {
+  const era = tlMap.eras[tlMap.selectedEra];
+  const axes = tlMap.axes.filter(a => a.eraId === era.id);
+
+  // Draw axis columns
+  axes.forEach(ax => {
+    // Axis header
+    ctx.font = 'bold 13px -apple-system, sans-serif';
+    ctx.fillStyle = '#d4875e';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+
+    // Wrap axis name
+    const words = ax.name.split(' ');
+    let line = '';
+    let lineY = ax.y || 60;
+    words.forEach(w => {
+      const test = line ? line + ' ' + w : w;
+      if (ctx.measureText(test).width > 180) {
+        ctx.fillText(line, ax.x, lineY);
+        line = w;
+        lineY += 16;
+      } else {
+        line = test;
+      }
+    });
+    if (line) ctx.fillText(line, ax.x, lineY);
+
+    // Vertical guide line
+    const outcomes = tlMap.outcomes.filter(o => o.axisId === ax.id);
+    if (outcomes.length) {
+      ctx.beginPath();
+      ctx.moveTo(ax.x, (outcomes[0].y || 130) - 20);
+      ctx.lineTo(ax.x, (outcomes[outcomes.length - 1].y || 130) + 20);
+      ctx.strokeStyle = 'rgba(122,132,148,0.1)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+  });
+
+  // Draw combination arcs
+  const eraCombos = tlMap.combinations.filter(c => c.eraId === era.id);
+  eraCombos.forEach(combo => {
+    const matchedOutcomes = combo.outcomeIds.map(oid =>
+      tlMap.outcomes.find(o => o.id === oid || o.id.endsWith('_' + oid))
+    ).filter(Boolean);
+
+    if (matchedOutcomes.length >= 2) {
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(212,135,94,0.12)';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([3, 3]);
+      for (let i = 0; i < matchedOutcomes.length - 1; i++) {
+        const a = matchedOutcomes[i], b = matchedOutcomes[i + 1];
+        const cpx = (a.x + b.x) / 2;
+        const cpy = Math.min(a.y, b.y) - 30;
+        if (i === 0) ctx.moveTo(a.x, a.y);
+        ctx.quadraticCurveTo(cpx, cpy, b.x, b.y);
+      }
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  });
+
+  // Draw outcome nodes
+  const eraOutcomes = tlMap.outcomes.filter(o => o.eraId === era.id);
+  eraOutcomes.forEach(o => {
+    const isHovered = tlMap.hovered?.type === 'outcome' && tlMap.hovered.id === o.id;
+    const isSelected = tlMap.selectedOutcome === o.id;
+    const r = o.radius || 18;
+    const color = OUTCOME_COLORS[o.classification] || OUTCOME_COLORS.default;
+
+    // Glow
+    if (isHovered || isSelected) {
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, r + 4, 0, Math.PI * 2);
+      ctx.fillStyle = color + '25';
+      ctx.fill();
+    }
+
+    // Node circle
+    ctx.beginPath();
+    ctx.arc(o.x, o.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = (isHovered || isSelected) ? color + '35' : color + '15';
+    ctx.fill();
+    ctx.strokeStyle = (isHovered || isSelected) ? color : color + '60';
+    ctx.lineWidth = (isHovered || isSelected) ? 2 : 1;
+    ctx.stroke();
+
+    // Label
+    const label = o.short || o.name;
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.fillStyle = (isHovered || isSelected) ? '#e8ecf4' : '#c8cdd8';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    // Wrap label in node
+    const maxW = r * 2 - 6;
+    const lwords = label.split(' ');
+    let lline = '';
+    let lines = [];
+    lwords.forEach(w => {
+      const test = lline ? lline + ' ' + w : w;
+      if (ctx.measureText(test).width > maxW && lline) {
+        lines.push(lline);
+        lline = w;
+      } else {
+        lline = test;
+      }
+    });
+    if (lline) lines.push(lline);
+
+    const lineH = 13;
+    const startY = o.y - ((lines.length - 1) * lineH) / 2;
+    lines.forEach((l, li) => {
+      ctx.fillText(l, o.x, startY + li * lineH);
+    });
+  });
+
+  // Draw emerging culture satellite nodes
+  const eraCultures = tlMap.cultures.filter(c => c.eraId === era.id);
+  eraCultures.forEach(c => {
+    if (c.x === undefined) return;
+    const isHovered = tlMap.hovered?.type === 'culture' && tlMap.hovered.id === c.id;
+    const r = c.radius || 8;
+
+    // Connection line to parent
+    const parent = tlMap.outcomes.find(o =>
+      c.condition && (c.condition.includes(o.id) || o.id.includes(c.condition.split('|')[0]))
+    );
+    if (parent) {
+      ctx.beginPath();
+      ctx.moveTo(parent.x + (parent.radius || 18), parent.y);
+      ctx.lineTo(c.x, c.y);
+      ctx.strokeStyle = 'rgba(106,154,122,0.2)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = isHovered ? '#6a9a7a40' : '#6a9a7a18';
+    ctx.fill();
+    ctx.strokeStyle = isHovered ? '#6a9a7a' : '#6a9a7a60';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Name
+    ctx.font = '9px -apple-system, sans-serif';
+    ctx.fillStyle = isHovered ? '#c8cdd8' : '#7a8494';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(c.name, c.x + r + 4, c.y);
+  });
+}
+
+// ─── Interaction ─────
+
+function tlScreenToWorld(sx, sy) {
+  const cx = tlMap.W / 2, cy = tlMap.H / 2;
+  return {
+    x: (sx - cx - tlMap.camera.x) / tlMap.camera.zoom + cx,
+    y: (sy - cy - tlMap.camera.y) / tlMap.camera.zoom + cy,
+  };
+}
+
+function tlHitTest(wx, wy) {
+  if (tlMap.level === 0) {
+    // Check state nodes first (they're the primary targets)
+    for (let i = tlMap.states.length - 1; i >= 0; i--) {
+      const s = tlMap.states[i];
+      if (s.x === undefined) continue;
+      const dx = wx - s.x, dy = wy - s.y;
+      if (dx * dx + dy * dy < (s.radius || 28) ** 2) return { type: 'state', id: s.id, index: s.eraIndex, data: s };
+    }
+    // Check era headers (click to go to Level 1)
+    for (let i = 0; i < tlMap.eras.length; i++) {
+      const e = tlMap.eras[i];
+      if (e.x === undefined) continue;
+      // Hit area for era header text
+      if (Math.abs(wx - e.x) < 60 && Math.abs(wy - e.y - 8) < 20) return { type: 'era', index: i, data: e };
+    }
+  } else if (tlMap.level === 'subtree') {
+    // Check all visible descendant states
+    const visible = new Set();
+    function cv(id) { visible.add(id); const n = tlMap.states.find(s => s.id === id); if (n) (n.childIds||[]).forEach(cv); }
+    if (tlMap.subtreeRoot) cv(tlMap.subtreeRoot);
+    for (const s of tlMap.states) {
+      if (!visible.has(s.id) || s.x === undefined || s.tx > 1500) continue;
+      const dx = wx - s.x, dy = wy - s.y;
+      if (dx * dx + dy * dy < (s.radius || 26) ** 2) return { type: 'state', id: s.id, index: s.eraIndex, data: s };
+    }
+  } else if (tlMap.level === 1 || tlMap.level === 2) {
+    const era = tlMap.eras[tlMap.selectedEra];
+    // Check outcomes
+    const eraOutcomes = tlMap.outcomes.filter(o => o.eraId === era.id);
+    for (let i = eraOutcomes.length - 1; i >= 0; i--) {
+      const o = eraOutcomes[i];
+      const dx = wx - o.x, dy = wy - o.y;
+      if (dx * dx + dy * dy < (o.radius || 18) ** 2) return { type: 'outcome', id: o.id, data: o };
+    }
+    // Check cultures
+    const eraCultures = tlMap.cultures.filter(c => c.eraId === era.id);
+    for (const c of eraCultures) {
+      if (c.x === undefined) continue;
+      const dx = wx - c.x, dy = wy - c.y;
+      if (dx * dx + dy * dy < (c.radius || 8) ** 2) return { type: 'culture', id: c.id, data: c };
+    }
+  }
+  return null;
+}
+
+function tlMouseDown(e) {
+  const rect = tlMap.canvas.getBoundingClientRect();
+  tlMap.drag = { active: true, lastX: e.clientX, lastY: e.clientY };
+}
+
+function tlMouseMove(e) {
+  const rect = tlMap.canvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  const { x: wx, y: wy } = tlScreenToWorld(sx, sy);
+
+  // Hover detection
+  tlMap.hovered = tlHitTest(wx, wy);
+  tlMap.canvas.style.cursor = tlMap.hovered ? 'pointer' : (tlMap.drag.active ? 'grabbing' : 'grab');
+
+  // Pan
+  if (tlMap.drag.active) {
+    const dx = e.clientX - tlMap.drag.lastX;
+    const dy = e.clientY - tlMap.drag.lastY;
+    tlMap.target.x += dx;
+    tlMap.target.y += dy;
+    tlMap.camera.x += dx;
+    tlMap.camera.y += dy;
+    tlMap.drag.lastX = e.clientX;
+    tlMap.drag.lastY = e.clientY;
+  }
+}
+
+function tlMouseUp(e) {
+  tlMap.drag.active = false;
+}
+
+function tlClick(e) {
+  const rect = tlMap.canvas.getBoundingClientRect();
+  const sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+  const { x: wx, y: wy } = tlScreenToWorld(sx, sy);
+  const hit = tlHitTest(wx, wy);
+
+  if (!hit) {
+    if (tlMap.level === 2) closeTimelineDetail();
+    return;
+  }
+
+  if (hit.type === 'state' && tlMap.level === 0 && hit.data.childIds?.length) {
+    // At parent level, clicking a branch zooms into its subtree
+    goToSubtree(hit.id);
+    return;
+  }
+
+  if (hit.type === 'state') {
+    // Show state detail in panel
+    const s = hit.data;
+    const we = s.what_exists || {};
+    showTimelineDetail({
+      name: s.name,
+      short: s.years ? `Years ${s.years}` : `Depth ${s.depth}`,
+      description: s.description || s.summary,
+      condition: s.condition || (s.composingOutcomes || []).map(o => o.short || o.name).join(' + '),
+      result: s.feels_like || '',
+      how_it_starts: '',
+      player_role: '',
+      cost: '',
+      how_it_manifests: '',
+      era_4_shape: '',
+      final_line: '',
+      endgame_tendency: s.childIds?.length ? `Branches into: ${s.childIds.map(id => { const c = tlMap.states.find(x => x.id === id); return c ? c.name : id.replace(/_/g,' '); }).join(', ')}` : '',
+      spawns_cultures: [
+        ...(we.dominant_factions || []),
+        ...(we.new_cultures || []),
+        ...(we.active_gods || []),
+      ],
+      spawns_tensions: we.threats || [],
+      faction_impact: {},
+    });
+    tlMap.selectedOutcome = hit.id;
+    updateBreadcrumb();
+  } else if (hit.type === 'era') {
+    goToLevel1(hit.index);
+  } else if (hit.type === 'outcome') {
+    goToLevel2(hit.id);
+  } else if (hit.type === 'culture') {
+    // Show culture in detail panel
+    showTimelineDetail({
+      name: hit.data.name,
+      short: 'Emerging Culture',
+      description: hit.data.description,
+      condition: hit.data.condition,
+      result: '', spawns_cultures: [], spawns_tensions: [], faction_impact: {},
+    });
+    tlMap.level = 2;
+    updateBreadcrumb();
+  }
+}
+
+function tlWheel(e) {
+  e.preventDefault();
+  const factor = e.deltaY > 0 ? 0.92 : 1.08;
+  tlMap.target.zoom = Math.max(0.3, Math.min(3, tlMap.target.zoom * factor));
 }
 
 // ─── Header Stats ───────────────────────────────────────────────────────────

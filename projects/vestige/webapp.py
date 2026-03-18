@@ -628,6 +628,59 @@ class WorldData:
             "valid": len(issues) == 0,
         }
 
+    # ─── Timeline API ────────────────────────────────────────────────────
+
+    def get_timeline(self):
+        """Get all timeline data files."""
+        timeline_dir = DATA_DIR / "timeline"
+        timelines = []
+        if timeline_dir.exists():
+            for json_file in sorted(timeline_dir.glob("*.json")):
+                try:
+                    with open(json_file) as f:
+                        data = json.load(f)
+                    timelines.append(data)
+                except (json.JSONDecodeError, OSError):
+                    continue
+        return timelines
+
+    def get_timeline_combinations(self, era_id):
+        """Get all possible world state combinations for an era's axes."""
+        timelines = self.get_timeline()
+        for tl in timelines:
+            if tl.get("id") == era_id or tl.get("era") == era_id:
+                axes = tl.get("axes", [])
+                # Build all combinations
+                from itertools import product
+                outcome_sets = []
+                for axis in axes:
+                    outcome_sets.append([
+                        {"axis": axis["id"], "axis_name": axis["name"],
+                         "outcome": o["id"], "outcome_name": o["name"],
+                         "short": o.get("short", o["name"])}
+                        for o in axis.get("outcomes", [])
+                    ])
+                combos = []
+                for combo in product(*outcome_sets):
+                    combo_ids = [c["outcome"] for c in combo]
+                    # Check if this matches a notable combination
+                    notable = None
+                    for nc in tl.get("notable_combinations", []):
+                        if set(nc["axes"]) == set(combo_ids):
+                            notable = nc
+                            break
+                    combos.append({
+                        "outcomes": list(combo),
+                        "notable": notable,
+                    })
+                return {
+                    "era": tl.get("name"),
+                    "axes_count": len(axes),
+                    "total_combinations": len(combos),
+                    "combinations": combos,
+                }
+        return {"error": "Era timeline not found"}
+
 
 # ─── HTTP Server ─────────────────────────────────────────────────────────────
 
@@ -701,6 +754,11 @@ class VestigeHandler(http.server.BaseHTTPRequestHandler):
                 self._json(self.world.get_context_checking(entity_type, entity_id))
             else:
                 self._error(400, "Bad path")
+        elif path == "/api/timeline":
+            self._json(self.world.get_timeline())
+        elif path.startswith("/api/timeline/combos/"):
+            era_id = path.split("/")[-1]
+            self._json(self.world.get_timeline_combinations(era_id))
         else:
             self._error(404, "Not found")
 

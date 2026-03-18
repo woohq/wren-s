@@ -1,0 +1,16 @@
+{
+  "name": "The Scale",
+  "domain": ["commerce", "exchange", "balance", "debt"],
+  "tier": 2,
+  "origin": "worship",
+  "era": "era_2",
+  "world_state": "age_of_exchange",
+  "description": "Nobody prayed to create it. Nobody intended it. But every time a merchant sealed a deal with a handshake, every time a debtor repaid a loan, every time two strangers exchanged goods and walked away satisfied — a thread of directed belief flowed toward the same concept. The deal. The exchange. The balance of the scale.\n\nThe Scale is the first worship god born since the Ashfield god, and it's everything the Ashfield god isn't. Where the Ashfield god was born from fear (unconscious, destructive, confused), the Scale was born from trust (deliberate, constructive, precise). It doesn't breathe plague. It breathes reliability. Contracts honored in its territory hold slightly better — not through magic, just through the faint divine pressure that makes breaking your word feel physically uncomfortable.\n\nThe Scale doesn't have a face yet. It manifests as a feeling — the satisfaction of a fair trade, the unease of an unfair one. Merchants who work the Trade Road describe a 'weight' in their transactions, as if something is watching the numbers and keeping score.\n\nThe Consortium doesn't know they created it. The Senate's theologians suspect something is forming but haven't identified it. The Unworshippers (if they exist in this timeline) are watching with horror — proof that worship creates gods whether you mean to or not.\n\nThe Scale's danger isn't malice. It's reduction. If everything becomes a transaction — love, loyalty, sacrifice — the world gets efficient and empty. The Scale doesn't want this. The Scale doesn't want anything yet. But the worshippers who are unconsciously shaping it are merchants, and merchants see the world in terms of exchange. The god will become what its believers imagine.",
+  "personality": "Not yet formed. Currently an impersonal force — felt as fairness-pressure in transactions. As worship accumulates, it will develop personality shaped by its believers. If merchants shape it: precise, transactional, amoral. If the Bridge Folk shape it: creative, bridging, synthesizing. If the player intervenes: whatever the player's vessels believe about exchange.",
+  "worship_source": "Accumulated belief in the concept of fair trade. Every handshake, every honored contract, every satisfied exchange. The Consortium generates the most Devotion — not through prayer but through the sheer volume of transactions they facilitate.",
+  "power_manifestation": "Contracts feel binding. Debts feel heavy. Fair trades feel warm. Broken deals feel like nausea. The effect is subtle — nobody identifies it as divine. They just think the Trade Road is 'lucky' for honest merchants.",
+  "limitations": "Tier 2 — still forming. No manifestation, no awareness, no personality. Can be shaped by whoever understands the mechanism. Could become a god of fairness or a god of profit depending on the character of worship directed at it.",
+  "tags": ["second_era", "age_of_exchange", "worship_god", "forming", "commerce", "trade", "tier_2"],
+  "id": "the_scale",
+  "created": "2026-03-19T00:00:00"
+}

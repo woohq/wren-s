@@ -1,0 +1,35 @@
+{
+  "id": "friend_critical_criminal",
+  "name": "The Collar (Criminal Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["criminal_s_heir"],
+  "callback_detail": "The tannery district. The smell. Her hand on your collar. Three seconds longer than it needed to be.",
+  "text": "They take Mira on a Tuesday.\n\nNot the city guard — your uncle's people. His own crew. She skimmed from three drops over two months, small enough amounts that nobody should have noticed. Somebody noticed.\n\nYour uncle tells you at breakfast, between bites, the way he tells you everything — like it's weather. 'Mira's in the back room. She stole from us. I need you to talk to her.'\n\nTalk to her. In the back room. You know what the back room is for.\n\n'Talk,' you say.\n\n'You grew up together. She'll tell you why. If the reason is good enough, she walks out. If it isn't—' He doesn't finish. He doesn't need to.\n\nThe back room smells like the tannery district. Same chemicals, different purpose. Mira is sitting on the floor with her wrists tied in front of her, not behind — a courtesy, which means your uncle hasn't decided yet, which means this conversation is real.\n\nShe looks up when you come in. She doesn't look afraid. She looks like she looked on the rooftop the night of the bad job — steady heartbeat, fast but steady.\n\n'I know why you did it,' you say. You don't. But you need her to talk.\n\n'No you don't.'\n\n'Then tell me.'\n\nShe's quiet for a long time. Long enough that you can hear the street sounds through the wall, and the street sounds are ordinary, and the ordinariness is obscene.\n\n'My mother,' she says. 'The healer costs. The real one, not the bone-setter on Ash Street. Your uncle pays us enough to live. Not enough to live and also keep someone else alive.'\n\nShe says it flat. The same flat delivery as a girl on a rooftop saying 'you froze.' No performance. No plea.\n\nHer hands are tied with rope. You remember her hand on your collar in the tannery dark. Three seconds longer than necessary. A paragraph in the language of people who survive by not saying what they mean.\n\nThis is the sentence you have to write back.",
+  "choices": [
+    {
+      "text": "Go to your uncle. Tell him the reason. Stake your name on her.",
+      "requires": {"trait_any": ["brave", "compassionate"]},
+      "effects": {"relationship_change": {"friend": 20}, "trait_gain": "vouched_for_a_thief"},
+      "consequence_text": "Your uncle listens. He chews. He looks at you for a long time with an expression you'll spend years learning to read — the expression of a man calculating whether loyalty is an asset or a liability.\n\n'She pays it back,' he says. 'Double. Out of your share.'\n\nYou nod. Mira walks out of the back room. She doesn't thank you. She doesn't need to. The debt between you is past the place where words work.\n\nIt takes eight months to pay the double. You eat thin. She brings you food sometimes — never when anyone is watching, never enough to be noticed. In the language, that's a letter."
+    },
+    {
+      "text": "Untie her. Tell her to run. Take whatever comes.",
+      "requires": {"trait_any": ["brave", "honor_bound"]},
+      "effects": {"relationship_change": {"friend": 15}, "faction_rep": {"criminal_network": -20}, "trait_gain": "burned_a_bridge"},
+      "consequence_text": "You cut the rope. She stares at you.\n\n'Go through the tannery district,' you say. 'The smell. Nobody follows through the smell.'\n\nShe goes. You sit in the back room and wait for your uncle's people to find it empty. The conversation that follows costs you a tooth and three weeks of restricted movement. Your uncle doesn't forgive. But he doesn't kill family.\n\nYou don't see Mira for a year. When you do, she's working the docks — legitimate, somehow. She sees you, and her hand goes to her collar, and three seconds is still a paragraph."
+    },
+    {
+      "text": "\"Your mother. How much does the healer cost?\" Work the problem, not the feeling.",
+      "effects": {"relationship_change": {"friend": 10}, "trait_gain": "problem_solver"},
+      "consequence_text": "She tells you. The number is larger than you expected and smaller than you feared.\n\nYou go to your uncle with a proposal instead of a plea: Mira pays it back through extra work. You supervise. The network doesn't lose a competent runner. Nobody has to visit the back room.\n\nHe agrees because it's practical and because practicality is the only language your uncle respects. Mira works double shifts for three months. You stand watch. Neither of you talks about the conversation in the back room.\n\nBut the problem with solving a problem is that the feeling doesn't go away. She stole because she was desperate. She'll be desperate again. You haven't fixed anything — you've deferred it."
+    },
+    {
+      "text": "Walk out. Tell your uncle you couldn't get anything from her. Let it play out.",
+      "effects": {"relationship_change": {"friend": -20}, "trait_gain": "survivor_s_calculus"},
+      "consequence_text": "You walk out. You tell your uncle the reason wasn't good enough.\n\nYou don't hear the rest. You go to the rooftop where she taught you the whistle signals and you sit there until the sun comes up. The city below you looks the same. It isn't.\n\nMira leaves the back room eventually. Your uncle is lenient — a broken finger, a message. She's out of the network. You see her once more, at the market, and her hand starts to move toward your collar and then stops. The three seconds that should be there aren't.\n\nYou chose the family over the friend. The family noticed. The friend noticed too."
+    }
+  ],
+  "tags": ["relationship", "childhood_friend", "critical", "criminal", "mira", "loyalty", "callback_tannery", "moral_choice"]
+}

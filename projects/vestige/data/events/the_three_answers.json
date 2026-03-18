@@ -13,7 +13,22 @@
         "trait_gain": "iron_doctrine",
         "faction_rep": {"the_forge_council": 10}
       },
-      "consequence_text": "You apprentice yourself more deeply to the craft. The hammer becomes a kind of prayer. There's a clarity in making things that argument can't touch — the weld holds or it doesn't, the blade cuts or it doesn't, and no amount of rhetoric changes the metal's answer.\n\nBut you notice, over time, that the finest sword can't mend a broken friendship. And the most honest forge still needs ore from somewhere else."
+      "consequence_text": "You apprentice yourself more deeply to the craft. The hammer becomes a kind of prayer. There's a clarity in making things that argument can't touch — the weld holds or it doesn't, the blade cuts or it doesn't, and no amount of rhetoric changes the metal's answer.\n\nBut you notice, over time, that the finest sword can't mend a broken friendship. And the most honest forge still needs ore from somewhere else.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_doctrine_hardens",
+            "delay": "years",
+            "description": "The Iron Doctrine has become policy. The Forge Council now judges disputes through the lens of craft — who built more, who built better. A young smith challenges the system: her work is flawless, but she learned from southern texts. Does the doctrine care where the knowledge came from?"
+          },
+          {
+            "id": "the_craft_test",
+            "delay": "years",
+            "description": "A border dispute. Both sides claim a bridge. The Forge Council proposes: whoever can repair it better keeps it. A craft-based justice that sounds fair until you realize one side has better tools."
+          }
+        ],
+        "world_changes": ["The Iron Doctrine gains formal recognition in Thornwall. Philosophy classes at the forge begin."]
+      }
     },
     {
       "text": "The Consul's Proposition makes sense. Understand the problem before you try to fix it.",
@@ -21,7 +36,22 @@
         "trait_gain": "scholar_of_crisis",
         "faction_rep": {"the_solmari_senate": 10}
       },
-      "consequence_text": "You read the summary. Then the full report. Then the sources the report drew from. The scholars are right — the crisis has identifiable causes, traceable failures, predictable patterns. Understanding it makes you feel less helpless.\n\nBut understanding a flood doesn't stop you from drowning in it. And the scholars, you notice, are studying the crisis from inside dry buildings."
+      "consequence_text": "You read the summary. Then the full report. Then the sources the report drew from. The scholars are right — the crisis has identifiable causes, traceable failures, predictable patterns. Understanding it makes you feel less helpless.\n\nBut understanding a flood doesn't stop you from drowning in it. And the scholars, you notice, are studying the crisis from inside dry buildings.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_senate_intervention",
+            "delay": "years",
+            "description": "The Senate sends advisors to Thornwall, citing the crisis report. They call it aid. The Forge Council calls it something else. You're caught between people who helped you understand the crisis and people who live in it."
+          },
+          {
+            "id": "the_scholars_blind_spot",
+            "delay": "years",
+            "description": "A scholar publishes a paper on the Rootwalkers' decline, written entirely from interviews with settled people. The River Tongue is furious. You've read the paper. It's accurate and completely wrong at the same time."
+          }
+        ],
+        "world_changes": ["The Senate's crisis analysis becomes official doctrine in Solmare. Interventionist policy gains momentum."]
+      }
     },
     {
       "text": "Vaya's song stays with you. The stone that cracks is the one that forgot the river.",
@@ -29,7 +59,28 @@
         "trait_gain": "walker",
         "knowledge_gain": "song_of_cracked_stone"
       },
-      "consequence_text": "You learn the Song of the Cracked Stone. It takes a week — the melody is simple but the rhythm is tricky, designed to match the pace of walking, so you can't learn it sitting down.\n\nThe song makes you want to move. Not away from the crisis — through it. To see what the other side looks like from where they're standing.\n\nBut walking doesn't build walls, and sometimes walls are what you need."
+      "consequence_text": "You learn the Song of the Cracked Stone. It takes a week — the melody is simple but the rhythm is tricky, designed to match the pace of walking, so you can't learn it sitting down.\n\nThe song makes you want to move. Not away from the crisis — through it. To see what the other side looks like from where they're standing.\n\nBut walking doesn't build walls, and sometimes walls are what you need.",
+      "spawns": {
+        "events": [
+          {
+            "id": "vayas_second_song",
+            "delay": "years",
+            "description": "Vaya composes a second song — the Song of the Deep Root — arguing that the Cracked Stone went too far. Movement without anchor is just flight. Some Rootwalkers embrace it. Others say she's betraying her own philosophy. You know both songs. They contradict each other. Both are true."
+          },
+          {
+            "id": "the_walking_generation",
+            "delay": "next_era",
+            "description": "A generation of young people from settled communities has taken up the Song. They leave Thornwall, leave Solmare, walk the rivers. Their parents call it a crisis. The Rootwalkers call it flattery. You call it consequence."
+          }
+        ],
+        "characters": [
+          {
+            "id": "vaya_student",
+            "description": "A young Rootwalker who learned the Song of the Cracked Stone from you, not from Vaya. She sings it differently — faster, angrier, with words she added herself. Vaya would be proud. Or horrified."
+          }
+        ],
+        "world_changes": ["The Song of the Cracked Stone spreads beyond the river camps. Settled children hum it in markets."]
+      }
     },
     {
       "text": "None of these. Or all of them. The answer isn't one idea.",
@@ -37,7 +88,17 @@
       "effects": {
         "trait_gain": "synthesist"
       },
-      "consequence_text": "You carry pieces of all three and commit to none. The smiths think you're undecided. The scholars think you're shallow. The singers think you're afraid to move.\n\nMaybe they're all right. But you've noticed something none of them have: they're each describing the same elephant from different angles, and the elephant doesn't care which part of it you're touching."
+      "consequence_text": "You carry pieces of all three and commit to none. The smiths think you're undecided. The scholars think you're shallow. The singers think you're afraid to move.\n\nMaybe they're all right. But you've noticed something none of them have: they're each describing the same elephant from different angles, and the elephant doesn't care which part of it you're touching.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_fourth_answer",
+            "delay": "years",
+            "description": "People have started calling your position 'the fourth answer.' You didn't name it. You didn't organize it. But people who felt trapped between three camps found you and stayed. Now the three camps are all suspicious of you, and the people who followed you are waiting for a philosophy you haven't written."
+          }
+        ],
+        "world_changes": ["A small but growing group rejects the three-camp framing. They don't have a name yet. They might never."]
+      }
     }
   ],
   "cascade_notes": "Each choice aligns the character with a philosophical tradition that echoes through future eras. Iron Doctrine becomes the foundation of northern conservatism. The Consul's Proposition evolves into the Senate's justification for intervention. The Song of the Cracked Stone becomes a Rootwalker anthem of resistance. The synthesist path is the rarest and the one most likely to create something new.",

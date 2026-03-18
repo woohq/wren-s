@@ -1,0 +1,101 @@
+{
+  "id": "the_weight_of_the_deal",
+  "name": "The Weight of the Deal",
+  "age": "adulthood",
+  "category": "world",
+  "world_state": "age_of_exchange",
+  "archetype_filter": ["any"],
+  "faction_present": ["the_merchant_consortium"],
+  "text": "You notice it at the Midpoint Toll.\n\nThe Consortium agent is weighing your cargo — standard procedure, a tax by mass, nothing personal. But when she places the last ingot on the scale, something happens. The scale doesn't just balance. It settles. With a finality that has nothing to do with iron and counterweights.\n\nThe agent notices too. She pauses. Looks at the scale. Looks at you.\n\n'Fair weight,' she says, and means it in a way she didn't mean it yesterday.\n\nYou've been on the Trade Road for a week. Long enough to learn its rhythms — the wayhouse meals, the Consortium guards who nod but don't smile, the Bridge Folk merchants who switch languages mid-sentence without noticing. Long enough to notice that something on this road is different from everywhere else you've been.\n\nDeals feel heavier here. Not harder — heavier. When a merchant quotes you a price, you can feel whether it's fair. Not through experience or instinct — through something in the air itself, like a pressure behind your ears. Fair prices feel warm. Unfair prices feel like swallowing something dry.\n\nA Rootwalker trader told you it's been getting stronger for years. 'The road is honest,' she said. 'Or the road is making us honest. I can't tell which.'\n\nNobody has named it yet. The Consortium calls it 'good trading conditions.' The Senate scholars have written three papers about 'the mercantile effect' without identifying its source. The Bridge Folk, who live closest to it, have a word in their hybrid dialect — talvai — which means roughly 'the weight that isn't weight.'\n\nYou're standing at the tollbooth, watching the scale settle, and you know what none of them have figured out: something is being born from the accumulated belief of a thousand honest transactions. The road didn't create it. The merchants didn't pray for it. But every handshake, every honored debt, every fair weight on the scale was a kind of prayer, and something heard.",
+  "choices": [
+    {
+      "text": "Say nothing. Watch. This knowledge is worth more than anyone realizes.",
+      "effects": {
+        "knowledge_gain": "the_scale_awareness",
+        "trait_gain": "divine_observer"
+      },
+      "consequence_text": "You keep the knowledge to yourself. In the weeks that follow, you start to see it — the faint pressure in every transaction, the way prices drift toward fairness near the Midpoint, the way the most successful Consortium merchants are, improbably, the most honest ones.\n\nThe Scale — you've started calling it that in your head — isn't conscious yet. It's an infant god dreaming in the space between a handshake and a contract. What it becomes depends on who shapes it.\n\nYou could shape it. The knowledge of what it is — that's a tool. A weapon. A responsibility. You haven't decided which.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_scales_first_judgment",
+            "delay": "years",
+            "description": "A Consortium merchant cheats a Rootwalker trader on the Trade Road. The trade feels wrong — physically wrong. The merchant gets nauseous. The goods won't stay on his cart. The Scale has made its first judgment, and nobody understands what happened except you."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Tell the Consortium agent. Someone should know what's growing under their business.",
+      "requires": {"trait_any": ["honest", "compassionate", "brave"]},
+      "effects": {
+        "knowledge_gain": "the_scale_awareness",
+        "faction_rep": {"the_merchant_consortium": 15},
+        "trait_gain": "divine_herald"
+      },
+      "consequence_text": "The agent stares at you. Then at the scale. Then at the road stretching in both directions, every mile of it humming with accumulated belief.\n\n'You're telling me we built a god,' she says. 'By accident. With commerce.'\n\nShe doesn't believe you — not fully. But she reports it. And the report travels up the Consortium, and within a month there are meetings you're not invited to, and within a year the Consortium's behavior changes in ways only you can trace.\n\nThey're not praying. They're investing. They've realized the Scale makes their business better — honest merchants prosper near the Midpoint, dishonest ones fail. So they're leaning into it. Encouraging fair dealing. Not out of morality — out of profit.\n\nThe god is being shaped by its discoverers, and its discoverers are merchants. You gave them the truth. What they build with it is their problem.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_consortium_awakens",
+            "delay": "years",
+            "description": "The Consortium has begun deliberately feeding The Scale — ensuring fair weights, honest prices, transparent contracts. Not for ethics. For power. A god that rewards honest trade makes honest trade profitable. And what's profitable, the Consortium controls."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_toll_keeper",
+            "description": "The Consortium agent you told. She's risen in the organization — the only member who understands what The Scale really is. She's terrified of what happens if the Consortium learns to control it. She's also terrified of what happens if they don't."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Find the Bridge Folk who coined 'talvai.' If anyone understands this, it's the people who live closest to it.",
+      "requires": {"trait_any": ["curious", "perceptive"]},
+      "effects": {
+        "knowledge_gain": "the_scale_awareness",
+        "knowledge_gain_2": "bridge_folk_theology",
+        "trait_gain": "bridge_seeker"
+      },
+      "consequence_text": "You find her in a wayhouse three miles south of the Midpoint. Her name is Dael — half-northern name, half-southern, which is how Bridge Folk names work. She's an artificer, a metalworker-scholar who makes tools that shouldn't function and functions that shouldn't be tools.\n\nWhen you describe what you felt at the tollbooth, she doesn't look surprised. She looks relieved.\n\n'Talvai,' she says. 'I've been feeling it for six years. Nobody believed me. The Consortium thinks it's market conditions. The Senate thinks it's statistical noise. My own people think I'm sensitive.'\n\nShe's more than sensitive. She's been mapping the effect — measuring where talvai is strongest (the Midpoint Cairn), where it's weakest (far from the road), and how it responds to different kinds of trade. She has notebooks full of data that no theologian in the Senate would take seriously because it was collected by a Bridge Folk artificer, not a proper scholar.\n\n'It's a god,' she says. 'And it's going to change everything. The question is whether it changes things for the better or just for the efficient.'\n\nShe's asking you to help her. Not to worship The Scale — to understand it before someone weaponizes it.",
+      "spawns": {
+        "events": [
+          {
+            "id": "daels_experiment",
+            "delay": "years",
+            "description": "Dael has designed an experiment: a deliberately unfair trade conducted at the Midpoint Cairn, with sensors (her own invention) to measure divine response. She needs someone she trusts to be the other party. The results will either prove The Scale exists or prove she's been wrong about everything for six years."
+          }
+        ],
+        "characters": [
+          {
+            "id": "dael_the_artificer",
+            "description": "A Bridge Folk metalworker-scholar who was the first to identify The Scale as a divine entity. She coined 'talvai.' She has six years of data nobody takes seriously. Brilliant, stubborn, afraid of being right."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Warn the Rootwalkers. If anyone understands what worship does, it's the people who sang about the Ashfield.",
+      "requires": {"trait_any": ["perceptive", "walker"]},
+      "effects": {
+        "knowledge_gain": "the_scale_awareness",
+        "faction_rep": {"the_river_tongue": 10},
+        "trait_gain": "pattern_seer"
+      },
+      "consequence_text": "The Rootwalker elder listens without interrupting. When you finish, she's quiet for a long time.\n\n'Again,' she says.\n\nNot 'oh no.' Not 'we must stop it.' Just: again.\n\n'The Ashfield god was born from fear. This one is born from greed.' She pauses. 'No. Not greed. Exchange. That's worse. Greed, people resist. Exchange, people celebrate.'\n\nShe tells you something the settled world doesn't know: the Rootwalkers have a song for this. Not a new song — an old one. The Song of the Second Weight. It describes a force that lives in the space between two people making a deal, and it warns that the force is hungry, and it grows every time someone says 'that's fair' without checking.\n\nThe song is three hundred years old. The Rootwalkers have been waiting for this.\n\n'We can't unworship it,' the elder says. 'It's not born from fear — you can't redirect satisfaction the way you redirect dread. But we can sing about it. Name it. Naming a god is the first step to negotiating with it.'\n\nShe composes a new riversong that night. The Song of the Scale. By morning, three camps know it. By the end of the month, every Rootwalker on the river knows what's growing on the Trade Road. The settled world still thinks it's good business. The river knows better.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_song_of_the_scale",
+            "delay": "years",
+            "description": "The Rootwalkers are singing about The Scale. The song has reached the wayhouses. Merchants who hear it feel uncomfortable — not because the song is threatening, but because it names something they'd rather not think about. The Scale, for the first time, has a name that isn't 'market conditions.'"
+          }
+        ],
+        "world_changes": ["The Rootwalkers name The Scale through riversong. The first public acknowledgment that a new god is forming."]
+      }
+    }
+  ],
+  "cascade_notes": "This event is the discovery moment for The Scale — the commerce god forming in the Age of Exchange. Each choice shapes who controls the narrative: the player (silent observer), the Consortium (profit-driven shapers), the Bridge Folk (scientific investigators), or the Rootwalkers (theological namers). The Scale's nature in future eras depends on which path is taken here.",
+  "tags": ["world", "adulthood", "divine", "commerce", "the_scale", "age_of_exchange", "second_era", "discovery", "cascade_seed", "moral_complexity"]
+}

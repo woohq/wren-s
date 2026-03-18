@@ -1,0 +1,183 @@
+{
+  "id": "first_era_timeline",
+  "name": "First Era — The Foundation",
+  "description": "Civilizations forming, gods establishing. The defining tensions of the First Era branch into multiple possible Second Era states.",
+  "era": "the_first_era",
+  "axes": [
+    {
+      "id": "southern_offer",
+      "name": "The Southern Offer",
+      "description": "Trade vs isolation. The Sunward Courts propose a trade route through the mountain passes. Thornwall must decide.",
+      "outcomes": [
+        {
+          "id": "trade_open",
+          "name": "Trade Opened Freely",
+          "short": "Open trade",
+          "description": "Southern goods flow north, northern ore flows south. Thornwall gets a southern quarter. Young smiths read about metallurgy. Old masters grieve.",
+          "second_era_result": "Blended northern culture emerges — literate, trade-connected, prosperous. But the True Forge retreats to the deep mountains, keeping old ways. Two northern cultures where there was one.",
+          "spawns_cultures": ["bridge_folk", "true_forge"],
+          "spawns_tensions": ["prosperity_vs_identity"],
+          "faction_impact": {"the_forge_council": "splits", "the_solmari_senate": "strengthens"}
+        },
+        {
+          "id": "trade_rejected",
+          "name": "Trade Rejected",
+          "short": "Closed passes",
+          "description": "Thornwall closed the passes. The Senate built a trade post at the mountain's base anyway. Young smiths slip down at night. A black market forms.",
+          "second_era_result": "Thornwall intact but brittle. The Foot — a town of southern traders and northern dissidents — grows at the mountain's base. The Forge Council pretends it doesn't exist.",
+          "spawns_cultures": ["the_foot"],
+          "spawns_tensions": ["internal_disobedience"],
+          "faction_impact": {"the_forge_council": "erodes_from_within", "the_solmari_senate": "adapts"}
+        },
+        {
+          "id": "trade_conditional",
+          "name": "Trade Negotiated",
+          "short": "Conditional treaty",
+          "description": "The seventeen-clause treaty: ore goes south, medicine comes north, nobody enters the forges. Holds for a generation, then a mixed-culture child dissolves the walls.",
+          "second_era_result": "Gradual blending nobody planned. The treaty technically still in effect. Nobody enforces it. A new generation speaks both languages and finds old arguments tiresome. Most stable outcome.",
+          "spawns_cultures": ["treaty_generation"],
+          "spawns_tensions": ["gradual_dissolution"],
+          "faction_impact": {"the_forge_council": "adapts_slowly", "the_solmari_senate": "satisfied"}
+        },
+        {
+          "id": "trade_default",
+          "name": "No Player Engagement",
+          "short": "Default compromise",
+          "description": "NPC-decided compromise pleased nobody. Trade exists but is resentful. Both sides feel cheated.",
+          "second_era_result": "Simmering tension. Neither open nor closed. The costs of trade without the trust, the isolation without the purity.",
+          "spawns_tensions": ["resentful_stagnation"],
+          "faction_impact": {"the_forge_council": "frustrated", "the_solmari_senate": "frustrated"}
+        }
+      ]
+    },
+    {
+      "id": "ash_cough",
+      "name": "The Ash Cough / Ashfield Awakening",
+      "description": "A plague born from accumulated fear. The Ashfield god breathes plague without malice. How the crisis is addressed shapes theology, medicine, and the nature of divinity.",
+      "outcomes": [
+        {
+          "id": "plague_treated",
+          "name": "Treated (Bond Healers)",
+          "short": "Fear-drainers",
+          "description": "Bond-attuned healers drain the fear. Death rate drops from 1-in-3 to 1-in-20. Treatment, not cure. The healers suffer — the work damages them.",
+          "second_era_result": "Endemic disease. Society adapts. Fear-drainers become a recognized profession and a political force. The Ashfield god continues growing slowly. Problem managed, not solved.",
+          "spawns_cultures": ["fear_drainers_guild"],
+          "spawns_tensions": ["healthcare_dependency"],
+          "faction_impact": {"the_forge_council": "dependent_on_healers"}
+        },
+        {
+          "id": "plague_investigated",
+          "name": "Investigated (Ashfield Explored)",
+          "short": "Source discovered",
+          "description": "The player discovers the god is a newborn breathing plague without malice. Knowledge spreads unevenly. Scholars debate. The Ash Tenders say they knew.",
+          "second_era_result": "Intellectual crisis. If the god isn't malicious, is killing it murder? If the plague is breath, is quarantine imprisonment? The philosophical divide deepens.",
+          "spawns_tensions": ["theological_crisis", "ossa_vindication"],
+          "faction_impact": {"the_solmari_senate": "funds_research"}
+        },
+        {
+          "id": "plague_quarantined",
+          "name": "Quarantined",
+          "short": "Sealed passes",
+          "description": "Thornwall sealed. The infected died isolated. The healthy survived behind walls. Trust between the forge quarter and upper town shattered.",
+          "second_era_result": "Thornwall physically survived but socially fractured. The upper town and forge quarter are effectively separate communities. Walls built for plague still standing.",
+          "spawns_tensions": ["internal_fracture", "trust_damage"],
+          "faction_impact": {"the_forge_council": "fractures_internally"}
+        },
+        {
+          "id": "plague_rootwalker",
+          "name": "Rootwalker Knowledge",
+          "short": "Unworship path",
+          "description": "An elder sings the old songs. The Ashfield wasn't always feared. The concept of unworship enters the conversation: change what people believe, change the god.",
+          "second_era_result": "Radical theological movement. If worship creates gods, can unworship unmake them? The Ash Tenders and Rootwalker elders form an unlikely alliance. The Senate wants to study it.",
+          "spawns_cultures": ["the_unworshippers"],
+          "spawns_tensions": ["unworship_movement"],
+          "faction_impact": {"the_river_tongue": "gains_influence", "the_solmari_senate": "intrigued"}
+        },
+        {
+          "id": "plague_default",
+          "name": "No Player Engagement",
+          "short": "Endemic decline",
+          "description": "Nobody investigates. Nobody discovers unworship. The plague becomes background. Cultures adapt around it.",
+          "second_era_result": "Stage 2 by year 20. Stage 3 by year 40. Stage 4 by year 60. The world gets older without getting wiser.",
+          "spawns_tensions": ["chronic_decline"],
+          "faction_impact": {}
+        }
+      ]
+    },
+    {
+      "id": "philosophical_split",
+      "name": "The Three Answers",
+      "description": "Three philosophies emerge from the crisis. Each has genuine value AND serves someone's power. They harden from ideas into political identities.",
+      "outcomes": [
+        {
+          "id": "iron_doctrine",
+          "name": "Iron Doctrine Dominant",
+          "short": "Craft as truth",
+          "description": "You are what you make. If you don't make things, your opinions are worth less. Serves the Forge Council's authority — but produces genuine artisans.",
+          "second_era_result": "Northern conservatism. Craft as moral framework. The Forge Council's philosophy becomes the dominant culture. Prosperity through making, rigidity through certainty.",
+          "faction_impact": {"the_forge_council": "empowered"}
+        },
+        {
+          "id": "consuls_proposition",
+          "name": "Consul's Proposition Dominant",
+          "short": "Knowledge as authority",
+          "description": "We understand the problem, therefore we should lead the solution. Serves the Senate's expansion — but produces genuine scholars.",
+          "second_era_result": "Senate interventionism. Knowledge-as-authority fills the vacuum. Genuine advances in medicine, engineering, law. But authority without trust is just control.",
+          "faction_impact": {"the_solmari_senate": "empowered"}
+        },
+        {
+          "id": "song_dominant",
+          "name": "Song of the Cracked Stone",
+          "short": "Movement as answer",
+          "description": "You cannot own the river. The settled world's problems come from settling. Serves Rootwalker identity — but produces genuine wisdom about adaptability.",
+          "second_era_result": "Rootwalker resistance philosophy spreads. Young people leave settled communities. The Song becomes an anthem. What happens when a generation decides old structures aren't worth maintaining?",
+          "faction_impact": {"the_river_tongue": "empowered"}
+        },
+        {
+          "id": "philosophy_default",
+          "name": "No Dominant Philosophy",
+          "short": "Tribal camps",
+          "description": "No philosophy wins. They become identity markers instead of living ideas. People stop asking 'what's the answer?' and start asking 'which side are you on?'",
+          "second_era_result": "Philosophical stagnation. Three camps, no synthesis. Ideas die when they become team jerseys.",
+          "faction_impact": {}
+        }
+      ]
+    }
+  ],
+  "notable_combinations": [
+    {
+      "axes": ["trade_open", "plague_treated", "iron_doctrine"],
+      "name": "Prosperous Conservatism",
+      "summary": "A prosperous but conservative north. Trade enriches everyone but the old masters feel sold out. The True Forge in the deep mountains becomes a symbol of resistance. Managed plague creates permanent healthcare dependency. Tension: prosperity vs identity."
+    },
+    {
+      "axes": ["trade_rejected", "plague_rootwalker", "song_dominant"],
+      "name": "Radical Isolation",
+      "summary": "An isolated but philosophically radical north. The Foot becomes the most interesting place in the world — where ideas cross borders even if goods don't. The unworship movement creates the first serious challenge to how gods work. Tension: can you change the nature of the divine?"
+    },
+    {
+      "axes": ["trade_conditional", "plague_quarantined", "consuls_proposition"],
+      "name": "Ordered Scars",
+      "summary": "Structurally stable but emotionally scarred. The treaty holds. The quarantine walls hold. Everything holds. But trust is gone. The Senate's knowledge-as-authority philosophy fills the vacuum. Order without trust is just control."
+    },
+    {
+      "axes": ["trade_default", "plague_default", "philosophy_default"],
+      "name": "The Default World",
+      "summary": "Nobody engaged. Resentful compromises. Endemic problems. Stagnant cultures. Not apocalyptic — just less. A world that got older without getting wiser. The heaviest ending."
+    }
+  ],
+  "emerging_cultures": [
+    {"id": "true_forge", "name": "The True Forge", "condition": "trade_open", "description": "Iron Holds purists who rejected trade. Oral tradition only. No outsiders. The most skilled smiths in the world, making weapons for nobody."},
+    {"id": "bridge_folk", "name": "Bridge Folk", "condition": "trade_open", "description": "Mixed-culture children of the trade quarter. Speak both languages. Belong to both worlds and neither."},
+    {"id": "the_foot", "name": "The Foot", "condition": "trade_rejected", "description": "The unofficial town at the mountain's base. Half southern traders, half northern dissidents. A culture of defiance and commerce."},
+    {"id": "fear_drainers_guild", "name": "The Fear-Drainers' Guild", "condition": "plague_treated", "description": "Bond-attuned healers who specialize in Ash Cough. A profession that becomes a political force."},
+    {"id": "the_unworshippers", "name": "The Unworshippers", "condition": "plague_rootwalker", "description": "Can you change a god by changing the story? Part scholar, part heretic, part revolutionary."},
+    {"id": "delta_syndicate", "name": "The Delta Syndicate", "condition": "trade_open|trade_conditional", "description": "The Brackish evolving into a proper mercantile power as trade increases."}
+  ],
+  "historical_figures_fate": [
+    {"id": "vaya", "name": "Vaya", "fates": {"song_dominant": "Legendary figure. Her songs define a generation.", "default": "Dies in obscurity. But the Rootwalkers remember her songs."}},
+    {"id": "harren", "name": "Harren", "fates": {"trade_open": "Dies vindicated — his craft lives on in the trade.", "trade_rejected": "Dies bitter — his forge goes to nobody who meets his standard."}},
+    {"id": "senator_lyris", "name": "Senator Lyris", "fates": {"trade_open": "Achieved her legacy.", "trade_rejected": "Pivoted to other strategies. She always lands on her feet."}},
+    {"id": "ossa", "name": "Ossa", "fates": {"plague_rootwalker": "Critical figure. Was she right all along?", "default": "Eccentric elder, talking to steam. Right about everything, heard by nobody."}}
+  ]
+}

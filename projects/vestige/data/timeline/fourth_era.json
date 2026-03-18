@@ -1,0 +1,218 @@
+{
+  "id": "fourth_era_timeline",
+  "name": "Fourth Era — The Reckoning",
+  "description": "The final question: what kind of world did you build? The player-god's domain crystallizes. The world gives them a name. Past characters are legends. The accumulated weight of every choice across every era determines not an ending — but a reckoning.",
+  "era": "era_4",
+  "depends_on": "third_era_timeline",
+  "years": "400-600+",
+  "runs": "12-20+",
+
+  "axes": [
+    {
+      "id": "domain_crystallization",
+      "name": "What Did You Become?",
+      "description": "Across dozens of lives, the god's nature has been taking shape from accumulated choices. The domain isn't chosen — it emerges. NPCs describe you in consistent terms. Worship power manifests in domain-consistent ways. The god interface changes aesthetically. And then: the name.",
+      "outcomes": [
+        {
+          "id": "god_of_mercy",
+          "name": "The Warm Threshold",
+          "short": "Mercy / Protection",
+          "description": "You kept choosing to protect. Sheltered the vulnerable. Healed what was broken. Spared enemies when killing was easier. Your vessels were shields, not swords. The world learned to pray to you when afraid — not for vengeance, but for shelter.",
+          "condition": "Mercy axis high + Connection axis high + Creation axis high",
+          "how_it_manifests": "Your worship power generates warmth. Literally — your vessels' presence calms. Wounds close faster near them. Nightmares stop. The Ashfield god's fear weakens in your territory. Your name means 'the place where it stops hurting.'",
+          "the_cost": "You protected so much that some of it couldn't grow. Mercy without justice lets the cruel persist. The tyrant you spared in run 4 is still out there."
+        },
+        {
+          "id": "god_of_judgment",
+          "name": "The Iron Scale",
+          "short": "Justice / Order",
+          "description": "You kept choosing fairness. Punished the corrupt. Enforced oaths. Held the powerful accountable. Your vessels were judges, mediators, executioners of broken promises. The world learned to pray to you when wronged — and to fear you when guilty.",
+          "condition": "Justice axis high + Order axis high + Action axis high",
+          "how_it_manifests": "Your worship power generates certainty. Lies feel wrong in your presence. Oathbreakers flinch. Your vessels can sense dishonesty — not as mind-reading but as physical discomfort in the liar's body. Your name means 'the weight that doesn't bend.'",
+          "the_cost": "Justice without mercy is cruelty by another name. The rigid world you built has no room for the complicated, the desperate, or the merely human."
+        },
+        {
+          "id": "god_of_wisdom",
+          "name": "The Unblinking Eye",
+          "short": "Knowledge / Foresight",
+          "description": "You kept choosing to learn. Investigated every mystery. Read every book. Understood every faction's perspective. Your vessels were scholars, seekers, the ones who asked 'why' when everyone else asked 'how.' The world learned to pray to you when confused.",
+          "condition": "Knowledge axis high + Independence axis high",
+          "how_it_manifests": "Your worship power generates clarity. Complex problems become visible in your vessels' presence — not solved, but seen. Your Sense attunement is supernaturally sharp. You can read the flow of worship itself. Your name means 'the one who sees what is.'",
+          "the_cost": "You understood everything and fixed nothing. Knowledge without action is a library in a burning building. The world has the best-documented decline in history."
+        },
+        {
+          "id": "god_of_war",
+          "name": "The Red March",
+          "short": "Conquest / Destruction",
+          "description": "You kept choosing to fight. Conquered. Destroyed threats. Broke what was broken and cleared the ground for what came next. Your vessels were warriors, revolutionaries, the ones who said 'this can't stand' and meant it. The world learned to pray to you when it needed something torn down.",
+          "condition": "Action axis high + Destruction axis high + Independence axis high",
+          "how_it_manifests": "Your worship power generates force. Your vessels are terrifying in combat — not through skill alone but through the weight of divine momentum. Armies hesitate. Walls feel thinner. Your name means 'the thing that is coming.'",
+          "the_cost": "You were so good at destroying that nobody asked what you'd build. The cleared ground is empty. The enemies are gone. So are some of the friends."
+        },
+        {
+          "id": "god_of_hearth",
+          "name": "The Living Root",
+          "short": "Creation / Community",
+          "description": "You kept choosing to build. Forged alliances. Founded communities. Created artifacts, traditions, mixed cultures. Your vessels were makers, mediators, parents. The world learned to pray to you when building something new.",
+          "condition": "Creation axis high + Connection axis high + Order axis high",
+          "how_it_manifests": "Your worship power generates growth. Things built in your name last longer. Communities under your protection cohere. Your vessels have a talent for making disparate people work together. Your name means 'the ground that holds.'",
+          "the_cost": "You built so much that change became threatening. The communities you founded resist adaptation. The traditions you created became chains. Growth requires pruning, and you never liked cutting."
+        },
+        {
+          "id": "god_of_endings",
+          "name": "The Last Word",
+          "short": "Entropy / Sacrifice",
+          "description": "You kept choosing the hard thing. Sacrificed vessels. Let beloved characters die for the greater good. Made the calls nobody else would. Your domain isn't evil — it's the acceptance that some things must end for other things to begin.",
+          "condition": "Destruction axis high + Justice axis high + Connection low",
+          "how_it_manifests": "Your worship power generates finality. Wounds you inflict don't heal easily. Curses you place stick. But also: suffering you end stays ended. Mercy killing is your sacrament. Your name means 'the kindness nobody wants.'",
+          "the_cost": "The world fears you more than it loves you. You did what was necessary. Nobody thanked you. The loneliest domain."
+        },
+        {
+          "id": "god_of_between",
+          "name": "The Unnamed Bridge",
+          "short": "Balance / Synthesis",
+          "description": "You never committed. Or: you committed to everything. Your vessels walked between factions, between cultures, between gods. You understood all sides. You belonged to none. Your domain is the space between — the translator, the bridge, the one who carries meaning across gaps.",
+          "condition": "No single axis dominant + high variety across runs",
+          "how_it_manifests": "Your worship power is the most versatile and the weakest. A little of everything, a lot of nothing. But in the spaces between powers — where a mercy god can't reach a justice problem — you fit perfectly. Your name means 'the distance between.'",
+          "the_cost": "The bridge belongs to neither side. You enabled everything and owned nothing. The world's most useful god and its most forgotten."
+        }
+      ]
+    },
+    {
+      "id": "the_final_state",
+      "name": "The World You Built",
+      "description": "The accumulated state of every faction, relationship, and resolved or unresolved tension. The game doesn't pick an ending. The world arrives at one.",
+      "outcomes": [
+        {
+          "id": "genuine_peace",
+          "name": "Genuine Peace",
+          "short": "The rarest outcome",
+          "description": "Bridges across multiple eras. Trade that benefited both sides. Philosophy exchanged, not imposed. Mixed-culture generations. Trust earned through repeated cooperation. Fragile. Imperfect. Real.",
+          "what_the_player_sees": "The chronicle shows a world at peace — not utopia, but a world where the guns aren't pointed at each other. Some groups are still unhappy. Some wounds haven't healed. But the default trajectory was decline, and you bent it toward something better. Every bridge you built is named in the summary. Every sacrifice remembered.",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. It holds."
+        },
+        {
+          "id": "dominance",
+          "name": "Dominance",
+          "short": "One faction supreme",
+          "description": "Military conquest, economic absorption, or cultural assimilation. The dominant faction's nature determines the world's character.",
+          "what_the_player_sees": "The chronicle shows a world under one banner. The dominant faction is rich, powerful, and defined by how it got there. The other factions are subjects, resistance, or memory. The player can trace every conquest to a choice they made.",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. It stands — but not everyone is standing in it."
+        },
+        {
+          "id": "alliance_with_cost",
+          "name": "Alliance (With Cost)",
+          "short": "Two prosper, one suffers",
+          "description": "Common ground found — at the expense of a third. The marginalized faction becomes underclass, resistance, diaspora.",
+          "what_the_player_sees": "The chronicle shows a world that mostly works — for most people. The allied factions prosper. The marginalized faction's section is the one that hurts to read. The player can trace exactly when they got left behind.",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. It works. But not for everyone. You know who you forgot."
+        },
+        {
+          "id": "mutual_destruction",
+          "name": "Mutual Destruction",
+          "short": "The Cold War went hot",
+          "description": "Nobody wanted it. Everybody caused it. New cultures emerge from rubble.",
+          "what_the_player_sees": "The chronicle shows ruins. Not dramatic — just empty. The faction sections are short because there isn't much left to say. But in the rubble: new things growing. Small communities. New songs. The world didn't end. It just had to start over.",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. It broke. And from the breaking — something small, and new, and not yet named."
+        },
+        {
+          "id": "fragmentation",
+          "name": "Fragmentation",
+          "short": "A thousand small pieces",
+          "description": "City-states. Tribal zones. Nobody powerful enough to threaten or protect.",
+          "what_the_player_sees": "The chronicle is the longest of any ending — because there are so many small stories. No grand narrative. Just people, in small places, making do. Some of them are happy. Some of them don't know what they lost.",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. It scattered. Every piece carries a fragment of what you intended. None of them has the whole picture. Neither do you."
+        },
+        {
+          "id": "the_default",
+          "name": "The Default World",
+          "short": "Mediocrity",
+          "description": "The player couldn't engage. The world played out its default. Not tragedy — just less.",
+          "what_the_player_sees": "The chronicle is the shortest. There isn't much to say. The world survived. Nobody prospered. The factions exist, diminished, defined by the problems nobody addressed. The most painful section: 'the parts of the world you never touched.'",
+          "final_line": "Here is the world you built. One life at a time. Across centuries. You were here. The world barely noticed."
+        }
+      ]
+    },
+    {
+      "id": "the_naming",
+      "name": "The Name",
+      "description": "The world gives the god a name. Not chosen by the player. Earned by the accumulated weight of centuries of choices. The name is the game's final statement about who you became.",
+      "outcomes": [
+        {
+          "id": "named_by_love",
+          "name": "Named by the Faithful",
+          "short": "Worshippers name you",
+          "description": "Your most devoted followers — the people whose lives your vessels touched directly — give you your name. It's intimate. Personal. A name from people who know what you did for them.",
+          "condition": "High worship + strong personal relationships across runs"
+        },
+        {
+          "id": "named_by_history",
+          "name": "Named by the Chronicle",
+          "short": "History names you",
+          "description": "Scholars who traced the pattern of your interventions across centuries name you. It's analytical. Accurate. A name from people who understand what you did but not why.",
+          "condition": "Major world impact + knowledge-heavy domain"
+        },
+        {
+          "id": "named_by_fear",
+          "name": "Named by the Enemies",
+          "short": "Opponents name you",
+          "description": "The factions you opposed, the gods you rivaled, the forces you broke — they name you. It's grudging. Accurate in a way that hurts. A name from people who understand your power because they felt it.",
+          "condition": "War/destruction domain + many enemies"
+        },
+        {
+          "id": "named_by_absence",
+          "name": "Named by What's Missing",
+          "short": "The unnamed god",
+          "description": "Nobody names you. Your interventions were too subtle, too scattered, or too infrequent to form a pattern anyone could recognize. You remain what you started as: a vestige. A shape where a name should be.",
+          "condition": "Low engagement + no crystallized domain"
+        },
+        {
+          "id": "self_named",
+          "name": "You Remember",
+          "short": "The old name returns",
+          "description": "In the final moments, the god remembers what they were before they fell. The old name surfaces — not from the world but from within. Whether the god accepts the old name or chooses the new one is the game's last choice.",
+          "condition": "Discovered enough fragments of past identity across runs"
+        }
+      ]
+    }
+  ],
+
+  "notable_combinations": [
+    {
+      "axes": ["god_of_mercy", "genuine_peace", "named_by_love"],
+      "name": "The Sheltering Hand",
+      "summary": "A god of mercy who built a world at peace, named by the people they protected. The gentlest ending. The one that takes the most work and the most runs and the most patience. The one that makes you cry — not because it's sad, but because it held."
+    },
+    {
+      "axes": ["god_of_war", "dominance", "named_by_fear"],
+      "name": "The Scarred Throne",
+      "summary": "A god of war who conquered the world, named by everyone who tried to stop them. The most powerful ending. The loneliest. The one where you won everything and the winning tastes like ash."
+    },
+    {
+      "axes": ["god_of_wisdom", "the_default", "named_by_absence"],
+      "name": "The Library That Watched",
+      "summary": "A god of knowledge who understood everything and changed nothing. The cruelest ending — not because the world burned, but because the god watched it dim and took notes. The unnamed god in the unnamed world."
+    },
+    {
+      "axes": ["god_of_between", "alliance_with_cost", "named_by_history"],
+      "name": "The Necessary Compromise",
+      "summary": "A god of balance who built an imperfect peace by accepting imperfect sacrifices. The most human ending — the one where the answer was 'good enough' and good enough was the hardest thing in the world to build."
+    },
+    {
+      "axes": ["god_of_endings", "mutual_destruction", "self_named"],
+      "name": "The Full Circle",
+      "summary": "A god of sacrifice who ended everything — including themselves. The world broke and the god remembered who they were before. They started as a vestige. They end as one. But now they know the shape of what was lost, and that knowledge is the seed of whatever comes next."
+    }
+  ],
+
+  "the_final_summary": {
+    "description": "The game ends with a chronicle. Not a score. Not a grade. A history.",
+    "sections": [
+      "For each faction: what they became. How the player shaped them. Key moments traced to specific choices.",
+      "For the player-god: their domain. Their name. The lives they lived. The parts of the world they touched and the parts they never reached.",
+      "The lives: a list of every vessel, every death, every legacy. The player sees the full span of their intervention — from the first confused child they embodied to the last legendary hero.",
+      "The world: what it looks like now. Who lives in it. What they believe. What they remember."
+    ],
+    "final_line": "Was it enough? The answer is always no. And the wanting-it-to-be-yes is why you play again."
+  }
+}
