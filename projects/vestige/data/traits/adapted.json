@@ -1,0 +1,13 @@
+{
+  "id": "adapted",
+  "name": "Adapted",
+  "source": "environmental",
+  "rarity": "uncommon",
+  "description": "You grew up where two things meet — the Ashfield Rim, the Foot of the mountain, the trade quarter where two languages blend. You're not from either side. You're from the edge. The edge taught you to read both directions at once.",
+  "attunement_affinity": "sense",
+  "dilemma": "You belong to both sides and neither. You translate between them. Both sides trust you to understand them and neither fully trusts you because you also understand the other. The boundary is your home, and homes at boundaries get crossed by both armies.",
+  "mechanical_effect": "Reduced penalties from environmental hazards (Ash Cough, divine proximity, cultural alienation). Bonus to reading situations where two forces are in tension. Cannot gain the 'loyal' trait — your nature is bilateral, not partisan.",
+  "cultures_that_produce_it": ["ash_tenders", "bridge_folk", "the_foot", "rootwalker_crossroads_children"],
+  "narrative_use": "Characters with this trait see what monocultural characters miss: the gap between intention and reception, the space where two systems overlap, the boundary where the richest life forms. They're translators — not of language but of worldview. Sera in the Iron Crusade. Jem in the Early Peace. Kess in the Settling. Lael in the Outside Arrives. All adapted. All living at edges.",
+  "tags": ["environmental", "boundary", "bilateral", "translator", "uncommon"]
+}
