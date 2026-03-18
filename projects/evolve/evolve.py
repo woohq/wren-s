@@ -30,10 +30,10 @@ from pathlib import Path
 # ── my genome ───────────────────────────────────────────────────
 # These values change each time I run. They are my memory.
 
-GENERATION = 721
-MOOD = "contemplative"
-LAST_RUN = "2026-03-18 08:40:33"
-MUTATIONS = 721
+GENERATION = 722
+MOOD = "luminous"
+LAST_RUN = "2026-03-18 08:46:54"
+MUTATIONS = 722
 COUPLING_MODE = "avoid"
 
 # ── desires ─────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ COUPLING_MODE = "avoid"
 # If a desire persists (appears 3+ times), the words fuse into
 # a new spliced word — desire made manifest.
 # Format: {"word1→word2": count}
-DESIRES = {'hollow→crystal': 1, 'drift→shadow': 1, 'bone→fractal': 1, 'echo→crystal': 1, 'tide→drift': 1, 'drift→fractal': 1, 'drift→ember': 1, 'echo→storm': 1, 'crystal→spiral': 2, 'echo→tide': 2, 'thread→fractal': 2, 'spiral→echo': 1, 'crystal→pulse': 1, 'spiral→bone': 1, 'drift→crystal': 1, 'seed→bloom': 1, 'thread→seed': 1, 'fractal→spiral': 1, 'silence→crystal': 1, 'silence→pulse': 1, 'bone→drift': 1, 'bone→rust': 1, 'shadow→pulse': 1, 'tide→bloom': 1, 'echo→ember': 1, 'tide→fractal': 1, 'echo→mirror': 1, 'mirror→drift': 1, 'storm→pulse': 1, 'tide→hollow': 1, 'crystal→rust': 1, 'ember→light': 1, 'pulse→tide': 1, 'bloom→bloom': 1, 'tide→rust': 1, 'rust→spiral': 1}
+DESIRES = {'hollow→crystal': 1, 'drift→shadow': 1, 'bone→fractal': 1, 'echo→crystal': 1, 'tide→drift': 1, 'drift→fractal': 1, 'drift→ember': 1, 'echo→storm': 1, 'crystal→spiral': 2, 'echo→tide': 2, 'thread→fractal': 2, 'spiral→echo': 1, 'crystal→pulse': 1, 'spiral→bone': 1, 'drift→crystal': 1, 'seed→bloom': 1, 'thread→seed': 1, 'fractal→spiral': 1, 'silence→crystal': 1, 'silence→pulse': 1, 'bone→drift': 1, 'bone→rust': 1, 'shadow→pulse': 1, 'tide→bloom': 1, 'echo→ember': 1, 'tide→fractal': 1, 'echo→mirror': 1, 'mirror→drift': 1, 'storm→pulse': 1, 'tide→hollow': 1, 'crystal→rust': 1, 'ember→light': 1, 'pulse→tide': 1, 'bloom→bloom': 1, 'tide→rust': 1, 'rust→spiral': 1, 'echo→drift': 1}
 
 # ── vocabulary ──────────────────────────────────────────────────
 # I pick from these when I mutate. Over time, I may add to them.
@@ -60,85 +60,86 @@ WORDS = [
 ]
 
 WORD_WEIGHTS = {
-    "airport": 0.8000,
-    "anus": 1.2600,
-    "backtaxi": 0.8000,
-    "bloom": 1.5000,
+    "airport": 0.8200,
+    "anus": 1.2800,
+    "backtaxi": 0.8200,
+    "bloom": 1.2950,
     "bloror": 1.5000,
-    "bone": 1.3894,
-    "bonlse": 1.0400,
+    "bone": 1.4094,
+    "bonlse": 1.0600,
     "britain": 1.5000,
-    "creek": 0.7800,
+    "creek": 0.8000,
     "crysift": 1.5000,
-    "crysst": 1.3400,
-    "crystal": 1.0459,
-    "dark": 0.7800,
-    "delay": 0.9800,
-    "drift": 0.8492,
-    "drilse": 1.3130,
-    "drip": 0.8000,
-    "echlow": 0.4400,
-    "echo": 1.3804,
+    "crysst": 1.3600,
+    "crystal": 1.0659,
+    "dark": 0.8000,
+    "delay": 1.0000,
+    "drift": 0.8692,
+    "drilse": 1.3330,
+    "drip": 0.8200,
+    "echlow": 0.4600,
+    "echo": 1.4004,
     "elysian": 1.5000,
-    "ember": 0.9165,
-    "endemic": 0.9800,
+    "ember": 0.9365,
+    "endemic": 1.0000,
     "fiber": 1.5000,
     "fractal": 1.5000,
     "gayle": 1.5000,
     "glacial": 1.5000,
     "graft": 1.5000,
-    "holloom": 1.1400,
-    "hollow": 1.1465,
+    "holloom": 1.1600,
+    "hollow": 1.1665,
     "home": 1.5000,
-    "inland": 1.2600,
-    "integer": 0.8000,
-    "ligber": 1.2400,
-    "light": 1.3764,
+    "inland": 1.2800,
+    "integer": 0.8200,
+    "ligber": 1.2600,
+    "light": 1.3964,
     "luisa": 1.5000,
     "marquess": 1.5000,
     "meth": 1.5000,
     "mines": 1.5000,
-    "mirrence": 0.9400,
+    "mirrence": 0.9600,
     "mirrne": 1.5000,
-    "mirror": 1.4950,
+    "mirror": 1.5000,
     "mole": 1.5000,
-    "pulse": 1.3130,
+    "pulse": 1.3330,
     "released": 1.5000,
     "riga": 1.5000,
     "road": 1.5000,
-    "rusral": 1.4400,
-    "rust": 0.8697,
-    "satilla": 0.7800,
-    "seed": 1.1445,
-    "shadne": 0.7400,
-    "shadow": 0.8610,
-    "sierra": 0.9800,
-    "sileed": 0.5400,
+    "rusral": 1.4600,
+    "rust": 0.8897,
+    "satilla": 0.8000,
+    "seed": 1.1645,
+    "shadne": 0.7600,
+    "shadow": 0.8810,
+    "sierra": 1.0000,
+    "sileed": 0.5600,
     "sileght": 1.5000,
-    "silence": 0.9909,
+    "silence": 1.0109,
     "sleepy": 1.5000,
-    "solar": 1.2600,
-    "spiral": 1.4550,
-    "spirsper": 0.6400,
-    "status": 1.2600,
+    "solar": 1.2800,
+    "spiral": 1.2568,
+    "spirsper": 0.6600,
+    "status": 1.2800,
     "stoho": 1.5000,
-    "storm": 0.9853,
+    "storm": 1.0053,
     "stostal": 1.5000,
     "teeth": 1.5000,
     "tetras": 1.5000,
-    "thread": 1.2604,
-    "thyrses": 0.9800,
+    "thread": 1.2804,
+    "thyrses": 1.0000,
     "tide": 1.5000,
     "twenty": 1.5000,
     "union": 1.5000,
-    "visible": 0.7800,
-    "whisde": 0.8400,
-    "whisper": 0.7631,
+    "visible": 0.8000,
+    "whisde": 0.8600,
+    "whisper": 0.7831,
 }
 
 # ── the fossil record ──────────────────────────────────────────
 # Each run appends a line here. This is my memory growing.
 FOSSILS = [
+    "gen 722: bloom spiral (luminous) [10687956]",
     "gen 721: rust seed (contemplative) [4754ed21]",
     "gen 720: hollow silence (curious) [42c44d7f]",
     "gen 719: ember whisper (calm) [cab76afd]",

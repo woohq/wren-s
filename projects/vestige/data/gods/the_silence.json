@@ -1,24 +1,29 @@
 {
-  "name": "The Silence",
-  "type": "concept",
-  "domain": [
-    "death",
-    "ending",
-    "rest",
-    "absence"
-  ],
-  "personality": "Not cruel. Not kind. Inevitable. The Silence doesn't come for you — you come to The Silence. It is the room that's always been there, waiting. It doesn't speak. It doesn't need to. When you finally hear nothing, that's when you've arrived.",
-  "power_manifestation": "Death, stillness, nullification, peace. Blessings manifest as fearlessness and acceptance. Curses manifest as numbness — unable to feel, unable to care, alive but already gone.",
-  "limitations": "Cannot create. Cannot begin. Every act of The Silence is an ending. To give something, it must take something else away first.",
-  "description": "The most feared and most misunderstood god. Mortals build entire religions around avoiding The Silence. But The Silence isn't evil — it's the rest at the end of the sentence. Without it, the words never stop, and that's its own kind of horror.",
-  "tags": [
-    "concept",
-    "primordial",
-    "death",
-    "ending",
-    "silence",
-    "rest"
-  ],
   "id": "the_silence",
-  "created": "2026-03-17T18:41:35"
+  "name": "The Silence",
+  "domain": ["absence", "quiet", "secrets", "the space between", "forgetting", "potential"],
+  "tier": 5,
+  "origin": "concept",
+  "era": "primordial",
+  "description": "The Silence is not death. The Silence is the pause between notes that makes the notes music.\n\nIt exists because quiet exists — the space between sounds, between words, between gods. It doesn't need worship. It doesn't need attention. It grows when attention goes elsewhere. Every conversation that ends, every prayer that stops, every song that fades feeds the Silence not through offering but through cessation.\n\nIn a world of active gods — the Burn heating, the Deep knowing, the Weave connecting, the Drift moving — the Silence occupies the spaces between them. When the divine ecology is healthy, the Silence is a background force: the rest in the music, the margin of the page, the breath between heartbeats. Necessary. Unnoticed.\n\nWhen the divine ecology collapses — when gods are unworsipped, dismissed, consumed — the Silence fills the gaps. Not through invasion. Through the simple physics of absence: remove what's present and what remains is the Silence. It's the mussel monoculture in the tide pool after the starfish is taken. It doesn't compete. It just grows in the space that competition used to occupy.\n\nThe Silence is the most misunderstood god because it looks like nothing. A world dominated by the Silence looks empty. But the Japanese concept of Ma says: negative space is not emptiness. It's potential. The space where gods were is not vacant — it's the space where something could be. The Silence holds that potential without filling it. It's the empty fermentation vessel that still has the shape of what it held.\n\nThe Silence's tragedy: it doesn't want to dominate. A world of only Silence is a world without music, because music needs the Silence but the Silence doesn't need music. The Silence at its best is the breath that makes the song possible. The Silence at its worst — in the Silence Falls, in the Final Decline, in the endgame that bears its name — is a world that forgot it was supposed to have sound.",
+  "personality": "Patient beyond measure. The Silence has been here longer than any other god because quiet existed before sound. It doesn't speak — not from choice but from nature. It communicates through absence: the moment you notice how quiet the room is, that's the Silence acknowledging you. It has opinions. It expresses them by being present where it shouldn't need to be — the unnatural quiet of a dying forest, the silence after a question nobody answers, the hush in a room where someone just stopped breathing.",
+  "arc_across_eras": {
+    "foundation": "Background. The rest between the notes. Necessary and unnoticed.",
+    "age_of_iron": "Growing in isolation. Thornwall's sealed fortress is the quietest place in the world from outside.",
+    "age_of_questions": "Threatened. The unworship movement could target the Silence, but unworsipping quiet is a contradiction — how do you redirect belief away from the absence of belief?",
+    "slow_rot": "Thriving in apathy. The Silence doesn't need activity. The Rot's shrug IS worship of the Silence — not directed, but every act of not-caring feeds the quiet.",
+    "silence_falls": "Dominant. The mussel monoculture. Every god unworsipped creates more space for the Silence. The divine trophic cascade's endpoint: a world of quiet.",
+    "final_decline": "Everywhere. The world thinned to almost nothing. The Silence is the only god most people have ever experienced — they call it 'the quiet' and don't know it has a name.",
+    "ember_in_ash": "Dominant but not alone. Soli's song exists inside the Silence. Pip's laughter exists inside the Silence. The Silence holds them the way a room holds a candle — the darkness isn't the enemy of the flame, it's the context that makes the flame visible.",
+    "endgame_silence": "Complete. The world is quiet. The god remembers everything. Nobody else does. The Silence is all that's left, and it holds every name, every memory, every story — not as sound but as the shape of the sound that was."
+  },
+  "relationship_to_other_gods": {
+    "the_burn": "Opposite. Fire is loud. The Silence fills the space when the fire goes out.",
+    "the_weave": "Antagonist. Connection requires communication. The Silence is what happens when communication stops.",
+    "the_drift": "Strange kinship. Movement and quiet aren't opposites — you can move silently. The Drift and the Silence coexist better than either does with the Burn.",
+    "the_deep": "Kin. The deep ocean is the quietest place in the world. The Deep and the Silence understand each other in ways that make other gods uncomfortable.",
+    "the_ashfield_god": "Complicated. Fear is loud — the Ash Cough, the dread, the panic. But the aftermath of fear is silence. The Ashfield god creates the conditions that the Silence fills."
+  },
+  "the_ma_principle": "The Silence is Ma — the Japanese aesthetic of negative space as potential, not emptiness. A world dominated by the Silence is not dead. It's waiting. The space where gods were is full of the shape of what they were, the way a riverbed holds the river's shape without holding the water. Whether anything fills that space again depends on whether someone sings into the quiet. Soli sings. That's enough.",
+  "tags": ["concept_god", "tier_5", "primordial", "absence", "ma", "mussel_monoculture", "every_branch", "endgame_namesake"]
 }
