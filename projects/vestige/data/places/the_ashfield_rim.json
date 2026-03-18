@@ -1,0 +1,18 @@
+{
+  "id": "the_ashfield_rim",
+  "name": "The Ashfield Rim",
+  "region": "The Northern Reaches",
+  "terrain": "boundary_zone",
+  "climate": "variable — ash-warm on the inner edge, continental on the outer",
+  "description": "The Rim is not a line on a map. It's a gradient — a zone roughly two miles wide where the Ashfield's heat and fear taper into the cooler, calmer air of the continental plain. Step too far in: the Ash Cough thickens, the ground radiates heat that blisters through boot soles, and the fear-god's presence presses on the mind like a hand on the chest. Step too far out: you lose the warmth, the mineral-rich soil, the strange clarity that comes from living close to something that could kill you. The Ash Tenders live in the gradient. Their settlements sit where the temperature is bearable and the soil is richest — the exact line where the Ashfield god's presence is strong enough to warm the ground but not strong enough to burn it. They've built at the boundary the way mussels build at the rim of a brine pool: not despite the toxicity but because of what the toxicity provides. The crops grow faster here than anywhere on the continent. The water from the inner springs carries minerals that make the Rim's herbs more potent than anything the healers' guild produces. The cost: the Cough. Everyone on the Rim coughs. The longtime residents cough less — adaptation, or the fear-god learning to tolerate the people who tolerate it. Nobody knows which.",
+  "atmosphere": "Warm air from the inner Ashfield mixing with cool continental wind, creating a permanent haze at the boundary. The ground is grey-black volcanic soil threaded with green — the only place on the Ashfield where things grow. Ash Tender settlements are low, built from dark stone, with gardens that shouldn't exist in volcanic soil but do. The sound: wind, the distant rumble of the inner vents, and coughing. Always, somewhere, someone coughing.",
+  "significance": "The Rim is the living proof of the boundary principle: the richest ecosystem forms at the edge between extremes. It's also the place where Sarai wrote the first Covenant in her own blood, where Ossa spent sixty years talking to the fear-god, and where Fen began her gambit. Every major interaction with the Ashfield god happens here — not inside the Ashfield (too dangerous) and not outside it (too far from the god's presence). The Rim is the only place where mortals and the Ashfield god share space.",
+  "boundary_ecology": {
+    "inner_edge": "Ash Cough intensifies, ground temperature rises, fear-pressure increases. Few people cross this line. Those who do report vivid dreams — the fear-god's consciousness leaking into their sleep.",
+    "sweet_spot": "Where the Ash Tenders settle. Warmth, rich soil, mineral springs, manageable Cough. The gradient that makes life possible — the brine pool's rim.",
+    "outer_edge": "Cooler, safer, poorer soil. The non-Tenders live here — close enough to trade with the Rim settlements, far enough to avoid the Cough. They think the Ash Tenders are eccentric. The Ash Tenders think the outsiders are missing the point."
+  },
+  "cultures_present": ["ash_tenders"],
+  "gods_present": ["the_ashfield_god (dominant — this is its body)", "the_burn (trace — the volcanic heat predates the fear-god)", "the_silence (in the ash-fall, between the coughs)"],
+  "tags": ["boundary", "volcanic", "divine_contact", "ash_tenders", "brine_pool_analogy", "era_1_through_4"]
+}
