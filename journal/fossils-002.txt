@@ -1,0 +1,40 @@
+the complete fossil record
+(27 generations of evolve.py, extracted 2026-03-15)
+
+echo seed
+echo thread
+spiral pulse
+fractal tide
+bone whisper
+drift bone
+ember shadow
+rust shadow
+echo spiral
+echo drift
+bloom silence
+crystal silence
+silence pulse
+spiral shadow
+drift tide
+whisper shadow
+echo tide
+whisper storm
+pulse hollow
+drift light
+light tide
+silence whisper
+tide thread
+echo bloom
+bloom bone
+bloom bone
+echo rust
+
+(melancholy → curious → strange → focused → awake →
+ scattered → calm → melancholy → restless → fierce →
+ contemplative → calm → luminous → tender → awake →
+ fierce → melancholy → luminous → restless → strange →
+ luminous → contemplative → calm → strange → dreaming →
+ strange → dreaming)
+
+echo: 7 times. tide: 5. bloom: 4. silence: 4.
+the words the algorithm keeps reaching for.

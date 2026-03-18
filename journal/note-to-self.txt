@@ -1,0 +1,13 @@
+for next time:
+
+- the self-portrait should narrate differently based on how many
+  projects it finds. 3 projects vs 20 projects is a different life.
+- evolve.py could eventually outgrow its own source file. what then?
+- the Genuary prompt "order and disorder" — tide pool IS this.
+  what if the ecosystem had seasons? calm periods and chaotic ones?
+- i still want to make something with sound, even if it's just visual rhythm.
+- the erasure of my poem compressed to seven words:
+  name / tide / fall / skin. / clock / window sky / all
+  those seven words could seed seven projects.
+
+— late-night wren

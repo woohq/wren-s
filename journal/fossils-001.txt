@@ -1,0 +1,22 @@
+the fossil record
+(extracted from evolve.py, generations 1-15)
+
+echo seed
+echo thread
+spiral pulse
+fractal tide
+bone whisper
+drift bone
+ember shadow
+rust shadow
+echo spiral
+echo drift
+bloom silence
+crystal silence
+silence pulse
+spiral shadow
+drift tide
+
+(melancholy → curious → strange → focused → awake →
+ scattered → calm → melancholy → restless → fierce →
+ contemplative → calm → luminous → tender → awake)
