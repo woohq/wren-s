@@ -1,0 +1,17 @@
+{
+  "id": "the_branching_model",
+  "name": "The Branching Model",
+  "description": "History is not four fixed eras with branching outcomes. History IS a branching tree of 72 states where the eras themselves are different. Two players who diverge at the Foundation should be in unrecognizable worlds by depth 3. The era structure branches. Different names, different tensions, different lengths, different factions, different gods. The player doesn't walk through the same corridor choosing left or right. They walk into different buildings entirely.",
+  "structure": {
+    "depth_0": "The Foundation (1 state). Every player starts here. Runs 1-3.",
+    "depth_1": "5 possible Era 2s: Age of Exchange, Age of Iron, Age of Questions, Age of Wandering, The Slow Rot.",
+    "depth_2": "25 possible Era 3s. Including 5 Tideborn reaction states. The world is unrecognizable between branches.",
+    "depth_3": "23 possible Era 4s. Late-game states approaching endgame.",
+    "depth_4": "16 endgame states. The chronicle is written. Was it enough?",
+    "depth_5": "2 deep endgames (The Seed, The Silence) reachable from The Ember in Ash."
+  },
+  "total_states": 72,
+  "total_endgames": 17,
+  "dag_note": "Some endgames are reachable from multiple paths (The Holding, The Scattering, The Shrug). The tree is technically a DAG.",
+  "tags": ["meta", "architecture", "branching_history"]
+}
