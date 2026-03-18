@@ -1,0 +1,16 @@
+{
+  "id": "the_split",
+  "name": "The Split",
+  "type": "split",
+  "description": "Someone you agree with on almost everything — and disagree with on the one thing that defines you both. Not an enemy. Not a rival. A friend you can't work with anymore. You share a history, a vocabulary, maybe an anvil or a river or a revolution. You can finish each other's sentences about everything except the sentence that matters. The argument isn't loud. It's the silence where agreement used to be.",
+  "emotional_function": "The grief of compatibility — the specific pain of knowing you COULD be allies if the world were slightly different, and it isn't, and you both know it. The Split doesn't produce hatred. It produces the particular sadness of lost potential. You don't want to fight them. You can't stand beside them. The space between is the most painful distance in the game because it's so small.",
+  "examples_in_the_tree": "Jorin and Dael (Forge War — same anvil, different principles). Nia and Osk (Song War — same song, one note different). Torren and Renn (Betrayal — same compromise, different definitions of sacrifice). Pella and Dren (False Dawn — same revolution, different mornings). Vael and Carr (Converted Enemy — same technique, different frameworks). Kira and Oren (Silent Revolution — same forge, different epistemologies). Essa and Breca (Awakening — same goal, invisible costs).",
+  "narrative_beats": {
+    "formation": "You work together. The agreement is genuine. The shared cause binds you.",
+    "discovery": "The one difference emerges. It seemed small. It wasn't.",
+    "the_split": "You can't un-see the difference. Every conversation now carries the awareness that on the one thing that matters, you're on opposite sides of a line neither of you drew.",
+    "aftermath": "You don't become enemies. You become the thing that's worse: people who almost agree. The almost is the wound."
+  },
+  "archetype_tendency": ["any — The Split can form between any two archetypes who share enough to make the difference devastating"],
+  "tags": ["tension", "adulthood", "moral_complexity", "the_fundamental_unit_of_drama", "boundary"]
+}
