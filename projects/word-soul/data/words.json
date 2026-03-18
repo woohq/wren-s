@@ -1,0 +1,26 @@
+{
+  "_axes": ["force", "structure", "connection", "decay", "perception"],
+  "_note": "Each word has a 5D affinity vector [0-1]. Player choices accumulate affinity; at emergence, cosine similarity determines their word.",
+  "words": {
+    "echo":    {"vector": [0.2, 0.2, 0.8, 0.5, 0.6], "power": "copy any word you touch — but lose a fragment each time", "mechanic": "echo", "hp": 8, "atk": 2},
+    "drift":   {"vector": [0.1, 0.1, 0.5, 0.5, 0.5], "power": "move through obstacles like smoke", "mechanic": "phase", "hp": 7, "atk": 3},
+    "spiral":  {"vector": [0.5, 0.2, 0.5, 0.5, 0.8], "power": "confuse enemies — they attack themselves", "mechanic": "confuse", "hp": 6, "atk": 2},
+    "bloom":   {"vector": [0.2, 0.8, 0.8, 0.1, 0.5], "power": "heal yourself and others — but you can't stop growing", "mechanic": "heal", "hp": 10, "atk": 1},
+    "rust":    {"vector": [0.4, 0.5, 0.2, 0.9, 0.4], "power": "decay anything you touch — weapons, armor, walls", "mechanic": "corrode", "hp": 7, "atk": 4},
+    "whisper": {"vector": [0.1, 0.2, 0.7, 0.2, 0.9], "power": "speak to the root network — hear secrets", "mechanic": "listen", "hp": 6, "atk": 2},
+    "fractal": {"vector": [0.6, 0.9, 0.5, 0.4, 0.8], "power": "split into copies — each weaker than the last", "mechanic": "split", "hp": 5, "atk": 3},
+    "tide":    {"vector": [0.8, 0.5, 0.5, 0.4, 0.4], "power": "push and pull — nothing stays where you don't want it", "mechanic": "push", "hp": 8, "atk": 3},
+    "ember":   {"vector": [0.6, 0.5, 0.5, 0.3, 0.3], "power": "burn slow and steady — you outlast everything", "mechanic": "endure", "hp": 12, "atk": 2},
+    "crystal": {"vector": [0.2, 0.9, 0.3, 0.1, 0.9], "power": "see the truth — illusions shatter around you", "mechanic": "reveal", "hp": 6, "atk": 2},
+    "hollow":  {"vector": [0.1, 0.1, 0.5, 0.8, 0.5], "power": "absorb attacks into your emptiness", "mechanic": "absorb", "hp": 9, "atk": 1},
+    "thread":  {"vector": [0.2, 0.8, 0.9, 0.2, 0.5], "power": "connect things — pull the web, feel vibrations", "mechanic": "connect", "hp": 7, "atk": 2},
+    "storm":   {"vector": [0.9, 0.1, 0.2, 0.7, 0.2], "power": "overwhelming force — but you can't aim", "mechanic": "blast", "hp": 6, "atk": 5},
+    "silence": {"vector": [0.0, 0.5, 0.2, 0.5, 0.8], "power": "nullify any word near you — including allies", "mechanic": "nullify", "hp": 7, "atk": 0},
+    "pulse":   {"vector": [0.5, 0.5, 0.7, 0.2, 0.9], "power": "sense life around you — find hidden things", "mechanic": "sense", "hp": 8, "atk": 2},
+    "mirror":  {"vector": [0.4, 0.5, 0.6, 0.4, 1.0], "power": "reflect attacks — but also reflect your own pain", "mechanic": "reflect", "hp": 5, "atk": 3},
+    "bone":    {"vector": [0.7, 1.0, 0.2, 0.1, 0.2], "power": "unbreakable — you endure what no one else can", "mechanic": "endure", "hp": 15, "atk": 2},
+    "seed":    {"vector": [0.2, 0.5, 0.5, 0.1, 0.5], "power": "potential — you grow stronger with every encounter", "mechanic": "grow", "hp": 5, "atk": 1},
+    "light":   {"vector": [0.5, 0.7, 0.7, 0.1, 0.8], "power": "illuminate — darkness retreats but you're always visible", "mechanic": "illuminate", "hp": 6, "atk": 3},
+    "shadow":  {"vector": [0.5, 0.2, 0.2, 0.5, 0.8], "power": "invisible — strike unseen but sunlight hurts you", "mechanic": "stealth", "hp": 6, "atk": 4}
+  }
+}

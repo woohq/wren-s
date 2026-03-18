@@ -1,0 +1,287 @@
+{
+  "word_wisp": {
+    "name": "Word Wisp",
+    "description": "A fragment of a dead word, drifting through the network",
+    "behavior": "Passive until touched. Echoes the last word it carried.",
+    "hp": "3",
+    "atk": "1",
+    "speed": "slow",
+    "habitat": [
+      "dying_roots",
+      "deep_root"
+    ],
+    "danger_level": "low",
+    "word_affinity": [
+      "echo",
+      "whisper",
+      "light"
+    ],
+    "tags": [
+      "undead",
+      "passive",
+      "word_remnant"
+    ],
+    "id": "word_wisp",
+    "created": "2026-03-17T02:24:31",
+    "appearances": []
+  },
+  "root_worm": {
+    "name": "Root Worm",
+    "description": "A blind, segmented creature that feeds on dying root connections. Not malicious — just hungry. Where root worms cluster, the network is already failing.",
+    "behavior": "Burrows through weak roots. Flees from light and loud words. Swarms when cornered.",
+    "hp": "4",
+    "atk": "2",
+    "speed": "medium",
+    "habitat": [
+      "dying_roots",
+      "deep_root"
+    ],
+    "danger_level": "medium",
+    "word_affinity": [
+      "rust",
+      "hollow"
+    ],
+    "drops": [
+      "root_fragment"
+    ],
+    "tags": [
+      "fauna",
+      "scavenger",
+      "swarm"
+    ],
+    "id": "root_worm",
+    "created": "2026-03-17T02:25:40",
+    "appearances": [
+      "ash_garden_path"
+    ]
+  },
+  "hollow_drifter": {
+    "name": "Hollow Drifter",
+    "description": "What happens when a soul echoes one too many times. Unlike Ren, who's half-hollow, drifters are gone — just empty shapes wearing the silhouette of who they were. They drift toward sound, trying to fill themselves.",
+    "behavior": "Drifts toward noise. Absorbs fragments on contact. Harmless unless you let them touch you. Can be dispersed by silence or strong words.",
+    "hp": "6",
+    "atk": "0",
+    "speed": "slow",
+    "habitat": [
+      "living_network",
+      "dying_roots"
+    ],
+    "danger_level": "low",
+    "word_affinity": [
+      "hollow",
+      "echo",
+      "silence"
+    ],
+    "drops": [
+      "empty_husk"
+    ],
+    "tags": [
+      "undead",
+      "passive",
+      "tragic",
+      "hollow_court"
+    ],
+    "id": "hollow_drifter",
+    "created": "2026-03-17T02:25:44",
+    "appearances": [
+      "meeting_ren",
+      "hollow_drifters_encounter"
+    ]
+  },
+  "storm_fragment": {
+    "name": "Storm Fragment",
+    "description": "A shard of Kael's power that broke off and gained a feral life of its own. Pure force without direction — crackling, erratic, dangerous. Each one carries a syllable of a consumed word.",
+    "behavior": "Charges at the nearest living thing. Explodes on impact. Cannot be reasoned with. Weak to structure-words (thread, crystal, bone).",
+    "hp": "3",
+    "atk": "5",
+    "speed": "fast",
+    "habitat": [
+      "deep_root",
+      "dying_roots"
+    ],
+    "danger_level": "high",
+    "word_affinity": [
+      "storm"
+    ],
+    "drops": [
+      "storm_shard",
+      "word_syllable"
+    ],
+    "tags": [
+      "elemental",
+      "aggressive",
+      "kael_related",
+      "boss_minion"
+    ],
+    "id": "storm_fragment",
+    "created": "2026-03-17T02:25:47",
+    "appearances": [
+      "the_descent_begins",
+      "emergence_moment",
+      "the_descent_to_deep",
+      "meeting_kael"
+    ]
+  },
+  "echo_moth": {
+    "name": "Echo Moth",
+    "description": "Delicate creatures that feed on sound. They carry echoes of old conversations in their wings — press your ear close and you might hear a dead soul's last words.",
+    "behavior": "Follows sound. Harmless. Can be caught to replay stored echoes. Flees from silence. Swarms in echo-rich areas.",
+    "hp": "1",
+    "atk": "0",
+    "speed": "fast",
+    "habitat": [
+      "living_network",
+      "upper_roots"
+    ],
+    "danger_level": "safe",
+    "word_affinity": [
+      "echo",
+      "whisper",
+      "pulse"
+    ],
+    "drops": [
+      "stored_echo"
+    ],
+    "tags": [
+      "fauna",
+      "passive",
+      "utility",
+      "lore_source"
+    ],
+    "id": "echo_moth",
+    "created": "2026-03-17T02:25:53",
+    "appearances": [
+      "echo_moths_flock",
+      "echo_chamber_visit"
+    ]
+  },
+  "tangle_beast": {
+    "name": "Tangle Beast",
+    "description": "A massive knot of living roots that guards network junctions. Ancient, territorial, patient. It doesn't attack — it waits for you to step on the wrong root, then pulls you in.",
+    "behavior": "Stationary ambush predator. Grabs intruders with root tendrils. Vulnerable to fire (ember) and decay (rust). Can be calmed by thread-speakers who understand root language.",
+    "hp": "15",
+    "atk": "4",
+    "speed": "slow",
+    "habitat": [
+      "upper_roots",
+      "living_network"
+    ],
+    "danger_level": "high",
+    "word_affinity": [
+      "bone",
+      "thread"
+    ],
+    "drops": [
+      "living_root",
+      "junction_key"
+    ],
+    "tags": [
+      "boss",
+      "guardian",
+      "territorial",
+      "root_creature"
+    ],
+    "id": "tangle_beast",
+    "created": "2026-03-17T02:25:57",
+    "appearances": [
+      "tangle_guardian"
+    ]
+  },
+  "seed_sprite": {
+    "name": "Seed Sprite",
+    "description": "Tiny luminous beings that cluster around areas of potential growth. Luma's only friends. They glow brighter near seed-word bearers and dim near storm or rust.",
+    "behavior": "Harmless, curious. Follows seed-bearers. Guides players toward hidden growth. Dies instantly in corrupted zones. Their glow reveals hidden paths.",
+    "hp": "1",
+    "atk": "0",
+    "speed": "medium",
+    "habitat": [
+      "dying_roots",
+      "upper_roots"
+    ],
+    "danger_level": "safe",
+    "word_affinity": [
+      "seed",
+      "bloom",
+      "light"
+    ],
+    "drops": [
+      "growth_mote"
+    ],
+    "tags": [
+      "fauna",
+      "passive",
+      "utility",
+      "luma_related",
+      "guide"
+    ],
+    "id": "seed_sprite",
+    "created": "2026-03-17T02:26:01",
+    "appearances": [
+      "finding_luma"
+    ]
+  },
+  "crystal_sentry": {
+    "name": "Crystal Sentry",
+    "description": "Ancient guardians carved from crystallized words. They were built to protect the network's core junctions when it was young and thriving. Most are dormant now, but some still activate when they sense intrusion.",
+    "behavior": "Dormant until triggered. Attacks with focused word-beams. Can be deactivated by speaking the correct word. Immune to physical attacks — only word-powers affect them.",
+    "hp": "20",
+    "atk": "3",
+    "speed": "slow",
+    "habitat": [
+      "deep_root",
+      "living_network"
+    ],
+    "danger_level": "extreme",
+    "word_affinity": [
+      "crystal",
+      "bone",
+      "light"
+    ],
+    "drops": [
+      "crystal_core",
+      "ancient_word"
+    ],
+    "tags": [
+      "construct",
+      "guardian",
+      "boss",
+      "ancient",
+      "puzzle"
+    ],
+    "id": "crystal_sentry",
+    "created": "2026-03-17T02:26:04",
+    "appearances": [
+      "storm_sentries_guard"
+    ]
+  },
+  "bloom_parasite": {
+    "name": "Bloom Parasite",
+    "description": "Beautiful but insidious — a flowering growth that attaches to living things and slowly drains their word-essence. Victims feel euphoric as they weaken. The most beautiful things in the dying roots are often the most dangerous.",
+    "behavior": "Attaches to creatures and players. Drains 1 fragment per turn. Victim feels happy (no pain). Can only be removed by rust or by the victim choosing to let go of the euphoria.",
+    "hp": "5",
+    "atk": "0",
+    "speed": "slow",
+    "habitat": [
+      "dying_roots",
+      "living_network"
+    ],
+    "danger_level": "medium",
+    "word_affinity": [
+      "bloom",
+      "drift"
+    ],
+    "drops": [
+      "parasite_bloom",
+      "euphoria_pollen"
+    ],
+    "tags": [
+      "plant",
+      "parasite",
+      "trap",
+      "deceptive"
+    ],
+    "id": "bloom_parasite",
+    "created": "2026-03-17T02:26:09",
+    "appearances": []
+  }
+}

@@ -1,0 +1,3029 @@
+{
+  "the_ember_woman": {
+    "title": "The Ember Woman",
+    "stage": "upper_roots",
+    "text": "The junction glows warm. An old woman sits by a fire that burns without wood. Her palm reads EMBER, but the light is dim — a candle where a bonfire used to be.\n\n\"Another one,\" she says, without looking up. \"They keep sending you down here like the roots are a problem to be solved. They're not. They're dying. There's a difference.\"",
+    "tags": [
+      "asha_intro",
+      "optional"
+    ],
+    "id": "the_ember_woman",
+    "created": "2026-03-17T02:24:08",
+    "choices": [
+      {
+        "text": "Sit by the fire without speaking",
+        "next": "ember_sit",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.1
+        }
+      },
+      {
+        "text": "\"I'm not here to solve anything. I'm here because I have to be.\"",
+        "next": "ember_honest",
+        "affinity": {
+          "perception": 0.1,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"Tell me about the roots.\"",
+        "next": "ember_lore",
+        "affinity": {
+          "perception": 0.15
+        }
+      }
+    ],
+    "characters": [
+      "asha"
+    ],
+    "creatures": [],
+    "items": [
+      "asha_s_lantern"
+    ],
+    "locations": [
+      "ember_junction"
+    ],
+    "text_variants": {
+      "word:ember": "The fire flares as you approach. Asha looks up — really looks — for the first time.\n\n\"Another ember,\" she breathes. \"I thought we'd all burned out.\"",
+      "word:hollow": "The fire dims as you approach. Asha wraps her arms around herself.\n\n\"A hollow. Don't touch the fire. You'll eat it without meaning to.\""
+    },
+    "conditions": null
+  },
+  "first_light": {
+    "title": "First Light",
+    "stage": "childhood",
+    "text": "You are five years old and the world is very large.\n\nYour mother holds your hand as you walk through the village. Everyone's palm glows faintly — their word, always there, like a second heartbeat. Your mother's palm says MOTHER_WORD.\n\nYou don't have a word yet. Children don't.\n\nBut sometimes, when you press your hand against the ground, you feel something humming back.",
+    "tags": [
+      "opening",
+      "mandatory",
+      "childhood"
+    ],
+    "id": "first_light",
+    "created": "2026-03-17T02:31:17",
+    "choices": [
+      {
+        "text": "Press your hand to the ground and listen",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Ask your mother what her word means",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Let go of her hand and run ahead",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.15,
+          "decay": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "mother"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "word_games": {
+    "title": "Word Games",
+    "stage": "childhood",
+    "text": "You are seven. The village children sit in a circle, playing the guessing game — everyone says what word they think they'll get.\n\n\"Storm!\" shouts Tam, flexing his arms. The others laugh.\n\"Thread,\" says quiet Mei. \"Like my grandmother.\"\n\nSeri nudges you. \"Your turn.\"",
+    "tags": [
+      "pool",
+      "childhood",
+      "social"
+    ],
+    "id": "word_games",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "\"Something powerful. Something nobody's ever had.\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.15,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"I don't know. I hope it's something that helps people.\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"What if I don't get one at all?\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "\"Same as Seri. Whatever she gets.\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "elders_lesson": {
+    "title": "The Elder's Lesson",
+    "stage": "childhood",
+    "text": "The Elder gathers the children in the square. Their palm glows THREAD — steady, unwavering, ancient.\n\n\"Beneath us,\" they say, tracing a line in the dirt, \"is a network older than the village. Older than words. Every soul with a word is connected to it. Your word isn't just power — it's your place in something larger.\"\n\nThey pause. Look at each of you.\n\n\"The network is... changing. You'll understand when you're older. For now: your word is a gift. What you do with a gift is who you are.\"",
+    "tags": [
+      "pool",
+      "childhood",
+      "lore",
+      "elder_intro"
+    ],
+    "id": "elders_lesson",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "\"What happens if the network dies?\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.15,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"Is it true someone changed their own word?\"",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Sit quietly and memorize every word",
+        "next": "childhood_pool",
+        "affinity": {
+          "structure": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "After the lesson, stay behind and ask The Elder what their word feels like",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "root_gate_curiosity": {
+    "title": "The Root Gate",
+    "stage": "childhood",
+    "text": "You are eight, and you've been told not to go near the Root Gate.\n\nSo of course you go.\n\nThe archway of living root towers above you, its surface faintly pulsing. Below, stairs descend into darkness. A cold breath of air rises from the depths, carrying a smell like old rain and something electric.\n\nYou stand at the top of the stairs. Nobody's watching.",
+    "tags": [
+      "pool",
+      "childhood",
+      "root_gate",
+      "foreshadowing"
+    ],
+    "id": "root_gate_curiosity",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "Go down three steps. Just three. Then come back.",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Press your palm to the root arch and feel",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Call into the darkness and wait for an echo",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.05,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "Turn around. Not today.",
+        "next": "childhood_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      }
+    ],
+    "characters": [],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_root_gate"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "night_ground_shook": {
+    "title": "The Night the Ground Shook",
+    "stage": "childhood",
+    "text": "You are nine.\n\nYou wake to your bed trembling. Dust falls from the ceiling. Outside, adults are shouting — their palms blazing, words flaring with alarm.\n\nThe ground shakes again, harder. From somewhere deep below, a sound like a word being torn in half.\n\nYour mother appears in the doorway. \"Stay inside.\"\n\nThrough the window, you see The Elder running toward the Root Gate, their Thread-light stretching behind them like a leash.",
+    "tags": [
+      "pool",
+      "childhood",
+      "foreshadowing",
+      "crisis"
+    ],
+    "id": "night_ground_shook",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "Climb out the window and follow The Elder",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "Stay. Hold the walls like you can keep the house together.",
+        "next": "childhood_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Run to Seri's house to make sure she's okay",
+        "next": "childhood_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      },
+      {
+        "text": "Put your hand on the floor and listen to what's happening below",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.2
+        }
+      }
+    ],
+    "characters": [
+      "mother",
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_butterfly_game": {
+    "title": "The Butterfly Game",
+    "stage": "childhood",
+    "text": "You are six. Seri finds a butterfly with words on its wings — tiny, shimmering, unreadable.\n\n\"Catch it and you get a wish!\" Seri says, already running.\n\nThe butterfly drifts toward the edge of the village, past the last house, toward the treeline where the roots surface. It's not fast. You could catch it easily.\n\nBut something about the way it moves — unhurried, purposeful — makes you wonder if it knows where it's going.",
+    "tags": [
+      "pool",
+      "childhood",
+      "seri",
+      "innocence",
+      "early"
+    ],
+    "id": "the_butterfly_game",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "Chase it with Seri, laughing",
+        "next": "childhood_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Follow it slowly, watching where it leads",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Try to read the words on its wings",
+        "next": "childhood_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Let it go. Some things aren't meant to be caught.",
+        "next": "childhood_pool",
+        "affinity": {
+          "structure": 0.1,
+          "decay": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "seris_emergence": {
+    "title": "Seri's Emergence",
+    "stage": "childhood",
+    "text": "You are ten. Seri is ten and three months, and today is her day.\n\nThe whole village gathers at the Word Shrine. Seri stands in the center of the stone circle, barefoot, trying not to shake. You watch from the front row.\n\nThe Elder speaks the words. The floor begins to glow.\n\nSeri gasps. Her palm ignites — and the word DRIFT writes itself in light that moves like smoke. She holds it up, laughing, crying. She phases through the stone behind her without meaning to, stumbles out the other side.\n\n\"I'm Drift!\" she shouts. \"I'm Drift, I'm Drift!\"\n\nEveryone cheers.\n\nYou look at your own palm. Still dark. Your turn will come. You're three months younger.\n\nThree months feels like forever.",
+    "tags": [
+      "mandatory",
+      "childhood",
+      "seri",
+      "emergence_foreshadow",
+      "emotional"
+    ],
+    "id": "seris_emergence",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "Run to Seri and hug her",
+        "next": "mothers_warning",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Cheer with everyone else, but your hands are fists",
+        "next": "mothers_warning",
+        "affinity": {
+          "force": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "Find The Elder's eyes in the crowd and see what they're really thinking",
+        "next": "mothers_warning",
+        "affinity": {
+          "perception": 0.2
+        }
+      },
+      {
+        "text": "Slip away before anyone sees your face",
+        "next": "mothers_warning",
+        "affinity": {
+          "decay": 0.1,
+          "structure": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri",
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_word_shrine"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "mothers_warning": {
+    "title": "Mother's Warning",
+    "stage": "childhood",
+    "text": "The night before your emergence, your mother sits on your bed.\n\nShe's quiet for a long time. Her MOTHER_WORD glows softly in the dark between you.\n\n\"I had a sister,\" she says. \"Her word was Light. When the network started dying, she said she could help. She went down through the Root Gate.\"\n\nShe touches your face.\n\n\"She never came back.\"\n\nAnother silence. Then:\n\n\"Tomorrow you'll get your word. Whatever it is — it's yours. Not the network's. Not the village's. Yours. Promise me you'll remember that.\"",
+    "tags": [
+      "mandatory",
+      "childhood",
+      "mother",
+      "emotional",
+      "lore",
+      "pre_emergence"
+    ],
+    "id": "mothers_warning",
+    "created": "2026-03-17T02:35:00",
+    "choices": [
+      {
+        "text": "\"I promise.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"What if my word says I have to go?\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.1,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "Say nothing. Just hold her hand.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "\"What was your sister like?\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "mother"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "late_bloomer": {
+    "title": "Late Bloomer",
+    "stage": "adolescence",
+    "text": "You are twelve. Everyone in your year has their word.\n\nTam is Storm — he won't shut up about it. Mei is Thread, like her grandmother. Even quiet Fen is Bone, which surprised everyone.\n\nYou are nothing. Your palm is dark.\n\nThe Elder says it happens sometimes. \"Late bloomers become the most interesting souls,\" they say, but you catch the worry in their eyes. At the Word Shrine, the floor didn't glow for you. They did the ceremony twice.\n\nNothing.\n\nSeri finds you sitting behind the shrine after the second attempt. She phases through the wall to reach you — casually, like breathing.",
+    "tags": [
+      "mandatory",
+      "adolescence",
+      "opening",
+      "emotional"
+    ],
+    "id": "late_bloomer",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "\"I think something's wrong with me.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "decay": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "\"I'm fine. It'll come.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "structure": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "\"Do you ever wish you got a different word?\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Say nothing. Put your dark palm against hers, glowing with DRIFT.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.15,
+          "decay": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri",
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_word_shrine"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "seri_drifts": {
+    "title": "Seri Drifts",
+    "stage": "adolescence",
+    "text": "Seri is different now.\n\nShe was always the brave one, but Drift has made her... untethered. She phases through walls for fun. She doesn't flinch when you touch her because she doesn't always feel it — sometimes your hand passes right through her shoulder.\n\nToday she's sitting on the roof of the tallest house, legs dangling through the tiles. She's looking toward the Root Gate.\n\n\"I've been thinking,\" she says when you climb up. \"About going down. Not when I'm old enough. Now.\"\n\nShe looks at you. Through you, almost.\n\n\"You'd come with me, right?\"",
+    "tags": [
+      "pool",
+      "adolescence",
+      "seri",
+      "foreshadowing",
+      "emotional"
+    ],
+    "id": "seri_drifts",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "\"Anywhere.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "\"You'd go without me if I said no.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.2
+        }
+      },
+      {
+        "text": "\"We're not ready. Neither of us.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"I don't even have a word, Seri. I'd be dead weight.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "decay": 0.15,
+          "perception": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_wrong_word": {
+    "title": "The Wrong Word",
+    "stage": "adolescence",
+    "text": "You find Kira behind the storehouse, trying to scrub her palm with sand until it bleeds.\n\nHer word emerged yesterday: RUST.\n\nEverything she touches corrodes. Her favorite book. Her mother's necklace. The door handle to her own house. She wears gloves now, thick ones, but you can see the fabric thinning where her fingers press.\n\n\"I didn't want this,\" she says. \"I wanted Thread. Or Bloom. Something that builds. Not something that eats.\"\n\nShe looks at your dark palm.\n\n\"You're lucky,\" she whispers. \"You still get to hope.\"",
+    "tags": [
+      "pool",
+      "adolescence",
+      "word_themes",
+      "emotional",
+      "rust"
+    ],
+    "id": "the_wrong_word",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Take her hand. Let her corrode something you own.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.2,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"Rust isn't just destruction. It's transformation.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"I'd trade. I'd take Rust over nothing.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "Sit with her silently. Sometimes presence is enough.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.1
+        }
+      }
+    ],
+    "characters": [],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "proto_flicker": {
+    "title": "The Flicker",
+    "stage": "adolescence",
+    "text": "You are thirteen. It's the middle of the night.\n\nYou wake up because your hand is warm. Not from the blanket — from inside. You hold it up in the dark and there it is: a faint glow from your palm, shifting, undecided. Letters trying to form but dissolving before they resolve.\n\nFor three seconds, you have a word. You can almost read it.\n\nThen it's gone.\n\nYour hand is dark again. But the warmth stays. And now you know: there's something in you. It just hasn't decided what yet.",
+    "tags": [
+      "pool",
+      "adolescence",
+      "emergence_foreshadow",
+      "personal",
+      "important"
+    ],
+    "id": "proto_flicker",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Try to make it come back — focus, clench your fist, will it into existence",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.2
+        }
+      },
+      {
+        "text": "Tell no one. This is yours.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "structure": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "Run to The Elder. They need to know.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.1
+        }
+      },
+      {
+        "text": "Put your palm to the floor and see if the hum answers you back",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_stranger": {
+    "title": "The Stranger from Below",
+    "stage": "adolescence",
+    "text": "A woman climbs out of the Root Gate at dawn. She's bleeding from her palms — not a wound, but something deeper. Her word-light is guttering like a candle in wind.\n\nHer word is LIGHT. Or was. The letters on her palm keep flickering, dimming, like something is eating them.\n\nThe Elder rushes to her. You're close enough to hear.\n\n\"The seed-storm,\" she gasps. \"It's reached the living network. He's eating everything. The ember woman can't hold the junction alone.\"\n\nShe grabs The Elder's collar. \"Send help. Or in a year, there won't be a network to connect to.\"\n\nThe Elder looks toward the village. Toward you.\n\nThen looks away.",
+    "tags": [
+      "pool",
+      "adolescence",
+      "lore",
+      "foreshadowing",
+      "kael",
+      "asha",
+      "crisis"
+    ],
+    "id": "the_stranger",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Step forward. \"I'll go.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.2,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Listen from hiding. Learn everything you can.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.2
+        }
+      },
+      {
+        "text": "Find Seri. She needs to hear this.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Watch The Elder's face. What are they hiding?",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "decay": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_root_gate"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "elders_secret": {
+    "title": "The Elder's Secret",
+    "stage": "adolescence",
+    "text": "You can't sleep. You've been watching the Root Gate from your window every night since the stranger came.\n\nTonight, you see The Elder.\n\nThey walk to the gate alone, long after midnight. Their Thread-light extends down the stairs like a fishing line cast into deep water. They stand there, eyes closed, palm pressed to the root arch. Listening.\n\nAfter a long time, they pull their hand back. You see their face in the moonlight.\n\nThey're crying.\n\nThey've never cried. Not when the ground shook. Not when the stranger bled on their doorstep. Not once in your entire life.\n\nThey know something. Something they can't tell anyone.",
+    "tags": [
+      "pool",
+      "adolescence",
+      "elder",
+      "lore",
+      "emotional",
+      "secret"
+    ],
+    "id": "elders_secret",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Go to them. \"I saw you.\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Say nothing. But start sleeping at the window every night, watching.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "The next morning, ask them directly: \"What's wrong with the network?\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "After they leave, go to the gate yourself. Press your palm where they pressed.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_root_gate"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_fight": {
+    "title": "The Fight",
+    "stage": "adolescence",
+    "text": "Tam has always been a bully, but Storm made him worse.\n\n\"Wordless,\" he calls you, in front of everyone. Lightning crackles between his fingers. \"The shrine didn't even bother with you. Maybe you're not connected at all. Maybe you're just... nothing.\"\n\nSeri steps forward, already phasing. \"Leave them alone, Tam.\"\n\n\"What are you gonna do, Drift? Float away?\" He laughs. His Storm-light flares.\n\nEveryone is watching. Seri is watching. Tam's hand is raised.\n\nYou don't have a word. You have your fists, your mind, and whatever is humming in your dark palm.",
+    "tags": [
+      "pool",
+      "adolescence",
+      "confrontation",
+      "tam",
+      "seri"
+    ],
+    "id": "the_fight",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Fight him. No word, no power, just fury.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "force": 0.2,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"You're afraid of someone who doesn't even have a word. What does that say about yours?\"",
+        "next": "adolescence_pool",
+        "affinity": {
+          "perception": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Walk away. He wants a reaction. Don't give him one.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Grab his hand — the one crackling with Storm. Hold it until he looks you in the eye.",
+        "next": "adolescence_pool",
+        "affinity": {
+          "connection": 0.1,
+          "force": 0.1,
+          "perception": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "seris_question": {
+    "title": "Seri's Question",
+    "stage": "adolescence",
+    "text": "You are fourteen. The tremors are weekly now.\n\nSeri finds you at the Root Gate — you've been spending more time here, listening to the hum that only you seem to hear.\n\nShe's different. Not the girl who chased butterflies. Drift has made her translucent in more than body — she's half here, half somewhere else. You've watched her fade a little more each month.\n\n\"I'm going tomorrow,\" she says. No preamble. \"Before dawn. I can phase through the gate locks.\"\n\nShe looks at you with the most solid expression she's had in months.\n\n\"I need to know if you're coming. Because if you are, I'll wait. And if you're not...\"\n\nShe doesn't finish. She doesn't have to.\n\nIf you're not, she goes alone. And Drift doesn't come back from things it drifts into.",
+    "tags": [
+      "mandatory",
+      "adolescence",
+      "seri",
+      "turning_point",
+      "emotional",
+      "decision"
+    ],
+    "id": "seris_question",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "\"I'm coming. I've always been coming.\"",
+        "next": "the_tremor",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "\"Not yet. Please. Wait for my word to come.\"",
+        "next": "the_tremor",
+        "affinity": {
+          "structure": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "\"You can't go alone. But I can't go like this — wordless.\"",
+        "next": "the_tremor",
+        "affinity": {
+          "decay": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Take her hand. Solid. Don't let it phase through.",
+        "next": "the_tremor",
+        "affinity": {
+          "connection": 0.2,
+          "force": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_root_gate"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_tremor": {
+    "title": "The Tremor",
+    "stage": "adolescence",
+    "text": "That night, the worst tremor yet.\n\nNot just shaking — a sound. A deep, rending scream from beneath the village, like the earth itself is being torn. Roots surface through the ground, cracking flagstones. The Word Shrine's floor goes dark for the first time in living memory.\n\nThe Elder stands in the village square, their Thread-light blazing brighter than you've ever seen. They look old. They look terrified.\n\n\"The deep root is failing,\" they announce. \"Someone must descend. Someone must reach the heart of the network before—\"\n\nAnother tremor. A house collapses. Screaming.\n\nThe Elder's eyes find you in the crowd. You — the wordless one. The late bloomer. The one whose palm hums when pressed to the ground.\n\n\"You feel it, don't you?\" they say quietly, just to you. \"You've always felt it. The network isn't ignoring you. It's waiting for you.\"\n\nThey press something into your hand — a length of glowing thread.",
+    "tags": [
+      "mandatory",
+      "adolescence",
+      "turning_point",
+      "crisis",
+      "elder",
+      "pre_emergence"
+    ],
+    "id": "the_tremor",
+    "created": "2026-03-17T02:45:00",
+    "choices": [
+      {
+        "text": "Take the thread. Take a breath. Walk toward the Root Gate.",
+        "next": "emergence_pool",
+        "affinity": {
+          "force": 0.1,
+          "structure": 0.1,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"I can't do this. I don't have a word.\" Go anyway.",
+        "next": "emergence_pool",
+        "affinity": {
+          "decay": 0.1,
+          "force": 0.1,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "Look for Seri in the crowd first. You're not going without her.",
+        "next": "emergence_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      },
+      {
+        "text": "Put your palm to the cracked ground one last time. Listen.",
+        "next": "emergence_pool",
+        "affinity": {
+          "perception": 0.2,
+          "connection": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "the_elder"
+    ],
+    "creatures": [],
+    "items": [
+      "the_elder_s_thread"
+    ],
+    "locations": [
+      "the_village"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_descent_begins": {
+    "title": "The Descent Begins",
+    "stage": "emergence",
+    "text": "The stairs spiral down into darkness.\n\nThe Elder's thread glows in your hand, a thin lifeline unspooling behind you. The air changes as you descend — warmer, damper, electric. The walls are living root, and they pulse with a light that's too slow, like a heart that's forgetting how to beat.\n\nSeri is beside you. Or she was. You look and she's three steps behind, then five, then phasing through the wall and back again. Drift makes it hard for her to stay in one place.\n\n\"I'm here,\" she says, reading your face. \"I'm here. I'm just... it's hard to hold on down here.\"\n\nThe stairs end. The Root Entrance opens before you — tunnels branching in every direction, each one pulsing with different light. The network is vast. It's dying. And something in your dark palm is humming louder than it ever has.\n\nThen you hear it: a sound like lightning trapped underground. Getting closer.\n\nA Storm Fragment rounds the corner — a crackling shard of stolen power, all force and no mind. It sees you. It charges.",
+    "tags": [
+      "mandatory",
+      "emergence",
+      "descent",
+      "seri",
+      "crisis"
+    ],
+    "id": "the_descent_begins",
+    "created": "2026-03-17T02:55:00",
+    "choices": [
+      {
+        "text": "Push Seri behind you and face it",
+        "next": "emergence_moment",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Grab Seri's hand — if she phases, you both phase",
+        "next": "emergence_moment",
+        "affinity": {
+          "connection": 0.15
+        }
+      },
+      {
+        "text": "Press your palm to the root wall — beg the network for help",
+        "next": "emergence_moment",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Stand your ground. Whatever's inside you — now or never.",
+        "next": "emergence_moment",
+        "affinity": {
+          "force": 0.05,
+          "structure": 0.05,
+          "perception": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [
+      "storm_fragment"
+    ],
+    "items": [
+      "the_elder_s_thread"
+    ],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "emergence_moment": {
+    "title": "Emergence",
+    "stage": "emergence",
+    "text": "The Storm Fragment hits you.\n\nNot your body — your palm. The dark palm that has been silent your entire life. It strikes like a match against flint.\n\nAnd you ignite.\n\nYour palm blazes with light so bright Seri has to look away. The Storm Fragment recoils, screaming. Letters are forming on your skin — not written, but emerging, like they were always there, just beneath the surface, waiting for the right moment.\n\nYou feel it happen. Not pain. Not joy. Something deeper. The feeling of a name you forgot remembering itself.\n\nYour word is PLAYER_WORD.\n\nThe network shudders. Somewhere far below, something ancient takes notice.\n\nThe Storm Fragment dissolves. Your palm still glows. Seri stares at you.\n\n\"What does it feel like?\" she whispers.\n\nYou look at your hand. At the word that chose you. At the light that waited fourteen years to arrive.",
+    "tags": [
+      "mandatory",
+      "emergence",
+      "climax",
+      "transformation",
+      "emotional"
+    ],
+    "id": "emergence_moment",
+    "created": "2026-03-17T02:55:00",
+    "choices": [
+      {
+        "text": "\"It feels like I've been holding my breath my whole life. And I just exhaled.\"",
+        "next": "post_emergence",
+        "affinity": {}
+      },
+      {
+        "text": "\"It feels like remembering something I never knew.\"",
+        "next": "post_emergence",
+        "affinity": {}
+      },
+      {
+        "text": "\"It feels like me.\"",
+        "next": "post_emergence",
+        "affinity": {}
+      },
+      {
+        "text": "Say nothing. Show her. Use your word for the first time.",
+        "next": "post_emergence",
+        "affinity": {}
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [
+      "storm_fragment"
+    ],
+    "items": [],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {
+      "word:echo": "Your word is ECHO.\n\nThe Storm Fragment's scream bounces back from your palm — but changed. Amplified. Your own voice layered over it, copying and multiplying until the sound fills the tunnel and the fragment shatters under the weight of its own echo.\n\nYou can hear everything. Every word the network has ever carried. Every voice that ever spoke through these roots. They're all in you now, and you're sending them back.\n\nSeri's voice, from somewhere: \"You're copying it. You're copying everything.\"\n\nYour palm reads ECHO, and the letters ripple like a reflection in water.",
+      "word:drift": "Your word is DRIFT.\n\nThe Storm Fragment passes through you. Through you. Your body dissolves into smoke and reforms behind it. You didn't choose to do that. Your word chose for you.\n\nSeri laughs — actually laughs. \"We match,\" she says. \"We're the same.\"\n\nNot the same. You can feel the difference. Seri drifts away from things. You drift through them. The same word, but you're the other side of the coin.\n\nYour palm reads DRIFT, and the letters move like smoke that never settles.",
+      "word:spiral": "Your word is SPIRAL.\n\nThe Storm Fragment hits your palm and starts spinning. Faster and faster, caught in something it can't escape. It spirals inward until it's the size of a marble, then a grain of sand, then nothing. Consumed by its own momentum.\n\nYour vision shifts. You can see the patterns — not just in the tunnel, but in everything. The way the roots branch. The way Seri breathes. The way the network pulses. It's all spirals.\n\nYour palm reads SPIRAL, and the letters turn slowly, endlessly, in on themselves.",
+      "word:bloom": "Your word is BLOOM.\n\nThe Storm Fragment hits you and flowers erupt from your skin. Not painful — inevitable. Vines pour from your palm and wrap the fragment in living green. It thrashes, but the growth is faster, stronger, relentless. In seconds, it's a garden.\n\nYou can't stop growing. Your fingers sprout tiny leaves. Your hair tangles with moss. You feel the network's dying roots and your whole body aches to fill them.\n\nSeri touches a flower on your shoulder. \"It's warm,\" she says, surprised.\n\nYour palm reads BLOOM, and the letters are alive, growing, always growing.",
+      "word:rust": "Your word is RUST.\n\nThe Storm Fragment hits your palm and corrodes. You watch lightning turn to powder, power turn to dust. Your touch eats it alive.\n\nYou think of Kira, scrubbing her palm behind the storehouse. You understand now. Rust isn't destruction — it's the universe reminding everything that nothing lasts. Including the things that hurt you.\n\nSeri steps back. Just half a step. She's afraid of you. Just for a second.\n\nYour palm reads RUST, and the letters are already aging, already wearing, already beautiful in their decay.",
+      "word:whisper": "Your word is WHISPER.\n\nYou don't fight the Storm Fragment. You speak to it. Not with your voice — with something quieter. Something the fragment can't resist. Your word slides into its cracks and takes it apart from the inside, syllable by syllable.\n\nThe root walls lean toward you. They're listening. The whole network is listening. You can hear it now — every root, every connection, every dying pulse. They've been waiting for someone who could hear them.\n\nYour palm reads WHISPER, and the letters are almost too faint to see. Almost.",
+      "word:fractal": "Your word is FRACTAL.\n\nYou split. Two of you, then four, then eight — each one smaller, each one you. The Storm Fragment doesn't know which to hit. Your copies surround it, each one raising a glowing palm, each one speaking with your voice.\n\nYou can feel all of them. You are all of them. The pattern repeats: you inside you inside you, infinite and getting smaller, never reaching zero.\n\nSeri looks between the copies. \"Which one is real?\" All of them. None of them.\n\nYour palm reads FRACTAL, and the letters contain smaller letters contain smaller letters...",
+      "word:tide": "Your word is TIDE.\n\nThe Storm Fragment charges and you push. Not with your hands — with everything. A wave of force ripples from your palm and sends the fragment tumbling backward, crashing through root walls. Then you pull, and it slides back toward you, helpless. Push. Pull. Push.\n\nYou are the rhythm. The in and out. The force that moves everything and keeps nothing.\n\nSeri braces against the wind. \"You're moving the whole tunnel,\" she says.\n\nYour palm reads TIDE, and the letters pulse in and out, in and out, like breathing.",
+      "word:ember": "Your word is EMBER.\n\nThe Storm Fragment hits you and you burn. Slowly. Steadily. No explosion, no flash — just a deep, patient heat that outlasts the lightning. The fragment throws everything it has at you and you just... glow. Brighter. Warmer. Still standing.\n\nYou think of Asha, somewhere below, keeping her junction alive for two hundred years. You understand her now.\n\nSeri moves closer, not away. Your warmth is a comfort, not a threat.\n\nYour palm reads EMBER, and the letters glow like coals that will never go out.",
+      "word:crystal": "Your word is CRYSTAL.\n\nThe Storm Fragment hits your palm and you see through it. Through the lightning, through the stolen power, through to what it really is: a scared syllable of someone's dead word, given violent form. You see the truth of it and the truth dissolves the threat.\n\nThe tunnel becomes glass-clear. You can see through walls, through roots, through the layers of the network all the way down. Everything is transparent. Everything is true.\n\nSeri looks at you and you see every thought on her face, clear as crystal.\n\nYour palm reads CRYSTAL, and the letters are transparent, refracting light into rainbows.",
+      "word:hollow": "Your word is HOLLOW.\n\nThe Storm Fragment hits you and disappears. Into you. Your palm opens and the lightning pours in like water into a well. You feel it inside you — all that rage, all that force — and it doesn't fill you. Nothing fills you. You are the space where things go.\n\nYou think of Ren, somewhere in the network, fading. You understand now. Hollow isn't empty. It's capacity. The question is what you choose to hold.\n\nSeri's eyes are wide. \"Where did it go?\" Inside. Always inside.\n\nYour palm reads HOLLOW, and the letters are carved into nothing, defined by what's around them.",
+      "word:thread": "Your word is THREAD.\n\nThe Storm Fragment charges and you reach out — not to it, but to everything around it. The roots. The walls. Seri. The Elder's thread in your hand. You feel the connections between everything and you pull.\n\nThe tunnel's roots wrap the fragment. Seri's hand finds yours. The Elder's thread blazes bright. Everything connected, everything held together, everything linked through you.\n\nYou are the web. Pull one strand and the whole network shivers.\n\nYour palm reads THREAD, and the letters are woven, each one connected to the next.",
+      "word:storm": "Your word is STORM.\n\nThe Storm Fragment hits you and you hit back. Harder. Lightning against lightning — except yours is wild, untamed, flooding every direction. The tunnel walls crack. The roots shatter. Seri dives for cover.\n\nYou can't aim. You don't want to. You want to break everything that's been holding you back. Every quiet year, every dark palm, every time they called you wordless. It's all coming out now.\n\nThe fragment doesn't stand a chance. Neither do the walls.\n\nYour palm reads STORM, and the letters crackle, barely contained.",
+      "word:silence": "Your word is SILENCE.\n\nThe Storm Fragment charges and the sound stops. All of it. Seri's breathing. The network's hum. The fragment's crackling. Everything falls into the quietest moment you've ever known.\n\nThe fragment can't exist without sound. Storm is noise incarnate. In your silence, it just... stops. Hangs in the air. Then dissolves, because nothing can sustain itself in a void this complete.\n\nSeri mouths something. You can't hear it. You can't hear anything. Your power erases the thing that connects people: the ability to be heard.\n\nYour palm reads SILENCE, and the letters make no sound at all.",
+      "word:pulse": "Your word is PULSE.\n\nThe Storm Fragment charges and you feel it before it arrives. You feel everything — every root's heartbeat, every creature in the tunnel, Seri's fear, the distant ache of dying connections. The network is alive and you are its nervous system.\n\nYou send a pulse through your palm. Not force — awareness. The fragment feels itself being seen, truly seen, and it recoils. It's a thing of destruction; it can't survive being understood.\n\nSeri gasps. \"I felt that. What was that?\" That was you. Feeling everything.\n\nYour palm reads PULSE, and the letters beat. Steady. Alive.",
+      "word:mirror": "Your word is MIRROR.\n\nThe Storm Fragment hits your palm and you throw it back. Not the impact — the fragment itself. A perfect copy of its own attack, reflected, doubled. It fights itself, lightning against lightning, and tears itself apart.\n\nBut there's a cost. You felt the attack too. Every volt. Your own power doesn't protect you from what you reflect — it makes you feel it twice.\n\nSeri sees you wince. \"Are you okay?\" You're everything the storm was and everything you were. Both at once. Always.\n\nYour palm reads MIRROR, and the letters are reversed, readable only by looking at them from the other side.",
+      "word:bone": "Your word is BONE.\n\nThe Storm Fragment hits you. You don't move. It hits again. You don't move. It throws everything it has — lightning, force, rage — and you stand there, rooted, immovable, unbreakable.\n\nYou are the thing that endures. When everything else cracks and shatters and blows away, you remain. The storm exhausts itself against you. You are still there. You will always be there.\n\nSeri stares. \"It didn't even scratch you.\"\n\nYour palm reads BONE, and the letters are carved deep, ancient, permanent.",
+      "word:seed": "Your word is SEED.\n\nThe Storm Fragment charges and... nothing happens. Your palm glows, but no power comes out. No defense. No attack. The fragment slams into you and you fall.\n\nBut when you hit the ground, something changes. Where your palm touches the dead root floor, a shoot of green pushes through. Then another. Then a dozen. Growing from where you fell, tiny and fragile and unstoppable.\n\nYou're the weakest word. You're also the only one that can do this: make something alive where everything is dead.\n\nLuma, somewhere in the dying roots, feels it. A child looks up from crying for the first time in months.\n\nYour palm reads SEED, and the letters are small, and growing.",
+      "word:light": "Your word is LIGHT.\n\nThe Storm Fragment charges and the tunnel becomes day. Not slowly — instantly. Every shadow erased, every dark corner exposed, every hidden thing revealed. The fragment screams — it's a creature of stolen power, and stolen things can't survive in full light.\n\nThe root walls glow. The path ahead is clear. Every junction, every branch, every tunnel — you can see all of it, all the way down to the deep root. Nothing is hidden from you. Including the things you might wish were.\n\nSeri shields her eyes. \"You're like a sun.\"\n\nYour palm reads LIGHT, and the letters burn too bright to look at directly.",
+      "word:shadow": "Your word is SHADOW.\n\nThe Storm Fragment charges and you disappear. Not phase, not drift — you become the darkness between the roots, the absence of light, the thing that exists only because other things block what's behind them.\n\nThe fragment can't hit what isn't there. It thrashes at empty air. Meanwhile, you slide behind it — in the shadow it casts — and strike. From nowhere. From everywhere darkness touches.\n\nSeri spins. \"Where did you — how —\" She can't see you. No one can, unless you want them to.\n\nYour palm reads SHADOW, and the letters are only visible when you tilt your hand just right."
+    },
+    "conditions": null
+  },
+  "post_emergence": {
+    "title": "After the Light",
+    "stage": "emergence",
+    "text": "The tunnel is quiet. The Storm Fragment is gone. Your palm glows with PLAYER_WORD — steady, real, yours.\n\nSeri looks at you like she's meeting you for the first time. Maybe she is.\n\n\"So,\" she says. \"We're really doing this. Going deeper.\"\n\nThe Elder's thread pulses in your hand. Behind you: stairs back to the village, to your mother, to safety. Ahead: the network, dying, waiting, vast.\n\nSomewhere below, an ember burns alone. A hollow flickers. A child cries into dead soil. And deeper still, the Seed-Who-Became-Storm is eating the world one word at a time.\n\nYou have a word now. The question is what you'll do with it.",
+    "tags": [
+      "mandatory",
+      "emergence",
+      "transition",
+      "post_climax"
+    ],
+    "id": "post_emergence",
+    "created": "2026-03-17T02:55:00",
+    "choices": [
+      {
+        "text": "Forward. Into the roots. No looking back.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.1
+        }
+      },
+      {
+        "text": "Tug the Elder's thread once — let them know you made it. Then forward.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Take a moment. Look at your word. Really look at it.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Take Seri's hand. \"Together.\" Then descend.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [
+      "the_elder_s_thread"
+    ],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ember_sit": {
+    "title": "Sitting with Asha",
+    "stage": "upper_roots",
+    "text": "You sit.\n\nAsha says nothing for a long time. The fire crackles between you — not wood, not fuel, just her will to keep burning. You watch the flames and they watch you back.\n\nMinutes pass. Maybe an hour. The junction warms.\n\nFinally, she speaks. \"My partner's name was Solene. Her word was Light.\" Her voice is careful, like she's handling something fragile. \"When the Storm came — the man who eats words — she went to fight him. She was so bright.\"\n\nA pause.\n\n\"He ate her word. All that light, gone. She came back to me afterwards, but she wasn't... she was just a body without a word. She faded in three days.\"\n\nAsha stokes the fire. It flares, just for a moment.\n\n\"I've been sitting here for two hundred years because if I move, this junction dies. And this junction is the last thing she connected to.\"",
+    "tags": [
+      "upper_roots",
+      "asha",
+      "lore",
+      "emotional",
+      "trust_building"
+    ],
+    "id": "ember_sit",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "\"I'll help you keep it alive.\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"What if you could get her word back?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.1,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "Stay. You don't need to say anything more.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "asha"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "ember_junction"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ember_honest": {
+    "title": "Honesty at the Junction",
+    "stage": "upper_roots",
+    "text": "Asha looks at you — really looks — for the first time. Her ember-light flickers, studying.\n\n\"Because you have to be,\" she repeats. Then, quieter: \"That's what Solene said. My partner. Right before she went to fight the Storm.\"\n\nShe stands. She's shorter than you expected. Two hundred years of sitting.\n\n\"I know why you're here. The tremors. The dying roots. The Elder sent you, didn't they?\" She doesn't wait for an answer. \"They always send the young ones. The old ones know what's down there and won't go.\"\n\nShe picks up a lantern — old, brass, burning with a flame that matches hers.\n\n\"If you're going deeper, you'll need light. Not your word — real light. The dying roots don't respond to words anymore.\"\n\nShe holds the lantern between you. An offering.\n\n\"Solene made this. It's the last thing of hers that still burns.\"",
+    "tags": [
+      "upper_roots",
+      "asha",
+      "emotional",
+      "lantern",
+      "direct"
+    ],
+    "id": "ember_honest",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Take the lantern. \"I'll bring it back.\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        },
+        "effect": {
+          "gain_item": "asha_s_lantern"
+        }
+      },
+      {
+        "text": "\"Come with me. You've been sitting long enough.\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "\"I can't take the last thing you have of her.\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "asha"
+    ],
+    "creatures": [],
+    "items": [
+      "asha_s_lantern"
+    ],
+    "locations": [
+      "ember_junction"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ember_lore": {
+    "title": "The Root Keeper's Story",
+    "stage": "upper_roots",
+    "text": "Asha's expression shifts. Not warmer — sharper. Like she's deciding how much truth you can handle.\n\n\"The roots are a network,\" she begins. \"Every soul with a word is connected to them. Your word isn't just yours — it's a node. When someone dies or their word is consumed, the connection breaks. Break enough connections and the whole network fails.\"\n\nShe draws in the dirt with her finger. A web of lines, some broken.\n\n\"There's a man in the deep root. He was born Seed — like the child in the garden. But he hated his word. Said it trapped him in potential forever. So he tore it out and replaced it with Storm.\"\n\nHer fire dims as she speaks of him.\n\n\"He started eating other words. Not out of malice — people came to him. Dying souls who said 'take mine, at least it won't go to waste.' He started as mercy. Now he's addiction. He can't stop.\"\n\nShe looks at your palm. At your word.\n\n\"Every word he eats, the network dies a little more. When it dies completely, everyone loses their word. Everyone becomes nothing. Like my Solene in her last three days.\"",
+    "tags": [
+      "upper_roots",
+      "asha",
+      "lore",
+      "kael_backstory",
+      "critical_lore"
+    ],
+    "id": "ember_lore",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "\"How do I stop him?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"He started as mercy. Is he still?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.2
+        }
+      },
+      {
+        "text": "\"What if he's right? What if some words are prisons?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "decay": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "\"Can eaten words be returned?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        },
+        "effect": {
+          "gain_knowledge": "words_can_return"
+        }
+      }
+    ],
+    "characters": [
+      "asha"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "ember_junction"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "first_word_use": {
+    "title": "First Steps with Your Word",
+    "stage": "upper_roots",
+    "text": "The tunnel ahead is blocked — a mass of dead roots tangled into a wall. Seri phases through easily, calls back from the other side.\n\n\"It's clear over here! Just come through!\"\n\nShe forgets. She always forgets that not everyone can drift through walls.\n\nYou look at your palm. PLAYER_WORD glows steady. You've had it for an hour, maybe two. You've never used it on purpose.\n\nThe root wall isn't moving. Seri can't pull you through. Your word is all you have.\n\nTime to find out what it does.",
+    "tags": [
+      "pool",
+      "upper_roots",
+      "word_use",
+      "seri",
+      "puzzle"
+    ],
+    "id": "first_word_use",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Press your palm to the root wall and push your word into it",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Step back. Study the wall. Find where it's weakest.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.15
+        }
+      },
+      {
+        "text": "Call to Seri: \"Guide me. Tell me what you see from your side.\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.15
+        }
+      },
+      {
+        "text": "Close your eyes. Feel the roots. They're part of the network — and so are you.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {
+      "word:storm": "You raise your palm and lightning tears the root wall apart. Splinters fly. Seri ducks on the other side.\n\n\"Warn me next time!\" But she's grinning. The wall is rubble.\n\nYou step through. Your hand is shaking. That was... easy. Too easy. You think of Tam back in the village, showing off his Storm. You understand now. The power doesn't feel good. It feels inevitable.",
+      "word:seed": "You press your palm to the dead roots and push. Nothing happens. Seri watches through the wall, worried.\n\nThen — a green shoot, pushing through the tangle. Then another. Then a dozen. The dead roots bloom with new growth, and the new growth pushes the dead wood aside, making a passage.\n\nYou step through a tunnel of living green you just made from nothing.\n\nSeri touches a leaf. \"You brought them back to life.\"\n\nNot back. New. Something new from something dead.",
+      "word:hollow": "You press your palm to the root wall and it flows into you. Not breaking — absorbing. You feel the dead roots fill the hollow inside you, and for a moment you're full. Then the feeling passes, and you're empty again, and there's a gap in the wall exactly your size.\n\nSeri stares at the gap. \"Where did it go?\"\n\nInside. You don't say it. You're not sure you want to know either."
+    },
+    "conditions": null
+  },
+  "tangle_guardian": {
+    "title": "The Guardian",
+    "stage": "upper_roots",
+    "text": "The tunnel opens into a wide junction — and something is waiting.\n\nA Tangle Beast. Massive. A knot of living roots the size of a house, pulsing with the last of the network's energy. Root tendrils extend across every path, feeling for vibration.\n\nIt's not aggressive. It's guarding. This junction connects the upper roots to the living network below. The Tangle Beast has been here since the network was young, protecting this crossing.\n\nBut the network is dying, and the beast is confused. It can't tell friend from threat anymore. Its tendrils twitch toward you.\n\nSeri freezes. She can phase through the roots, but Drift doesn't help against something that's everywhere.",
+    "tags": [
+      "pool",
+      "upper_roots",
+      "combat_or_puzzle",
+      "creature",
+      "tangle_beast"
+    ],
+    "id": "tangle_guardian",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Use your word to force through",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.2
+        },
+        "effect": {
+          "fragment_cost": 1
+        }
+      },
+      {
+        "text": "Speak to it. It's part of the network — maybe it can hear you.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "Find a way around. Not everything needs to be fought.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "structure": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Show it your word-palm. Let it see you're connected to the network too.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [
+      "tangle_beast"
+    ],
+    "items": [],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "echo_moths_flock": {
+    "title": "The Moth Memories",
+    "stage": "upper_roots",
+    "text": "A cloud of Echo Moths descends from the ceiling — hundreds of them, wings shimmering with stored conversations. They fill the tunnel with layered whispers, fragments of words spoken years ago.\n\nSeri holds perfectly still. \"Listen,\" she breathes.\n\nThe moths settle on the walls, on your arms, on Seri's translucent shoulders. Each one carries a different echo:\n\n\"...the Seed child hasn't stopped crying since...\"\n\"...tell the Ember Woman that help is coming, even if it's a lie...\"\n\"...he doesn't eat words because he wants to. He eats them because they ask him to...\"\n\"...the First Root still pulses. Once every three minutes. I counted...\"\n\nOne moth lands on your palm, right over your word. It vibrates — and plays back a voice you don't recognize:\n\n\"If you're hearing this, the network is still alive. I'm sorry I can't be there. My word was Light. Tell Asha I kept burning as long as I could.\"",
+    "tags": [
+      "pool",
+      "upper_roots",
+      "lore",
+      "moths",
+      "emotional",
+      "solene"
+    ],
+    "id": "echo_moths_flock",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Catch the moth carrying Solene's message. Bring it to Asha.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.2
+        },
+        "effect": {
+          "gain_item": "solenes_echo",
+          "gain_knowledge": "solenes_message"
+        }
+      },
+      {
+        "text": "Listen to more echoes. Every fragment is a piece of the truth.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "perception": 0.2
+        },
+        "effect": {
+          "gain_knowledge": "kael_mercy"
+        }
+      },
+      {
+        "text": "Ask the moths: \"Where is the Seed child?\"",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        },
+        "effect": {
+          "gain_knowledge": "luma_location"
+        }
+      },
+      {
+        "text": "Let them go. These are private words. Not yours to collect.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "structure": 0.15,
+          "decay": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [
+      "echo_moth"
+    ],
+    "items": [],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "seri_phases_ahead": {
+    "title": "Seri, Wait —",
+    "stage": "upper_roots",
+    "text": "Seri drifts.\n\nNot metaphorically — she literally phases through the tunnel wall and disappears. You hear her footsteps on the other side, then nothing.\n\n\"Seri!\"\n\nNo answer.\n\nYou press your ear to the root wall. Faint sounds — Seri's voice, talking to someone. Or something. She found a side passage and just... went.\n\nThis is what Drift does. She doesn't mean to leave you behind. She just forgets that walls exist for other people.\n\nYou could try to find your way around. Or you could wait — she always comes back. Eventually.\n\nA minute passes. Then five.\n\nFrom somewhere beyond the wall, you hear Seri scream.",
+    "tags": [
+      "pool",
+      "upper_roots",
+      "seri",
+      "tension",
+      "choice_matters"
+    ],
+    "id": "seri_phases_ahead",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Use your word to break through the wall. NOW.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.15,
+          "connection": 0.1
+        },
+        "effect": {
+          "fragment_cost": 1
+        }
+      },
+      {
+        "text": "Find a way around. Panic doesn't help. Think.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "structure": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Press your palm to the wall and reach through the network for her.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Scream her name. Make her hear you through the stone.",
+        "next": "upper_roots_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "root_entrance"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "asha_offers_lantern": {
+    "title": "The Lantern",
+    "stage": "upper_roots",
+    "text": "You return to the junction. Asha is waiting — she hasn't moved, of course. But something in her face has changed. She's been watching you through the network.\n\n\"You're not like the others they send,\" she says. \"The others come with plans. Save the network, fix the roots, stop the Storm. You came because you have to. That's different.\"\n\nShe picks up the brass lantern. Solene's lantern. The flame inside matches Asha's — steady, patient, two hundred years of not going out.\n\n\"The dying roots don't respond to words. Your power won't work where the network is dead. But this will.\" She holds it out. \"Solene's light reaches everywhere. Even the places that have forgotten what light is.\"\n\nHer hands shake.\n\n\"I want you to have it. But you have to understand — it's the last thing I have of her. If you take it, you're taking her with you. And you have to bring it back.\"\n\nThe fire in the lantern flickers. Waiting for your hand.",
+    "tags": [
+      "mandatory",
+      "upper_roots",
+      "asha",
+      "lantern",
+      "emotional",
+      "quest_item"
+    ],
+    "id": "asha_offers_lantern",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Take the lantern. \"I'll bring her back to you.\"",
+        "next": "path_deeper",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        },
+        "effect": {
+          "gain_item": "asha_s_lantern"
+        }
+      },
+      {
+        "text": "\"Keep it. I'll find my own light.\" Leave with only your word.",
+        "next": "path_deeper",
+        "affinity": {
+          "structure": 0.15,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"Come with me. Bring her yourself.\"",
+        "next": "path_deeper",
+        "affinity": {
+          "connection": 0.1,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "Take it silently. Some promises are better unspoken.",
+        "next": "path_deeper",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        },
+        "effect": {
+          "gain_item": "asha_s_lantern"
+        }
+      }
+    ],
+    "characters": [
+      "asha"
+    ],
+    "creatures": [],
+    "items": [
+      "asha_s_lantern"
+    ],
+    "locations": [
+      "ember_junction"
+    ],
+    "text_variants": {
+      "word:ember": "Asha looks at your palm. EMBER. Same as hers.\n\n\"Another ember,\" she says, for the second time. But now it sounds like hope.\n\n\"Take it. The lantern burns brighter for embers. Solene would have wanted that.\"\n\nWhen you take the lantern, the flame doubles in size. Asha smiles — the first time you've seen her smile in the entire time you've known her.\n\n\"She likes you,\" Asha whispers."
+    },
+    "conditions": null
+  },
+  "path_deeper": {
+    "title": "Deeper",
+    "stage": "upper_roots",
+    "text": "The tunnel slopes downward. Behind you, Asha's junction glows — a warm dot shrinking in the distance. Ahead, the light changes. The roots are still alive here, but barely. Their pulse is slower. Weaker.\n\nSeri walks beside you, more solid than she's been since you descended. Something about the network's depth grounds her.\n\n\"I can feel it,\" she says. \"The living part. It's still there, underneath all the dying. Like a heartbeat under rubble.\"\n\nShe's right. You can feel it too — through your word, through the roots, through the soles of your feet. The network isn't dead. It's holding on.\n\nSomewhere ahead, a bridge of braided roots spans a vast darkness. Somewhere below that, a child cries into dead soil. And deeper still — the storm.\n\nBut first: the living network. What's left of it.",
+    "tags": [
+      "mandatory",
+      "upper_roots",
+      "transition",
+      "seri",
+      "atmosphere"
+    ],
+    "id": "path_deeper",
+    "created": "2026-03-17T03:00:00",
+    "choices": [
+      {
+        "text": "Forward. The living network is waiting.",
+        "next": "living_network_pool",
+        "affinity": {
+          "force": 0.05,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"Seri — whatever happens down there, stay solid. For me.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15
+        }
+      },
+      {
+        "text": "Pause. Listen to the heartbeat under the rubble. Remember it.",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.15
+        }
+      },
+      {
+        "text": "Check the Elder's thread. Still connected. Still glowing. Good.",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "hollow_passage"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "the_living_bridge": {
+    "title": "The Living Bridge",
+    "stage": "living_network",
+    "text": "The bridge takes your breath away.\n\nBraided roots thick as trees, woven together across a darkness that has no bottom. Each root pulses with light — words being carried between distant souls, connections still alive, still humming. Standing on the bridge, you feel every message passing under your feet. Fragments of conversation. Fragments of people.\n\nSeri walks to the edge and looks down. \"There's nothing below,\" she says. \"Not even darkness. Just... space.\"\n\nThe bridge sways. Not from wind — from words. Every soul that speaks through the network makes it vibrate. The heavier the words, the more it moves.\n\nHalfway across, Seri stops. She's flickering — not her usual phase, something different. The network's depth is pulling at her Drift.\n\n\"I'm fine,\" she says, before you ask. Her hand passes through the railing.\n\nOn the far side of the bridge, a vast hall opens. Something flickers in the darkness there — a shape that's almost a person. Almost.",
+    "tags": [
+      "mandatory",
+      "living_network",
+      "opening",
+      "bridge",
+      "atmosphere",
+      "seri"
+    ],
+    "id": "the_living_bridge",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "Cross quickly. Don't give the darkness time to pull at you.",
+        "next": "meeting_ren",
+        "affinity": {
+          "force": 0.1,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Walk slowly. Feel every word passing under your feet.",
+        "next": "meeting_ren",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Hold Seri's hand as you cross. Anchor her to something solid.",
+        "next": "meeting_ren",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Stop at the center. Look down into the nothing. Face it.",
+        "next": "meeting_ren",
+        "affinity": {
+          "perception": 0.1,
+          "decay": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_living_bridge"
+    ],
+    "text_variants": {
+      "word:thread": "You step onto the bridge and the world opens.\n\nEvery braided root is a connection — and you feel ALL of them. Hundreds of souls linked through this bridge, their words flowing like light through fiber. You can feel the Elder in the village above, their Thread-light stretching thin. You can feel Asha's ember, burning alone. You can feel the child crying in the dying roots.\n\nThe bridge isn't just a bridge. It's the central nervous system of the entire network. And you're standing on its spine.\n\nSeri grabs your arm. \"You're glowing.\"\n\nYou are. Your Thread-light has joined the bridge's web, and for a moment you are the most connected thing in the network.",
+      "word:pulse": "You step onto the bridge and feel a heartbeat.\n\nNot yours. The network's. Every soul connected to these roots has a pulse, and you can sense them all — flickering, fading, some strong, most weak. The bridge carries their heartbeats like a stethoscope pressed to the chest of the world.\n\nYou count them. Two hundred and seventeen living connections. Down from thousands. Down from tens of thousands.\n\nEach one is a person. Each one is dying a little more each day.\n\nSeri watches you counting something she can't see. \"How many?\" she asks.\n\n\"Not enough,\" you say."
+    },
+    "conditions": null
+  },
+  "meeting_ren": {
+    "title": "The Half-Hollow",
+    "stage": "living_network",
+    "text": "The Hollow Hall is vast and empty and full of ghosts.\n\nNot ghosts — Hollow Drifters. Dozens of them, floating through the space like smoke, wearing the shapes of people they used to be. Some flicker. Some barely exist at all.\n\nAnd in the center, sitting on a stone that might have been a throne once, is someone who's still... almost... here.\n\nThey look up as you enter. Their outline pulses — solid, then transparent, then solid again. Their palm reads HOLLOW, but the letters stutter, like a light with a bad connection.\n\n\"Don't stare,\" they say. Their voice comes from slightly to the left of their mouth, delayed, like an echo of themselves. \"I know what I look like.\"\n\nSeri phases back to full opacity, startled. The figure notices.\n\n\"Drift,\" they say. \"You'll end up like me if you're not careful. Every time you phase, you leave a little of yourself behind.\"\n\nThey stand. Parts of them don't stand with the rest.\n\n\"My name is Ren. I used to be somebody. Now I'm mostly the space where somebody was.\"",
+    "tags": [
+      "mandatory",
+      "living_network",
+      "ren_intro",
+      "emotional",
+      "core"
+    ],
+    "id": "meeting_ren",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "\"I see you. You're still here.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      },
+      {
+        "text": "\"What happened to you?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"Can I help?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Don't look away. That's the most you can do.",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri"
+    ],
+    "creatures": [
+      "hollow_drifter"
+    ],
+    "items": [],
+    "locations": [
+      "hollow_hall"
+    ],
+    "text_variants": {
+      "word:hollow": "Ren stares at your palm. HOLLOW. Their expression breaks.\n\n\"Oh,\" they whisper. \"Oh no. You're one of us.\"\n\nThey reach for your hand — and their fingers pass through yours. They look down at their own hand like they've been betrayed by it.\n\n\"I was going to tell you not to absorb too much. Not to take more than you can hold. But you know. You already know.\" Their voice cracks. \"Empty means nothing was ever there. Hollow means something was, and now there's a shape where it used to be.\"",
+      "word:echo": "Ren stares at your palm. ECHO.\n\n\"Echo,\" they say, and their voice does something terrible — it copies itself. Three Rens speaking at once, layered, overlapping. They wince.\n\n\"Sorry. That happens around Echoes. You reflect what's near you, and I'm... there's a lot of empty space to echo in.\"\n\nYou can hear it now. Inside Ren, where a whole person used to be, your word bounces back and forth forever. Every word they ever absorbed, still echoing in their hollow. They're not empty. They're full of ghosts.",
+      "word:thread": "Ren stares at your palm. THREAD.\n\nYou feel it immediately — the connections. Ren has thousands of them, snapped and fraying, reaching into the dark like severed nerves. Every person they ever absorbed left a thread behind, and those threads still reach for connections that no longer exist.\n\n\"You can feel them, can't you?\" Ren says quietly. \"The broken ends. Everyone always could. Thread-bearers just feel it sharper.\"\n\nYou nod. It hurts. Like holding a handful of cut strings that remember being a web.",
+      "word:silence": "Ren stares at your palm. SILENCE.\n\nThe Hollow Hall goes quiet. Not the normal kind of quiet — the kind where even the echoes stop. The drifters freeze. Ren's flickering steadies.\n\n\"Oh,\" they breathe. \"Oh, that's... I haven't felt quiet in so long.\"\n\nYour word nullifies everything near you. Including the constant noise inside Ren — the screaming of absorbed words, the echoes of people who aren't there anymore. In your silence, Ren is just Ren. For the first time in years.\n\nThey're crying. You can't hear it. But you can see it.",
+      "word:light": "Ren stares at your palm. LIGHT.\n\nAnd you see them. Really see them.\n\nYour word illuminates everything, and in Ren's flickering outline you can see the cracks — every fracture, every place where they absorbed too much and broke a little. The gaps where fingers used to be. The shimmer where their edges don't quite hold.\n\nBut in your light, the cracks glow.\n\nNot white. Gold. Like veins of precious metal running through old clay. Every break in Ren is illuminated, and for one moment they're not a half-erased person — they're a map of everywhere they've been hurt and kept going.\n\n\"What are you doing?\" Ren whispers. They can see themselves glowing. \"What's happening to me?\"\n\n\"I'm showing you what you look like,\" you say. \"You're not broken. You're repaired.\""
+    },
+    "conditions": null
+  },
+  "echo_chamber_visit": {
+    "title": "The Chamber of Echoes",
+    "stage": "living_network",
+    "text": "Ren leads you to a spherical cavern where sound multiplies. Echo moths swarm the ceiling, wings humming with stolen words.\n\n\"This is where the network stores what it doesn't want to forget,\" Ren says. Their voice bounces between the walls — four Rens speaking in overlapping delay. \"Every conversation that mattered. Every last word. Every—\"\n\nThey stop. One of the echoes is still going.\n\n\"—promise I broke,\" says Ren's echo, from years ago. A younger Ren, stronger, more solid. \"I told them I'd hold the line. I told them their words would be safe with me. I absorbed too many. I tried to save everyone and I couldn't hold it all.\"\n\nThe echo fades. Ren's present self flickers hard, like the memory cost them something physical.\n\n\"I hate this room,\" they say quietly.",
+    "tags": [
+      "pool",
+      "living_network",
+      "ren",
+      "lore",
+      "echo_chamber",
+      "emotional"
+    ],
+    "id": "echo_chamber_visit",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "\"Those words you absorbed — are they still inside you?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        },
+        "effect": {
+          "gain_knowledge": "ren_holds_words"
+        }
+      },
+      {
+        "text": "\"You didn't fail them. You tried.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Listen to the other echoes. What else is stored here?",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.2
+        },
+        "effect": {
+          "gain_knowledge": "network_memory"
+        }
+      },
+      {
+        "text": "\"Let's go. You don't have to stay in the room that hurts you.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren"
+    ],
+    "creatures": [
+      "echo_moth"
+    ],
+    "items": [],
+    "locations": [
+      "echo_chamber"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "hollow_drifters_encounter": {
+    "title": "The Ones Who Faded",
+    "stage": "living_network",
+    "text": "A cluster of Hollow Drifters blocks the passage — six of them, hovering in a loose circle. They're not threatening. They're mourning.\n\nRen stops. Their hands clench — or try to.\n\n\"I knew them,\" they say. \"All of them. Mira. Dex. Old Thane. They were Hollows, like me. We absorbed things together. Held the line together.\"\n\nThe drifters turn toward Ren. They can't see anymore — no eyes left — but they sense the familiar. One of them drifts close, and for a moment its outline overlaps with Ren's. They share the same emptiness.\n\n\"They asked me to absorb them,\" Ren says. \"When they were fading. They said 'take what's left of me, at least it won't go to waste.' That's what everyone says.\"\n\nRen's voice is barely audible. \"That's what Kael said to the first word he ate. The exact same words.\"\n\nThe parallel hangs in the air. Kael eats words. Ren absorbed friends. Same desperation. Same mercy. Different scale.\n\n\"I said no,\" Ren whispers. \"I let them fade. I let them become this. And I don't know if that was kindness or cruelty.\"",
+    "tags": [
+      "pool",
+      "living_network",
+      "ren",
+      "hollow_drifters",
+      "kael_parallel",
+      "moral"
+    ],
+    "id": "hollow_drifters_encounter",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "\"It was kindness. You let them end on their own terms.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"It was cruelty. They asked and you refused.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "force": 0.1,
+          "decay": 0.1
+        }
+      },
+      {
+        "text": "\"Maybe it doesn't matter. They're here either way.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.15,
+          "decay": 0.05
+        }
+      },
+      {
+        "text": "\"Would you make the same choice now?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren"
+    ],
+    "creatures": [
+      "hollow_drifter"
+    ],
+    "items": [],
+    "locations": [
+      "hollow_hall"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "seri_fading": {
+    "title": "Seri Is Fading",
+    "stage": "living_network",
+    "text": "You notice it during a quiet moment. Seri is sitting against the wall, and you can see the wall through her.\n\nNot phasing — fading. Her edges are soft, indistinct, like a chalk drawing in rain. She's looking at her hands, turning them over. She can see through them too.\n\n\"It's getting worse,\" she says. No panic. Worse — acceptance. \"Down here, Drift doesn't just let me phase through things. It lets things phase through me. I'm losing... edges.\"\n\nRen watches from across the tunnel, recognition in their flickering eyes. They've seen this before. They've been this before.\n\n\"The network is pulling at her,\" Ren says to you, quiet enough that Seri can't hear. \"Drift was never meant to go this deep. She's becoming part of the background.\"\n\nSeri stands. She's translucent now from the waist down.\n\n\"I can still walk,\" she says. \"I'm not stopping. Don't you dare tell me to go back.\"",
+    "tags": [
+      "pool",
+      "living_network",
+      "seri",
+      "crisis",
+      "emotional",
+      "foreshadowing"
+    ],
+    "id": "seri_fading",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "\"I'm not telling you to go back. I'm telling you to hold on.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Ask Ren: \"Is there a way to stop it?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "\"Seri... maybe you should go back. Through the bridge, before—\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "structure": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Take her hand. Squeeze until she can feel it. Don't let go.",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      }
+    ],
+    "characters": [
+      "seri",
+      "ren"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "hollow_hall"
+    ],
+    "text_variants": {
+      "word:drift": "You understand what's happening to her because it's happening to you too.\n\nYour word is DRIFT. Same as hers. And down here, in the deep network, Drift doesn't just phase — it dissolves. You look at your own hands. Your fingertips are translucent.\n\n\"We're the same,\" Seri says, looking at your matching fading edges. \"We're both going.\"\n\nNo. Not the same. She drifts AWAY from things. You drift THROUGH them. She loses her edges. You choose which edges to keep.\n\nYou grab her hand. Your matching Drifts cancel out — for a moment, where your hands meet, you're both completely solid.\n\n\"Don't let go,\" she whispers.\n\nYou don't.",
+      "word:thread": "You feel her unraveling.\n\nYour word is THREAD, and you can sense connections — and Seri's are coming apart. The links between her body and her word, between her edges and her center, between her self and the world. Thread by thread, she's dissolving.\n\nYou reach out with your word. Not physically — through the network. You grab the fraying threads of her and hold them. It's like trying to keep a sweater from unraveling by holding every loose end at once.\n\n\"What are you doing?\" Seri asks. She can feel it — your Thread wrapping around her Drift, holding her together.\n\n\"Anchoring you,\" you say. \"Hold still.\"\n\nIt costs you. One fragment. But she's solid again. For now."
+    },
+    "conditions": null
+  },
+  "rens_warning": {
+    "title": "What Ren Knows",
+    "stage": "living_network",
+    "text": "Ren pulls you aside while Seri rests — as much as something half-transparent can rest.\n\n\"Listen,\" they say. \"I need to tell you something about what's below. About the dying roots and the deep root and the man at the center.\"\n\nThey flicker. Concentrate. Come back.\n\n\"Kael isn't a monster. He's a Seed that planted itself in the wrong soil. When he ate his first word — a woman named Lira, word of Pulse — she came to him dying. 'Take mine,' she said. He cried the whole time. Every word after that was easier.\"\n\nRen's voice drops.\n\n\"There's a child in the dying roots. Luma. Word of Seed, like Kael was. She waters dead words with her tears. She thinks she's broken because nothing grows.\"\n\nRen looks at your palm.\n\n\"Something's growing for her. I can feel it from here. It started when you emerged. The network noticed you. Whatever you do down there — find Luma first. Before Kael does. He sees himself in every Seed child, and he'll either save her or eat her, and I don't think even he knows which.\"",
+    "tags": [
+      "pool",
+      "living_network",
+      "ren",
+      "lore",
+      "kael",
+      "luma",
+      "critical"
+    ],
+    "id": "rens_warning",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "\"I'll find her. I promise.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "\"Come with me. She might need someone who understands being hollow.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "\"What if Kael is right? What if eating her word saves her from being potential forever?\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "decay": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "\"Why do you care? You're barely here.\"",
+        "next": "living_network_pool",
+        "affinity": {
+          "force": 0.1,
+          "perception": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "hollow_hall"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "bridge_breaks": {
+    "title": "The Bridge Breaks",
+    "stage": "living_network",
+    "text": "The tremor hits without warning.\n\nNot like the village tremors — this one comes from the bridge itself. A root snaps with a sound like a scream. Then another. The braided walkway lurches, and suddenly the light running through it starts flickering out, strand by strand.\n\n\"He's eating faster,\" Ren says. No fear in their voice — they're past fear. \"The Storm is consuming the connections between the upper and lower network. He's isolating the dying roots.\"\n\nAnother root snaps. The bridge sags. Behind you, the path to Asha's junction shudders.\n\n\"If the bridge falls, the upper roots are cut off,\" Ren says. \"Everyone above — Asha, your village, the Elder — they lose their connection. Their words start fading. Like mine.\"\n\nSeri is standing at the edge, flickering. She looks at the bridge. At you. At the tunnel leading down into the dying roots.\n\n\"If we go forward, we can't come back this way,\" she says.\n\nThe bridge groans. You have seconds.",
+    "tags": [
+      "mandatory",
+      "living_network",
+      "crisis",
+      "bridge",
+      "point_of_no_return"
+    ],
+    "id": "bridge_breaks",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "Forward. Into the dying roots. We can't save the bridge, but we can stop what's killing it.",
+        "next": "path_to_dying",
+        "affinity": {
+          "force": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Tug the Elder's thread. One last signal. Then run forward.",
+        "next": "path_to_dying",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"Ren — can you hold it? Even for a moment?\"",
+        "next": "path_to_dying",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Use your word on the bridge. Buy time for the people above.",
+        "next": "path_to_dying",
+        "affinity": {
+          "connection": 0.1,
+          "force": 0.1
+        },
+        "effect": {
+          "fragment_cost": 2
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_living_bridge"
+    ],
+    "text_variants": {
+      "word:thread": "Your word flares. THREAD. You can feel the bridge's connections — every braided root, every link. They're snapping one by one and you can feel each one like a nerve being cut.\n\nYou reach out with your word and grab the fraying ends. Hold. HOLD.\n\nFor a moment — just a moment — you are the bridge. Every connection running through you. The weight is immense. But you hold, and the people above keep their words for one more day.",
+      "word:seed": "A root snaps and you catch it. Not with your hands — with your word. Where your palm touches the broken end, new growth erupts. A living patch on a dying bridge.\n\nIt won't hold forever. But it holds now. And Ren stares at the new green growth on the ancient root and whispers: \"How are you doing that? Nothing grows down here.\"\n\nLuma, in the dying roots below, feels it again. Something growing. Someone coming."
+    },
+    "conditions": null
+  },
+  "path_to_dying": {
+    "title": "Into the Dark",
+    "stage": "living_network",
+    "text": "The three of you descend. Behind you, the bridge moans and cracks. The light from the living network fades.\n\nRen walks beside you — walks is generous. They drift, flicker, reappear a step ahead. But they're here. More here than they've been in a long time.\n\n\"I haven't gone this deep in years,\" they say. \"The last time, I lost three fingers.\" They hold up a hand. Only the thumb and index are fully visible. \"Well. Lost more, since then.\"\n\nSeri is quiet. She's been quiet since the bridge. She's holding your hand, gripping hard, like if she lets go she'll phase through the floor and never stop falling.\n\nThe tunnel walls change. The roots are grey here. Dead. The air tastes like ash and old metal.\n\nAsha's lantern — if you took it — is the only light.\n\nSomewhere ahead, very faintly, you hear crying. A child's voice. And the smell of wet earth.\n\n\"Luma,\" Ren whispers.\n\nThe dying roots. You've arrived.",
+    "tags": [
+      "mandatory",
+      "living_network",
+      "transition",
+      "ren",
+      "seri",
+      "atmosphere"
+    ],
+    "id": "path_to_dying",
+    "created": "2026-03-17T03:15:00",
+    "choices": [
+      {
+        "text": "Follow the crying. Find Luma.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "\"Ren — lead the way. You know this place.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.1,
+          "structure": 0.1
+        }
+      },
+      {
+        "text": "Hold the lantern high. Push the darkness back.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "force": 0.1,
+          "perception": 0.1
+        }
+      },
+      {
+        "text": "Squeeze Seri's hand. \"Still here?\" \"Still here.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri"
+    ],
+    "creatures": [],
+    "items": [
+      "asha_s_lantern"
+    ],
+    "locations": [
+      "the_root_garden"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "finding_luma": {
+    "title": "The Root Garden",
+    "stage": "dying_roots",
+    "text": "The garden is the saddest place you've ever seen.\n\nRows of small mounds, each marked with a faded word — names of souls whose connections died. The soil should be dead. It is dead. But someone has been watering it.\n\nA child kneels at the far end, pouring tears onto a mound marked LIGHT. Seed sprites hover around them — tiny, luminous, drawn to the child's word like moths to a flame. The child's palm reads SEED, glowing weakly.\n\n\"It won't grow,\" the child says, without looking up. They've been saying it to themselves for a long time. \"I water and water and nothing grows. I'm Seed. I should make things grow. That's what Seed means.\"\n\nRen stops. Their whole body goes rigid — or as rigid as something half-transparent can go.\n\n\"Luma,\" they say softly.\n\nThe child looks up. Their eyes are red. They're maybe nine. They've been crying so long their tears have worn channels in the dirt.\n\nThey look at your group — a wordless-no-more traveler, a half-hollow, and a girl who's mostly see-through — and say the most heartbreaking thing you've heard in your life:\n\n\"Are you here to tell me I'm broken too?\"",
+    "tags": [
+      "mandatory",
+      "dying_roots",
+      "luma_intro",
+      "emotional",
+      "core",
+      "garden"
+    ],
+    "id": "finding_luma",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "\"You're not broken. Look at the soil — it's warm. Your tears are keeping these words alive.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Kneel beside them. Start watering too.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.2
+        }
+      },
+      {
+        "text": "\"I'm here because the network is dying. And I think you might be the one keeping it from dying faster.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"No. I'm here because someone told me to find you before the Storm does.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "force": 0.1,
+          "connection": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "luma",
+      "ren"
+    ],
+    "creatures": [
+      "seed_sprite"
+    ],
+    "items": [],
+    "locations": [
+      "the_root_garden"
+    ],
+    "text_variants": {
+      "word:seed": "Luma stares at your palm. SEED. Same as hers.\n\nHer eyes go wide. She stands up so fast she knocks dirt onto the mound she was watering.\n\n\"You're Seed,\" she whispers. \"You're like me. Does it—\" Her voice catches. \"Does it work for you? Can you make things grow?\"\n\nYou press your palm to the dead soil. A shoot pushes through. Green. Alive.\n\nLuma watches it grow and starts crying again — but different tears. Not sadness. Not frustration. Something she'd forgotten existed.\n\n\"How?\" she asks, so small.\n\n\"I don't know,\" you say. And that's the truth. You don't know why your Seed works and hers doesn't. But standing here, in her garden, you feel stronger than you have since you emerged. Like the soil needs you. Like you need the soil.",
+      "word:bloom": "You kneel beside Luma and the garden erupts.\n\nNot dramatically — gently. Tiny flowers push through the dead soil around your knees. Moss creeps along the root-walls. A vine spirals up from nowhere and wraps around the nearest mound.\n\nBut the flowers aren't growing from the living parts of the soil. They're growing from the cracks. Every fracture in the dead roots, every gap where a connection used to be — that's where the green pushes through. The breaks are where the growth happens.\n\nLuma stares. \"They're growing from the scars,\" she whispers.\n\n\"That's where the light gets in,\" you say, without knowing why you know that.\n\nShe touches a flower growing from a crack. It blooms wider. She starts crying, but she's smiling.\n\n\"I've been watering the wrong part,\" she says. \"I've been watering the soil. I should have been watering the scars.\"",
+      "word:light": "You hold up your palm and the garden ignites with light.\n\nEvery mound, every buried word, every dormant connection — your Light reveals what Luma's tears have been doing all along. The dead words aren't dead. They're glowing faintly under the soil, preserved by years of a child's crying.\n\n\"Look,\" you say. \"Luma, look.\"\n\nShe looks. And sees. For the first time, she sees what she's been saving. Dozens of words, held in dormancy, not dead but sleeping. Her tears didn't fail. Her tears are the only reason anything survived down here.\n\n\"I did that?\" she asks, so small.\n\n\"You did that. Every single day.\"\n\nShe starts crying again. But she's smiling."
+    },
+    "conditions": null
+  },
+  "ash_garden_path": {
+    "title": "The Ash Garden",
+    "stage": "dying_roots",
+    "text": "Beyond Luma's garden, the ash begins.\n\nEverything here was alive once. The grey dust is warm — ember residue from connections that burned too bright. Root worms burrow through the remains, feeding on what's left. The crunch under your feet is the sound of dead words turning to powder.\n\nLuma walks beside you now. She's small and quiet and she holds the hem of Seri's jacket even though her hand keeps phasing through.\n\n\"This used to be the Bright Quarter,\" she says. \"Before I was born. People say it was the most beautiful part of the network. All the Light-words and Ember-words lived here.\"\n\nShe points at a shape in the ash — the outline of a doorway, a house, a life.\n\n\"Then he came through. The Storm. He didn't even fight them. They just... gave up. One by one. 'Take mine,' they said. Everyone always says that.\"\n\nA root worm surfaces, pale and blind, and slithers back under. Luma watches it without disgust.\n\n\"Even the worms are just trying to eat,\" she says. \"Nobody's evil here. Everyone's just hungry for something that's already gone.\"",
+    "tags": [
+      "pool",
+      "dying_roots",
+      "luma",
+      "atmosphere",
+      "decay",
+      "lore"
+    ],
+    "id": "ash_garden_path",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "\"Not everything is gone. You're still here. We're still here.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Search the ash. Maybe something survived.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "\"Luma — what do you know about Kael?\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        },
+        "effect": {
+          "gain_knowledge": "luma_knows_kael"
+        }
+      },
+      {
+        "text": "Walk in silence. Some places deserve silence.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "structure": 0.1,
+          "decay": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "luma",
+      "seri"
+    ],
+    "creatures": [
+      "root_worm"
+    ],
+    "items": [],
+    "locations": [
+      "ash_garden"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "rust_veins_shortcut": {
+    "title": "The Rust Veins",
+    "stage": "dying_roots",
+    "text": "Ren stops at a fork. Left: the long way, through the ash garden's edge. Right: a tunnel where the walls weep metallic liquid. The Rust Veins.\n\n\"The Veins are faster,\" Ren says. \"Straight to the Descent. But everything decays in there — weapons, armor, words. Even your word-light dims.\"\n\nThey hold up their hand. Two of their fingers are completely transparent now.\n\n\"Last time I went through, I lost my sense of taste. Not that I eat anymore. But I liked remembering what food was.\"\n\nSeri looks at the metallic tunnel. A drop of corrosive liquid falls and hisses on the stone.\n\n\"I'm already fading,\" she says. \"What's a little more?\"\n\nLuma tugs your sleeve. \"My word doesn't work in there. I tried once. The rust ate the seed before it could grow.\"",
+    "tags": [
+      "pool",
+      "dying_roots",
+      "choice",
+      "shortcut",
+      "risk"
+    ],
+    "id": "rust_veins_shortcut",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "Take the Rust Veins. Speed matters more than comfort.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "force": 0.15,
+          "decay": 0.05
+        },
+        "effect": {
+          "fragment_cost": 2
+        }
+      },
+      {
+        "text": "Go the long way. Keep everyone whole.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "structure": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"Ren — you go through. You've already lost what rust takes. Scout ahead and meet us on the other side.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.1,
+          "structure": 0.1
+        }
+      },
+      {
+        "text": "Ask Luma: \"What if we planted something in the rust? Could a seed survive it?\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_rust_veins"
+    ],
+    "text_variants": {
+      "word:rust": "The Rust Veins don't frighten you. They feel like home.\n\nYou step into the metallic tunnel and your word flares — not dimming, but brightening. Rust recognizes Rust. The corrosive liquid parts around you, making a dry path.\n\nLuma stares. \"It likes you.\"\n\nNot likes. Recognizes. Your word is decay's cousin — you understand the beauty in dissolution, the art in letting go. The Rust Veins open for you like a door opening for its owner.\n\nEveryone walks through in your wake, safe in the corridor your word carved through the corrosion.\n\n\"I've never seen anyone do that,\" Ren murmurs."
+    },
+    "conditions": null
+  },
+  "seris_crisis": {
+    "title": "Seri's Crisis",
+    "stage": "dying_roots",
+    "text": "It happens suddenly.\n\nSeri stops walking. Not because she chose to — because she can't. Her legs have phased through the floor. She's sinking, slowly, into the dead root-stone like quicksand.\n\n\"I can't—\" She grabs at the ground but her hands pass through. \"I can't stop it. I can't—\"\n\nRen lurches toward her but their own hands pass through hers. Two half-things trying to hold each other.\n\nLuma grabs Seri's arm — and holds. Solid. Seed touching Drift, growth gripping dissolution. Luma's small hands are the only thing between Seri and disappearing into the floor.\n\n\"I've got you,\" Luma says, straining. \"I've got you, I've got you.\"\n\nSeri is waist-deep. Her face is pure terror — the brave girl who chased butterflies, who said 'anywhere,' who phased through walls for fun. Now the walls are phasing through her.\n\nYour turn.",
+    "tags": [
+      "pool",
+      "dying_roots",
+      "seri",
+      "luma",
+      "crisis",
+      "emotional",
+      "critical"
+    ],
+    "id": "seris_crisis",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "Use your word. Whatever it takes. Pull her out.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "force": 0.15,
+          "connection": 0.1
+        },
+        "effect": {
+          "fragment_cost": 2
+        }
+      },
+      {
+        "text": "Grab her hands. Your word can anchor — you are real, you are solid, hold on.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "connection": 0.2,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "\"Seri — don't drift. Don't phase. Choose to be HERE. You have to choose it.\"",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Tell Luma: \"Don't let go. Whatever you do, don't let go.\" Then use your word on the floor around Seri.",
+        "next": "dying_roots_pool",
+        "affinity": {
+          "structure": 0.1,
+          "connection": 0.1,
+          "perception": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "seri",
+      "ren",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_root_garden"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "lumas_gift": {
+    "title": "Luma's Gift",
+    "stage": "dying_roots",
+    "text": "After the crisis, you rest in a hollow where the roots form something like a room. Luma sits with Seri, keeping contact — Seed anchoring Drift.\n\nRen stands watch, flickering at the entrance.\n\nLuma looks at you. Something has changed in her eyes. She's still sad. But there's something else now — a tiny, fragile determination.\n\n\"You came for me,\" she says. \"Nobody comes here. Nobody comes to the dying roots on purpose.\"\n\nShe reaches into the pocket of her tattered clothes and pulls out something small. A seed. Not a word-seed — an actual seed, dark brown, warm.\n\n\"I've been carrying this since before I can remember. My mother gave it to me when I got my word. She said: 'Plant it when you're ready.'\"\n\nShe holds it out to you.\n\n\"I'm not ready. I don't think I'll ever be ready. But you — something grows where you walk. Even down here. Even in the dying roots.\"\n\nHer hand shakes.\n\n\"Plant it for me. When you find the place that needs it most.\"",
+    "tags": [
+      "mandatory",
+      "dying_roots",
+      "luma",
+      "quest_item",
+      "emotional",
+      "growth_ending"
+    ],
+    "id": "lumas_gift",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "Take the seed. \"I'll plant it where it matters most.\"",
+        "next": "the_descent_to_deep",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        },
+        "effect": {
+          "gain_item": "luma_s_seed"
+        }
+      },
+      {
+        "text": "\"Plant it yourself. You're stronger than you think.\"",
+        "next": "the_descent_to_deep",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"We'll plant it together. When this is over.\"",
+        "next": "the_descent_to_deep",
+        "affinity": {
+          "connection": 0.15,
+          "force": 0.05
+        },
+        "effect": {
+          "gain_item": "luma_s_seed"
+        }
+      },
+      {
+        "text": "Take it silently. Press it against your word-palm. It warms.",
+        "next": "the_descent_to_deep",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        },
+        "effect": {
+          "gain_item": "luma_s_seed"
+        }
+      }
+    ],
+    "characters": [
+      "luma",
+      "seri",
+      "ren"
+    ],
+    "creatures": [],
+    "items": [
+      "luma_s_seed"
+    ],
+    "locations": [
+      "the_root_garden"
+    ],
+    "text_variants": {
+      "word:seed": "Luma looks at the seed, then at your palm. SEED. She looks at the seed again.\n\n\"You should have this,\" she says. \"A Seed holding a seed. It's right.\"\n\nWhen you take it, it pulses. Not with word-light — with something older. Something that was here before words. The seed recognizes you, Seed recognizes Seed, and for a moment you feel the entire dying garden lean toward you like a field of sunflowers turning toward the sun.\n\nLuma watches, crying. But smiling. For the first time.\n\n\"It grew,\" she whispers. \"You made it grow. Just by holding it.\"\n\nShe's wrong. It was always growing. She just couldn't see it."
+    },
+    "conditions": null
+  },
+  "the_descent_to_deep": {
+    "title": "The Descent",
+    "stage": "dying_roots",
+    "text": "The vertical shaft spirals down.\n\nStorm fragments crackle in the darkness — loose shards of Kael's power, feral and purposeless. The walls bear claw marks from where he tore his own word out, years ago. The air tastes of ozone.\n\nYour party is strange and small: you, with your word and your borrowed lantern. Ren, flickering. Seri, translucent. Luma, tiny and fierce and holding Seri's hand like a lifeline.\n\nThree broken people and one who just found out what they're made of.\n\n\"He's down there,\" Ren says. \"I can feel him. The Storm. He knows we're coming.\"\n\nSeri tightens her grip on Luma's hand. \"Good.\"\n\nLuma looks up at you. \"Is he going to eat my word?\"\n\nThe shaft opens into darkness. Below, you can see it — a faint, impossibly vast glow. Orbiting syllables. The eye of a storm made of stolen words.\n\nThe deep root. Where it ends. Where it all ends.\n\nOr begins.",
+    "tags": [
+      "mandatory",
+      "dying_roots",
+      "transition",
+      "all_companions",
+      "pre_endgame",
+      "atmosphere"
+    ],
+    "id": "the_descent_to_deep",
+    "created": "2026-03-17T03:30:00",
+    "choices": [
+      {
+        "text": "\"Nobody's eating anybody's word. Not while I'm here.\" Descend.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "force": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "\"Stay close. All of you.\" Descend together.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "connection": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "Look at each of your companions. Remember their faces. Then descend.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        }
+      },
+      {
+        "text": "Press your palm to the shaft wall. Let the deep root know you're coming.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "perception": 0.1,
+          "force": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [
+      "storm_fragment"
+    ],
+    "items": [
+      "asha_s_lantern"
+    ],
+    "locations": [
+      "the_descent"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "mirror_pool_visit": {
+    "title": "The Mirror Pool",
+    "stage": "deep_root",
+    "text": "A side cavern opens into perfect stillness.\n\nThe pool is crystal liquid — not water, not light, something in between. Its surface is absolutely flat. No ripples. No breath of air disturbs it.\n\nRen stops at the entrance. \"I'm not going in there. I don't want to see what I look like in a mirror that shows the truth.\"\n\nLuma peers around your leg. \"What does it show?\"\n\n\"Your word,\" Ren says. \"Not the letters. The shape of it. Who you really are underneath everything you tell yourself.\"\n\nSeri drifts forward, curious despite herself. She looks into the pool and goes very still.\n\n\"I can see myself,\" she whispers. \"All of me. I'm whole in there.\" Her voice breaks. \"I forgot what that looks like.\"\n\nThe pool waits for you. Your reflection waits for you. The truth waits for you.",
+    "tags": [
+      "pool",
+      "deep_root",
+      "mirror",
+      "revelation",
+      "optional",
+      "emotional"
+    ],
+    "id": "mirror_pool_visit",
+    "created": "2026-03-17T03:45:00",
+    "choices": [
+      {
+        "text": "Look into the pool. See yourself.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "perception": 0.2
+        },
+        "effect": {
+          "gain_knowledge": "true_self"
+        }
+      },
+      {
+        "text": "\"I know who I am. I don't need a mirror to tell me.\"",
+        "next": "deep_root_pool",
+        "affinity": {
+          "structure": 0.15,
+          "force": 0.05
+        }
+      },
+      {
+        "text": "Look — but also look for Kael's reflection. He must have looked once.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        },
+        "effect": {
+          "gain_knowledge": "kael_reflection"
+        }
+      },
+      {
+        "text": "Let Luma look. She needs to see what Seed really looks like.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.05
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "the_mirror_pool"
+    ],
+    "text_variants": {
+      "word:mirror": "You look into the pool and see... everything.\n\nNot just yourself. Everyone you've met. Every choice you've made. Asha by her fire. Ren flickering. Luma crying into soil. Seri phasing through walls.\n\nYour word is Mirror. You don't just reflect attacks — you reflect people. You show them what they are. And in this pool, you see what you are: a surface that holds every face it's ever seen.\n\nThe pool recognizes you. One mirror meeting another. The surface ripples for the first time in centuries.\n\nAnd in the ripple, you see Kael. Not the Storm. The boy. The Seed. Crying as he ate his first word."
+    },
+    "conditions": null
+  },
+  "storm_sentries_guard": {
+    "title": "The Sentries",
+    "stage": "deep_root",
+    "text": "Two Crystal Sentries flank the final passage — ancient constructs, dormant for centuries, now reactivated by Kael's storm. They pulse with focused word-beams, scanning for intrusion.\n\nOne sweep of those beams would strip your word bare. They were built to protect the deep root from everything. Including you.\n\nRen studies them. \"They respond to words. Only words. Physical force means nothing to them.\"\n\nLuma tugs your sleeve. \"Can we talk to them? They're lonely. They've been down here so long.\"\n\nSeri is already looking for a way around. Old habits.\n\n\"There might be a deactivation word,\" Ren says. \"Something from when they were built. But that was before anyone alive remembers.\"",
+    "tags": [
+      "pool",
+      "deep_root",
+      "puzzle",
+      "crystal_sentry",
+      "combat_or_solve"
+    ],
+    "id": "storm_sentries_guard",
+    "created": "2026-03-17T03:45:00",
+    "choices": [
+      {
+        "text": "Speak your word at them. See if the network's own creations recognize a network soul.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "connection": 0.1,
+          "force": 0.1
+        }
+      },
+      {
+        "text": "Let Luma try. Children disarm things adults can't.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "perception": 0.1,
+          "connection": 0.1
+        }
+      },
+      {
+        "text": "Use your word to overpower them. You've come too far to stop at a door.",
+        "next": "deep_root_pool",
+        "affinity": {
+          "force": 0.2
+        },
+        "effect": {
+          "fragment_cost": 2
+        }
+      },
+      {
+        "text": "\"Ren — can you absorb their beam? Hollow takes what's thrown at it.\"",
+        "next": "deep_root_pool",
+        "affinity": {
+          "connection": 0.1,
+          "perception": 0.1
+        }
+      }
+    ],
+    "characters": [
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [
+      "crystal_sentry"
+    ],
+    "items": [],
+    "locations": [
+      "the_descent"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "meeting_kael": {
+    "title": "The Storm at the Center",
+    "stage": "deep_root",
+    "text": "The Storm Core.\n\nYou've imagined this a hundred times since The Elder told you about the network. Since Asha told you about Solene. Since Ren told you about mercy becoming addiction.\n\nNothing prepared you for this.\n\nKael sits at the center of a hurricane of stolen words. Syllables orbit him like planets — fragments of Echo, shards of Light, splinters of Pulse and Thread and Bloom. Every word he's ever consumed, still alive inside his storm, screaming silently.\n\nHe's younger than you expected. Not much older than you. His palm reads STORM in letters that crackle and shift, but underneath — if you look closely — you can see the ghost of another word. The word he was born with.\n\nSEED.\n\nHe sees you. Sees your companions. His eyes land on Luma and something crosses his face — recognition, pain, regret, hunger. All at once.\n\n\"Another one,\" he says. His voice is the sound of a thousand stolen voices speaking in unison. \"The network sent another hero. How many is that now? I've lost count.\"\n\nHe stands. The hurricane widens. Storm fragments crackle.\n\n\"You brought the Seed child. Why? To show me what I was?\" He looks at Luma and his storm-light gutters. \"I know what I was. I was potential forever. I was the thing that hasn't happened yet, for my entire life.\"\n\nHis voice drops. Just his voice now. One person.\n\n\"Do you know what that's like? To be the word that means 'not yet'?\"",
+    "tags": [
+      "mandatory",
+      "deep_root",
+      "kael_confrontation",
+      "climax",
+      "emotional",
+      "core"
+    ],
+    "id": "meeting_kael",
+    "created": "2026-03-17T03:45:00",
+    "choices": [
+      {
+        "text": "\"I know you didn't start this out of cruelty. They came to you. They asked.\"",
+        "next": "the_final_choice",
+        "affinity": {
+          "perception": 0.15,
+          "connection": 0.05
+        },
+        "effect": {
+          "gain_knowledge": "understood_kael"
+        }
+      },
+      {
+        "text": "\"It doesn't matter why you started. Look at what you've become.\"",
+        "next": "the_final_choice",
+        "affinity": {
+          "force": 0.15,
+          "structure": 0.05
+        }
+      },
+      {
+        "text": "\"Luma is Seed. She waters dead things with her tears. She hasn't eaten a single word. There's another way.\"",
+        "next": "the_final_choice",
+        "affinity": {
+          "connection": 0.15,
+          "perception": 0.05
+        }
+      },
+      {
+        "text": "Say nothing. Let him look at Luma. Let him see the Seed he could have been.",
+        "next": "the_final_choice",
+        "affinity": {
+          "perception": 0.2
+        }
+      }
+    ],
+    "characters": [
+      "kael",
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [
+      "storm_fragment"
+    ],
+    "items": [],
+    "locations": [
+      "storm_core"
+    ],
+    "text_variants": {
+      "word:seed": "Kael stares at your palm. SEED.\n\nThe hurricane stops. Every stolen syllable hangs frozen in the air.\n\n\"No,\" he whispers. \"No. That's not possible. Seed doesn't survive. Seed stays potential forever. Seed is the prison I escaped.\"\n\nHe's trembling. Looking at you — a Seed who emerged, who traveled the network, who made it here — is like looking at the life he threw away.\n\n\"How?\" he asks. The storm-voice is gone. It's just a boy's voice. A Seed's voice. \"How did you become something without eating anyone?\"\n\nLuma steps forward. Two Seeds looking at the boy who couldn't be one.\n\n\"You grew,\" Luma says, looking at you. \"You just grew.\"",
+      "word:storm": "Kael stares at your palm. STORM. Same as his.\n\n\"Another Storm,\" he says, and laughs. The sound is terrible — a storm laughing at itself. \"The network made another one of me. To fight me? To replace me?\"\n\nHis hurricane surges. Your own storm surges back. The cavern shakes.\n\n\"You don't know what it's like,\" he snarls. \"Storm doesn't choose. Storm doesn't aim. Storm just — happens. Over and over. You'll start eating words too. Eventually. They'll come to you dying and you won't be able to say no.\"\n\nHe's not threatening you. He's warning you.",
+      "word:hollow": "Kael stares at your palm. HOLLOW.\n\nHis storm surges — then hesitates. Hollow is the one word he can't consume. There's nothing to eat. You are the space where a word lives, not the word itself.\n\n\"Hollow,\" he says, almost laughing. \"They sent a Hollow to stop me. The one thing I can't swallow. That's either brilliant or cruel.\"\n\nYou step forward. His storm washes over you and into you. You absorb the edges of his hurricane, the stray syllables, the noise. It fills the emptiness for a moment. Then passes.\n\n\"You're like Ren,\" he says quietly. \"You hold things without keeping them.\"\n\n\"No,\" you say. \"Ren held too much. I'm here to give things back.\"",
+      "word:mirror": "Kael stares at your palm. MIRROR.\n\nAnd you reflect him. Not on purpose — your word does it automatically. Kael sees himself in you: the stolen words orbiting your surface, but reflected, reversed, shown from the outside for the first time.\n\nHe sees what he looks like. A boy wrapped in a hurricane of screaming syllables. A mercy that became a monster.\n\n\"Stop it,\" he says. \"Stop showing me—\"\n\n\"I can't. That's what Mirror does.\"\n\nHe looks away. But the image stays. You feel it too — reflecting his pain costs you. Mirror doesn't just show. Mirror feels.",
+      "word:silence": "Kael stares at your palm. SILENCE.\n\nAnd the storm stops.\n\nNot gradually — instantly. Every stolen syllable, every crackling fragment, every howling word — silenced. The hurricane hangs frozen in the air, suddenly mute.\n\nKael gasps. In the silence, he can hear himself think for the first time in years. Without the storm-voice. Without the consumed words screaming. Just him.\n\n\"What did you do?\" he whispers. His own voice. A boy's voice.\n\n\"Nothing,\" you say. \"I made nothing. That's what Silence is.\"\n\nIn the nothing, Kael remembers what it was like before. When he was just a Seed. When the world was quiet and full of potential.\n\nHe's shaking. \"Don't stop. Please don't stop.\""
+    },
+    "conditions": null
+  },
+  "the_final_choice": {
+    "title": "The Choice",
+    "stage": "endgame",
+    "text": "Kael waits. The stolen words orbit. The First Root pulses beneath his feet — one beat every three minutes, the oldest connection in the network, barely alive.\n\nEverything comes down to this.\n\nYou have your word. You have your companions — Ren flickering, Seri translucent, Luma holding steady. You have whatever you carried with you from the world above.\n\nKael's storm crackles. But his eyes — his real eyes, under the stolen lightning — are tired. He's been doing this for so long. Eating words because they ask him to. Becoming more storm and less seed with every one.\n\n\"Well?\" he says. \"What did you come here to do?\"",
+    "tags": [
+      "mandatory",
+      "endgame",
+      "final_choice",
+      "branching",
+      "climax"
+    ],
+    "id": "the_final_choice",
+    "created": "2026-03-17T03:45:00",
+    "choices": [
+      {
+        "text": "Plant Luma's seed in the First Root. Grow something new.",
+        "next": "ending_growth",
+        "affinity": {},
+        "conditions": {
+          "item": "luma_s_seed"
+        }
+      },
+      {
+        "text": "Fight him. Storm against PLAYER_WORD. End this.",
+        "next": "ending_storm",
+        "affinity": {}
+      },
+      {
+        "text": "\"Give them back. Every word you ate. Give them back and be Seed again.\"",
+        "next": "ending_mercy",
+        "affinity": {}
+      },
+      {
+        "text": "\"Ren.\" One word. Ren knows what you're asking.",
+        "next": "ending_sacrifice",
+        "affinity": {}
+      }
+    ],
+    "characters": [
+      "kael",
+      "ren",
+      "seri",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [
+      "luma_s_seed"
+    ],
+    "locations": [
+      "storm_core"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ending_growth": {
+    "title": "The Growth Ending",
+    "stage": "endgame",
+    "text": "You kneel.\n\nThe First Root pulses under your knees — once every three minutes, the slowest heartbeat in the world. You dig into the soil around it with your bare hands. Kael watches, confused. His storm doesn't know what to do with someone who isn't fighting.\n\nLuma's seed is warm in your palm. Small. Brown. Ordinary. The most important thing in the world.\n\nYou plant it.\n\nFor a moment, nothing. Kael laughs. \"A seed? You came all this way to plant a seed?\"\n\nThen the First Root pulses. Not once every three minutes. Once every minute. Once every thirty seconds. Faster.\n\nThe seed drinks the pulse. Roots spread — not the old grey roots of the dying network, but new ones, green, alive, threading through the dead wood and filling it with something it hasn't felt in decades.\n\nGrowth.\n\nLuma's hand finds yours. Her palm glows — SEED — brighter than you've ever seen it. She's growing it too. Both of you. Two Seeds doing what Seeds do.\n\nThe new roots reach Kael's storm. They don't fight it. They grow through it. Around it. The stolen words caught in his hurricane start settling — softly, like snow — onto the new roots. Finding new homes. New connections.\n\nKael sinks to his knees. His storm dissolves. Not violently — gently. Like a storm that finally ran out of wind.\n\nUnderneath, a boy. A Seed. Crying.\n\n\"I didn't know it could be like this,\" he says. \"I didn't know growing felt like this.\"\n\nLuma walks to him. Takes his hand.\n\n\"It's okay,\" she says. \"It's slow. But it's real.\"\n\nAbove, in the village, the Elder feels the thread hum. The network breathes. The Word Shrine glows for the first time in years.\n\nAsha's fire brightens. She stands up. For the first time in two hundred years, she walks.\n\nSomewhere in the new roots, a word re-forms. Light. Solene's Light, finding its way home.\n\nYou sit in the garden you grew at the bottom of the world, and you watch the roots spread, and you know: some things don't need to be fought. Some things just need to be planted.",
+    "tags": [
+      "ending",
+      "endgame",
+      "growth",
+      "luma",
+      "kael",
+      "hopeful"
+    ],
+    "id": "ending_growth",
+    "created": "2026-03-17T03:45:00",
+    "choices": [],
+    "characters": [
+      "kael",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [
+      "luma_s_seed"
+    ],
+    "locations": [
+      "the_first_root"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ending_storm": {
+    "title": "The Storm Ending",
+    "stage": "endgame",
+    "text": "You fight.\n\nYour word against his storm. PLAYER_WORD blazes on your palm and you throw everything you have at the hurricane of stolen words. The cavern shakes. The First Root cracks.\n\nKael fights back — not with skill but with volume. A hundred consumed words fuel his storm. Lightning and wind and the screaming of syllables that don't belong to him.\n\nSeri tries to help — phasing in and out, striking at the edges of the storm. But she's too faded. A tendril of lightning catches her and she flickers out like a candle. Just for a second. Just long enough for your heart to stop.\n\nShe comes back. Barely.\n\nRen absorbs what they can — bolts of stolen power disappearing into their hollow center. But there's too much. Even nothing has a limit.\n\nLuma hides behind a root, crying. Back to crying.\n\nYou push harder. Your fragments drain — 7, 5, 3. Your word-light dims. But so does Kael's.\n\nIn the end, two exhausted people face each other in the ruins of the Storm Core. His hurricane is gone. Your word is a whisper. The First Root is cracked but alive.\n\nKael lies on the ground, wordless. Not dead — emptied. Every stolen word shaken loose by your assault, scattering into the network like sparks. Some will find their way home. Some won't.\n\nHe looks at his palm. STORM is gone. Underneath, faintly, SEED flickers. Then goes dark.\n\n\"You took my storm,\" he says. He doesn't sound angry. He sounds relieved. \"I'm nothing again.\"\n\n\"You're Seed again,\" you say. \"That's not nothing.\"\n\nHe closes his eyes.\n\nThe network survives. Damaged. Changed. But surviving. Like everyone in it.",
+    "tags": [
+      "ending",
+      "endgame",
+      "storm",
+      "combat",
+      "bittersweet"
+    ],
+    "id": "ending_storm",
+    "created": "2026-03-17T03:45:00",
+    "choices": [],
+    "characters": [
+      "kael",
+      "seri",
+      "ren",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "storm_core"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ending_mercy": {
+    "title": "The Mercy Ending",
+    "stage": "endgame",
+    "text": "\"Give them back,\" you say. \"Every word.\"\n\nKael stares at you. The hurricane screams around him.\n\n\"You don't understand,\" he says. \"They gave them to me. They chose this. I can't just—\"\n\n\"They chose it because they were dying and you were the only one who would take their pain. That's not consent. That's desperation.\"\n\nThe words hang in the storm. Kael's eyes are wet.\n\n\"I was trying to help,\" he whispers. The storm-voice is gone. It's just him. Just a boy who ate too many people's pain.\n\n\"I know,\" you say. \"But help that eats people isn't help. It's hunger wearing a kind face.\"\n\nLuma steps forward. Two Seeds facing each other across a hurricane.\n\n\"I water dead words,\" she says to Kael. \"Every day. They don't grow. But they don't die either. That's what Seed does. We hold potential. We don't consume it.\"\n\nKael looks at her. At his own palm, where STORM covers SEED. At the orbiting words — dozens of consumed souls.\n\n\"If I give them back,\" he says, \"I'll be Seed again. Potential forever. The thing that hasn't happened yet.\"\n\n\"Yes,\" you say.\n\n\"That's a prison.\"\n\n\"It's a choice.\"\n\nThe longest pause of your life.\n\nThen Kael opens his hands. And the storm opens with them.\n\nWords pour out of him like light from a broken lantern — Echo and Pulse and Thread and Light, a hundred stolen words finding their way back into the network, flooding the dying roots with reconnection. The First Root blazes. The network surges.\n\nKael falls. Small again. His palm reads SEED. Just SEED.\n\nLuma catches him. She's the only one strong enough — Seed holding Seed.\n\n\"Welcome back,\" she says.\n\nHe cries. Not storm-tears. Just tears. The kind that water things.",
+    "tags": [
+      "ending",
+      "endgame",
+      "mercy",
+      "kael",
+      "luma",
+      "hopeful",
+      "forgiveness"
+    ],
+    "id": "ending_mercy",
+    "created": "2026-03-17T03:45:00",
+    "choices": [],
+    "characters": [
+      "kael",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "storm_core"
+    ],
+    "text_variants": {},
+    "conditions": null
+  },
+  "ending_sacrifice": {
+    "title": "The Sacrifice Ending",
+    "stage": "endgame",
+    "text": "\"Ren.\"\n\nOne word. They know.\n\nThey've always known. Since the Hollow Hall. Since the Echo Chamber where their past self confessed to trying to save everyone. Since the bridge, where they felt the connections snapping.\n\nRen steps forward. What's left of them — a flicker, an outline, two visible fingers and a voice that comes from slightly the wrong place.\n\n\"I couldn't save them before,\" they say. \"The Hollow Court. My friends. I let them fade because I was afraid of becoming what Kael is.\"\n\nThey look at you. Through you. Their hollow eyes hold every word they ever absorbed, every person they ever tried to save.\n\n\"I'm not afraid anymore.\"\n\nRen opens their arms. HOLLOW blazes on their palm — brighter than you've ever seen it, brighter than it should be possible for someone so faded.\n\nAnd they absorb.\n\nNot a word. Not a bolt. The storm. The whole storm. Every stolen word, every crackling fragment, every syllable of every soul Kael ever consumed — Ren takes it all. Into the hollow. Into the space where a person used to be.\n\nKael screams. Seri screams. Luma hides her face.\n\nRen doesn't scream. They glow. For one perfect, terrible moment, Ren is the fullest thing in the network. Every word they absorbed makes them solid — completely, beautifully solid. You can see their face clearly for the first time. Young. Kind. Whole.\n\nThey look at you and smile.\n\n\"I can feel it,\" they say. \"Everything. All of them. They're all in here.\"\n\nThen the light goes out.\n\nRen is gone. Not faded — gone. The hollow filled itself completely and closed. Every stolen word, held safe inside a person who finally held enough.\n\nKael lies on the ground, empty, wordless. SEED flickers on his palm. He's a child again.\n\nThe network steadies. Not healed — held. Ren is the bridge now. Ren is the junction. Ren is the connection between everything Kael broke.\n\n\"They wanted to feel something real one more time,\" Seri whispers, tears running down her translucent face. \"They did.\"\n\nLuma puts a flower on the spot where Ren was standing. It's the first thing that's ever grown in the deep root.\n\nYou stand in the silence that Ren made, and you know: some people don't get to stay. Some people become the thing they save.",
+    "tags": [
+      "ending",
+      "endgame",
+      "sacrifice",
+      "ren",
+      "tragic",
+      "beautiful"
+    ],
+    "id": "ending_sacrifice",
+    "created": "2026-03-17T03:45:00",
+    "choices": [],
+    "characters": [
+      "ren",
+      "kael",
+      "seri",
+      "luma"
+    ],
+    "creatures": [],
+    "items": [],
+    "locations": [
+      "storm_core"
+    ],
+    "text_variants": {},
+    "conditions": null
+  }
+}

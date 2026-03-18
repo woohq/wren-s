@@ -1,0 +1,148 @@
+{
+  "asha_s_lantern": {
+    "name": "Asha's Lantern",
+    "type": "key_item",
+    "description": "A lantern that burns without fuel. Asha's partner made it.",
+    "rarity": "unique",
+    "word_affinity": [
+      "ember",
+      "light"
+    ],
+    "effect": "Illuminates hidden paths in dying roots. Asha only gives it if she trusts you.",
+    "tags": [
+      "quest_item",
+      "asha_related",
+      "light_source"
+    ],
+    "id": "asha_s_lantern",
+    "created": "2026-03-17T02:24:37",
+    "appearances": [
+      "the_ember_woman",
+      "ember_honest",
+      "asha_offers_lantern",
+      "path_to_dying",
+      "the_descent_to_deep"
+    ]
+  },
+  "root_fragment": {
+    "name": "Root Fragment",
+    "type": "material",
+    "description": "A piece of living root, still faintly pulsing. Can be used to repair minor network damage or traded.",
+    "rarity": "common",
+    "effect": "Restores 1 fragment. Can repair simple root breaks.",
+    "tags": [
+      "consumable",
+      "resource",
+      "common_drop"
+    ],
+    "id": "root_fragment",
+    "created": "2026-03-17T02:27:23",
+    "appearances": []
+  },
+  "stored_echo": {
+    "name": "Stored Echo",
+    "type": "consumable",
+    "description": "An echo moth's wing, vibrating with a captured conversation. Crack it open to hear the last words someone spoke before their word died.",
+    "rarity": "uncommon",
+    "word_affinity": [
+      "echo",
+      "whisper"
+    ],
+    "effect": "Reveals a piece of lore. Sometimes contains hints about puzzle solutions or character backstories.",
+    "tags": [
+      "lore_item",
+      "consumable",
+      "echo_moth_drop"
+    ],
+    "id": "stored_echo",
+    "created": "2026-03-17T02:27:26",
+    "appearances": []
+  },
+  "storm_shard": {
+    "name": "Storm Shard",
+    "type": "material",
+    "description": "A crystallized fragment of Kael's power. Crackles with dangerous energy. Holding it too long makes your own word flicker.",
+    "rarity": "rare",
+    "word_affinity": [
+      "storm"
+    ],
+    "effect": "Can be used to force open locked passages. Costs 1 fragment per use. Three shards can be combined into a Storm Key.",
+    "tags": [
+      "dangerous",
+      "kael_related",
+      "key_component",
+      "resource"
+    ],
+    "id": "storm_shard",
+    "created": "2026-03-17T02:27:29",
+    "appearances": []
+  },
+  "luma_s_seed": {
+    "name": "Luma's Seed",
+    "type": "key_item",
+    "description": "A seed that Luma gives you if you help them believe they're not broken. It doesn't look like much — small, dull, warm. But it's the first thing Luma ever grew on purpose.",
+    "rarity": "unique",
+    "word_affinity": [
+      "seed",
+      "bloom"
+    ],
+    "effect": "Plants itself in the First Root during the endgame. One of the keys to the growth ending. Proof that potential isn't wasted.",
+    "tags": [
+      "quest_item",
+      "luma_related",
+      "endgame",
+      "growth_ending"
+    ],
+    "id": "luma_s_seed",
+    "created": "2026-03-17T02:27:32",
+    "appearances": [
+      "lumas_gift",
+      "the_final_choice",
+      "ending_growth"
+    ]
+  },
+  "ren_s_last_echo": {
+    "name": "Ren's Last Echo",
+    "type": "key_item",
+    "description": "The last fragment of Ren's original word, preserved in a small glass vial. Ren doesn't know they still have it. If returned to them, it might bring back enough of who they were to face the end.",
+    "rarity": "unique",
+    "word_affinity": [
+      "hollow",
+      "echo"
+    ],
+    "effect": "Restores Ren temporarily during the endgame confrontation. Ren can absorb one of Kael's attacks, buying you time. The cost: Ren disappears completely afterward.",
+    "tags": [
+      "quest_item",
+      "ren_related",
+      "endgame",
+      "sacrifice",
+      "emotional"
+    ],
+    "id": "ren_s_last_echo",
+    "created": "2026-03-17T02:27:36",
+    "appearances": []
+  },
+  "the_elder_s_thread": {
+    "name": "The Elder's Thread",
+    "type": "key_item",
+    "description": "A length of glowing thread The Elder gives you before you descend. It connects you back to the village — pull it and they'll know where you are. Cut it and you're truly on your own.",
+    "rarity": "unique",
+    "word_affinity": [
+      "thread"
+    ],
+    "effect": "Allows one emergency retreat to the surface. If kept intact through the endgame, enables the 'connection' ending where the village sends help.",
+    "tags": [
+      "quest_item",
+      "elder_related",
+      "safety_net",
+      "connection_ending"
+    ],
+    "id": "the_elder_s_thread",
+    "created": "2026-03-17T02:27:40",
+    "appearances": [
+      "the_tremor",
+      "the_descent_begins",
+      "post_emergence"
+    ]
+  }
+}

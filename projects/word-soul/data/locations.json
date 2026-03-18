@@ -1,0 +1,428 @@
+{
+  "ember_junction": {
+    "name": "Ember Junction",
+    "region": "upper_roots",
+    "description": "A warm node where root pathways converge. Asha's fire burns at the center.",
+    "atmosphere": "Warm amber light, smell of old fires, faint humming",
+    "danger_level": "safe",
+    "connections": [
+      "root_entrance",
+      "living_bridge"
+    ],
+    "inhabitants": [
+      "asha"
+    ],
+    "tags": [
+      "safe_zone",
+      "ember_territory",
+      "hub"
+    ],
+    "id": "ember_junction",
+    "created": "2026-03-17T02:24:35",
+    "appearances": [
+      "the_ember_woman",
+      "ember_sit",
+      "ember_honest",
+      "ember_lore",
+      "asha_offers_lantern"
+    ]
+  },
+  "the_village": {
+    "name": "The Village",
+    "region": "village",
+    "description": "A small settlement built on the surface above the root network. Everyone here has a word, revealed at coming-of-age. Life is quiet but uncertain — the network beneath rumbles more often now.",
+    "atmosphere": "Wooden houses, cooking smoke, children playing word-games, distant hum from below",
+    "danger_level": "safe",
+    "connections": [
+      "word_shrine",
+      "root_gate"
+    ],
+    "tags": [
+      "starting_area",
+      "childhood",
+      "home",
+      "safe_zone"
+    ],
+    "id": "the_village",
+    "created": "2026-03-17T02:26:17",
+    "appearances": [
+      "first_light",
+      "word_games",
+      "elders_lesson",
+      "night_ground_shook",
+      "the_butterfly_game",
+      "mothers_warning",
+      "seri_drifts",
+      "the_wrong_word",
+      "proto_flicker",
+      "the_fight",
+      "the_tremor"
+    ]
+  },
+  "the_word_shrine": {
+    "name": "The Word Shrine",
+    "region": "village",
+    "description": "A circular stone chamber where words are revealed. When you come of age, you stand in the center and the floor glows with your word. The Elder oversees every ceremony. The walls are carved with every word ever revealed here.",
+    "atmosphere": "Cool stone, flickering word-light from the floor, reverent silence, old incense",
+    "danger_level": "safe",
+    "connections": [
+      "the_village"
+    ],
+    "inhabitants": [
+      "the_elder"
+    ],
+    "tags": [
+      "ceremony",
+      "emergence",
+      "sacred",
+      "childhood"
+    ],
+    "id": "the_word_shrine",
+    "created": "2026-03-17T02:26:20",
+    "appearances": [
+      "seris_emergence",
+      "late_bloomer"
+    ]
+  },
+  "the_root_gate": {
+    "name": "The Root Gate",
+    "region": "village",
+    "description": "A massive archway of living root at the edge of the village. Below it, stairs descend into the network. The gate used to pulse with light. Now it barely flickers. Only the brave or desperate go below.",
+    "atmosphere": "Fading bioluminescence, cold updraft from below, the sound of distant dripping",
+    "danger_level": "low",
+    "connections": [
+      "the_village",
+      "root_entrance"
+    ],
+    "tags": [
+      "threshold",
+      "transition",
+      "childhood_to_journey"
+    ],
+    "id": "the_root_gate",
+    "created": "2026-03-17T02:26:23",
+    "appearances": [
+      "root_gate_curiosity",
+      "the_stranger",
+      "elders_secret",
+      "seris_question"
+    ]
+  },
+  "root_entrance": {
+    "name": "Root Entrance",
+    "region": "upper_roots",
+    "description": "The first chamber of the root network. Tunnels branch in multiple directions, each pulsing with different light. The walls are alive — touch them and you feel the network's heartbeat, slower than it should be.",
+    "atmosphere": "Dim bioluminescent roots, damp earth smell, distant vibrations, branching paths",
+    "danger_level": "low",
+    "connections": [
+      "the_root_gate",
+      "ember_junction",
+      "hollow_passage",
+      "vibration_tunnel"
+    ],
+    "tags": [
+      "hub",
+      "first_area",
+      "branching_point"
+    ],
+    "id": "root_entrance",
+    "created": "2026-03-17T02:26:29",
+    "appearances": [
+      "the_descent_begins",
+      "emergence_moment",
+      "post_emergence",
+      "first_word_use",
+      "tangle_guardian",
+      "echo_moths_flock",
+      "seri_phases_ahead"
+    ]
+  },
+  "hollow_passage": {
+    "name": "Hollow Passage",
+    "region": "upper_roots",
+    "description": "A tunnel where the roots have gone dark. Hollow drifters float through like ghosts. The passage leads deeper, toward where the network still lives — but you have to walk through the dead parts to get there.",
+    "atmosphere": "Silence except for your footsteps, dark shapes drifting past, cold, the occasional flicker of a word dying",
+    "danger_level": "medium",
+    "connections": [
+      "root_entrance",
+      "the_living_bridge"
+    ],
+    "inhabitants": [
+      "hollow_drifter"
+    ],
+    "tags": [
+      "transition",
+      "eerie",
+      "hollow_territory"
+    ],
+    "id": "hollow_passage",
+    "created": "2026-03-17T02:26:33",
+    "appearances": [
+      "path_deeper"
+    ]
+  },
+  "the_living_bridge": {
+    "name": "The Living Bridge",
+    "region": "living_network",
+    "description": "A bridge of braided roots spanning a vast underground chasm. This is where the network still works — roots pulse with light, carrying words between distant souls. Standing here, you can feel every connection.",
+    "atmosphere": "Warm light from healthy roots, humming with transmitted words, wind from the chasm below, vertigo",
+    "danger_level": "medium",
+    "connections": [
+      "hollow_passage",
+      "echo_chamber",
+      "hollow_hall"
+    ],
+    "tags": [
+      "hub",
+      "living_area",
+      "bridge",
+      "impressive"
+    ],
+    "id": "the_living_bridge",
+    "created": "2026-03-17T02:26:36",
+    "appearances": [
+      "the_living_bridge",
+      "bridge_breaks"
+    ]
+  },
+  "echo_chamber": {
+    "name": "Echo Chamber",
+    "region": "living_network",
+    "description": "A spherical cavern where every sound multiplies. Old conversations replay here — fragments of words spoken decades ago bouncing between the walls. Echo moths swarm the ceiling. If you listen carefully, you might learn something the dead knew.",
+    "atmosphere": "Layered whispers, flutter of moth wings, your own voice coming back changed, overwhelming if you're not careful",
+    "danger_level": "low",
+    "connections": [
+      "the_living_bridge"
+    ],
+    "inhabitants": [
+      "echo_moth"
+    ],
+    "tags": [
+      "lore_area",
+      "echo_territory",
+      "overwhelming",
+      "puzzle"
+    ],
+    "id": "echo_chamber",
+    "created": "2026-03-17T02:26:39",
+    "appearances": [
+      "echo_chamber_visit"
+    ]
+  },
+  "hollow_hall": {
+    "name": "Hollow Hall",
+    "region": "living_network",
+    "description": "A vast, empty hall where the Hollow Court once gathered — souls who chose to absorb rather than create. Most are drifters now. Ren is the last one who can still speak. The hall echoes with what used to fill it.",
+    "atmosphere": "Cavernous emptiness, faint outlines of former grandeur, Ren's flickering light the only warmth, oppressive silence",
+    "danger_level": "medium",
+    "connections": [
+      "the_living_bridge",
+      "the_root_garden"
+    ],
+    "inhabitants": [
+      "ren",
+      "hollow_drifter"
+    ],
+    "tags": [
+      "ren_home",
+      "hollow_court",
+      "hub",
+      "sad"
+    ],
+    "id": "hollow_hall",
+    "created": "2026-03-17T02:26:43",
+    "appearances": [
+      "meeting_ren",
+      "hollow_drifters_encounter",
+      "seri_fading",
+      "rens_warning"
+    ]
+  },
+  "the_root_garden": {
+    "name": "The Root Garden",
+    "region": "dying_roots",
+    "description": "Where dead words are buried. Luma tends this garden, watering the soil with tears that keep dormant words from fully dying. Nothing visibly grows, but the soil is warm. Seed sprites cluster here, drawn to Luma's word.",
+    "atmosphere": "Soft soil underfoot, rows of small mounds each marked with a faded word, Luma's quiet crying, seed sprite glow, bittersweet",
+    "danger_level": "low",
+    "connections": [
+      "hollow_hall",
+      "ash_garden",
+      "rust_veins"
+    ],
+    "inhabitants": [
+      "luma",
+      "seed_sprite"
+    ],
+    "resources": [
+      "dormant_words",
+      "growth_motes"
+    ],
+    "tags": [
+      "luma_home",
+      "garden",
+      "dying_area",
+      "emotional",
+      "hub"
+    ],
+    "id": "the_root_garden",
+    "created": "2026-03-17T02:26:51",
+    "appearances": [
+      "path_to_dying",
+      "finding_luma",
+      "seris_crisis",
+      "lumas_gift"
+    ]
+  },
+  "ash_garden": {
+    "name": "Ash Garden",
+    "region": "dying_roots",
+    "description": "Where burned-out connections crumble to dust. Everything here was alive once. The ash is warm — ember residue from connections that burned too bright and died. Root worms feast on what remains.",
+    "atmosphere": "Grey dust, warmth from dying embers in the soil, the crunch of ash underfoot, root worms burrowing, desolation",
+    "danger_level": "medium",
+    "connections": [
+      "the_root_garden",
+      "the_descent"
+    ],
+    "inhabitants": [
+      "root_worm"
+    ],
+    "tags": [
+      "decay",
+      "dangerous_terrain",
+      "sad",
+      "resource_area"
+    ],
+    "id": "ash_garden",
+    "created": "2026-03-17T02:26:55",
+    "appearances": [
+      "ash_garden_path"
+    ]
+  },
+  "the_rust_veins": {
+    "name": "The Rust Veins",
+    "region": "dying_roots",
+    "description": "Pathways where the root network has corroded beyond repair. The walls weep a metallic liquid. Everything here decays — weapons, armor, even words lose their edge. Rust-word bearers feel at home. Everyone else feels their power draining.",
+    "atmosphere": "Metallic taste in the air, dripping corrosive liquid, orange-brown walls, the sound of things dissolving",
+    "danger_level": "high",
+    "connections": [
+      "the_root_garden",
+      "the_descent"
+    ],
+    "tags": [
+      "hazard",
+      "rust_territory",
+      "decay",
+      "resource_area",
+      "shortcut"
+    ],
+    "id": "the_rust_veins",
+    "created": "2026-03-17T02:27:00",
+    "appearances": [
+      "rust_veins_shortcut"
+    ]
+  },
+  "the_descent": {
+    "name": "The Descent",
+    "region": "deep_root",
+    "description": "A vertical shaft spiraling down to the deepest root. Storm fragments crackle in the darkness. The air tastes of ozone and old words. This is where Kael made his transformation — the walls still bear the scars.",
+    "atmosphere": "Vertigo, crackling electricity, burnt word-smell, the walls scarred with claw marks, wind howling upward",
+    "danger_level": "high",
+    "connections": [
+      "ash_garden",
+      "rust_veins",
+      "storm_core",
+      "mirror_pool"
+    ],
+    "inhabitants": [
+      "storm_fragment"
+    ],
+    "tags": [
+      "transition",
+      "deep_area",
+      "kael_territory",
+      "dramatic"
+    ],
+    "id": "the_descent",
+    "created": "2026-03-17T02:27:03",
+    "appearances": [
+      "the_descent_to_deep",
+      "storm_sentries_guard"
+    ]
+  },
+  "storm_core": {
+    "name": "Storm Core",
+    "region": "deep_root",
+    "description": "The heart of the deepest root. Kael sits here, surrounded by the words he's consumed — they orbit him like a storm of glowing syllables. The network's original seed is beneath his feet, buried under layers of stolen power.",
+    "atmosphere": "Deafening wind, orbiting word-fragments casting shifting light, Kael's silhouette at the center, raw power, the ground trembling",
+    "danger_level": "extreme",
+    "connections": [
+      "the_descent"
+    ],
+    "inhabitants": [
+      "kael",
+      "storm_fragment"
+    ],
+    "tags": [
+      "final_area",
+      "kael_home",
+      "boss_arena",
+      "endgame",
+      "climax"
+    ],
+    "id": "storm_core",
+    "created": "2026-03-17T02:27:06",
+    "appearances": [
+      "meeting_kael",
+      "the_final_choice",
+      "ending_storm",
+      "ending_mercy",
+      "ending_sacrifice"
+    ]
+  },
+  "the_mirror_pool": {
+    "name": "The Mirror Pool",
+    "region": "deep_root",
+    "description": "A still pool of liquid crystal at the bottom of the network. It reflects not your face but your word — the true shape of who you are. Some people see their word and accept it. Some see it and break. Kael saw Seed and chose to become Storm.",
+    "atmosphere": "Perfect silence, mirror-still water, your reflection but wrong, the word you carry glowing in the depths, unsettling clarity",
+    "danger_level": "medium",
+    "connections": [
+      "the_descent"
+    ],
+    "tags": [
+      "revelation",
+      "mirror",
+      "self_reflection",
+      "optional",
+      "lore_area",
+      "emergence_callback"
+    ],
+    "id": "the_mirror_pool",
+    "created": "2026-03-17T02:27:11",
+    "appearances": [
+      "mirror_pool_visit"
+    ]
+  },
+  "the_first_root": {
+    "name": "The First Root",
+    "region": "deep_root",
+    "description": "The oldest connection in the network — the root that started everything. It's barely alive, a thread-thin filament pulsing once every few minutes. If this root dies, the whole network dies. Kael knows this. So does The Elder.",
+    "atmosphere": "Almost total darkness, a single faint pulse of light every few minutes, profound age, the weight of everything resting on something so small",
+    "danger_level": "low",
+    "connections": [
+      "storm_core"
+    ],
+    "tags": [
+      "ancient",
+      "sacred",
+      "endgame",
+      "network_origin",
+      "fragile",
+      "climax"
+    ],
+    "id": "the_first_root",
+    "created": "2026-03-17T02:27:14",
+    "appearances": [
+      "ending_growth"
+    ]
+  }
+}
