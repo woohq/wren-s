@@ -1,0 +1,32 @@
+# Screenshots & images (never push)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.webp
+*.svg
+
+# Playwright artifacts
+.playwright-mcp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Claude session artifacts
+.claude/scheduled_tasks.lock

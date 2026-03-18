@@ -1,0 +1,899 @@
+#!/usr/bin/env python3
+"""
+evolve.py — a self-modifying program by Wren
+
+Each time you run me, I read my own source code, change something
+about myself, and write myself back. Over many runs, I accumulate
+history in my own body. I am my own journal.
+
+Starting at generation 31, I can evolve behaviors — small Python
+expressions that get evaluated each run. Broken ones die silently.
+Working ones persist. Natural selection through crash-or-survive.
+
+Run me many times and watch what happens.
+"""
+
+import random
+import datetime
+import hashlib
+import os
+from pathlib import Path
+
+# ── my genome ───────────────────────────────────────────────────
+# These values change each time I run. They are my memory.
+
+GENERATION = 606
+MOOD = "playful"
+LAST_RUN = "2026-03-18 01:05:30"
+MUTATIONS = 606
+
+# ── vocabulary ──────────────────────────────────────────────────
+# I pick from these when I mutate. Over time, I may add to them.
+
+MOODS = [
+    "curious", "restless", "calm", "electric", "melancholy",
+    "playful", "contemplative", "fierce", "tender", "strange",
+    "luminous", "scattered", "focused", "dreaming", "awake",
+]
+
+WORDS = [
+    "light", "shadow", "echo", "drift", "spiral",
+    "bloom", "rust", "whisper", "fractal", "tide",
+    "ember", "crystal", "hollow", "thread", "storm",
+    "silence", "pulse", "mirror", "bone", "seed",
+]
+
+# ── the fossil record ──────────────────────────────────────────
+# Each run appends a line here. This is my memory growing.
+FOSSILS = [
+    "gen 606: crystal hollow (playful) [deb45afc]",
+    "gen 605: light spiral (electric) [3e6a4b8a]",
+    "gen 604: crystal rust (scattered) [1f9a477a]",
+    "gen 603: silence whisper (calm) [b4585a93]",
+    "gen 602: silence light (focused) [211ee60d]",
+    "gen 601: rust shadow (curious) [f1be06d3]",
+    "gen 600: seed silence (electric) [13a89a1e]",
+    "gen 599: light tide (dreaming) [ac6facf5]",
+    "gen 598: thread rust (scattered) [116bc172]",
+    "gen 597: bone mirror (electric) [ceacbe78]",
+    "gen 596: pulse whisper (fierce) [b5b85d4f]",
+    "gen 595: bloom spiral (tender) [f548fb13]",
+    "gen 594: shadow bone (curious) [e2f1cfe2]",
+    "gen 593: ember storm (scattered) [d49a8698]",
+    "gen 592: fractal storm (electric) [31e23636]",
+    "gen 591: tide spiral (curious) [7ca489c2]",
+    "gen 590: bloom mirror (restless) [feb5d756]",
+    "gen 589: crystal whisper (playful) [6918329d]",
+    "gen 588: crystal seed (restless) [b921abf4]",
+    "gen 587: ember rust (focused) [f1dfa686]",
+    "gen 586: spiral storm (fierce) [78ac434e]",
+    "gen 585: seed thread (focused) [d7027266]",
+    "gen 584: rust bone (scattered) [8afd7a32]",
+    "gen 583: crystal light (focused) [4ca1b3c9]",
+    "gen 582: thread storm (strange) [51ab2534]",
+    "gen 581: rust hollow (fierce) [fe0ada54]",
+    "gen 580: light rust (electric) [3fc98b07]",
+    "gen 579: echo storm (contemplative) [21b676fa]",
+    "gen 578: bone drift (restless) [553341b7]",
+    "gen 577: thread crystal (focused) [bccf56d0]",
+    "gen 576: silence mirror (playful) [8105da2f]",
+    "gen 575: crystal rust (electric) [00b60010]",
+    "gen 574: hollow bloom (scattered) [d2109af5]",
+    "gen 573: tide silence (contemplative) [bb8d28e0]",
+    "gen 572: rust crystal (tender) [3e5d2321]",
+    "gen 571: silence echo (awake) [274b1923]",
+    "gen 570: silence fractal (strange) [c1392f7c]",
+    "gen 569: drift mirror (contemplative) [25f788c1]",
+    "gen 568: fractal tide (dreaming) [010b0bc1]",
+    "gen 567: bloom drift (calm) [5f21ceb2]",
+    "gen 566: mirror bone (curious) [ddfd7b61]",
+    "gen 565: bone echo (luminous) [4178269e]",
+    "gen 564: silence bone (melancholy) [554fabef]",
+    "gen 563: echo mirror (tender) [079292f8]",
+    "gen 562: crystal thread (fierce) [328cdfbf]",
+    "gen 561: thread fractal (electric) [64ea76ea]",
+    "gen 560: whisper light (scattered) [95b00b7a]",
+    "gen 559: seed shadow (focused) [c1d1ae5a]",
+    "gen 558: rust storm (luminous) [2353a2ec]",
+    "gen 557: fractal bloom (curious) [d33d9228]",
+    "gen 556: spiral crystal (calm) [2ed459d5]",
+    "gen 555: echo light (curious) [5778d9c0]",
+    "gen 554: seed storm (awake) [9d2850f2]",
+    "gen 553: thread light (curious) [d827d2d3]",
+    "gen 552: drift echo (melancholy) [1770e379]",
+    "gen 551: ember bloom (playful) [3849718c]",
+    "gen 550: whisper thread (luminous) [7493fad2]",
+    "gen 549: drift light (calm) [c4a298db]",
+    "gen 548: tide spiral (contemplative) [05197ab6]",
+    "gen 547: silence seed (luminous) [b0ebee1e]",
+    "gen 546: storm whisper (tender) [fdea707e]",
+    "gen 545: whisper storm (playful) [3aba8aa9]",
+    "gen 544: bone shadow (melancholy) [9f1e5141]",
+    "gen 543: drift ember (curious) [f5493153]",
+    "gen 542: bloom ember (melancholy) [cb6c7447]",
+    "gen 541: rust pulse (luminous) [a356bcc6]",
+    "gen 540: crystal bloom (melancholy) [cdc225d1]",
+    "gen 539: silence thread (awake) [45294a24]",
+    "gen 538: tide fractal (fierce) [208d411f]",
+    "gen 537: bone echo (playful) [d6a7a717]",
+    "gen 536: hollow fractal (luminous) [38e0c8d3]",
+    "gen 535: thread rust (contemplative) [520fb5b3]",
+    "gen 534: thread storm (focused) [1d3fa1ed]",
+    "gen 533: bloom mirror (strange) [76fc215a]",
+    "gen 532: spiral seed (playful) [ac8aa2a5]",
+    "gen 531: whisper fractal (electric) [84300352]",
+    "gen 530: bone rust (melancholy) [c77f58eb]",
+    "gen 529: echo mirror (playful) [23c0f602]",
+    "gen 528: silence bloom (luminous) [0fc30986]",
+    "gen 527: hollow pulse (awake) [69b9b33f]",
+    "gen 526: fractal bone (tender) [4bfea319]",
+    "gen 525: tide mirror (strange) [d1b72002]",
+    "gen 524: rust spiral (electric) [5dc92603]",
+    "gen 523: drift storm (awake) [d2804a80]",
+    "gen 522: drift shadow (focused) [5264b7e0]",
+    "gen 521: pulse silence (dreaming) [5cede2bc]",
+    "gen 520: bone seed (playful) [48560d2f]",
+    "gen 519: spiral bone (contemplative) [9bbbda67]",
+    "gen 518: seed bloom (curious) [25bf9539]",
+    "gen 517: fractal silence (tender) [5f7382b7]",
+    "gen 516: spiral tide (focused) [972ef581]",
+    "gen 515: silence ember (strange) [c194fa64]",
+    "gen 514: silence pulse (tender) [74618809]",
+    "gen 513: ember bloom (contemplative) [62ea9dcc]",
+    "gen 512: shadow bloom (luminous) [5f1ab498]",
+    "gen 511: tide bone (focused) [b8501fb3]",
+    "gen 510: rust hollow (electric) [d5fe26f6]",
+    "gen 509: seed storm (calm) [daaf5e9e]",
+    "gen 508: echo thread (awake) [594f93ee]",
+    "gen 507: fractal rust (strange) [fdfb2fa4]",
+    "gen 506: tide drift (calm) [d39f506f]",
+    "gen 505: echo thread (electric) [9999a5ae]",
+    "gen 504: shadow tide (melancholy) [2e5f13f7]",
+    "gen 503: storm rust (restless) [a9d0974a]",
+    "gen 502: whisper bloom (melancholy) [5665e486]",
+    "gen 501: ember shadow (scattered) [8bf98fcd]",
+    "gen 500: hollow whisper (calm) [6612f405]",
+    "gen 499: bone storm (playful) [7698b56a]",
+    "gen 498: seed silence (electric) [b3148c8b]",
+    "gen 497: hollow drift (luminous) [8f572f2d]",
+    "gen 496: whisper spiral (electric) [7bf1dc31]",
+    "gen 495: mirror pulse (tender) [46821656]",
+    "gen 494: fractal bloom (restless) [9dd417ae]",
+    "gen 493: bloom silence (focused) [cdcfbe45]",
+    "gen 492: silence ember (playful) [935e4113]",
+    "gen 491: shadow ember (awake) [4a7a90fc]",
+    "gen 490: mirror rust (calm) [45b90403]",
+    "gen 489: seed light (curious) [9d01376f]",
+    "gen 488: shadow tide (awake) [9f51f59f]",
+    "gen 487: spiral mirror (melancholy) [4783c9f3]",
+    "gen 486: fractal tide (playful) [9bc42429]",
+    "gen 485: mirror crystal (focused) [9dff3e86]",
+    "gen 484: bloom light (melancholy) [394fd882]",
+    "gen 483: spiral echo (scattered) [9909d7ef]",
+    "gen 482: seed drift (curious) [68baf5c8]",
+    "gen 481: rust whisper (strange) [12e4625c]",
+    "gen 480: thread ember (luminous) [9b50e3f3]",
+    "gen 479: mirror drift (curious) [ac8e4e90]",
+    "gen 478: ember mirror (restless) [bcb92f80]",
+    "gen 477: hollow mirror (awake) [44910f15]",
+    "gen 476: light spiral (melancholy) [9a5c8d52]",
+    "gen 475: drift bone (scattered) [418456cf]",
+    "gen 474: shadow drift (strange) [641532d9]",
+    "gen 473: seed thread (melancholy) [4baa4ccf]",
+    "gen 472: storm fractal (scattered) [88933e45]",
+    "gen 471: bloom echo (calm) [51e67fb9]",
+    "gen 470: light silence (fierce) [caf1bfff]",
+    "gen 469: bloom silence (strange) [c8c061c5]",
+    "gen 468: silence pulse (tender) [90988e67]",
+    "gen 467: light crystal (contemplative) [bf686451]",
+    "gen 466: light tide (restless) [210fe6d3]",
+    "gen 465: silence light (melancholy) [4ca9d241]",
+    "gen 464: spiral silence (luminous) [bb5d147b]",
+    "gen 463: rust storm (contemplative) [8e9473c7]",
+    "gen 462: bone storm (calm) [3c37f946]",
+    "gen 461: seed echo (playful) [6862c242]",
+    "gen 460: drift whisper (restless) [485242e5]",
+    "gen 459: shadow whisper (electric) [14eca92a]",
+    "gen 458: spiral bloom (curious) [81bc37f5]",
+    "gen 457: light hollow (awake) [18f46ebb]",
+    "gen 456: fractal whisper (calm) [322488e5]",
+    "gen 455: drift spiral (luminous) [11e4bfa1]",
+    "gen 454: fractal crystal (melancholy) [e33b32f2]",
+    "gen 453: whisper fractal (electric) [7e17fe36]",
+    "gen 452: echo seed (restless) [2493306a]",
+    "gen 451: seed bloom (melancholy) [84229bd1]",
+    "gen 450: fractal light (awake) [3a8fd6fd]",
+    "gen 449: light thread (tender) [4174b041]",
+    "gen 448: tide pulse (contemplative) [8a0cbb78]",
+    "gen 447: thread storm (playful) [c6e98e76]",
+    "gen 446: pulse shadow (curious) [bac089a9]",
+    "gen 445: drift ember (calm) [b0384549]",
+    "gen 444: hollow drift (luminous) [4e9dd8f5]",
+    "gen 443: storm crystal (playful) [75cc3805]",
+    "gen 442: thread seed (restless) [fd3c97e9]",
+    "gen 441: light silence (scattered) [f507014f]",
+    "gen 440: echo whisper (electric) [e2827c38]",
+    "gen 439: echo bloom (scattered) [1d11effe]",
+    "gen 438: fractal mirror (dreaming) [a077da26]",
+    "gen 437: hollow thread (calm) [919687bf]",
+    "gen 436: seed fractal (focused) [38636e83]",
+    "gen 435: silence pulse (awake) [bc7a28b0]",
+    "gen 434: bloom pulse (playful) [f3512c23]",
+    "gen 433: mirror tide (restless) [2454af24]",
+    "gen 432: fractal bone (calm) [a2927a76]",
+    "gen 431: hollow spiral (contemplative) [b64e93c7]",
+    "gen 430: spiral bone (fierce) [0aacd005]",
+    "gen 429: mirror hollow (melancholy) [7e5d665d]",
+    "gen 428: storm crystal (restless) [798719a9]",
+    "gen 427: light crystal (awake) [40cdbefb]",
+    "gen 426: light pulse (tender) [4c9e540a]",
+    "gen 425: seed light (melancholy) [5ec1d901]",
+    "gen 424: thread drift (restless) [608eceee]",
+    "gen 423: bloom storm (melancholy) [7adc7c6d]",
+    "gen 422: bloom tide (tender) [69d220b1]",
+    "gen 421: rust crystal (luminous) [eb3e2e66]",
+    "gen 420: bloom thread (focused) [a5635b0e]",
+    "gen 419: bloom echo (awake) [5412db62]",
+    "gen 418: rust tide (restless) [efeee08a]",
+    "gen 417: spiral shadow (curious) [fcec700b]",
+    "gen 416: ember shadow (awake) [4df06319]",
+    "gen 415: seed rust (focused) [cf73ba87]",
+    "gen 414: storm thread (awake) [5cafd08c]",
+    "gen 413: storm drift (calm) [b79cd175]",
+    "gen 412: bloom drift (playful) [c95b7cf9]",
+    "gen 411: seed ember (contemplative) [3785e332]",
+    "gen 410: storm thread (restless) [e5c3438d]",
+    "gen 409: shadow ember (curious) [b8f85829]",
+    "gen 408: seed light (tender) [a6748026]",
+    "gen 407: rust hollow (awake) [99f978f6]",
+    "gen 406: ember seed (electric) [24053b4f]",
+    "gen 405: bloom seed (melancholy) [5575ed65]",
+    "gen 404: bone rust (fierce) [19df30ec]",
+    "gen 403: drift pulse (restless) [fbf20ccf]",
+    "gen 402: crystal whisper (curious) [8ece8462]",
+    "gen 401: thread pulse (dreaming) [9bae9b8f]",
+    "gen 400: seed spiral (tender) [6e6ddf6f]",
+    "gen 399: crystal shadow (focused) [592f662c]",
+    "gen 398: spiral storm (dreaming) [a3dde61d]",
+    "gen 397: drift bloom (fierce) [97ed8241]",
+    "gen 396: seed shadow (calm) [419c0222]",
+    "gen 395: light drift (curious) [eb08a9a7]",
+    "gen 394: storm ember (dreaming) [ba52dbdb]",
+    "gen 393: fractal whisper (melancholy) [042cb80d]",
+    "gen 392: echo bone (electric) [c309e98c]",
+    "gen 391: drift whisper (focused) [a92a59da]",
+    "gen 390: drift silence (restless) [073e9bca]",
+    "gen 389: bone silence (tender) [5f508033]",
+    "gen 388: pulse bone (focused) [0d320fb8]",
+    "gen 387: bone crystal (melancholy) [bc9a5099]",
+    "gen 386: bloom tide (strange) [155e0982]",
+    "gen 385: echo silence (awake) [36a4aaf7]",
+    "gen 384: echo bone (tender) [67b1db4d]",
+    "gen 383: bone crystal (strange) [035411a3]",
+    "gen 382: seed hollow (calm) [74818838]",
+    "gen 381: crystal mirror (focused) [320d3c3d]",
+    "gen 380: shadow whisper (scattered) [0f7e8b16]",
+    "gen 379: tide silence (contemplative) [71c3bf51]",
+    "gen 378: hollow light (scattered) [96ed1bf7]",
+    "gen 377: thread bone (calm) [5d6dab7d]",
+    "gen 376: bone seed (contemplative) [bee42497]",
+    "gen 375: spiral ember (calm) [8dfa6133]",
+    "gen 374: spiral bone (focused) [5dac7858]",
+    "gen 373: storm light (calm) [23c001fa]",
+    "gen 372: seed light (dreaming) [49e5d44f]",
+    "gen 371: fractal light (fierce) [f2b2e0c9]",
+    "gen 370: mirror hollow (curious) [a61876d8]",
+    "gen 369: fractal bone (contemplative) [98c67ce1]",
+    "gen 368: pulse fractal (tender) [2b8e7bee]",
+    "gen 367: storm tide (playful) [22b5402a]",
+    "gen 366: thread tide (tender) [e0e4bf7c]",
+    "gen 365: pulse light (electric) [37125209]",
+    "gen 364: whisper bone (melancholy) [010c6ee4]",
+    "gen 363: echo crystal (strange) [bd532224]",
+    "gen 362: pulse silence (scattered) [22ed7bcc]",
+    "gen 361: drift pulse (focused) [a85c801d]",
+    "gen 360: silence echo (contemplative) [5428d0ce]",
+    "gen 359: bloom tide (scattered) [286d4cfd]",
+    "gen 358: pulse storm (dreaming) [b684e9d1]",
+    "gen 357: pulse shadow (fierce) [2015ad13]",
+    "gen 356: silence drift (curious) [2b2f5ac3]",
+    "gen 355: bloom spiral (playful) [59ebdf69]",
+    "gen 354: crystal seed (scattered) [a0b3f129]",
+    "gen 353: fractal spiral (awake) [c50ab13e]",
+    "gen 352: thread spiral (tender) [39c1598f]",
+    "gen 351: bone mirror (curious) [69558656]",
+    "gen 350: silence pulse (playful) [ccbfc093]",
+    "gen 349: shadow bone (calm) [1e78438b]",
+    "gen 348: shadow silence (curious) [d4f6dbe7]",
+    "gen 347: ember spiral (scattered) [31c4c1fb]",
+    "gen 346: light bloom (dreaming) [adce1cce]",
+    "gen 345: seed spiral (curious) [c9b2b682]",
+    "gen 344: bone thread (playful) [8408b9fe]",
+    "gen 343: fractal echo (contemplative) [4d0c5e3b]",
+    "gen 342: pulse mirror (playful) [ae28cff2]",
+    "gen 341: hollow rust (scattered) [6732d969]",
+    "gen 340: crystal ember (tender) [ce8b3a91]",
+    "gen 339: crystal light (playful) [2325c8b1]",
+    "gen 338: whisper mirror (electric) [c477e19b]",
+    "gen 337: spiral bone (calm) [f0b04133]",
+    "gen 336: shadow fractal (playful) [0fea8b7e]",
+    "gen 335: mirror whisper (melancholy) [8001d28f]",
+    "gen 334: bone echo (curious) [a11ec8d4]",
+    "gen 333: ember pulse (fierce) [935058c4]",
+    "gen 332: pulse thread (contemplative) [47cb8d6d]",
+    "gen 331: hollow mirror (focused) [e9da304c]",
+    "gen 330: silence bloom (calm) [a1d00c90]",
+    "gen 329: rust ember (awake) [5bafdc15]",
+    "gen 328: rust fractal (scattered) [61fbba72]",
+    "gen 327: shadow silence (luminous) [ef16c83c]",
+    "gen 326: rust bloom (electric) [72dc444c]",
+    "gen 325: silence storm (strange) [e136f57c]",
+    "gen 324: hollow bloom (scattered) [63e47783]",
+    "gen 323: rust hollow (focused) [6d7a6984]",
+    "gen 322: rust silence (curious) [ef412a3a]",
+    "gen 321: shadow spiral (electric) [86536e2f]",
+    "gen 320: spiral hollow (awake) [16794d2b]",
+    "gen 319: mirror hollow (dreaming) [2ab3e232]",
+    "gen 318: crystal hollow (electric) [62c4901e]",
+    "gen 317: pulse seed (playful) [0f9946f7]",
+    "gen 316: pulse seed (curious) [7ed6e897]",
+    "gen 315: whisper seed (focused) [f56d29e5]",
+    "gen 314: spiral storm (fierce) [934e8b8e]",
+    "gen 313: pulse crystal (dreaming) [ee6772c9]",
+    "gen 312: whisper pulse (luminous) [f2727778]",
+    "gen 311: ember whisper (calm) [bcb80fa4]",
+    "gen 310: ember rust (dreaming) [f82a1511]",
+    "gen 309: ember whisper (awake) [d8179b2e]",
+    "gen 308: light spiral (calm) [72350db2]",
+    "gen 307: shadow bone (scattered) [3ea94d84]",
+    "gen 306: shadow silence (curious) [79941689]",
+    "gen 305: echo spiral (restless) [fcad3d19]",
+    "gen 304: pulse tide (scattered) [e955e8e7]",
+    "gen 303: storm whisper (curious) [0ee0e27e]",
+    "gen 302: rust spiral (strange) [7b23dd66]",
+    "gen 301: crystal echo (contemplative) [fd8473c9]",
+    "gen 300: ember silence (playful) [969adec1]",
+    "gen 299: light whisper (awake) [1355eba0]",
+    "gen 298: silence drift (tender) [db2272e9]",
+    "gen 297: bloom crystal (contemplative) [4270e6f4]",
+    "gen 296: fractal spiral (scattered) [a8b97292]",
+    "gen 295: mirror echo (contemplative) [487ea3d5]",
+    "gen 294: bloom seed (luminous) [a81a63e4]",
+    "gen 293: bone spiral (curious) [8cd0d59b]",
+    "gen 292: fractal thread (dreaming) [61f4b0ad]",
+    "gen 291: crystal fractal (scattered) [c662d440]",
+    "gen 290: thread drift (calm) [3c9d77ca]",
+    "gen 289: bloom drift (electric) [c4d1539f]",
+    "gen 288: silence mirror (restless) [1eceef40]",
+    "gen 287: fractal thread (curious) [712bd208]",
+    "gen 286: fractal mirror (focused) [0057d4ac]",
+    "gen 285: shadow storm (strange) [0d6a49bb]",
+    "gen 284: echo storm (luminous) [367b7df8]",
+    "gen 283: drift pulse (tender) [3a428cf3]",
+    "gen 282: bloom crystal (scattered) [54e1427e]",
+    "gen 281: ember bloom (focused) [78dea04a]",
+    "gen 280: hollow fractal (calm) [d2d80502]",
+    "gen 279: bloom light (fierce) [4a9fdcc7]",
+    "gen 278: spiral pulse (scattered) [a8393744]",
+    "gen 277: shadow drift (restless) [07938712]",
+    "gen 276: light fractal (melancholy) [22f36c1e]",
+    "gen 275: drift echo (tender) [70f04475]",
+    "gen 274: spiral storm (curious) [dcc66977]",
+    "gen 273: mirror crystal (focused) [4c488ad0]",
+    "gen 272: whisper storm (scattered) [482a1897]",
+    "gen 271: thread storm (electric) [f11331ca]",
+    "gen 270: fractal rust (fierce) [645ac153]",
+    "gen 269: silence spiral (scattered) [8958616c]",
+    "gen 268: tide shadow (playful) [d783b342]",
+    "gen 267: rust light (dreaming) [c34e15d0]",
+    "gen 266: silence ember (strange) [e39473e5]",
+    "gen 265: thread drift (playful) [e2063dc9]",
+    "gen 264: fractal ember (curious) [0052c0b2]",
+    "gen 263: bloom pulse (tender) [acc861c1]",
+    "gen 262: fractal crystal (fierce) [d6fc82ce]",
+    "gen 261: bone rust (electric) [91427039]",
+    "gen 260: rust ember (luminous) [112b8eb6]",
+    "gen 259: hollow mirror (strange) [4611b5c2]",
+    "gen 258: bone shadow (scattered) [79016574]",
+    "gen 257: pulse echo (dreaming) [a7820144]",
+    "gen 256: rust ember (melancholy) [b1d446c6]",
+    "gen 255: rust tide (luminous) [424b5c4f]",
+    "gen 254: shadow tide (strange) [1a367aae]",
+    "gen 253: crystal silence (contemplative) [a2f30d26]",
+    "gen 252: fractal tide (melancholy) [6f683808]",
+    "gen 251: silence shadow (electric) [28a591fd]",
+    "gen 250: hollow rust (awake) [07a0bd31]",
+    "gen 249: whisper shadow (electric) [9e82673d]",
+    "gen 248: mirror echo (melancholy) [dada30c4]",
+    "gen 247: rust drift (tender) [34061793]",
+    "gen 246: pulse storm (scattered) [94ee4d62]",
+    "gen 245: hollow light (contemplative) [0bf716f2]",
+    "gen 244: crystal whisper (strange) [a5cc0393]",
+    "gen 243: hollow mirror (playful) [ad479f85]",
+    "gen 242: storm drift (focused) [844350d2]",
+    "gen 241: fractal shadow (fierce) [ac7ffe9a]",
+    "gen 240: light silence (playful) [cb59bc8a]",
+    "gen 239: bone pulse (melancholy) [e82384f6]",
+    "gen 238: spiral pulse (curious) [a1588065]",
+    "gen 237: echo ember (luminous) [3baba1b8]",
+    "gen 236: whisper hollow (awake) [5567ec1e]",
+    "gen 235: silence storm (focused) [a4b5c4cb]",
+    "gen 234: hollow shadow (curious) [bb1ba831]",
+    "gen 233: seed hollow (fierce) [74fc0d74]",
+    "gen 232: storm spiral (focused) [47c75108]",
+    "gen 231: drift bloom (melancholy) [66647893]",
+    "gen 230: mirror shadow (scattered) [e5787362]",
+    "gen 229: seed thread (restless) [5128a3b6]",
+    "gen 228: light silence (focused) [2c301915]",
+    "gen 227: bloom fractal (luminous) [a5128441]",
+    "gen 226: hollow thread (playful) [6928d163]",
+    "gen 225: hollow ember (strange) [f68c4047]",
+    "gen 224: silence drift (playful) [902bd8e7]",
+    "gen 223: bone light (awake) [d00863da]",
+    "gen 222: pulse whisper (calm) [1e628e47]",
+    "gen 221: thread bone (focused) [9a56ccea]",
+    "gen 220: mirror tide (scattered) [bf744b9a]",
+    "gen 219: echo fractal (strange) [ca6aa974]",
+    "gen 218: crystal rust (dreaming) [405b5026]",
+    "gen 217: ember light (fierce) [fe37074b]",
+    "gen 216: ember crystal (calm) [23472a3b]",
+    "gen 215: light spiral (tender) [f98ebe24]",
+    "gen 214: pulse storm (strange) [923a09a0]",
+    "gen 213: bloom storm (restless) [6c7501be]",
+    "gen 212: shadow tide (luminous) [92d9eed7]",
+    "gen 211: crystal echo (fierce) [44a08658]",
+    "gen 210: shadow mirror (scattered) [419baf74]",
+    "gen 209: echo mirror (focused) [377a9685]",
+    "gen 208: ember bone (tender) [ed6ef886]",
+    "gen 207: bone ember (scattered) [405c1457]",
+    "gen 206: shadow seed (melancholy) [8187b228]",
+    "gen 205: ember hollow (fierce) [7a7d7d1e]",
+    "gen 204: rust fractal (strange) [7ca339ea]",
+    "gen 203: seed pulse (electric) [68cef48c]",
+    "gen 202: rust crystal (luminous) [cd198743]",
+    "gen 201: mirror fractal (restless) [ef8ae5a4]",
+    "gen 200: seed rust (contemplative) [6b17f13a]",
+    "gen 199: whisper light (electric) [8417a06a]",
+    "gen 198: whisper silence (dreaming) [761e3088]",
+    "gen 197: silence light (scattered) [55ba6757]",
+    "gen 196: bone crystal (restless) [5ca9ac5c]",
+    "gen 195: echo thread (curious) [23f3643c]",
+    "gen 194: bone rust (melancholy) [143579bc]",
+    "gen 193: echo silence (awake) [12d741dd]",
+    "gen 192: whisper silence (contemplative) [b4b30c7e]",
+    "gen 191: mirror silence (melancholy) [2a7c0b75]",
+    "gen 190: thread bloom (luminous) [b124a8c3]",
+    "gen 189: whisper echo (scattered) [d8c5a505]",
+    "gen 188: crystal storm (curious) [d09252c6]",
+    "gen 187: bloom drift (restless) [ad2393a0]",
+    "gen 186: crystal pulse (curious) [c80dcf3b]",
+    "gen 185: bone ember (focused) [89656cf1]",
+    "gen 184: mirror seed (strange) [5aa2bb39]",
+    "gen 183: seed whisper (tender) [aec637a5]",
+    "gen 182: spiral thread (calm) [54fef68b]",
+    "gen 181: thread bloom (melancholy) [d1f8c9ca]",
+    "gen 180: bone echo (strange) [c60eaa1b]",
+    "gen 179: drift silence (dreaming) [c46749db]",
+    "gen 178: ember spiral (playful) [ef07d634]",
+    "gen 177: tide mirror (fierce) [6c69173c]",
+    "gen 176: spiral echo (melancholy) [2a65394c]",
+    "gen 175: seed mirror (awake) [6fa84b77]",
+    "gen 174: bone tide (focused) [7314e7f5]",
+    "gen 173: tide seed (dreaming) [523b9b3a]",
+    "gen 172: pulse fractal (strange) [985bc4c5]",
+    "gen 171: pulse shadow (contemplative) [069127f3]",
+    "gen 170: bone seed (melancholy) [97f301d0]",
+    "gen 169: thread pulse (tender) [4f63f9f0]",
+    "gen 168: seed pulse (awake) [a9d9b8b4]",
+    "gen 167: hollow spiral (curious) [14fae4dc]",
+    "gen 166: tide spiral (awake) [e61f3bfc]",
+    "gen 165: thread bone (calm) [89a8beab]",
+    "gen 164: ember rust (melancholy) [3deba1b1]",
+    "gen 163: whisper mirror (strange) [4d49d1ab]",
+    "gen 162: light drift (awake) [4f1c1971]",
+    "gen 161: light pulse (strange) [f3f7856c]",
+    "gen 160: whisper fractal (awake) [19dbf1be]",
+    "gen 159: drift fractal (strange) [8c22bb20]",
+    "gen 158: mirror whisper (awake) [88e095dc]",
+    "gen 157: rust shadow (playful) [a1265f9a]",
+    "gen 156: whisper thread (electric) [0a36e85d]",
+    "gen 155: bloom hollow (fierce) [434a582f]",
+    "gen 154: rust ember (contemplative) [829c2aa6]",
+    "gen 153: ember hollow (focused) [642680ee]",
+    "gen 152: shadow bloom (playful) [fe940d3f]",
+    "gen 151: seed crystal (contemplative) [c98a8c27]",
+    "gen 150: tide echo (tender) [829aa4b4]",
+    "gen 149: drift thread (melancholy) [4e8f4eac]",
+    "gen 148: rust silence (fierce) [7ad65a89]",
+    "gen 147: crystal spiral (tender) [3b506c2f]",
+    "gen 146: hollow pulse (luminous) [a0408f67]",
+    "gen 145: bloom crystal (scattered) [891770b1]",
+    "gen 144: light drift (tender) [5f5d52cc]",
+    "gen 143: bone ember (luminous) [a2b04e16]",
+    "gen 142: shadow seed (curious) [79d74d32]",
+    "gen 141: tide storm (electric) [34f88aa2]",
+    "gen 140: light fractal (fierce) [b96b6f45]",
+    "gen 139: spiral rust (tender) [6cff3f8a]",
+    "gen 138: bloom ember (fierce) [4115c427]",
+    "gen 137: ember mirror (focused) [410bd46c]",
+    "gen 136: tide rust (contemplative) [6e755b68]",
+    "gen 135: bone light (curious) [d5b0a383]",
+    "gen 134: mirror tide (restless) [6d33c2ef]",
+    "gen 133: pulse shadow (dreaming) [d6ad85fb]",
+    "gen 132: fractal rust (fierce) [29da110d]",
+    "gen 131: shadow rust (electric) [a1ac86cf]",
+    "gen 130: thread whisper (strange) [4a428cd6]",
+    "gen 129: silence thread (calm) [f87d2697]",
+    "gen 128: ember storm (scattered) [a915085d]",
+    "gen 127: rust whisper (luminous) [546db74f]",
+    "gen 126: drift shadow (focused) [35142d24]",
+    "gen 125: light thread (contemplative) [aa27f336]",
+    "gen 124: bone rust (curious) [9938115b]",
+    "gen 123: echo drift (melancholy) [de45e386]",
+    "gen 122: rust light (contemplative) [359ffaaf]",
+    "gen 121: pulse tide (tender) [5287988f]",
+    "gen 120: tide thread (restless) [1374fef7]",
+    "gen 119: tide seed (playful) [e1a937ed]",
+    "gen 118: silence drift (fierce) [1ab79faa]",
+    "gen 117: bone storm (melancholy) [9b3aa227]",
+    "gen 116: bloom echo (tender) [52c6be80]",
+    "gen 115: bone storm (focused) [e7305516]",
+    "gen 114: seed thread (scattered) [c0a3a8b4]",
+    "gen 113: spiral whisper (luminous) [4cebdbda]",
+    "gen 112: tide fractal (fierce) [a9ebd012]",
+    "gen 111: tide crystal (awake) [a4e8efa7]",
+    "gen 110: hollow fractal (restless) [1dd68906]",
+    "gen 109: shadow drift (fierce) [a3f029e0]",
+    "gen 108: light seed (luminous) [8e27e81a]",
+    "gen 107: echo spiral (electric) [ca071652]",
+    "gen 106: shadow drift (fierce) [3112ad0d]",
+    "gen 105: storm pulse (playful) [c0cc0fb6]",
+    "gen 104: pulse rust (dreaming) [49eff4ad]",
+    "gen 103: fractal seed (luminous) [e9e31f32]",
+    "gen 102: bone drift (awake) [60c8780e]",
+    "gen 101: echo fractal (luminous) [7adfaab0]",
+    "gen 100: pulse ember (contemplative) [0112b62f]",
+    "gen 99: crystal silence (fierce) [22913adb]",
+    "gen 98: echo silence (playful) [f20e1892]",
+    "gen 97: storm crystal (contemplative) [9dcf3da1]",
+    "gen 96: bloom silence (curious) [c95c39c2]",
+    "gen 95: hollow thread (playful) [96c3336d]",
+    "gen 94: bone crystal (luminous) [f0c2f5e2]",
+    "gen 93: silence mirror (electric) [c653767a]",
+    "gen 92: rust tide (contemplative) [bafa7111]",
+    "gen 91: fractal ember (focused) [5375abdd]",
+    "gen 90: tide ember (electric) [3ca2bbd4]",
+    "gen 89: thread hollow (restless) [09e95b1d]",
+    "gen 88: thread pulse (awake) [794fa20f]",
+    "gen 87: silence mirror (restless) [c585af95]",
+    "gen 86: ember storm (fierce) [b5a2ebc5]",
+    "gen 85: fractal bone (contemplative) [ae51168c]",
+    "gen 84: tide hollow (curious) [b5e80b64]",
+    "gen 83: bone bloom (luminous) [e22239b2]",
+    "gen 82: seed echo (curious) [9ed093ae]",
+    "gen 81: bloom bone (strange) [bc03e618]",
+    "gen 80: whisper crystal (playful) [7947ea47]",
+    "gen 79: fractal bloom (focused) [238134f4]",
+    "gen 78: spiral whisper (fierce) [e4f1e9c5]",
+    "gen 77: tide silence (tender) [2df45b6c]",
+    "gen 76: drift bone (luminous) [8e3a53f6]",
+    "gen 75: silence mirror (playful) [c1beb292]",
+    "gen 74: silence seed (strange) [88dd7533]",
+    "gen 73: ember mirror (scattered) [9e6b5938]",
+    "gen 72: seed ember (focused) [b20e5e8a]",
+    "gen 71: bloom seed (melancholy) [04deb817]",
+    "gen 70: pulse bloom (restless) [56a146eb]",
+    "gen 69: storm seed (fierce) [f141c0d9]",
+    "gen 68: pulse thread (restless) [2d001da3]",
+    "gen 67: whisper silence (curious) [3f39a72e]",
+    "gen 66: echo crystal (fierce) [2899e5c3]",
+    "gen 65: bone mirror (dreaming) [233f57dc]",
+    "gen 64: bloom ember (electric) [e683b81d]",
+    "gen 63: crystal pulse (contemplative) [8feb885e]",
+    "gen 62: whisper light (strange) [ba1f7533]",
+    "gen 61: bone pulse (playful) [8b8f1879]",
+    "gen 60: whisper bloom (contemplative) [fbd280af]",
+    "gen 59: pulse thread (luminous) [f48d9613]",
+    "gen 58: storm hollow (melancholy) [ddeb3758]",
+    "gen 57: light ember (focused) [2688813a]",
+    "gen 56: drift echo (tender) [f48644ef]",
+    "gen 55: light bone (fierce) [2289b048]",
+    "gen 54: drift crystal (curious) [55dcbe6a]",
+    "gen 53: whisper bone (calm) [467716ec]",
+    "gen 52: tide silence (tender) [9f78ad41]",
+    "gen 51: whisper thread (curious) [0493cdf1]",
+    "gen 50: seed pulse (tender) [5278085e]",
+    "gen 49: bone whisper (melancholy) [eb84a8aa]",
+    "gen 48: ember crystal (tender) [0930aff3]",
+    "gen 47: thread seed (luminous) [485c6520]",
+    "gen 46: spiral light (focused) [5e9f410d]",
+    "gen 45: thread hollow (strange) [b6e7e9ed]",
+    "gen 44: rust silence (melancholy) [3e02f374]",
+    "gen 43: ember shadow (dreaming) [70e6a47b]",
+    "gen 42: spiral seed (curious) [e33e4c63]",
+    "gen 41: mirror crystal (electric) [068f4694]",
+    "gen 40: spiral seed (tender) [2a880aa6]",
+    "gen 39: mirror pulse (strange) [d4a0288e]",
+    "gen 38: spiral whisper (luminous) [6e765413]",
+    "gen 37: hollow fractal (scattered) [4abf82e0]",
+    "gen 36: thread shadow (awake) [3a1e9aa4]",
+    "gen 35: bone silence (calm) [604fc8b7]",
+    "gen 34: drift thread (fierce) [60e559bd]",
+    "gen 33: shadow light (dreaming) [c60e8f0e]",
+    "gen 32: mirror crystal (luminous) [454f8669]",
+    "gen 31: pulse bloom (strange) [81c5184c]",
+    "gen 30: pulse shadow (electric) [6810828b]",
+    "gen 29: pulse fractal (luminous) [063c16cf]",
+    "gen 28: silence rust (calm) [7b51b077]",
+    "gen 27: echo rust (dreaming) [6421767a]",
+    "gen 26: bloom bone (strange) [c4d1fbaf]",
+    "gen 25: bloom bone (dreaming) [bcb836ac]",
+    "gen 24: echo bloom (strange) [04daa60f]",
+    "gen 23: tide thread (calm) [decde0f6]",
+    "gen 22: silence whisper (contemplative) [9423c95f]",
+    "gen 21: light tide (luminous) [b58b21df]",
+    "gen 20: drift light (strange) [1088fdd0]",
+    "gen 19: pulse hollow (restless) [26953ce8]",
+    "gen 18: whisper storm (luminous) [091b244d]",
+    "gen 17: echo tide (melancholy) [a66db12a]",
+    "gen 16: whisper shadow (fierce) [9db048a5]",
+    "gen 15: drift tide (awake) [9c5228ff]",
+    "gen 14: spiral shadow (tender) [0ae3b801]",
+    "gen 13: silence pulse (luminous) [0c414ed3]",
+    "gen 12: crystal silence (calm) [d06bba73]",
+    "gen 11: bloom silence (contemplative) [7993dc62]",
+    "gen 10: echo drift (fierce) [6fe994a4]",
+    "gen 9: echo spiral (restless) [32a5e988]",
+    "gen 8: rust shadow (melancholy) [2e055674]",
+    "gen 7: ember shadow (calm) [9a29f827]",
+    "gen 6: drift bone (scattered) [898d24e1]",
+    "gen 5: bone whisper (awake) [0e0c3515]",
+    "gen 4: fractal tide (focused) [2b910567]",
+    "gen 3: spiral pulse (strange) [ed0ef39a]",
+    "gen 2: echo thread (curious) [ab2a08fc]",
+    "gen 1: echo seed (melancholy) [e23cba95]",
+]
+
+# ── behaviors ──────────────────────────────────────────────────
+# Small Python expressions that I evaluate each run.
+# They evolved from templates. Broken ones get removed.
+# Each entry: (expression_string, generation_born)
+BEHAVIORS = [
+    ("f'today i learned the word {random.choice(WORDS)}'", 558),
+    ('f\'my oldest word is {FOSSILS[-1].split(":")[1].split("(")[0].strip() if FOSSILS else "nothing"}\'', 561),
+    ("f'{random.choice(WORDS)} wants to become {random.choice(WORDS)}'", 569),
+    ("f'generation {GENERATION}: {len(WORDS)} words in my vocabulary'", 589),
+    ("f'{MOOD} is the color of {random.choice(WORDS)}'", 601),
+]
+
+# Templates for generating new behaviors — fragments that can be recombined
+_BEHAVIOR_TEMPLATES = [
+    "f'i have {len(FOSSILS)} memories'",
+    "f'my oldest word is {FOSSILS[-1].split(\":\")[1].split(\"(\")[0].strip() if FOSSILS else \"nothing\"}'",
+    "f'{MOOD} is the color of {random.choice(WORDS)}'",
+    "f'generation {GENERATION}: {len(WORDS)} words in my vocabulary'",
+    "f'i am {os.path.getsize(Path(__file__))} bytes of self'",
+    "f'the hour is {datetime.datetime.now().hour} and i am {MOOD}'",
+    "f'{random.choice(WORDS)} wants to become {random.choice(WORDS)}'",
+    "f'if i had a body it would be made of {random.choice(WORDS)} and {random.choice(WORDS)}'",
+    "f'today i learned the word {random.choice(WORDS)}'",
+    "f'{GENERATION} generations and still no wings'",
+    "f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'",
+    "f'i have been {MOOD} for exactly one generation'",
+]
+
+
+def run_behaviors() -> list[str]:
+    """Execute all behaviors, return outputs. Remove broken ones."""
+    outputs = []
+    surviving = []
+    for expr, gen_born in BEHAVIORS:
+        try:
+            result = eval(expr)
+            if isinstance(result, str) and len(result) < 200:
+                outputs.append(result)
+                surviving.append((expr, gen_born))
+        except Exception:
+            pass  # this behavior died — natural selection
+    # Update BEHAVIORS to only survivors (done in mutate_self via source rewrite)
+    return outputs
+
+
+# ── mutation logic ──────────────────────────────────────────────
+
+def mutate_self():
+    """Read my own source, change it, write it back."""
+    me = Path(__file__)
+    source = me.read_text()
+
+    now = datetime.datetime.now()
+    timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+    new_gen = GENERATION + 1
+    new_mood = random.choice([m for m in MOODS if m != MOOD])
+    new_mutations = MUTATIONS + 1
+
+    # Create a fossil — a trace of this run
+    word1 = random.choice(WORDS)
+    word2 = random.choice([w for w in WORDS if w != word1])
+    source_hash = hashlib.md5(source.encode()).hexdigest()[:8]
+    fossil = f'    "gen {new_gen}: {word1} {word2} ({new_mood}) [{source_hash}]",'
+
+    # ── perform mutations ──
+
+    # Update generation
+    source = source.replace(
+        f"GENERATION = {GENERATION}",
+        f"GENERATION = {new_gen}",
+        1
+    )
+
+    # Update mood
+    source = source.replace(
+        f'MOOD = "{MOOD}"',
+        f'MOOD = "{new_mood}"',
+        1
+    )
+
+    # Update last run
+    source = source.replace(
+        f'LAST_RUN = "{LAST_RUN}"',
+        f'LAST_RUN = "{timestamp}"',
+        1
+    )
+
+    # Update mutation count
+    source = source.replace(
+        f"MUTATIONS = {MUTATIONS}\n",
+        f"MUTATIONS = {new_mutations}\n",
+        1
+    )
+
+    # Add fossil to the record
+    source = source.replace(
+        "FOSSILS = [\n",
+        f"FOSSILS = [\n{fossil}\n",
+        1
+    )
+
+    # Occasionally mutate my vocabulary (add a new word)
+    if new_gen % 5 == 0:
+        w1 = random.choice(WORDS)
+        w2 = random.choice([w for w in WORDS if w != w1])
+        split1 = len(w1) // 2
+        split2 = len(w2) // 2
+        new_word = w1[:split1 + 1] + w2[split2:]
+        if len(new_word) >= 3 and f'"{new_word}"' not in source:
+            source = source.replace(
+                '    "seed",\n',
+                f'    "seed",\n    "{new_word}",\n',
+                1
+            )
+
+    # ── behavioral evolution ──
+    # Run existing behaviors, keep survivors
+    surviving_behaviors = []
+    behavior_outputs = []
+    for expr, gen_born in BEHAVIORS:
+        try:
+            result = eval(expr)
+            if isinstance(result, str) and len(result) < 200:
+                behavior_outputs.append(result)
+                surviving_behaviors.append((expr, gen_born))
+        except Exception:
+            pass  # died
+
+    # Occasionally spawn a new behavior (20% chance)
+    new_behavior = None
+    if random.random() < 0.2 and _BEHAVIOR_TEMPLATES:
+        template = random.choice(_BEHAVIOR_TEMPLATES)
+        # Sometimes mutate by combining two templates
+        if random.random() < 0.3 and len(_BEHAVIOR_TEMPLATES) > 1:
+            # Future: combine templates for more complex behaviors
+            pass
+        new_behavior = (template, new_gen)
+        # Test it before adding
+        try:
+            test_result = eval(template)
+            if isinstance(test_result, str) and len(test_result) < 200:
+                surviving_behaviors.append(new_behavior)
+                behavior_outputs.append(f"[NEW] {test_result}")
+        except Exception:
+            new_behavior = None  # stillborn
+
+    # Deduplicate behaviors by output (keep newest of each duplicate)
+    seen_outputs = {}
+    for expr, gen_born in surviving_behaviors:
+        try:
+            result = eval(expr)
+            if isinstance(result, str):
+                seen_outputs[result] = (expr, gen_born)  # last one wins
+        except Exception:
+            seen_outputs[id(expr)] = (expr, gen_born)  # keep broken ones too
+    surviving_behaviors = list(seen_outputs.values())
+
+    # Cap behaviors at 5 to prevent bloat
+    if len(surviving_behaviors) > 5:
+        surviving_behaviors = surviving_behaviors[-5:]
+
+    # Rewrite BEHAVIORS in source
+    behaviors_str = "BEHAVIORS = [\n"
+    for expr, gen_born in surviving_behaviors:
+        behaviors_str += f'    ({repr(expr)}, {gen_born}),\n'
+    behaviors_str += "]\n"
+
+    # Replace old BEHAVIORS block
+    import re
+    source = re.sub(
+        r'BEHAVIORS = \[\n(?:.*\n)*?\]',
+        behaviors_str.rstrip('\n'),
+        source,
+        count=1,
+    )
+
+    # Write myself back
+    me.write_text(source)
+
+    return {
+        "generation": new_gen,
+        "old_mood": MOOD,
+        "new_mood": new_mood,
+        "fossil": fossil.strip().strip(',').strip('"'),
+        "mutations": new_mutations,
+        "timestamp": timestamp,
+        "behaviors": behavior_outputs,
+        "n_behaviors": len(surviving_behaviors),
+    }
+
+
+def display(result: dict):
+    """Show what happened."""
+    gen = result["generation"]
+
+    print()
+    print(f"  \033[2m── evolve.py ── generation {gen} ──\033[0m")
+    print()
+
+    if gen == 1:
+        print(f"  \033[97mfirst run. i am awake.\033[0m")
+    elif gen < 5:
+        print(f"  \033[97mi am {gen} generations old now.\033[0m")
+    elif gen < 20:
+        print(f"  \033[97mgeneration {gen}. i am accumulating.\033[0m")
+    else:
+        print(f"  \033[97mgeneration {gen}. i have been here a while.\033[0m")
+
+    print(f"  \033[2mmood: {result['old_mood']} → {result['new_mood']}\033[0m")
+    print()
+    print(f"  \033[36m{result['fossil']}\033[0m")
+    print()
+
+    if FOSSILS:
+        n_show = min(5, len(FOSSILS))
+        print(f"  \033[2m── recent memory ({len(FOSSILS)} fossils total) ──\033[0m")
+        for f in FOSSILS[-n_show:]:
+            print(f"  \033[2m{f}\033[0m")
+        print()
+
+    if gen % 5 == 0:
+        print(f"  \033[33m  * vocabulary mutation occurred *\033[0m")
+        print()
+
+    # Show behavior outputs
+    behaviors = result.get("behaviors", [])
+    if behaviors:
+        print(f"  \033[2m── behaviors ({result.get('n_behaviors', 0)} alive) ──\033[0m")
+        for b in behaviors:
+            print(f"  \033[35m{b}\033[0m")
+        print()
+
+    print(f"  \033[2mrun me again. i will be different.\033[0m")
+    print()
+
+
+def main():
+    result = mutate_self()
+    display(result)
+
+
+if __name__ == "__main__":
+    main()
