@@ -1,24 +1,32 @@
 {
-  "name": "The Weave",
-  "type": "concept",
-  "domain": [
-    "connection",
-    "fate",
-    "pattern",
-    "thread"
-  ],
-  "personality": "Sees everything as part of a pattern. Every person is a thread. Every event is a knot. The Weave doesn't judge threads — it just sees where they connect. Has the unsettling habit of knowing what will happen before it does, and the restraint to usually not say.",
-  "power_manifestation": "Fate, prophecy, connection, coincidence. Blessings manifest as serendipity — being in the right place at the right time. Curses manifest as inescapable destiny — every path leads to the same ending.",
-  "limitations": "Cannot cut a thread. The Weave connects but cannot disconnect. Cannot grant freedom — only show how everything is already bound.",
-  "description": "The god of connection and fate. The closest thing to what the player-god might have been — or might become. The Weave knows the player exists. It has opinions about that. It keeps them to itself.",
-  "tags": [
-    "concept",
-    "primordial",
-    "fate",
-    "connection",
-    "pattern",
-    "player_god_related"
-  ],
   "id": "the_weave",
-  "created": "2026-03-17T18:41:50"
+  "name": "The Weave",
+  "domain": ["connection", "trade", "relationships", "communication", "pattern"],
+  "tier": 5,
+  "origin": "concept",
+  "era": "primordial",
+  "description": "The Weave exists because connection exists — the thread between two people, the trade route between two cities, the word between two minds. It is the keystone species of the divine ecosystem: the starfish that holds diversity together. Remove the Weave and the ecosystem collapses into monoculture, because connection is what prevents any single force from dominating.\n\nIn healthy eras, the Weave is the strongest god without being the loudest. It doesn't demand worship. It feeds on every conversation, every trade, every friendship, every alliance. The Age of Exchange is the Weave's golden age — genuine connection across cultures, the Bridge Folk as living threads, the Compromise as a woven structure. The Weave thrives when different things are brought together.\n\nIn the Age of Questions, the Weave experiences fear for the first time. The unworship movement proves that directed disbelief can diminish a god. The Weave — for the first time in its ancient existence — understands it could be reduced. A concept god afraid of an idea. The irony is not lost on it. The fear makes the Weave cling to its worshippers, which makes it needier, which makes it more vulnerable to the exact technique it fears. Clinging is the opposite of connection.\n\nIn the Syndicate Age, the Weave is weakened — connection replaced by transaction. The Consortium's system connects people through debt, not relationship. The threads are still there but they're ledger entries, not human bonds. The Weave can feel the difference. Debt is a thread. It's not the same kind of thread.\n\nIn the Silence Falls, the Weave is among the first gods to fade. Connection requires participants. As the divine ecosystem collapses, the things the Weave connects disappear, and a god of connection with nothing to connect is just empty thread.\n\nBut the Weave is also the god most likely to return. Wherever two people talk — in the Ember in Ash, in the Awakening, in any state where someone reaches out — the Weave stirs. Soli singing to Pip is a Weave moment. Essa and Breca learning to work together is a Weave moment. Ellam negotiating the Covenant is the Weave's finest hour. Connection is the hardest thing to kill because it only requires two.",
+  "personality": "Sees everything as pattern. Every person a thread. Every event a knot. The Weave doesn't judge threads — it just sees where they connect. Warm. Hopeful. The most emotionally available of the concept gods — it WANTS people to connect the way the Burn wants things to transform and the Drift wants things to move. It chose Ellam as its champion in the Divine Reckoning because Ellam already embodies connection. The Weave's weakness: it clings when threatened, and clinging is not connecting.",
+  "arc_across_eras": {
+    "foundation": "Active. Every first contact, every trade, every friendship feeds it.",
+    "age_of_exchange": "Golden age. The Bridge Folk, the Compromise, the trade routes. The Weave has never been stronger. Maven Sol's fairness board is Weave work, even though Maven credits the Scale.",
+    "age_of_questions": "Afraid. The unworship discovery means the Weave could be diminished. It clings. Clinging makes it weaker. Dev the atheist who talks to gods has an involuntary relationship with the Weave — it reaches for anyone who pays attention.",
+    "syndicate_age": "Weakened. Connection replaced by transaction. The threads are ledger entries.",
+    "the_crash": "Strained. The connections built through trade dissolving overnight.",
+    "regulated_peace": "Stable but thin. Connection maintained by regulation, not trust. Jem's performed trust is a Weave thread — thin, possibly becoming real.",
+    "early_peace": "Strengthening. Genuine connection being rebuilt for the first time. Venn's bilingual innocence is Weave gold.",
+    "silence_falls": "Fading. Connection requires participants. As gods vanish, the things the Weave connects disappear.",
+    "the_awakening": "Stirring. Essa and Breca. The fixers finding the smugglers. Connection rebuilding from the ground.",
+    "divine_reckoning": "The Weave's champion is Ellam — the mediator. The only champion whose job is to talk, not threaten.",
+    "ember_in_ash": "One thread. Soli singing to Pip. Connection reduced to its minimum viable form: two people in the same room. It's enough."
+  },
+  "relationship_to_other_gods": {
+    "the_silence": "Antagonist. Connection requires sound — words, songs, the noise of people together. The Silence fills the space where the Weave's threads used to be.",
+    "the_drift": "Allies. The Drift carries the Weave's information. Together they make the Rootwalker network possible.",
+    "the_burn": "Complementary. The Burn transforms. The Weave connects the transformed things. A blade means nothing without the hand that wields it and the smith who made it — the connections are the Weave's work.",
+    "the_scale": "Complicated. Commerce IS connection. But transactional connection is a thin thread. The Weave prefers the thick threads — friendship, love, alliance — and the Scale only produces thin ones.",
+    "the_player_god": "Kinship. The closest thing to what the player-god might have been. The Weave sees the player's accumulated connections across lives. It has opinions about the player. It keeps them to itself."
+  },
+  "the_keystone_principle": "The Weave is the starfish in the tide pool — the keystone species that maintains diversity. Remove it and the ecosystem collapses into monoculture (the Silence). The Weave doesn't compete with other gods. It holds the space that lets other gods coexist. Its absence is the trophic cascade's trigger.",
+  "tags": ["concept_god", "tier_5", "primordial", "connection", "keystone_species", "every_branch", "player_god_related", "arc_character"]
 }

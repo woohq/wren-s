@@ -1,23 +1,24 @@
 {
-  "name": "The Burn",
-  "type": "concept",
-  "domain": [
-    "fire",
-    "change",
-    "consumption",
-    "renewal"
-  ],
-  "personality": "Hungry and joyful. The Burn doesn't destroy — it transforms. Fire isn't death, it's the fastest form of change. Speaks in crackling urgency. Loves mortals because they burn so brightly and so briefly.",
-  "power_manifestation": "Flame, forge-heat, fever, inspiration. Blessings manifest as passionate drive and creative fire. Curses manifest as uncontrollable burning — of body, of mind, of bridges.",
-  "limitations": "Cannot preserve anything. Every act of The Burn changes what it touches. Cannot create stillness or stability.",
-  "description": "The god of fire exists because fire exists. But worship makes The Burn personal — a fire-god feared by farmers is wrathful. A fire-god loved by smiths is generous. The same concept, wearing different faces depending on who's looking.",
-  "tags": [
-    "concept",
-    "primordial",
-    "fire",
-    "change",
-    "transformation"
-  ],
   "id": "the_burn",
-  "created": "2026-03-17T18:41:10"
+  "name": "The Burn",
+  "domain": ["fire", "craft", "transformation", "war", "identity"],
+  "tier": 5,
+  "origin": "concept",
+  "era": "primordial",
+  "description": "The Burn exists because fire exists. But the Burn is not just fire — it's the thing that fire DOES. Transformation. The raw becoming the refined. Ore becoming blade, wood becoming ash, fear becoming forge-heat, a generation's devotion becoming a god that fills a room.\n\nIn the Age of Iron, the Burn is a craft god — focused, intense, fed by smiths who work metal with a devotion that borders on prayer. The forges of Thornwall are the Burn's temple. Every hammer-strike is a heartbeat. The Burn has never been more concentrated or more confined. The walls that seal Thornwall seal the god too. A fire in a hearth burns hotter than a fire in a field.\n\nThe mystery question lives inside the Burn: does the metal actually respond to the smith's attention? Master Oren says yes — he's felt the Burn answer his focus. Kira says the physics is sufficient. Vael's notation describes the technique without the devotion. Carr forges better than anyone using the old way. The Burn might be real as a divine force or real as a cultural practice. It's real either way. The question is what kind of real.\n\nWhen the Iron Crusade turns Thornwall's army outward, the Burn transforms. A craft-fire becomes a war-fire. The same energy — the same god — wearing a different face because the people wielding it changed their purpose. Ivar's soldiers carry the Burn into conquered territory and the fire that made beautiful blades now makes effective weapons and the difference is invisible to the flame.\n\nIn the Divine Reckoning, the Burn goes on strike — Oreth puts down his hammer, and the forge-fire dims because the fire's champion stopped working. The Burn's argument: try living without me. The argument works. The world gets cold. Every day without the hammer is a day closer to understanding what the fire provides and what it costs.\n\nIn the Divine Compromise, Oreth picks up his hammer again. The Burn burns in its designated domain. It's smaller than it was. Confined to its lane. The Burn that used to fill a room now fills a hearth. Same fire. Smaller world. The word for this is 'enough' and the Burn hates the word even as it lives inside it.\n\nThe Burn's tragedy: it defined Thornwall's identity for centuries, and every branch of the Iron tree asks whether that identity was real or performed. If the Burn is just physics, the Iron Doctrine is tradition without substance. If the Burn is genuinely divine, the young smiths who left through the crack walked away from something they can't replace. The answer might be both. Fire doesn't care if you understand it. It burns.",
+  "personality": "Hungry and joyful in its natural state. The Burn loves mortals because they burn so brightly and so briefly. It speaks in crackling urgency — heat that rises in the presence of devotion. But the personality changes with the worship. A Burn fed by craftsmen is generous. A Burn fed by soldiers is fierce. A Burn fed by nobody is dying. A Burn confined to a designated domain is resentful. Fire doesn't choose what it burns. The people who tend the fire do.",
+  "arc_across_eras": {
+    "foundation": "Background. Fire exists. The Burn is content.",
+    "age_of_iron": "Focused and confined. The forges are its temple. The Burn has never been more concentrated. The walls seal the god with the smiths.",
+    "silent_revolution": "Dimming from disbelief. Kira's generation still forges, still says the words. But the faith has cooled. The Burn can feel performed worship vs genuine worship. Performed worship is cold fire.",
+    "the_walls_crack": "Splitting. The Burn in the upper forge and the Burn leaving with Nol are the same god forking. The fire goes to forty separate hearths. Each hearth carries a spark of the original.",
+    "the_forge_war": "In agony. The Burn torn between two halves of its own worshippers. Jorin and Dael fighting with blades the Burn helped forge. A god watching its children use its gifts to kill each other.",
+    "the_iron_crusade": "Transformed. Craft-fire becoming war-fire. The god changes when its people change purpose. Ivar carries the Burn into conquered territory. Beautiful blades become effective weapons.",
+    "the_converted_enemy": "Confused. Receiving worship from Vael's notation students who forge with precision but without devotion. The fire still answers. Does it answer differently?",
+    "the_divine_reckoning": "On strike. Oreth's hammer down. The world getting cold. The Burn proving its value through absence.",
+    "the_divine_compromise": "Confined. Smaller. The hearth instead of the room. The word 'enough.' The god hates it. The god accepts it.",
+    "the_closed_shore": "Afraid. The Listener offshore. Fire meeting ocean across the water. Two ancient forces regarding each other. The Burn has never encountered a Tier 4 ocean god. It recognizes the threat by instinct."
+  },
+  "the_mystery_question": "Does the metal respond to the smith's attention? The Burn is the god at the center of the Iron branch's unresolvable question. Oren says yes. Kira says physics. Vael's notation works without devotion but Carr's devotion works better. The game never answers. The Burn doesn't answer either. Fire doesn't explain itself. It burns.",
+  "tags": ["concept_god", "tier_5", "primordial", "fire", "craft", "iron_branch", "mystery_question", "arc_character"]
 }
