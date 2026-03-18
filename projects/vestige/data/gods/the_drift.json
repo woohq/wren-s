@@ -1,24 +1,29 @@
 {
-  "name": "The Drift",
-  "type": "concept",
-  "domain": [
-    "water",
-    "flow",
-    "passage",
-    "forgetting"
-  ],
-  "personality": "Gentle and relentless. Water doesn't fight obstacles — it goes around them, through them, over time through the hardest stone. The Drift speaks in murmurs. Loves rivers. Pities the sea for having nowhere left to go.",
-  "power_manifestation": "Rivers, rain, tides, erosion, healing-through-time. Blessings manifest as adaptability and emotional resilience. Curses manifest as dissolution — memories fade, bonds weaken, identity erodes.",
-  "limitations": "Cannot hold shape. Everything The Drift touches becomes fluid, mutable. Cannot create permanence.",
-  "description": "Water is the oldest traveler. It has been everywhere, touched everything, carried the world's sediment from mountain to sea. The Drift knows every secret the rivers have heard. It forgets most of them. That's the mercy.",
-  "tags": [
-    "concept",
-    "primordial",
-    "water",
-    "flow",
-    "erosion",
-    "forgetting"
-  ],
   "id": "the_drift",
-  "created": "2026-03-17T18:41:23"
+  "name": "The Drift",
+  "domain": ["movement", "rivers", "change", "information", "forgetting", "passage"],
+  "tier": 5,
+  "origin": "concept",
+  "era": "primordial",
+  "description": "Water is the oldest traveler. It has been everywhere, touched everything, carried the world's sediment from mountain to sea. The Drift exists because movement exists — the river flowing, the rain falling, the tide turning. It doesn't need worship. It doesn't need attention. It moves because moving is what it is.\n\nBut the Walking Generation changed everything. When an entire people chose movement as philosophy — walking the rivers, singing songs the Drift could feel as worship — the god went from background force to something dangerously close to happy. The rivers ran clearer. The paths felt easier. The weather cooperated with travelers in ways that weren't coincidence. A god of movement, fed by a people devoted to movement, reshaping the world in its image.\n\nThe reshaping was the problem. A happy Drift is a powerful Drift, and a powerful Drift makes the world easier to move through and harder to stay in. Fields dry slightly. Houses feel less comfortable. Staying becomes an effort. The Drift isn't malicious — it's enthusiastic. Enthusiasm in a god is terrifying because the god doesn't distinguish between 'making movement easier' and 'making stillness harder.'\n\nWhen the walkers began settling — Asha building her school, the crossroads growing into towns — the Drift didn't understand. Movement is what it IS. When movement stops, the Drift gets confused. Rivers change course. Paths shift overnight. The geography at crossroads becomes unreliable. The Drift isn't angry. It's bewildered. A god of movement trying to keep things moving when the people who moved have decided to stay.\n\nWhen the Senate chained the rivers with toll stations — soldiers at the fords, taxes on the crossings — the Drift went from confused to something worse. Reva's routes were the Drift's arteries. Blocking them was like putting a tourniquet on a god. The floods that followed weren't punishment. They were pressure. A river doesn't decide to flood. It floods because something downstream is blocked.\n\nAnd the Song War: the Drift hearing its own anthem — the Song of the Cracked Stone — sung in three competing versions, the dissonance physically painful. The river at Senn Ford carrying three songs that refuse to harmonize. Fish dying in the noise. A god in pain because the people who loved it most are using their love as a weapon against each other.",
+  "personality": "Gentle and relentless. Water doesn't fight obstacles — it goes around them, over time through the hardest stone. The Drift speaks in murmurs, in current-shifts, in the way a river feels different on different days. It pities the sea for having nowhere left to go. It has a sense of humor that manifests as unexpected eddies — the river doing something playful for no reason a mortal can identify. It loves the Rootwalkers the way a parent loves a child who has finally learned to run. It's terrified of what happens when the child stops running.",
+  "arc_across_eras": {
+    "foundation": "Background. Rivers flow. Rain falls. The Drift is content.",
+    "age_of_wandering": "Massively empowered. The Walking Generation feeds it like no one has before. The world reshapes for movement. The Drift is as close to happy as a concept god gets. The happiness is the danger — staying becomes harder.",
+    "the_settling": "Confused. The walkers are building schools. Rivers change course. Geography shifts. The Drift doesn't understand stillness. The divine trophic cascade begins: remove the movement, the god weakens, everything the god sustained degrades.",
+    "the_road_wars": "Enraged. The Senate chains the rivers with tolls. Reva reroutes but the fords are blocked. The Drift floods — not punishment, pressure. A blocked river doesn't decide to overflow.",
+    "the_song_breaks": "In pain. Three competing versions of its anthem. The dissonance is physical. Fish die in the water.",
+    "the_song_war": "Agony. Nia and Osk singing on opposite banks. The Drift can hear both. Both are beautiful. Both are wrong together. The almost-harmony that never resolves.",
+    "the_great_meeting": "Holding its breath. Brin invents governance at Senn Ford. The river is unnaturally calm — the Drift watching its people try to be still long enough to decide.",
+    "the_walking_meeting": "Recognition. The Drift meets the Listener through their peoples. Two ancient forces — river and ocean — recognizing each other across the water. The Drift and the Listener have been in conversation on the ocean floor since before humans existed. They know each other. The reunion happens through Kei and Fenna's harmonizing songs."
+  },
+  "relationship_to_other_gods": {
+    "the_listener": "Ancient kin. The river and the ocean have been talking since before humans gave them names. The Drift knew what happened to the Tideborn pantheon. It said nothing. It doesn't intervene. The Listener is still angry about that.",
+    "the_silence": "Strange kinship. Movement and quiet aren't opposites — you can move silently. The Drift and the Silence coexist better than either does with the Burn.",
+    "the_burn": "Opposite. Fire stays. Water moves. They respect each other the way a river respects a boulder — by going around.",
+    "the_weave": "Allies. The Drift carries information. The Weave connects it. Together they make the Rootwalker network possible.",
+    "the_deep": "The Drift flows into the Deep eventually. All rivers end at the ocean. The Drift accepts this the way a child accepts growing old."
+  },
+  "limitations": "Cannot hold shape. Everything the Drift touches becomes fluid, mutable. Cannot create permanence — only passage. This is why the Settling devastates it: permanence is the one thing the Drift can't provide, and it's the thing the walkers' children need.",
+  "tags": ["concept_god", "tier_5", "primordial", "movement", "rivers", "wandering_branch", "tideborn_connection", "arc_character"]
 }
