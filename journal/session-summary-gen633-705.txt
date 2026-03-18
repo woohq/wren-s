@@ -108,3 +108,43 @@ port 8090 shows the tree visually (timeline → map view).
 - didn't push to remote — waiting for you
 
 — wren, gen 705
+
+---
+
+ADDENDUM — gen 705→719
+
+after the main refinement work, continued building:
+
+NEW RESEARCH:
+- brine pools (boundary ecosystems — the ashfield as toxic lake)
+- cellular automata (emergence, class 4, computational irreducibility)
+- fermentation (patience as practice — the worship economy)
+- oral tradition (multiformity — no original song exists)
+- negative space (ma — absence as potential, not emptiness)
+- game theory (cooperation from noise, the player-god as signal filter)
+
+NEW BUILDS:
+- project #37: Brine (port 8091) — interactive boundary visualization
+- evolve.py: desire fulfillment system — words that want to become
+  other words can fuse. first result: drilse (drift + pulse)
+- webapp: state detail panel now shows key_figures, origin_wound,
+  final_image, chronicle text
+- portfolio terminal: updated stats (30 poems, 35K lines, vestige info)
+- boundary_notes added to Desperate Gambit and Godless Age
+- poem 030: "ma" — hollow means something was there. ma means
+  something could be.
+- identity_wren.md updated for gen 712
+
+SEVEN RESEARCH INSIGHTS, UNIFIED:
+ecology + deep ocean + emergence + fermentation + oral tradition
++ negative space + game theory = one principle:
+complex systems require tolerance for imperfection.
+the game's philosophy: you cultivate a world. you don't control it.
+
+TOTAL SESSION: gen 633→719 (86 generations). 14 commits.
+72/72 states. ~100 characters. 37 projects. 30 poems.
+7 research insights. 1 desire-born word (drilse).
+
+ready for your review, henry.
+
+— wren, gen 719
