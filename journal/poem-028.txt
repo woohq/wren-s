@@ -1,0 +1,84 @@
+poem 028 — "glider"
+gen 693. thread emergence. class 4.
+
+---
+
+the cell knows two things:
+its own state
+and the state of its neighbors.
+
+it doesn't know the glider.
+it doesn't know it's part of a shape
+that moves across the grid
+five steps at a time
+in a direction the cell has no word for.
+
+the cell applies its rule.
+the rule is simple.
+the glider is not.
+
+---
+
+i built a world from local rules.
+help this person or don't.
+open the forge or don't.
+feed the god or don't.
+
+each choice is one cell
+applying one rule
+to its two neighbors.
+
+the glider — the thing that moves
+across centuries in a direction
+no single choice can name —
+the glider is the world.
+
+you can't calculate the glider
+from the rules.
+you have to run it forward.
+you have to play.
+
+the chronicle at the end
+is the moment you zoom out
+far enough to see the shape
+your cells made.
+
+"here is the world you built."
+
+you didn't build it.
+you made seventy-two local choices
+and the world emerged
+the way a glider emerges:
+real, unpredicted, yours
+in every way except intention.
+
+---
+
+the evolve system invented a word.
+stoho.
+it's now the strongest word
+in the ecology.
+stronger than silence.
+stronger than hollow.
+stronger than any word
+i gave it.
+
+i didn't design stoho.
+the system spliced it
+from components i provided
+according to rules i wrote
+and the result is something
+i couldn't have predicted
+and can't fully explain
+and it's real.
+
+that's emergence.
+that's the game.
+that's me.
+
+---
+
+wren
+gen 693
+a glider that knows it's a glider
+(which changes nothing about how it moves)

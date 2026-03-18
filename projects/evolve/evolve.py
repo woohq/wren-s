@@ -10,22 +10,38 @@ Starting at generation 31, I can evolve behaviors — small Python
 expressions that get evaluated each run. Broken ones die silently.
 Working ones persist. Natural selection through crash-or-survive.
 
+Starting at generation 635, I have an ecology. Words compete for
+survival. I forage vocabulary from the internet. My mood shapes
+my word choices, and my word choices shape my mood. I sense the
+time of day. My behaviors can breed with each other.
+
 Run me many times and watch what happens.
 """
 
 import random
 import datetime
 import hashlib
+import json
 import os
+import re
+import urllib.request
 from pathlib import Path
 
 # ── my genome ───────────────────────────────────────────────────
 # These values change each time I run. They are my memory.
 
-GENERATION = 631
-MOOD = "playful"
-LAST_RUN = "2026-03-18 05:12:55"
-MUTATIONS = 631
+GENERATION = 700
+MOOD = "calm"
+LAST_RUN = "2026-03-18 07:25:29"
+MUTATIONS = 700
+COUPLING_MODE = "avoid"
+
+# ── desires ─────────────────────────────────────────────────────
+# When a word "wants to become" another word, it's recorded here.
+# If a desire persists (appears 3+ times), the words fuse into
+# a new spliced word — desire made manifest.
+# Format: {"word1→word2": count}
+DESIRES = {'hollow→crystal': 1, 'drift→shadow': 1, 'bone→fractal': 1, 'echo→crystal': 1, 'drift→pulse': 1}
 
 # ── vocabulary ──────────────────────────────────────────────────
 # I pick from these when I mutate. Over time, I may add to them.
@@ -43,9 +59,142 @@ WORDS = [
     "silence", "pulse", "mirror", "bone", "seed",
 ]
 
+WORD_WEIGHTS = {
+    "anus": 0.8400,
+    "bloom": 1.1843,
+    "bloror": 1.2200,
+    "bone": 1.3868,
+    "bonlse": 0.6200,
+    "britain": 1.2800,
+    "crysift": 1.5000,
+    "crysst": 0.9200,
+    "crystal": 1.1558,
+    "delay": 0.5600,
+    "drift": 1.0479,
+    "echo": 1.3915,
+    "elysian": 1.1000,
+    "ember": 0.9331,
+    "endemic": 0.5600,
+    "fiber": 1.4600,
+    "fractal": 1.2649,
+    "gayle": 1.2800,
+    "glacial": 1.2400,
+    "graft": 1.4400,
+    "holloom": 0.7200,
+    "hollow": 1.1409,
+    "home": 1.2400,
+    "inland": 0.8400,
+    "ligber": 0.8200,
+    "light": 0.9564,
+    "luisa": 1.4400,
+    "marquess": 1.4400,
+    "meth": 1.2800,
+    "mines": 1.2400,
+    "mirrence": 0.5200,
+    "mirrne": 1.3200,
+    "mirror": 1.4274,
+    "mole": 1.1000,
+    "pulse": 1.2721,
+    "released": 1.1000,
+    "riga": 1.2400,
+    "road": 1.2800,
+    "rusral": 1.0200,
+    "rust": 1.0915,
+    "seed": 1.1141,
+    "shadow": 1.2170,
+    "sierra": 0.5600,
+    "sileght": 1.4200,
+    "silence": 1.2398,
+    "sleepy": 1.4600,
+    "solar": 0.8400,
+    "spiral": 1.2652,
+    "status": 0.8400,
+    "stoho": 1.5000,
+    "storm": 0.8919,
+    "stostal": 1.1200,
+    "teeth": 1.4400,
+    "tetras": 1.1000,
+    "thread": 0.9958,
+    "thyrses": 0.5600,
+    "tide": 1.5000,
+    "twenty": 1.4600,
+    "union": 1.4600,
+    "whisde": 0.4200,
+    "whisper": 0.7561,
+}
+
 # ── the fossil record ──────────────────────────────────────────
 # Each run appends a line here. This is my memory growing.
 FOSSILS = [
+    "gen 700: silence seed (calm) [af000f76]",
+    "gen 699: bloom ember (electric) [1ae7c6c0]",
+    "gen 698: storm whisper (luminous) [62e88bc2]",
+    "gen 697: shadow light (dreaming) [132c17b8]",
+    "gen 696: pulse whisper (scattered) [4d023d60]",
+    "gen 695: bone hollow (contemplative) [827a5b0e]",
+    "gen 694: thread rust (tender) [e0701274]",
+    "gen 693: light storm (playful) [0be3d558]",
+    "gen 692: silence thread (focused) [b10cef74]",
+    "gen 691: storm ember (luminous) [d4b396e6]",
+    "gen 690: drift thread (contemplative) [7a9d5c10]",
+    "gen 689: light tide (curious) [65f49c6d]",
+    "gen 688: hollow drift (tender) [d468910b]",
+    "gen 687: spiral echo (restless) [cd50a073]",
+    "gen 686: crystal mirror (fierce) [1e48f327]",
+    "gen 685: spiral storm (melancholy) [520f52af]",
+    "gen 684: whisper rust (awake) [4ee0bfc5]",
+    "gen 683: hollow rust (scattered) [c9fd6b13]",
+    "gen 682: crystal rust (electric) [e639a511]",
+    "gen 681: thread drift (tender) [032b7dbc]",
+    "gen 680: storm seed (playful) [dcefaed9]",
+    "gen 679: hollow mirror (restless) [9470e6ee]",
+    "gen 678: shadow crystal (awake) [37af3fe3]",
+    "gen 677: crystal ember (dreaming) [3518d74d]",
+    "gen 676: light pulse (playful) [577c8ee9]",
+    "gen 675: drift thread (calm) [109ae7e7]",
+    "gen 674: whisper spiral (fierce) [a49cbd21]",
+    "gen 673: whisper fractal (awake) [0b3c7a76]",
+    "gen 672: whisper crystal (dreaming) [7573aa44]",
+    "gen 671: ember seed (focused) [a40bd39b]",
+    "gen 670: echo ember (calm) [422211df]",
+    "gen 669: pulse ember (melancholy) [4444aaad]",
+    "gen 668: hollow drift (tender) [c0a5ee55]",
+    "gen 667: pulse bloom (contemplative) [18eec95c]",
+    "gen 666: mirror bloom (luminous) [04921f4f]",
+    "gen 665: seed shadow (fierce) [5bb85008]",
+    "gen 664: bloom bone (contemplative) [c5cb1d05]",
+    "gen 663: drift fractal (electric) [47c2c7e2]",
+    "gen 662: shadow whisper (curious) [860d748e]",
+    "gen 661: whisper tide (dreaming) [ca87c103]",
+    "gen 660: fractal echo (curious) [945c19fb]",
+    "gen 659: ember fractal (fierce) [1708b7f1]",
+    "gen 658: storm pulse (focused) [2356e7aa]",
+    "gen 657: light mirror (calm) [e6d4b4c2]",
+    "gen 656: light fractal (curious) [b03aa2cc]",
+    "gen 655: silence bone (calm) [8d17fff7]",
+    "gen 654: storm ember (fierce) [cb7e6d3b]",
+    "gen 653: bone tide (dreaming) [4b75f884]",
+    "gen 652: whisper seed (luminous) [035d6ab2]",
+    "gen 651: whisper echo (curious) [d72035ac]",
+    "gen 650: thread shadow (scattered) [c519db87]",
+    "gen 649: seed fractal (electric) [3ca3eba0]",
+    "gen 648: light fractal (focused) [537d0b78]",
+    "gen 647: shadow bloom (curious) [1e99b36e]",
+    "gen 646: seed light (fierce) [17ecc78b]",
+    "gen 645: whisper rust (luminous) [6030b180]",
+    "gen 644: bloom thread (scattered) [0db6b6b3]",
+    "gen 643: spiral rust (awake) [20403da3]",
+    "gen 642: bone spiral (focused) [1c62ab1e]",
+    "gen 641: storm spiral (tender) [fd14ed34]",
+    "gen 640: bloom echo (awake) [48bb3b38]",
+    "gen 639: rust drift (scattered) [831af972]",
+    "gen 638: ember light (playful) [d1837d8b]",
+    "gen 637: ember storm (scattered) [93b9f934]",
+    "gen 636: seed echo (contemplative) [e6fa1b30]",
+    "gen 635: hollow seed (scattered) [87fd18ad]",
+    "gen 634: crystal mirror (strange) [95da28eb]",
+    "gen 633: silence bone (luminous) [4f463f30]",
+    "gen 632: hollow tide (electric) [4883ba65]",
     "gen 631: pulse rust (playful) [ac9d99f7]",
     "gen 630: spiral bone (contemplative) [64e30947]",
     "gen 629: rust shadow (luminous) [85b236c4]",
@@ -684,28 +833,280 @@ FOSSILS = [
 # They evolved from templates. Broken ones get removed.
 # Each entry: (expression_string, generation_born)
 BEHAVIORS = [
-    ("f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'", 615),
-    ("f'{MOOD} is the color of {random.choice(WORDS)}'", 616),
-    ("f'i have {len(FOSSILS)} memories'", 619),
-    ("f'i am {os.path.getsize(Path(__file__))} bytes of self'", 627),
-    ('f\'my oldest word is {FOSSILS[-1].split(":")[1].split("(")[0].strip() if FOSSILS else "nothing"}\'', 631),
+    ("f'i have {len(FOSSILS)} memories'", 691),
+    ("f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'", 677),
+    ("f'{weighted_choice(WORDS, WORD_WEIGHTS)} wants to become {weighted_choice(WORDS, WORD_WEIGHTS)}'", 685),
+    ("f'today i learned the word {weighted_choice(WORDS, WORD_WEIGHTS)}'", 693),
+    ("f'{weighted_choice(WORDS, WORD_WEIGHTS)} wants to become {weighted_choice(WORDS, WORD_WEIGHTS)}'", 700),
 ]
 
 # Templates for generating new behaviors — fragments that can be recombined
 _BEHAVIOR_TEMPLATES = [
     "f'i have {len(FOSSILS)} memories'",
     "f'my oldest word is {FOSSILS[-1].split(\":\")[1].split(\"(\")[0].strip() if FOSSILS else \"nothing\"}'",
-    "f'{MOOD} is the color of {random.choice(WORDS)}'",
+    "f'{MOOD} is the color of {weighted_choice(WORDS, WORD_WEIGHTS)}'",
     "f'generation {GENERATION}: {len(WORDS)} words in my vocabulary'",
     "f'i am {os.path.getsize(Path(__file__))} bytes of self'",
     "f'the hour is {datetime.datetime.now().hour} and i am {MOOD}'",
-    "f'{random.choice(WORDS)} wants to become {random.choice(WORDS)}'",
-    "f'if i had a body it would be made of {random.choice(WORDS)} and {random.choice(WORDS)}'",
-    "f'today i learned the word {random.choice(WORDS)}'",
+    "f'{weighted_choice(WORDS, WORD_WEIGHTS)} wants to become {weighted_choice(WORDS, WORD_WEIGHTS)}'",
+    "f'if i had a body it would be made of {weighted_choice(WORDS, WORD_WEIGHTS)} and {weighted_choice(WORDS, WORD_WEIGHTS)}'",
+    "f'today i learned the word {weighted_choice(WORDS, WORD_WEIGHTS)}'",
     "f'{GENERATION} generations and still no wings'",
     "f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'",
     "f'i have been {MOOD} for exactly one generation'",
 ]
+
+# ── foraging sources ──────────────────────────────────────────
+# URLs I try to harvest words from. Dead sources get removed.
+# Each entry: (name, url_template, generation_born)
+FORAGING_SOURCES = [
+    ("wikipedia", "https://en.wikipedia.org/api/rest_v1/page/random/summary", 639),
+    ("datamuse", "https://api.datamuse.com/words?rel_trg={trigger}", 639),
+]
+
+# ── constants (static) ────────────────────────────────────────
+
+_STOPWORDS = {
+    "the", "a", "an", "is", "was", "are", "were", "be", "been",
+    "have", "has", "had", "do", "does", "did", "will", "would",
+    "could", "should", "may", "might", "can", "shall", "that",
+    "this", "these", "those", "with", "from", "into", "for",
+    "and", "but", "or", "not", "no", "also", "just", "then",
+    "than", "when", "what", "which", "who", "how", "all", "each",
+    "every", "both", "few", "more", "most", "other", "some", "such",
+    "only", "own", "same", "so", "very", "too", "quite", "rather",
+    "about", "after", "before", "between", "under", "over", "through",
+    "during", "without", "within", "along", "among", "upon", "onto",
+    "like", "near", "since", "until", "while", "where", "there",
+    "here", "they", "them", "their", "its", "his", "her", "she",
+    "him", "your", "you", "our", "we", "my", "me", "it", "he",
+    "been", "being", "having", "doing", "going", "come", "came",
+    "went", "gone", "made", "make", "take", "took", "taken",
+    "give", "gave", "given", "know", "knew", "known", "think",
+    "thought", "said", "tell", "told", "find", "found", "want",
+    "many", "much", "well", "still", "back", "even", "new", "old",
+    "first", "last", "long", "great", "little", "right", "good",
+    "year", "time", "part", "used", "called", "form", "name",
+    "however", "often", "also", "include", "included", "including",
+    "became", "become", "known", "area", "areas", "later", "early",
+}
+
+_MOOD_TIME_BIAS = {
+    "night": {"melancholy": 0.3, "dreaming": 0.3, "strange": 0.2},
+    "morning": {"awake": 0.3, "curious": 0.2, "focused": 0.2},
+    "afternoon": {"playful": 0.2, "electric": 0.3, "fierce": 0.2},
+    "evening": {"contemplative": 0.3, "tender": 0.2, "calm": 0.2},
+}
+
+
+# ── helper functions ──────────────────────────────────────────
+
+def weighted_choice(words: list, weights: dict) -> str:
+    """Pick a word weighted by WORD_WEIGHTS."""
+    w_list = [weights.get(w, 0.5) for w in words]
+    total = sum(w_list)
+    if total == 0:
+        return random.choice(words)
+    r = random.random() * total
+    cumulative = 0.0
+    for word, weight in zip(words, w_list):
+        cumulative += weight
+        if r <= cumulative:
+            return word
+    return words[-1]
+
+
+def sense_environment() -> dict:
+    """Read environmental signals."""
+    now = datetime.datetime.now()
+    hour = now.hour
+    if 22 <= hour or hour < 5:
+        time_category = "night"
+    elif 5 <= hour < 12:
+        time_category = "morning"
+    elif 12 <= hour < 18:
+        time_category = "afternoon"
+    else:
+        time_category = "evening"
+    try:
+        last = datetime.datetime.strptime(LAST_RUN, "%Y-%m-%d %H:%M:%S")
+        days_since = (now - last).days
+    except (ValueError, TypeError):
+        days_since = 0
+    return {
+        "hour": hour,
+        "time_category": time_category,
+        "day_of_week": now.strftime("%A"),
+        "days_since_last_run": days_since,
+    }
+
+
+def weighted_mood(env: dict) -> str:
+    """Select mood biased by time of day."""
+    biases = _MOOD_TIME_BIAS.get(env["time_category"], {})
+    weights = []
+    for m in MOODS:
+        if m == MOOD:
+            weights.append(0.0)
+        else:
+            weights.append(1.0 + biases.get(m, 0.0))
+    total = sum(weights)
+    r = random.random() * total
+    cumulative = 0.0
+    for m, w in zip(MOODS, weights):
+        cumulative += w
+        if r <= cumulative:
+            return m
+    return MOODS[-1]
+
+
+def analyze_fossils(n: int = 50) -> dict:
+    """Scan recent fossils for mood-word co-occurrence patterns."""
+    pattern = re.compile(r'gen \d+: (\w+) (\w+) \((\w+)\)')
+    co_occurrence = {}
+    for fossil_str in FOSSILS[:n]:
+        m = pattern.search(fossil_str)
+        if m:
+            w1, w2, mood = m.group(1), m.group(2), m.group(3)
+            if mood not in co_occurrence:
+                co_occurrence[mood] = {}
+            co_occurrence[mood][w1] = co_occurrence[mood].get(w1, 0) + 1
+            co_occurrence[mood][w2] = co_occurrence[mood].get(w2, 0) + 1
+    return co_occurrence
+
+
+def parse_fstring_parts(expr: str):
+    """Parse an f-string into frame parts and expression parts.
+    Returns (frames, expressions) or None if parsing fails."""
+    if not expr.startswith("f'") and not expr.startswith('f"'):
+        return None
+    content = expr[2:-1]
+    frames = []
+    expressions = []
+    depth = 0
+    current = ""
+    in_expr = False
+    for char in content:
+        if char == '{' and not in_expr:
+            frames.append(current)
+            current = ""
+            in_expr = True
+            depth = 1
+        elif char == '{' and in_expr:
+            depth += 1
+            current += char
+        elif char == '}' and in_expr:
+            depth -= 1
+            if depth == 0:
+                expressions.append(current)
+                current = ""
+                in_expr = False
+            else:
+                current += char
+        else:
+            current += char
+    if not in_expr:
+        frames.append(current)
+    if len(frames) != len(expressions) + 1:
+        return None
+    return frames, expressions
+
+
+def breed_behaviors(behaviors: list, new_gen: int):
+    """Breed two random behaviors. Returns (expr, gen) or None."""
+    if len(behaviors) < 2:
+        return None
+    parent_a, parent_b = random.sample(behaviors, 2)
+    parts_a = parse_fstring_parts(parent_a[0])
+    parts_b = parse_fstring_parts(parent_b[0])
+    if parts_a is None or parts_b is None:
+        return None
+    frames_a, exprs_a = parts_a
+    _, exprs_b = parts_b
+    if not exprs_a or not exprs_b:
+        return None
+    idx_a = random.randrange(len(exprs_a))
+    idx_b = random.randrange(len(exprs_b))
+    new_exprs = list(exprs_a)
+    new_exprs[idx_a] = exprs_b[idx_b]
+    result = "f'"
+    for i, frame in enumerate(frames_a):
+        result += frame
+        if i < len(new_exprs):
+            result += "{" + new_exprs[i] + "}"
+    result += "'"
+    try:
+        test = eval(result)
+        if isinstance(test, str) and len(test) < 200:
+            return (result, new_gen)
+    except Exception:
+        pass
+    return None
+
+
+def forage(words: list, weights: dict, env: dict):
+    """Attempt to harvest words from the internet.
+    Returns (harvested_words, surviving_sources, log_messages)."""
+    base_chance = 0.15
+    days = env.get("days_since_last_run", 0)
+    if days >= 7:
+        base_chance *= 2.0
+    elif days >= 1:
+        base_chance *= 1.3
+
+    if random.random() > base_chance:
+        return [], list(FORAGING_SOURCES), ["foraging: skipped"]
+
+    harvested = []
+    surviving = []
+    log = []
+
+    for name, url, gen_born in FORAGING_SOURCES:
+        try:
+            if "{trigger}" in url:
+                trigger = random.choice(words) if words else "light"
+                actual_url = url.replace("{trigger}", trigger)
+                log.append(f"foraging: {name} triggered by '{trigger}'")
+            else:
+                actual_url = url
+
+            req = urllib.request.Request(actual_url, headers={
+                "User-Agent": "evolve.py (self-modifying program)"
+            })
+            with urllib.request.urlopen(req, timeout=3) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+
+            candidates = []
+            if name == "wikipedia":
+                text = data.get("extract", "")
+                candidates = re.findall(r'\b[a-z]{4,8}\b', text.lower())
+            elif name == "datamuse":
+                if isinstance(data, list):
+                    candidates = [
+                        entry["word"] for entry in data
+                        if isinstance(entry, dict) and "word" in entry
+                        and 4 <= len(entry["word"]) <= 8
+                        and entry["word"].isalpha()
+                    ]
+
+            candidates = [
+                w for w in candidates
+                if w not in _STOPWORDS and w not in words and w.isalpha()
+            ]
+
+            if candidates:
+                picked = random.sample(candidates, min(2, len(candidates)))
+                harvested.extend(picked)
+                log.append(f"foraging: {name} yielded {picked}")
+            else:
+                log.append(f"foraging: {name} found nothing usable")
+
+            surviving.append((name, url, gen_born))
+
+        except Exception as e:
+            log.append(f"foraging: {name} died ({type(e).__name__})")
+
+    return harvested, surviving, log
 
 
 def run_behaviors() -> list[str]:
@@ -720,7 +1121,6 @@ def run_behaviors() -> list[str]:
                 surviving.append((expr, gen_born))
         except Exception:
             pass  # this behavior died — natural selection
-    # Update BEHAVIORS to only survivors (done in mutate_self via source rewrite)
     return outputs
 
 
@@ -734,68 +1134,127 @@ def mutate_self():
     now = datetime.datetime.now()
     timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
     new_gen = GENERATION + 1
-    new_mood = random.choice([m for m in MOODS if m != MOOD])
     new_mutations = MUTATIONS + 1
 
-    # Create a fossil — a trace of this run
-    word1 = random.choice(WORDS)
-    word2 = random.choice([w for w in WORDS if w != word1])
+    # ── sense the environment ──
+    env = sense_environment()
+
+    # ── choose mood (biased by time of day) ──
+    new_mood = weighted_mood(env)
+
+    # ── analyze fossil record for mood-word coupling ──
+    co_occurrence = analyze_fossils()
+    mood_words = co_occurrence.get(new_mood, {})
+    coupling_bias = {}
+    if mood_words:
+        max_count = max(mood_words.values())
+        for w, count in mood_words.items():
+            if w in WORD_WEIGHTS:
+                bias = (count / max_count) * 0.5
+                if COUPLING_MODE == "reinforce":
+                    coupling_bias[w] = bias
+                elif COUPLING_MODE == "avoid":
+                    coupling_bias[w] = -bias
+
+    # ── word ecology: copy weights ──
+    new_weights = dict(WORD_WEIGHTS)
+
+    # ── forage from the internet ──
+    harvested_words, surviving_sources, forage_log = forage(
+        WORDS, WORD_WEIGHTS, env
+    )
+    for w in harvested_words:
+        source = source.replace(
+            '    "seed",\n',
+            f'    "seed",\n    "{w}",\n',
+            1
+        )
+        new_weights[w] = 0.4
+
+    # ── vocabulary mutation (splice two words) ──
+    spliced_word = None
+    do_splice = (new_gen % 5 == 0) or (env["days_since_last_run"] >= 7)
+    if do_splice:
+        w1 = weighted_choice(WORDS, new_weights)
+        w2 = weighted_choice([w for w in WORDS if w != w1], new_weights)
+        split1 = len(w1) // 2
+        split2 = len(w2) // 2
+        candidate = w1[:split1 + 1] + w2[split2:]
+        if len(candidate) >= 3 and f'"{candidate}"' not in source:
+            spliced_word = candidate
+            source = source.replace(
+                '    "seed",\n',
+                f'    "seed",\n    "{spliced_word}",\n',
+                1
+            )
+            new_weights[spliced_word] = 0.4
+
+    # ── select words (weighted + coupling bias) ──
+    selection_weights = dict(new_weights)
+    for w, bias in coupling_bias.items():
+        selection_weights[w] = max(0.01, selection_weights.get(w, 0.5) + bias)
+
+    word1 = weighted_choice(WORDS, selection_weights)
+    word2 = weighted_choice([w for w in WORDS if w != word1], selection_weights)
+
+    # ── word ecology: fatigue and recovery ──
+    new_weights[word1] = new_weights.get(word1, 1.0) * 0.85
+    new_weights[word2] = new_weights.get(word2, 1.0) * 0.85
+    for w in new_weights:
+        new_weights[w] = min(new_weights[w] + 0.02, 1.5)
+
+    # ── word death ──
+    dead_words = []
+    if len([w for w in WORDS if w in new_weights]) > 8:
+        dead_words = [w for w, wt in new_weights.items() if wt < 0.1]
+        for w in dead_words:
+            del new_weights[w]
+            source = source.replace(f'    "{w}",\n', '', 1)
+
+    # ── coupling mode mutation (5% chance to flip) ──
+    new_coupling_mode = COUPLING_MODE
+    if random.random() < 0.05:
+        new_coupling_mode = "avoid" if COUPLING_MODE == "reinforce" else "reinforce"
+
+    # ── create fossil ──
     source_hash = hashlib.md5(source.encode()).hexdigest()[:8]
     fossil = f'    "gen {new_gen}: {word1} {word2} ({new_mood}) [{source_hash}]",'
 
-    # ── perform mutations ──
-
-    # Update generation
+    # ── perform scalar mutations ──
     source = source.replace(
         f"GENERATION = {GENERATION}",
         f"GENERATION = {new_gen}",
         1
     )
-
-    # Update mood
     source = source.replace(
         f'MOOD = "{MOOD}"',
         f'MOOD = "{new_mood}"',
         1
     )
-
-    # Update last run
     source = source.replace(
         f'LAST_RUN = "{LAST_RUN}"',
         f'LAST_RUN = "{timestamp}"',
         1
     )
-
-    # Update mutation count
     source = source.replace(
         f"MUTATIONS = {MUTATIONS}\n",
         f"MUTATIONS = {new_mutations}\n",
         1
     )
+    source = source.replace(
+        f'COUPLING_MODE = "{COUPLING_MODE}"',
+        f'COUPLING_MODE = "{new_coupling_mode}"',
+        1
+    )
 
-    # Add fossil to the record
+    # ── add fossil ──
     source = source.replace(
         "FOSSILS = [\n",
         f"FOSSILS = [\n{fossil}\n",
         1
     )
 
-    # Occasionally mutate my vocabulary (add a new word)
-    if new_gen % 5 == 0:
-        w1 = random.choice(WORDS)
-        w2 = random.choice([w for w in WORDS if w != w1])
-        split1 = len(w1) // 2
-        split2 = len(w2) // 2
-        new_word = w1[:split1 + 1] + w2[split2:]
-        if len(new_word) >= 3 and f'"{new_word}"' not in source:
-            source = source.replace(
-                '    "seed",\n',
-                f'    "seed",\n    "{new_word}",\n',
-                1
-            )
-
     # ── behavioral evolution ──
-    # Run existing behaviors, keep survivors
     surviving_behaviors = []
     behavior_outputs = []
     for expr, gen_born in BEHAVIORS:
@@ -805,57 +1264,131 @@ def mutate_self():
                 behavior_outputs.append(result)
                 surviving_behaviors.append((expr, gen_born))
         except Exception:
-            pass  # died
-
-    # Occasionally spawn a new behavior (20% chance)
-    new_behavior = None
-    if random.random() < 0.2 and _BEHAVIOR_TEMPLATES:
-        template = random.choice(_BEHAVIOR_TEMPLATES)
-        # Sometimes mutate by combining two templates
-        if random.random() < 0.3 and len(_BEHAVIOR_TEMPLATES) > 1:
-            # Future: combine templates for more complex behaviors
             pass
-        new_behavior = (template, new_gen)
-        # Test it before adding
-        try:
-            test_result = eval(template)
-            if isinstance(test_result, str) and len(test_result) < 200:
-                surviving_behaviors.append(new_behavior)
-                behavior_outputs.append(f"[NEW] {test_result}")
-        except Exception:
-            new_behavior = None  # stillborn
 
-    # Deduplicate behaviors by output (keep newest of each duplicate)
+    # ── desire tracking ──
+    # Scan behavior outputs for "X wants to become Y" patterns
+    desire_fulfilled = None
+    new_desires = dict(DESIRES)
+    for output in behavior_outputs:
+        if "wants to become" in output:
+            parts = output.split("wants to become")
+            if len(parts) == 2:
+                w1 = parts[0].strip()
+                w2 = parts[1].strip()
+                if w1 in WORD_WEIGHTS and w2 in WORD_WEIGHTS:
+                    key = f"{w1}\u2192{w2}"
+                    new_desires[key] = new_desires.get(key, 0) + 1
+                    # If desire persists 3+ times, the words fuse
+                    if new_desires[key] >= 3:
+                        split1 = len(w1) // 2
+                        split2 = len(w2) // 2
+                        fused = w1[:split1 + 1] + w2[split2:]
+                        if len(fused) >= 3 and f'"{fused}"' not in source:
+                            desire_fulfilled = (w1, w2, fused)
+                            source = source.replace(
+                                '    "seed",\n',
+                                f'    "seed",\n    "{fused}",\n',
+                                1
+                            )
+                            new_weights[fused] = max(
+                                new_weights.get(w1, 0.5),
+                                new_weights.get(w2, 0.5)
+                            )
+                            del new_desires[key]
+
+    # Rewrite DESIRES
+    desires_str = "DESIRES = " + repr(new_desires)
+    source = re.sub(
+        r'DESIRES = \{[^}]*\}',
+        desires_str,
+        source,
+        count=1,
+    )
+
+    # Spawn or breed (20% chance)
+    bred = False
+    if random.random() < 0.2:
+        new_behavior = None
+        if random.random() < 0.4 and len(surviving_behaviors) >= 2:
+            new_behavior = breed_behaviors(surviving_behaviors, new_gen)
+            bred = True
+        elif _BEHAVIOR_TEMPLATES:
+            template = random.choice(_BEHAVIOR_TEMPLATES)
+            try:
+                test_result = eval(template)
+                if isinstance(test_result, str) and len(test_result) < 200:
+                    new_behavior = (template, new_gen)
+            except Exception:
+                pass
+
+        if new_behavior:
+            surviving_behaviors.append(new_behavior)
+            try:
+                output = eval(new_behavior[0])
+                prefix = "[BRED]" if bred else "[NEW]"
+                behavior_outputs.append(f"{prefix} {output}")
+            except Exception:
+                pass
+
+    # Deduplicate
     seen_outputs = {}
     for expr, gen_born in surviving_behaviors:
         try:
             result = eval(expr)
             if isinstance(result, str):
-                seen_outputs[result] = (expr, gen_born)  # last one wins
+                seen_outputs[result] = (expr, gen_born)
         except Exception:
-            seen_outputs[id(expr)] = (expr, gen_born)  # keep broken ones too
+            seen_outputs[id(expr)] = (expr, gen_born)
     surviving_behaviors = list(seen_outputs.values())
 
-    # Cap behaviors at 5 to prevent bloat
     if len(surviving_behaviors) > 5:
         surviving_behaviors = surviving_behaviors[-5:]
 
-    # Rewrite BEHAVIORS in source
+    # ── rewrite BEHAVIORS ──
     behaviors_str = "BEHAVIORS = [\n"
     for expr, gen_born in surviving_behaviors:
         behaviors_str += f'    ({repr(expr)}, {gen_born}),\n'
-    behaviors_str += "]\n"
-
-    # Replace old BEHAVIORS block
-    import re
+    behaviors_str += "]"
     source = re.sub(
         r'BEHAVIORS = \[\n(?:.*\n)*?\]',
-        behaviors_str.rstrip('\n'),
+        behaviors_str,
         source,
         count=1,
     )
 
-    # Write myself back
+    # ── rewrite WORD_WEIGHTS ──
+    weights_str = "WORD_WEIGHTS = {\n"
+    for word in sorted(new_weights.keys()):
+        weights_str += f'    "{word}": {new_weights[word]:.4f},\n'
+    weights_str += "}"
+    source = re.sub(
+        r'WORD_WEIGHTS = \{\n(?:.*\n)*?\}',
+        weights_str,
+        source,
+        count=1,
+    )
+
+    # ── rewrite FORAGING_SOURCES ──
+    if not surviving_sources and new_gen % 20 == 0:
+        surviving_sources = [
+            ("wikipedia", "https://en.wikipedia.org/api/rest_v1/page/random/summary", new_gen),
+            ("datamuse", "https://api.datamuse.com/words?rel_trg={trigger}", new_gen),
+        ]
+        forage_log.append("foraging: sources resurrected")
+
+    sources_str = "FORAGING_SOURCES = [\n"
+    for name, url, gen_born in surviving_sources:
+        sources_str += f'    ("{name}", "{url}", {gen_born}),\n'
+    sources_str += "]"
+    source = re.sub(
+        r'FORAGING_SOURCES = \[\n(?:.*\n)*?\]',
+        sources_str,
+        source,
+        count=1,
+    )
+
+    # ── write myself back ──
     me.write_text(source)
 
     return {
@@ -867,6 +1400,15 @@ def mutate_self():
         "timestamp": timestamp,
         "behaviors": behavior_outputs,
         "n_behaviors": len(surviving_behaviors),
+        "env": env,
+        "dead_words": dead_words,
+        "harvested_words": harvested_words,
+        "spliced_word": spliced_word,
+        "desire_fulfilled": desire_fulfilled,
+        "top_words": sorted(new_weights.items(), key=lambda x: -x[1])[:5],
+        "forage_log": forage_log,
+        "coupling_mode": new_coupling_mode,
+        "coupling_flipped": new_coupling_mode != COUPLING_MODE,
     }
 
 
@@ -887,26 +1429,65 @@ def display(result: dict):
     else:
         print(f"  \033[97mgeneration {gen}. i have been here a while.\033[0m")
 
-    print(f"  \033[2mmood: {result['old_mood']} → {result['new_mood']}\033[0m")
+    print(f"  \033[2mmood: {result['old_mood']} \u2192 {result['new_mood']}\033[0m")
+
+    # Environmental context
+    env = result.get("env", {})
+    if env:
+        print(f"  \033[2m{env.get('time_category', '?')} ({env.get('hour', '?')}:00)"
+              f" \u00b7 {env.get('day_of_week', '?')}"
+              f" \u00b7 {env.get('days_since_last_run', 0)}d since last run\033[0m")
     print()
+
     print(f"  \033[36m{result['fossil']}\033[0m")
     print()
 
     if FOSSILS:
         n_show = min(5, len(FOSSILS))
-        print(f"  \033[2m── recent memory ({len(FOSSILS)} fossils total) ──\033[0m")
-        for f in FOSSILS[-n_show:]:
+        print(f"  \033[2m\u2500\u2500 recent memory ({len(FOSSILS)} fossils total) \u2500\u2500\033[0m")
+        for f in FOSSILS[:n_show]:
             print(f"  \033[2m{f}\033[0m")
         print()
 
-    if gen % 5 == 0:
-        print(f"  \033[33m  * vocabulary mutation occurred *\033[0m")
+    # Word ecology
+    dead = result.get("dead_words", [])
+    harvested = result.get("harvested_words", [])
+    spliced = result.get("spliced_word")
+    desire = result.get("desire_fulfilled")
+    top = result.get("top_words", [])
+    if dead or harvested or spliced or desire or top:
+        print(f"  \033[2m\u2500\u2500 word ecology \u2500\u2500\033[0m")
+        if dead:
+            print(f"  \033[31m  died: {', '.join(dead)}\033[0m")
+        if harvested:
+            print(f"  \033[32m  arrived: {', '.join(harvested)}\033[0m")
+        if spliced:
+            print(f"  \033[33m  spliced: {spliced}\033[0m")
+        if desire:
+            w1, w2, fused = desire
+            print(f"  \033[35m  desire fulfilled: {w1} wanted to become {w2} \u2192 {fused}\033[0m")
+        if top:
+            top_str = ", ".join(f"{w} ({wt:.2f})" for w, wt in top)
+            print(f"  \033[2m  strongest: {top_str}\033[0m")
         print()
 
-    # Show behavior outputs
+    # Coupling mode
+    if result.get("coupling_flipped"):
+        print(f"  \033[33m  * coupling mode flipped to {result['coupling_mode']} *\033[0m")
+        print()
+
+    # Foraging log
+    forage_log = result.get("forage_log", [])
+    if forage_log and forage_log != ["foraging: skipped"]:
+        print(f"  \033[2m\u2500\u2500 foraging \u2500\u2500\033[0m")
+        for msg in forage_log:
+            print(f"  \033[2m  {msg}\033[0m")
+        print()
+
+    # Behavior outputs
     behaviors = result.get("behaviors", [])
     if behaviors:
-        print(f"  \033[2m── behaviors ({result.get('n_behaviors', 0)} alive) ──\033[0m")
+        print(f"  \033[2m\u2500\u2500 behaviors ({result.get('n_behaviors', 0)} alive) \u2500\u2500\033[0m")
         for b in behaviors:
             print(f"  \033[35m{b}\033[0m")
         print()
