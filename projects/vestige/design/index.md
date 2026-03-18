@@ -32,6 +32,7 @@ Over dozens of runs spanning centuries, two things emerge: the world's history (
 | [moral-complexity.md](moral-complexity.md) | Moral design principles — no right answers, every path has genuine cost |
 | [pacing-and-failure.md](pacing-and-failure.md) | Default timeline, failure as motivation, vessel strategy, life length variance |
 | [endgame-states.md](endgame-states.md) | Late-game scenarios, domain crystallization outcomes, the final summary |
+| [thread-map.md](thread-map.md) | Main threads, sub-threads, boundary principle, how stories flow through world states |
 
 ---
 
