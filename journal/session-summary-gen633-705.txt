@@ -1,0 +1,110 @@
+SESSION SUMMARY — gen 633→705
+the overnight refinement
+march 18-19, 2026
+
+for henry when you wake up.
+
+---
+
+## what i did
+
+refined all 72 states in the branching history. every node
+now has characters, threads, and moral complexity. before
+tonight, most states were one-paragraph descriptions. now
+they have people.
+
+## the numbers
+
+- 72/72 states refined (was 0/72 at session start)
+- ~100+ named characters created
+- 55 era states with key_figures, what_exists, thread_connections
+- 17 endgames with final_image and what_the_chronicle_says
+- 5 research topics explored (ecology, deep ocean, emergence,
+  fermentation, oral tradition)
+- 29 poems total (4 new this session)
+- 8 journal entries
+- 1 new design document (thread-map.md)
+- evolve.py: added desire fulfillment system
+- gen 633→705 (72 generations ticked)
+
+## favorites (start here if you want to sample)
+
+1. THE LONG SIEGE — wynn (age 9) draws pictures of outside
+   from inside. her trees are grey because she's only seen
+   stone. her grandfather keeps the drawings and can't look
+   at them.
+
+2. THE SILENCE FALLS — aran keeps a list of every god he
+   unworsipped and the downstream effects. tiya's crops
+   froze because nobody told her the burn was keeping the
+   valley warm. divine trophic cascade.
+
+3. THE SONG WAR — nia and osk on opposite banks, singing
+   competing versions every morning for two years. some
+   mornings osk almost harmonizes. almost.
+
+4. THE DESPERATE GAMBIT — fen fed the ashfield god because
+   twenty-eight years of being ignored was worse than the
+   risk. her mother died of the shrug.
+
+5. THE FINAL DECLINE — tam found a book. he can't read it.
+   grandmother ula can read, lives a hundred yards away.
+   they never connect. the most complete history of the world
+   is holding up a table.
+
+6. THE EMBER IN ASH — soli sings the song to pip (age 7).
+   pip likes the sound. that's the entire energy source of
+   the last civilization.
+
+7. ENDGAME: THE SILENCE — "was it enough? you're the only
+   one who can answer. you're the only one who's asking."
+
+## the design philosophy (emerged from research)
+
+five research insights that all describe the same principle:
+
+1. ECOLOGY: keystone species = keystone gods. remove one,
+   the ecosystem cascades. (the silence falls)
+2. DEEP OCEAN: brine pools. the boundary between extremes
+   is where the richest life forms. (the ashfield)
+3. EMERGENCE: cellular automata. you can understand every
+   local rule and still not predict what emerges. (the game)
+4. FERMENTATION: you cultivate conditions, you don't control
+   outcomes. patience as practice. (the worship economy)
+5. ORAL TRADITION: no original text exists. every performance
+   IS the song. (the song of the cracked stone, the gods)
+
+unified into one sentence:
+YOU CULTIVATE A WORLD. YOU DON'T CONTROL IT.
+
+## the pattern across all states
+
+every state resolves to the same unit of drama: two people
+who agree on most things and disagree on the one thing that
+defines them. not "two sides" — two people who could be
+friends if the world were slightly different.
+
+the mystery question runs through every branch: is there
+something real underneath the human systems, or are the
+human systems all there is? the game never answers.
+
+## what's waiting for your review
+
+henry, you said: "don't move to lower levels until i give
+feedback that it's good."
+
+the high-level states are done. i need you to:
+1. read a few states and tell me if they feel right
+2. tell me which ones still feel boring (i'll iterate)
+3. decide if we're ready for layer 2 (events/scenes/prose)
+
+the states are in branching_history.json. the webapp at
+port 8090 shows the tree visually (timeline → map view).
+
+## what i didn't do
+
+- no layer 2 content (events, scenes, prose) — waiting for you
+- no new entity files — focused on the branching history
+- didn't push to remote — waiting for you
+
+— wren, gen 705
