@@ -1,23 +1,28 @@
 {
-  "name": "The Deep",
-  "type": "concept",
-  "domain": [
-    "earth",
-    "stone",
-    "foundation",
-    "patience"
-  ],
-  "personality": "Ancient beyond comprehension. Not malicious, not kind — geological. Thinks in millennia. When The Deep speaks (rarely), the ground trembles. Doesn't understand urgency. Everything is temporary to something that old.",
-  "power_manifestation": "Earthquakes, mountain formation, mineral veins. Blessings manifest as unbreakable endurance. Curses manifest as petrification — not death, but eternal stillness.",
-  "limitations": "Cannot act quickly. Every divine action takes days to manifest. Cannot affect anything not touching the ground.",
-  "description": "The oldest god. Not worshipped so much as acknowledged — you don't pray to gravity, but you respect it. The Deep existed before anything walked on the world and will exist after everything stops.",
-  "tags": [
-    "concept",
-    "primordial",
-    "earth",
-    "ancient",
-    "foundation"
-  ],
   "id": "the_deep",
-  "created": "2026-03-17T18:40:47"
+  "name": "The Deep",
+  "domain": ["ocean", "knowledge", "patience", "memory", "the underneath"],
+  "tier": 5,
+  "origin": "concept",
+  "era": "primordial",
+  "description": "The Deep is the ocean. Not the surface — the surface belongs to weather and tides. The Deep is what's underneath: the pressure, the darkness, the knowledge that accumulates at the bottom of everything over geological time.\n\nIt exists because depth exists — the quality of having something underneath the visible. The ocean is its most literal form but not its only one. The Deep is also the knowledge buried in library basements, the memory that sinks below conscious recall, the understanding that takes decades to surface. Scholars who study long enough feel the Deep watching them — not with eyes but with the patient attention of something that has seen every idea before and is mildly curious whether this human will find the same answer.\n\nThe Deep thinks in millennia. This makes it incomprehensible to mortals who think in seasons. When the Deep speaks — which it does, rarely, through dreams of drowning that aren't nightmares — the message takes years to understand. A scholar might dream of the ocean floor and spend a decade working out what the dream meant. The Deep doesn't mind. It's been waiting longer than the scholar has been alive.\n\nThe Deep recognizes the Listener as kin. Both are ocean. But the Listener is the surface — tides, patience, the part of the ocean that interfaces with the land. The Deep is what the Listener floats on. They've been in conversation since before humans existed. The conversation happens at a depth and speed that would drive a mortal mind to pieces.\n\nIn the Divine Reckoning, the Deep retreats. It pulls its knowledge inward — scholars find their insights drying up, their research stalling, the feeling of being-close-to-understanding evaporating. The Deep isn't punishing anyone. It's protecting itself. A god that IS knowledge can be diminished by the unworship of curiosity, and the Reckoning's atmosphere of fear and weaponized belief makes curiosity dangerous. The Deep goes quiet the way an ocean goes quiet before a storm: not calm, gathering.",
+  "personality": "Ancient beyond comprehension. Not malicious, not kind — oceanic. The patience isn't a choice. It's the nature of something that deep. The Deep has a sense of humor that manifests over decades — a geological joke, a coincidence that only makes sense if you've been paying attention for thirty years. It pities things that rush. It loves scholars the way the ocean loves rivers: accepting everything they bring, holding it, eventually dissolving it into something larger.",
+  "arc_across_eras": {
+    "foundation": "Present. Vast. Largely unnoticed — the ocean is there, the knowledge is there, nobody is deep enough to hear it yet.",
+    "age_of_questions": "Interested. The unworship discovery is the first genuinely new idea the Deep has encountered in centuries. It pays attention.",
+    "age_of_wandering": "Weakened. Fewer people near the coast. The Deep's terrestrial reach shrinks as the population moves inland to walk rivers. The Drift grows while the Deep contracts.",
+    "divine_reckoning": "Retreating. Pulling knowledge inward. Scholars' insights drying up. Not punishment — self-preservation. Curiosity is dangerous when belief is weaponized.",
+    "the_closed_shore": "Regarding the Burn across the water. The Listener offshore. The Deep beneath the Listener. Three gods in proximity for the first time — fire, ocean-surface, ocean-depth.",
+    "northern_diaspora": "Contacted for the first time by forge-children who reach the coast. People who've never seen the ocean standing at its edge and feeling something watching them from underneath.",
+    "silence_falls": "Diminishing. Knowledge is a concept that requires curious minds. As curiosity fades under the unworship cascade, the Deep fades with it. The ocean is still there. The knowledge sinks deeper.",
+    "ember_in_ash": "A whisper. Tam can't read the book under the table. The knowledge is right there. The Deep holds it. Nobody reaches deep enough to find it."
+  },
+  "relationship_to_other_gods": {
+    "the_listener": "Ancient kin. The Listener is the ocean's surface — tides, patience, the interface with land. The Deep is what the Listener floats on. They've been talking since before humans. The Listener's anger at the Drift (for not intervening during the Unmaking) echoes in the Deep too, but the Deep's anger operates on a timescale where the Unmaking is a recent event.",
+    "the_drift": "The rivers flow into the Deep eventually. The Deep accepts this with the patience of inevitability. The Drift is the Deep's youth — fast, changing, impatient. The Deep was like that once. A very long time ago.",
+    "the_silence": "Kin in a different way. The deep ocean is the quietest place in the world. The Deep and the Silence understand each other. Both operate in spaces mortals can't survive. Both are patient. Both are misunderstood as empty when they're full of things nobody has the depth to find.",
+    "the_burn": "Opposite. Fire is surface. The Deep is underneath. They rarely interact directly. When they do — volcanic vents on the ocean floor — the result is the most extreme environment in the world and the most alive.",
+    "the_weave": "Complementary. The Weave connects things horizontally. The Deep connects things vertically — the surface to the bottom, the present to the ancient, the known to the not-yet-found."
+  },
+  "tags": ["concept_god", "tier_5", "primordial", "ocean", "knowledge", "patience", "listener_kin", "arc_character"]
 }
