@@ -1,0 +1,12 @@
+{
+  "id": "rim_moth",
+  "name": "Rim Moth",
+  "danger_level": "none (unless provoked)",
+  "description": "A moth the size of a child's hand that lives exclusively at the Ashfield Rim — the boundary zone between toxic and livable. Its wings are ash-grey with veins of dull orange, like cooling lava. It feeds on the mineral deposits that accumulate where the Ashfield's heat meets the continental air — the exact gradient where the Ash Tenders build their settlements.\n\nThe Rim Moth is the boundary principle made small and alive. It cannot survive inside the Ashfield (too hot, too toxic). It cannot survive outside the Rim (wrong minerals, wrong temperature). It exists only at the edge. If you see Rim Moths, you're at the boundary. If you don't see them, you've gone too far in one direction or the other. The Ash Tenders use them as indicators — a living compass for the gradient.\n\nThe moths are attracted to the Ash Cough. Not to sick people — to the exhaled mineral particles. A Rim Moth landing on your shoulder after you cough is the Ashfield's strange benediction: you're adapted enough to breathe what the moth eats. Longtime Rim residents wear moth-dust on their clothes like a badge. Outsiders find this unsettling.",
+  "behavior": "Passive. Feeds on mineral deposits at the boundary gradient. Attracted to Ash Cough exhalations. Lands on adapted residents. Avoids the deep Ashfield and the open continental plain equally. Swarms during the ash-fall season when mineral deposits are richest. The swarms are beautiful — thousands of grey-orange wings catching the light at the exact line where toxic meets livable.",
+  "ecological_role": "Indicator species. The Rim Moth's presence marks the habitable boundary. The Ash Tenders read moth density the way sailors read wind — more moths means the boundary has shifted outward (more habitable space), fewer moths means it's shifted inward (the Ashfield expanding). After Fen's gambit feeds the Ashfield god, the moth population crashes — the boundary zone narrows as the god's presence intensifies. The moths are the first warning that the gambit's effects are physical, not just theological.",
+  "attunement": "sense (to detect them) or bond (to read their patterns)",
+  "habitat": ["the_ashfield_rim"],
+  "combat": "None. They're moths. They don't fight. Hurting them is technically possible and universally considered a sign that you don't belong on the Rim.",
+  "tags": ["boundary_creature", "indicator_species", "ashfield_rim", "non_combat", "ecological", "ash_tenders"]
+}
