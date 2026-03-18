@@ -1,0 +1,25 @@
+{
+  "id": "essa",
+  "name": "Essa",
+  "role": "Fixer / Awakening catalyst / reluctant leader",
+  "era": "era_3_slow_rot_to_era_4",
+  "world_state": "the_awakening",
+  "age_at_introduction": 26,
+  "culture": "slow_rot_continental",
+  "description": "Essa repaired the quarantine ward wall. That's it. That's what started it.\n\nThree days of work with reclaimed stone, mortar mixed from ash and river clay. The wall had been broken for nineteen years. Nobody fixed it because fixing requires energy and energy requires hope and hope requires believing things can be different and nobody in the Rot believes that.\n\nEssa fixed it because a child in her village was sick and the nearest healer was on the other side of the wall. She's not a visionary. She's a person with a functional anger that turns into action. She can see that problems have solutions and the solutions are often physical: repair the wall, clear the road, reopen the well.\n\nPeople saw Essa's wall and thought: 'oh. you can just... do things.' Then someone else repaired a bridge. Then a third person reopened a well. The Awakening is a cascade of small repairs by people remembering that broken things can be fixed.\n\nEssa's blind spot is systemic. She fixes what she can see. She can't see the networks that existed in the gaps — the smuggling routes, the unofficial trade, the shadow systems that kept the Rot survivable. Her wall blocked Breca's medicine route. Three people died before Breca found an alternative. The first act of awakening killed the invisible system that was keeping the worst of the Rot livable.\n\nHope's costs are invisible to the person hoping.",
+  "personality": "Direct. Physical. She thinks in repairs, not theories. When she sees a problem, her hands start calculating: what materials, how long, which tools. She doesn't give speeches — she picks up stones. The charisma is accidental: people follow someone who's DOING something in a world where nobody does anything. She's uncomfortable being followed. She wanted to fix a wall, not lead a movement.",
+  "arc": {
+    "the_awakening": "Twenty-six. Fixes the wall. The cascade begins. She doesn't know she's started something. She just wanted the child treated.",
+    "the_new_foundation": "Forty. Leads the New Council. Not because she planned to — because she kept fixing things when everyone else stopped. She's learned Breca's lesson: fixing isn't simple. The new institutions she builds have deliberate gaps — smuggler-routes built in because Essa learned that shadow systems save lives.",
+    "the_false_dawn": "If the Awakening fractures: Essa watches Pella and Dren tear apart what all three of them built. She says: 'At least we tried.' She doesn't find this comforting.",
+    "the_second_rot": "If the Awakening fails entirely: Essa still fixes things. Small things, in her village, alone. She doesn't inspire anyone anymore. She just fixes things because she doesn't know how to stop."
+  },
+  "origin_wound": "She grew up in the Rot. Not a dramatic origin — no dead parent, no tragic event. Just the accumulated weight of a world that stopped trying. The wound is the Rot itself: growing up in a place where the adults had stopped maintaining anything. Every collapsed building, every overgrown road, every closed healer's ward is a wound. Essa fixes walls because every broken wall is the Rot made physical, and she can't stop the Rot but she can fix a wall.",
+  "relationships": {
+    "breca": "The smuggler whose medicine route Essa's wall blocked. Three people died. Breca doesn't hate Essa — she hates the idea that fixing is simple. When Essa finally comes to Breca (because the next repair requires knowledge only smugglers have), Breca says: 'You want to fix the world? Start by learning what's already working.' They become allies. In the New Foundation, Breca sits on the Council as logistics advisor.",
+    "the_old_guard_elders": "The remnant faction leaders who watched the Awakening and felt fear — not of failure, of hope. Because hope makes failure hurt. Some rejoin. Some don't. The ones who don't aren't cowards — they're people who've been broken by the Rot.",
+    "kael": "If the Awakening leads to the Second Rot: Kael is the fixer who kept going when everyone else stopped. He rebuilt the bridge three times. Essa and Kael are mirrors — she started the cascade, he maintained the last structure. Both fix things. Neither can fix the thing that matters."
+  },
+  "significance": "Essa is the Awakening's proof that change starts with a single physical act. Not a speech, not a vision, not a divine intervention — a wall. Mortar and stone. The most mundane catalyst in the branching tree. And the most honest: the world is broken, fixing is possible, the fixing has costs you can't see. That's the game. That's the lesson. One wall at a time.",
+  "tags": ["era_3", "slow_rot", "awakening", "new_foundation", "fixer", "catalyst", "blind_spot", "hope_costs"]
+}
