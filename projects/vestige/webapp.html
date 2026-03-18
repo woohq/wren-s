@@ -2473,34 +2473,72 @@ function setupTimelineCanvas() {
 // ─── Layout Calculations ─────
 
 function layoutLevel0() {
-  // Parent map: only root + depth-1 states (the main branches)
+  // Show ALL non-endgame states as a branching tree
   const W = tlMap.W, H = tlMap.H;
-  const parentStates = tlMap.states.filter(s => s.depth <= 1);
-  const root = parentStates.find(s => s.depth === 0);
-  const branches = parentStates.filter(s => s.depth === 1);
+  const eraStates = tlMap.states.filter(s => s.type !== 'endgame');
+  const endgames = tlMap.states.filter(s => s.type === 'endgame');
+  const colSpacing = 190;
+  const nodeSpacing = 58;
 
-  if (root) {
-    root.tx = 150;
-    root.ty = H / 2;
-    root.radius = 40;
+  const maxDepth = Math.max(...eraStates.map(s => s.depth), 0);
+
+  // Sort within each depth by parent clustering
+  for (let d = 1; d <= maxDepth; d++) {
+    const atDepth = eraStates.filter(s => s.depth === d);
+    atDepth.sort((a, b) => {
+      const pa = eraStates.find(s => s.childIds?.includes(a.id));
+      const pb = eraStates.find(s => s.childIds?.includes(b.id));
+      const paIdx = pa ? eraStates.indexOf(pa) : 0;
+      const pbIdx = pb ? eraStates.indexOf(pb) : 0;
+      if (paIdx !== pbIdx) return paIdx - pbIdx;
+      return (a.stateIndex || 0) - (b.stateIndex || 0);
+    });
+    atDepth.forEach((s, i) => s._sortedIndex = i);
   }
 
-  const spacing = Math.min(100, (H - 80) / Math.max(branches.length, 1));
-  const startY = (H - spacing * (branches.length - 1)) / 2;
-  branches.forEach((s, i) => {
-    s.tx = W * 0.55;
-    s.ty = startY + i * spacing;
-    s.radius = 34;
-  });
+  // Position by depth column
+  for (let d = 0; d <= maxDepth; d++) {
+    const atDepth = eraStates.filter(s => s.depth === d);
+    atDepth.sort((a, b) => (a._sortedIndex ?? 0) - (b._sortedIndex ?? 0));
 
-  // Hide all deeper states off-screen
-  tlMap.states.filter(s => s.depth > 1).forEach(s => {
-    s.tx = W + 200;
-    s.ty = H / 2;
-  });
+    const x = 80 + d * colSpacing;
+    const totalH = atDepth.length * nodeSpacing;
+    const virtualH = Math.max(H, totalH + 80);
+    const startY = (virtualH - totalH) / 2 + nodeSpacing / 2;
 
-  fitCameraToNodes(parentStates, W, H);
+    atDepth.forEach((s, si) => {
+      s.tx = x;
+      s.ty = startY + si * nodeSpacing;
+      if (d === 0) s.radius = 36;
+      else if (d === 1) s.radius = 30;
+      else s.radius = 24;
+    });
+  }
 
+  // Pull children toward parents (3 passes)
+  for (let pass = 0; pass < 4; pass++) {
+    for (let d = 1; d <= maxDepth; d++) {
+      const atDepth = eraStates.filter(s => s.depth === d);
+      atDepth.forEach(s => {
+        const parent = eraStates.find(p => p.childIds?.includes(s.id));
+        if (parent && parent.ty !== undefined) {
+          s.ty += (parent.ty - s.ty) * 0.35;
+        }
+      });
+      atDepth.sort((a, b) => a.ty - b.ty);
+      for (let i = 1; i < atDepth.length; i++) {
+        const minGap = nodeSpacing * 0.7;
+        if (atDepth[i].ty - atDepth[i-1].ty < minGap) {
+          atDepth[i].ty = atDepth[i-1].ty + minGap;
+        }
+      }
+    }
+  }
+
+  // Hide endgames off-screen
+  endgames.forEach(s => { s.tx = 2000; s.ty = H / 2; });
+
+  fitCameraToNodes(eraStates, W, H);
   tlMap.eras.forEach((e, i) => { e.tx = -100; e.ty = -100; e.radius = 42; });
 }
 
@@ -2862,58 +2900,101 @@ function drawStateNode(ctx, s, opts = {}) {
 }
 
 function drawLevel0(ctx, W, H) {
-  // Parent map: only root + depth-1 states. Clean and simple.
-  const parentStates = tlMap.states.filter(s => s.depth <= 1 && s.tx < W + 100);
-  const root = parentStates.find(s => s.depth === 0);
-  const branches = parentStates.filter(s => s.depth === 1);
+  // Full era-state tree (all non-endgame states)
+  const eraStates = tlMap.states.filter(s => s.type !== 'endgame' && s.tx < 1500);
+  const selectedState = tlMap.hovered?.type === 'state' ? tlMap.hovered.id : null;
 
-  // Draw edges from root to branches
-  if (root) {
-    branches.forEach((b, i) => {
-      if (b.x === undefined || root.x === undefined) return;
-      const color = ERA_COLORS[i % ERA_COLORS.length];
-      ctx.beginPath();
-      const midX = (root.x + b.x) / 2;
-      ctx.moveTo(root.x + (root.radius || 40), root.y);
-      ctx.bezierCurveTo(midX, root.y, midX, b.y, b.x - (b.radius || 34), b.y);
-      ctx.strokeStyle = color + '40';
-      ctx.lineWidth = 2;
-      ctx.stroke();
-
-      // Arrow
-      const ax = b.x - (b.radius || 34) - 6;
-      ctx.beginPath();
-      ctx.moveTo(ax, b.y - 4);
-      ctx.lineTo(ax + 7, b.y);
-      ctx.lineTo(ax, b.y + 4);
-      ctx.fillStyle = color + '40';
-      ctx.fill();
-    });
+  // Find the Era 2 ancestor for lineage coloring
+  const era2States = tlMap.states.filter(s => s.depth === 1);
+  function getLineageColor(s) {
+    if (s.depth === 0) return '#d4875e';
+    if (s.depth === 1) return ERA_COLORS[era2States.indexOf(s) % ERA_COLORS.length];
+    // Walk up to find Era 2 ancestor
+    let current = s;
+    while (current && current.depth > 1) {
+      current = tlMap.states.find(p => p.childIds?.includes(current.id));
+    }
+    if (current && current.depth === 1) return ERA_COLORS[era2States.indexOf(current) % ERA_COLORS.length];
+    return '#7a8494';
   }
 
-  // Draw nodes
-  parentStates.forEach((s, i) => {
-    const isHovered = tlMap.hovered?.type === 'state' && tlMap.hovered.id === s.id;
-    const color = s.depth === 0 ? '#d4875e' : ERA_COLORS[branches.indexOf(s) % ERA_COLORS.length];
-    drawStateNode(ctx, s, { isHovered, lineageColor: color });
+  // Draw depth column labels
+  const maxDepth = Math.max(...eraStates.map(s => s.depth), 0);
+  for (let d = 0; d <= maxDepth; d++) {
+    const sample = eraStates.find(s => s.depth === d);
+    if (!sample) continue;
+    ctx.font = '10px -apple-system, sans-serif';
+    ctx.fillStyle = '#4a546440';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    const labels = ['Era 1', 'Era 2', 'Era 3', 'Era 4', 'Era 5'];
+    ctx.fillText(labels[d] || `Era ${d+1}`, sample.tx || sample.x, 12);
+  }
 
-    // Child count badge
-    if (s.childIds?.length && !isHovered) {
-      ctx.font = '9px -apple-system, sans-serif';
+  // Draw edges
+  tlMap.stateEdges.forEach(edge => {
+    const src = eraStates.find(s => s.id === edge.from);
+    const dst = eraStates.find(s => s.id === edge.to);
+    if (!src || !dst || src.x === undefined || dst.x === undefined) return;
+
+    const color = getLineageColor(dst);
+    const isHighlighted = selectedState === src.id || selectedState === dst.id;
+
+    ctx.beginPath();
+    const midX = (src.x + dst.x) / 2;
+    ctx.moveTo(src.x + (src.radius || 26), src.y);
+    ctx.bezierCurveTo(midX, src.y, midX, dst.y, dst.x - (dst.radius || 24), dst.y);
+    ctx.strokeStyle = color;
+    ctx.globalAlpha = isHighlighted ? 0.5 : 0.15;
+    ctx.lineWidth = isHighlighted ? 2.5 : 1.5;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  });
+
+  // Draw nodes
+  eraStates.forEach(s => {
+    if (s.x === undefined) return;
+    const isHovered = tlMap.hovered?.type === 'state' && tlMap.hovered.id === s.id;
+    const color = getLineageColor(s);
+
+    // Dim nodes not connected to hovered
+    let isDimmed = false;
+    if (selectedState && !isHovered) {
+      const connected = tlMap.stateEdges.some(e =>
+        (e.from === selectedState && e.to === s.id) || (e.to === selectedState && e.from === s.id)
+      );
+      isDimmed = !connected && selectedState !== s.id;
+    }
+
+    if (isDimmed) {
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.radius || 24, 0, Math.PI * 2);
+      ctx.fillStyle = color + '08';
+      ctx.fill();
+      ctx.strokeStyle = color + '20';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      ctx.font = (s.radius < 26 ? '9' : '10') + 'px -apple-system, sans-serif';
       ctx.fillStyle = '#4a5464';
       ctx.textAlign = 'center';
-      // Count all descendants
-      let descCount = 0;
-      function countDesc(id) { const n = tlMap.states.find(x => x.id === id); if (n) { descCount++; (n.childIds||[]).forEach(countDesc); } }
-      (s.childIds||[]).forEach(countDesc);
-      ctx.fillText(`${descCount} states →`, s.x, s.y + (s.radius || 34) + 14);
-    }
-    if (isHovered && s.description) {
-      ctx.font = '10px -apple-system, sans-serif';
-      ctx.fillStyle = '#7a8494';
-      ctx.textAlign = 'center';
-      const desc = s.description.length > 80 ? s.description.slice(0, 77) + '...' : s.description;
-      ctx.fillText(desc, s.x, s.y + (s.radius || 34) + 14);
+      ctx.textBaseline = 'middle';
+      ctx.fillText(s.name.replace(/^The /, ''), s.x, s.y);
+    } else {
+      drawStateNode(ctx, s, { isHovered, lineageColor: color });
+
+      // Endgame count badge for leaf-ish nodes
+      if (isHovered) {
+        const endgameChildren = (s.childIds || []).filter(cid =>
+          tlMap.states.find(x => x.id === cid && x.type === 'endgame')
+        );
+        if (endgameChildren.length) {
+          ctx.font = '9px -apple-system, sans-serif';
+          ctx.fillStyle = '#7a8494';
+          ctx.textAlign = 'center';
+          ctx.fillText(`${endgameChildren.length} endgames`, s.x, s.y + (s.radius || 24) + 12);
+        }
+      }
     }
   });
 }
@@ -3140,10 +3221,10 @@ function tlScreenToWorld(sx, sy) {
 
 function tlHitTest(wx, wy) {
   if (tlMap.level === 0) {
-    // Check state nodes first (they're the primary targets)
+    // Check non-endgame state nodes (endgames are off-screen at Level 0)
     for (let i = tlMap.states.length - 1; i >= 0; i--) {
       const s = tlMap.states[i];
-      if (s.x === undefined) continue;
+      if (s.x === undefined || s.type === 'endgame' || s.tx > 1500) continue;
       const dx = wx - s.x, dy = wy - s.y;
       if (dx * dx + dy * dy < (s.radius || 28) ** 2) return { type: 'state', id: s.id, index: s.eraIndex, data: s };
     }
@@ -3226,10 +3307,16 @@ function tlClick(e) {
     return;
   }
 
-  if (hit.type === 'state' && tlMap.level === 0 && hit.data.childIds?.length) {
-    // At parent level, clicking a branch zooms into its subtree
-    goToSubtree(hit.id);
-    return;
+  if (hit.type === 'state' && tlMap.level === 0) {
+    // At parent level: check if this node has endgame children — if so, go to subtree
+    const hasEndgameChildren = (hit.data.childIds || []).some(cid =>
+      tlMap.states.find(x => x.id === cid && x.type === 'endgame')
+    );
+    if (hasEndgameChildren) {
+      goToSubtree(hit.id);
+      return;
+    }
+    // Otherwise fall through to show detail panel
   }
 
   if (hit.type === 'state') {

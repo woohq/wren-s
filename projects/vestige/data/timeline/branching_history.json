@@ -57,7 +57,8 @@
         "the_merchant_wars",
         "the_golden_compromise",
         "the_syndicate_age",
-        "the_crash"
+        "the_crash",
+        "the_synthesis"
       ]
     },
     {
@@ -99,7 +100,8 @@
         "the_iron_crusade",
         "the_walls_crack",
         "the_silent_revolution",
-        "the_long_siege"
+        "the_long_siege",
+        "the_closed_shore"
       ]
     },
     {
@@ -142,7 +144,8 @@
         "the_divine_reckoning",
         "the_new_covenant",
         "the_god_war",
-        "the_silence_falls"
+        "the_silence_falls",
+        "the_divine_dialogue"
       ]
     },
     {
@@ -184,7 +187,8 @@
         "the_great_meeting",
         "the_road_wars",
         "the_settling",
-        "the_song_breaks"
+        "the_song_breaks",
+        "the_walking_meeting"
       ]
     },
     {
@@ -225,7 +229,8 @@
         "the_awakening",
         "the_final_decline",
         "the_outside_arrives",
-        "the_desperate_gambit"
+        "the_desperate_gambit",
+        "the_wake_up_call"
       ]
     },
     {
@@ -901,6 +906,500 @@
       "parent": "the_ember_in_ash",
       "tension": "The ember went out. The world is quiet. The god remembers everything. Nobody else does.",
       "branches_into": []
+    },
+    {
+      "id": "the_synthesis",
+      "name": "The Synthesis",
+      "type": "era",
+      "parent": "age_of_exchange",
+      "condition": "Tideborn arrival + Age of Exchange. Trade-world meets partnership-world. The Bridge Folk are the first to understand both paradigms.",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Two kinds of sophistication meeting. The Tideborn have divine partnership. The Exchange has economic infrastructure. The Bridge Folk sit between, speaking both languages — trade and prayer. The synthesis could create something unprecedented: a scaled civilization with divine reciprocity. Or it could be the worst of both — commerce that commodifies the gods.",
+      "feels_like": "Tang Dynasty China meeting the Islamic Golden Age. Two advanced civilizations trading ideas rather than armies. The results transform both. But trade in ideas is still trade, and someone always profits more.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_merchant_consortium (adapting)",
+          "the_tide_speakers (embedded)",
+          "bridge_folk_synthesists (new)"
+        ],
+        "new_cultures": [
+          "the_listeners (mortals who learned to hear gods)"
+        ],
+        "active_gods": [
+          "the_scale (being reshaped by Tideborn influence)",
+          "the_listener (onshore now)",
+          "the_weave (revitalized)"
+        ],
+        "threats": [
+          "divine_commodification",
+          "tideborn_cultural_erosion",
+          "partnership_at_scale"
+        ]
+      },
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_divine_new_order"
+      ]
+    },
+    {
+      "id": "the_closed_shore",
+      "name": "The Closed Shore",
+      "type": "era",
+      "parent": "age_of_iron",
+      "condition": "Tideborn arrival + Age of Iron. Fortress-world meets people with no concept of walls. The Forge Council sees a threat it can't hammer.",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Tideborn have no army. The Iron Holds have nothing but army. The Forge Council closes the coast — no foreign ships in territorial waters. But the Tideborn gods don't recognize borders, and the ocean doesn't obey the Forge Council. Young smiths sneak to the shore to see the living ships. The walls keep people in better than they keep ideas out.",
+      "feels_like": "Tokugawa Japan's sakoku policy meeting Perry's black ships — except the foreign ships aren't armed, just strange. Isolation confronting something it can't categorize as threat or opportunity, so it defaults to threat.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_forge_council (paranoid)",
+          "the_wall_keepers (empowered)",
+          "shore_smugglers (new — smuggling ideas, not goods)"
+        ],
+        "active_gods": [
+          "the_burn (afraid of the Listener)",
+          "the_silence (intrigued)",
+          "the_listener (offshore, patient)"
+        ],
+        "threats": [
+          "cultural_siege",
+          "internal_curiosity",
+          "the_ocean_doesnt_obey"
+        ]
+      },
+      "branches_into": [
+        "the_iron_crusade",
+        "the_walls_crack"
+      ]
+    },
+    {
+      "id": "the_divine_dialogue",
+      "name": "The Divine Dialogue",
+      "type": "era",
+      "parent": "age_of_questions",
+      "condition": "Tideborn arrival + Age of Questions. The continent that just discovered worship can be weaponized meets people who've been doing it right for centuries.",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Unworshippers wanted to unmake gods. The Tideborn want to befriend them. Both approaches challenge the old worship system, but they're opposites — one subtracts, the other transforms. The theological crisis deepens into the most important philosophical debate in history: what SHOULD the relationship between mortals and gods look like?",
+      "feels_like": "The Reformation meeting Buddhism. A civilization in theological crisis encountering a tradition that resolved the same crisis centuries ago through a completely different path. The answer exists — but accepting it means admitting everything you built was wrong.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_unworshippers (split)",
+          "the_tide_speakers (respected)",
+          "the_new_theologians (emerging)"
+        ],
+        "active_gods": [
+          "all five concept gods (in conversation for the first time)",
+          "the_listener (mediating)",
+          "the_ashfield_god (being sung to)"
+        ],
+        "threats": [
+          "theological_paralysis",
+          "divine_culture_shock",
+          "the_gods_disagree_about_their_own_future"
+        ]
+      },
+      "branches_into": [
+        "the_new_pantheon",
+        "the_godless_age"
+      ]
+    },
+    {
+      "id": "the_walking_meeting",
+      "name": "The Walking Meeting",
+      "type": "era",
+      "parent": "age_of_wandering",
+      "condition": "Tideborn arrival + Age of Wandering. Two mobile cultures meet. The Rootwalkers walk the rivers. The Tideborn sail the ocean. The songs rhyme.",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Rootwalkers discover their oldest songs are Tideborn songs. The two cultures were connected before memory. The meeting isn't first contact — it's a reunion. But reunion between peoples separated by an ocean and a thousand years of divergent evolution produces as much grief as joy. They share roots. They grew in different directions.",
+      "feels_like": "The African diaspora reunion — peoples separated by history discovering shared origins, shared songs, shared pain, and completely different lives. The connection is real and the distance is also real. Neither cancels the other.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_river_tongue (transformed)",
+          "the_tide_speakers (home)",
+          "the_song_weavers (new — merging traditions)"
+        ],
+        "new_cultures": [
+          "the_reunited (Rootwalker-Tideborn merged camps)"
+        ],
+        "active_gods": [
+          "the_drift (recognizing the Listener as old kin)",
+          "the_listener (remembering the land it left)"
+        ],
+        "threats": [
+          "nostalgia_as_identity",
+          "romanticized_past",
+          "the_reunion_masks_real_differences"
+        ]
+      },
+      "branches_into": [
+        "the_river_republic",
+        "the_great_scattering"
+      ]
+    },
+    {
+      "id": "the_wake_up_call",
+      "name": "The Wake-Up Call",
+      "type": "era",
+      "parent": "the_slow_rot",
+      "condition": "Tideborn arrival + Slow Rot. Ships singing in a harbor nobody uses anymore. A mirror held up to a world that forgot what vitality looks like.",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Tideborn arrive in a world that's stopped trying. The singing ships dock at a crumbling port. The Voice-Carriers walk through empty markets and overgrown roads and can't understand how a people with this much land, this many gods, this much potential, just... stopped. The Wake-Up Call isn't the Tideborn fixing anything. It's the Tideborn being appalled. Sometimes shame is the catalyst nobody wanted and everyone needed.",
+      "feels_like": "A Peace Corps volunteer arriving in a community that's given up — except the volunteer has nothing material to offer, only the visible proof that another way of living exists. The help isn't resources. It's the reminder that giving up was a choice.",
+      "what_exists": {
+        "dominant_factions": [
+          "the_tide_speakers (horrified)",
+          "the_still_trying (empowered by example)",
+          "the_resigned (resentful of being pitied)"
+        ],
+        "active_gods": [
+          "the_silence (dominant, resentful of the Listener's arrival)",
+          "the_listener (grieving what it hears)"
+        ],
+        "threats": [
+          "shame_spiral",
+          "resentment_of_outsiders",
+          "the_rot_is_deeper_than_the_tideborn_know"
+        ]
+      },
+      "branches_into": [
+        "the_awakening",
+        "the_final_decline"
+      ]
+    },
+    {
+      "id": "the_syndicate_age",
+      "name": "The Syndicate Age",
+      "type": "era",
+      "parent": "age_of_exchange",
+      "condition": "Merchant Consortium absorbs both old factions + Brackish become dominant traders",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Consortium stopped pretending to be middlemen. They're the government now — not through election or conquest but through dependency. Everyone owes them. Debt is citizenship. The old factions exist as brands, not powers.",
+      "feels_like": "Venice at its height. A republic of merchants where wealth IS governance. Elegant, efficient, amoral.",
+      "branches_into": [
+        "corporate_dominion",
+        "the_peoples_revolt"
+      ]
+    },
+    {
+      "id": "the_crash",
+      "name": "The Crash",
+      "type": "era",
+      "parent": "age_of_exchange",
+      "condition": "Trade bubble collapses + Consortium overextended + external shock",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The trade system that enriched everyone collapsed overnight. Nobody knows what anything is worth anymore. The Consortium's credit network — which replaced barter, which replaced trust — evaporated. People with warehouses full of goods can't sell them. People with nothing can't buy. The Age of Exchange ends the way bubbles always end: with everyone remembering that wealth was a story they agreed to believe.",
+      "feels_like": "The South Sea Bubble. The 2008 crash. The morning after a party that went too long. The hangover is the era.",
+      "branches_into": [
+        "the_peoples_revolt",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_silent_revolution",
+      "name": "The Silent Revolution",
+      "type": "era",
+      "parent": "age_of_iron",
+      "condition": "Young smiths quietly reject the doctrine + information leaks through The Foot",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Nobody stormed the gates. Nobody gave speeches. The young simply stopped believing. They still forge, still follow the forms, still attend Council sessions. But in the workshops, after hours, they read southern texts. They experiment with alloys the masters forbid. They talk about a forge that doesn't need walls. The revolution isn't loud. It's the sound of a generation deciding their parents were wrong and being too polite to say so.",
+      "feels_like": "The Quiet Revolution in Quebec. Or the way the Soviet Union's youth stopped believing before the wall fell. The structure stands. The faith holding it up has evaporated.",
+      "branches_into": [
+        "the_walls_crack",
+        "the_northern_diaspora"
+      ]
+    },
+    {
+      "id": "the_long_siege",
+      "name": "The Long Siege",
+      "type": "era",
+      "parent": "age_of_iron",
+      "condition": "External threat (Ashfield god or Tideborn) + Thornwall doubles down on isolation",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Thornwall was built to endure. Now it endures. The Ashfield god presses from the east. The Tideborn confuse from the west. The Senate probes from the south. Thornwall seals everything and survives on stored ore and stubborn faith. They can hold for decades. They can hold for generations. But holding isn't living, and the children born inside the siege have never seen the sky without walls around it.",
+      "feels_like": "Constantinople's final centuries. Masada. A fortress that's outlived its purpose but not its pride. Beautiful and doomed and refusing to admit either.",
+      "branches_into": [
+        "the_iron_crusade",
+        "the_crusade_breaks"
+      ]
+    },
+    {
+      "id": "the_new_covenant",
+      "name": "The New Covenant",
+      "type": "era",
+      "parent": "age_of_questions",
+      "condition": "Unworship + investigation leads to negotiated divine relationship",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "They wrote a treaty with a god. The Ashfield god — the newborn, the plague-breather — was the first to sign. Not literally. But the Unworshippers and the Ash Tenders found a way to redirect belief deliberately, reshaping the god from a thing of fear into a thing of... something else. The precedent is staggering. If you can negotiate with one god, you can negotiate with all of them. The divine world will never be the same.",
+      "feels_like": "The Magna Carta applied to theology. The first time anyone said 'gods have obligations too' and made it stick.",
+      "branches_into": [
+        "the_new_pantheon",
+        "the_divine_reckoning"
+      ]
+    },
+    {
+      "id": "the_god_war",
+      "name": "The God War",
+      "type": "era",
+      "parent": "age_of_questions",
+      "condition": "Weaponized belief + factions creating gods deliberately as weapons",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Someone did the obvious thing. If unworship can diminish a god, then directed worship can create one. The Senate created a war-god. The Forge Council fed their forge-spirit into something with teeth. The River Tongue sang a storm into existence. Nobody wanted divine warfare. Everybody armed for it. The gods that were born from weapons act like weapons.",
+      "feels_like": "The nuclear arms race but with deities. Mutually assured divine destruction. Everyone has a god pointed at everyone else and the gods are aware enough to be terrified.",
+      "branches_into": [
+        "the_divine_reckoning",
+        "endgame_mutual_destruction"
+      ]
+    },
+    {
+      "id": "the_silence_falls",
+      "name": "The Silence Falls",
+      "type": "era",
+      "parent": "age_of_questions",
+      "condition": "Unworship succeeds too well + divine ecosystem collapses",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "They unworshipped too much. The Ashfield god was first — successfully diminished, reshaped, quieted. Then someone applied the technique to the Burn, which was threatening a settlement. Then to a local harvest spirit that was demanding too many offerings. Then to anything inconvenient. The divine ecosystem is collapsing. Gods are going silent. The Silence — the concept god of quiet and secrets — is the only one growing, and it's growing because absence itself has become the dominant force.",
+      "feels_like": "Deforestation. You cut one tree because you needed the wood. Then another. Then you look up and the forest is gone and the rain stopped coming. Ecological collapse, but the ecology was divine.",
+      "branches_into": [
+        "the_godless_age",
+        "endgame_silence"
+      ]
+    },
+    {
+      "id": "the_road_wars",
+      "name": "The Road Wars",
+      "type": "era",
+      "parent": "age_of_wandering",
+      "condition": "Network becomes contested + settled powers try to control routes",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The river routes became too valuable. When the Rootwalker network was the only reliable trade system, nobody attacked it because everyone needed it. Now the Senate wants to tax it. The Forge Council wants to fortify it. The Consortium wants to buy it. The Rootwalkers don't think you can own a river, and they're about to learn that ownership is just a word for 'the person with the most soldiers.'",
+      "feels_like": "The Silk Road when empires started fighting over it. Infrastructure as the prize of war. The thing that connected everyone becomes the thing everyone fights over.",
+      "branches_into": [
+        "the_great_meeting",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_settling",
+      "name": "The Settling",
+      "type": "era",
+      "parent": "age_of_wandering",
+      "condition": "Walking generation grows older + need for permanence",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The walkers got tired. Not of walking — of raising children on the road. The Walking Generation that left settled life in idealistic youth is now middle-aged, and their children need schools, not songs. The great irony: the movement that rejected settlement is building settlements. They call them 'crossroads' instead of 'towns.' The difference is philosophical. The plumbing is the same.",
+      "feels_like": "Kibbutz movement evolving from radical communes to suburbs. The revolutionary generation discovering that their children want stability. Idealism meeting biology.",
+      "branches_into": [
+        "the_river_republic",
+        "endgame_default"
+      ]
+    },
+    {
+      "id": "the_song_breaks",
+      "name": "The Song Breaks",
+      "type": "era",
+      "parent": "age_of_wandering",
+      "condition": "Song of the Cracked Stone fragments into incompatible versions",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Song of the Cracked Stone was supposed to be a shared anthem. Instead, it became a hundred songs. Every camp sings it differently. Every version claims to be the original. Vaya's composition — designed to unite — has splintered into a sectarian mess. The Rootwalkers who can't agree on the words can't agree on anything else either. The thing that held the network together is tearing it apart.",
+      "feels_like": "The Protestant Reformation's first century. A shared text interpreted differently by every reader, each interpretation becoming an identity. The book that united becomes the book that divides.",
+      "branches_into": [
+        "the_great_scattering",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_outside_arrives",
+      "name": "The Outside Arrives",
+      "type": "era",
+      "parent": "the_slow_rot",
+      "condition": "Something from beyond the known world enters during decline",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "While the continent rotted, something grew in the margins. The deep Oldwood. The far coast. Under the Ashfield. It's not the Tideborn — the Tideborn are people. This is something else. Something that makes the factions' decay irrelevant because the category 'faction' doesn't apply to what's coming.",
+      "feels_like": "The asteroid that killed the dinosaurs. Not malicious — just indifferent to everything that matters to you. A force operating on a different scale entirely.",
+      "branches_into": [
+        "endgame_mutual_destruction",
+        "endgame_silence"
+      ]
+    },
+    {
+      "id": "the_desperate_gambit",
+      "name": "The Desperate Gambit",
+      "type": "era",
+      "parent": "the_slow_rot",
+      "condition": "One faction makes a wild play to restart everything",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Desperation makes people creative. Someone — a faction leader, a rogue scholar, a vessel the player-god is guiding — tries something unprecedented. Maybe they deliberately create a crisis to wake people up. Maybe they open a sealed ruin. Maybe they pray to a god nobody has prayed to in centuries. The gambit is dangerous and possibly insane and it's the first time anyone has TRIED in a generation.",
+      "feels_like": "Hail Mary pass. The gambler's last chip. It might save everything. It might accelerate the collapse. The only thing worse than the gambit is not taking it.",
+      "branches_into": [
+        "the_awakening",
+        "endgame_mutual_destruction"
+      ]
+    },
+    {
+      "id": "the_second_rot",
+      "name": "The Second Rot",
+      "type": "era",
+      "parent": "the_awakening",
+      "condition": "Awakening fails to take root + old patterns reassert",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "It happened again. Different names, same pattern. The awakening burned bright and burned the people carrying it. The reforms fought each other. The old guard waited patiently and returned wearing new clothes. The rot is back, and this time it knows how to survive an awakening.",
+      "feels_like": "A relapse. The second time is worse because you know it doesn't have to be this way.",
+      "branches_into": [
+        "endgame_second_rot",
+        "endgame_default"
+      ]
+    },
+    {
+      "id": "genuine_peace",
+      "name": "The Early Peace",
+      "type": "era",
+      "parent": "the_golden_compromise",
+      "condition": "Compromise deepens fast + no major disruptions + player invested heavily",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Peace came earlier than anyone expected. The Compromise didn't just hold — it flourished. Intermarriage, shared institutions, joint festivals. It's fragile and young and nobody fully trusts it. But it's real. The question: can you protect something this new from everything that wants to break it?",
+      "feels_like": "The first year of a ceasefire that might become permanent. Everyone is careful. Everyone is hopeful. Everyone is watching the exits.",
+      "branches_into": [
+        "the_long_peace",
+        "the_old_wounds"
+      ]
+    },
+    {
+      "id": "the_betrayal",
+      "name": "The Betrayal",
+      "type": "era",
+      "parent": "the_golden_compromise",
+      "condition": "One faction secretly undermines the compromise for advantage",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "Someone cheated. The Compromise had terms. Someone broke them — quietly, deniably, profitably. When it comes to light, the damage isn't just material. It's trust. The entire framework of cooperation was built on the assumption that agreements would be honored. One betrayal and the assumption is gone, and the assumption was load-bearing.",
+      "feels_like": "The Molotov-Ribbentrop Pact breaking. A betrayal that surprises nobody and devastates everyone because the lie was comfortable and the truth is not.",
+      "branches_into": [
+        "the_old_wounds",
+        "endgame_mutual_destruction"
+      ]
+    },
+    {
+      "id": "the_regulated_peace",
+      "name": "The Regulated Peace",
+      "type": "era",
+      "parent": "the_merchant_wars",
+      "condition": "Factions impose regulations on trade to prevent another war",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "They built rules to prevent the Merchant Wars from happening again. Tariffs, trade limits, enforced fairness. It works. Nobody is getting catastrophically rich. Nobody is getting catastrophically poor. And nobody is innovating, because innovation threatens the balance, and the balance is all they have.",
+      "feels_like": "Bretton Woods. Post-war regulatory framework. Stability at the cost of dynamism. The question: is a world where nothing terrible happens worth it if nothing wonderful happens either?",
+      "branches_into": [
+        "endgame_genuine_peace",
+        "endgame_complacent_fall"
+      ]
+    },
+    {
+      "id": "the_diaspora",
+      "name": "The First Exodus",
+      "type": "era",
+      "parent": "the_walls_crack",
+      "condition": "Young smiths leave before the walls fully crack",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "They left through the cracks. Not the dramatic collapse — the slow leak. One smith at a time, packing tools, slipping through the gap in the quarantine wall that nobody repairs anymore. Each one carrying techniques Thornwall considered sacred. Each one making the walls less necessary by making Thornwall less unique.",
+      "feels_like": "Brain drain. East Germany before the wall. The best people leaving first because the best people can.",
+      "branches_into": [
+        "the_northern_diaspora",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_reformation",
+      "name": "The Iron Reformation",
+      "type": "era",
+      "parent": "the_walls_crack",
+      "condition": "Internal revolt succeeds + Forge Council restructured",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The Council fell. Not to an army — to a vote. The young smiths outnumbered the old masters, and for the first time in Thornwall's history, they used that majority. The new Council writes techniques down. Opens the forges. Invites southern scholars. Everything the old masters feared. The question: was the fear justified? Is Thornwall still Thornwall if anyone can learn its secrets?",
+      "feels_like": "Vatican II. The institution reforming itself from within. Genuine improvement that feels like loss to the people who loved what came before.",
+      "branches_into": [
+        "endgame_reformation",
+        "endgame_synthesis"
+      ]
+    },
+    {
+      "id": "the_civil_war",
+      "name": "The Forge War",
+      "type": "era",
+      "parent": "the_walls_crack",
+      "condition": "Crack becomes violent + old guard vs reformers",
+      "runs": "7-10",
+      "years": "200-350",
+      "tension": "The crack became a break and the break became a war. Old masters vs young innovators, fought with the finest weapons in the world, inside the finest fortress in the world. Every blade on both sides was forged in the same tradition. The irony is lost on nobody and changes nothing.",
+      "feels_like": "The English Civil War. The American Civil War. Families split by principle. The worst wars are the ones where both sides know each other's names.",
+      "branches_into": [
+        "the_iron_empire",
+        "endgame_fragmentation"
+      ]
+    },
+    {
+      "id": "the_converted_enemy",
+      "name": "The Converted Enemy",
+      "type": "era",
+      "parent": "the_iron_crusade",
+      "condition": "Conquered peoples adopt and transform the Iron Doctrine",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "The crusade conquered. The conquered adapted. And then the conquered became better at the doctrine than the conquerors. Southern scholars applied the Iron Doctrine with analytical rigor. Bridge Folk merged it with their hybrid philosophy. The thing Thornwall tried to impose was taken, improved, and handed back — and the improved version made the original look provincial.",
+      "feels_like": "Rome conquering Greece and being conquered by Greek culture. The conquered transforming the conqueror's identity. The sword becomes a plowshare becomes a better sword.",
+      "branches_into": [
+        "endgame_synthesis",
+        "endgame_alliance_with_cost"
+      ]
+    },
+    {
+      "id": "the_divine_compromise",
+      "name": "The Divine Compromise",
+      "type": "era",
+      "parent": "the_divine_reckoning",
+      "condition": "Gods and mortals reach an uneasy truce without full partnership",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "Not a covenant — a ceasefire. The gods agree to limit their interference. Mortals agree to maintain baseline worship. Nobody's happy. Everybody's alive. The compromise satisfies the pragmatists and infuriates the idealists on both sides. It's the theological equivalent of an unhappy marriage that persists because divorce is worse.",
+      "feels_like": "The Peace of Westphalia. Nobody got what they wanted. Everybody got enough to stop fighting. The compromise defines the next century not by what it achieved but by what it prevented.",
+      "branches_into": [
+        "endgame_alliance_with_cost",
+        "endgame_complacent_fall"
+      ]
+    },
+    {
+      "id": "the_song_war",
+      "name": "The Song War",
+      "type": "era",
+      "parent": "the_great_meeting",
+      "condition": "Different song traditions compete for cultural dominance at the Meeting",
+      "runs": "10-14",
+      "years": "350-500",
+      "tension": "The Meeting was supposed to unify. Instead, three competing song-traditions each claim to be the authentic voice of the river. It's not a war with weapons — it's a war with music. Each tradition sings louder, composes more, trains more singers. The river is full of song and none of it harmonizes. The Drift god is confused. The Tideborn Listener is amused. Everyone else is deafened.",
+      "feels_like": "The Great Schism between Catholic and Orthodox. A shared tradition splitting over questions of form, authority, and authenticity. The content is almost identical. The disagreement is absolute.",
+      "branches_into": [
+        "the_great_scattering",
+        "endgame_fragmentation"
+      ]
     }
   ],
   "design_notes": [
