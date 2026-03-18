@@ -1,0 +1,13 @@
+{
+  "id": "read_the_edge",
+  "name": "Read the Edge",
+  "energy_cost": "1",
+  "attunement": "sense",
+  "source": "trait",
+  "trait_required": "adapted",
+  "damage": "0",
+  "target": "all_enemies",
+  "special_effect": "Reveal all enemy intents for this turn AND the next turn. If fighting near a boundary (Ashfield Rim, the Foot, trade quarter border): also reveal hidden enemies.",
+  "flavor_text": "You grew up where two things meet. You learned to read both directions at once. The edge teaches you what's coming before it arrives.",
+  "tags": ["utility", "sense", "information", "adapted_trait", "boundary"]
+}
