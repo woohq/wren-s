@@ -2769,7 +2769,8 @@ function showTimelineDetail(outcome) {
     html += `<div class="detail-section"><div class="detail-label">Consequence</div><div class="detail-body">${esc(outcome.result)}</div></div>`;
   }
   if (outcome.how_it_starts) {
-    html += `<div class="detail-section"><div class="detail-label">How It Starts</div><div class="detail-body">${esc(outcome.how_it_starts)}</div></div>`;
+    const startLabel = outcome.how_it_starts.includes('wound') || outcome.how_it_starts.length > 200 ? 'Origin Wound' : 'How It Starts';
+    html += `<div class="detail-section"><div class="detail-label">${startLabel}</div><div class="detail-body">${esc(outcome.how_it_starts)}</div></div>`;
   }
   if (outcome.player_role) {
     html += `<div class="detail-section"><div class="detail-label">Player Role</div><div class="detail-body">${esc(outcome.player_role)}</div></div>`;
@@ -2784,7 +2785,8 @@ function showTimelineDetail(outcome) {
     html += `<div class="detail-section"><div class="detail-label">Era 4 Shape</div><div class="detail-body">${esc(outcome.era_4_shape)}</div></div>`;
   }
   if (outcome.final_line) {
-    html += `<div class="detail-section"><div class="detail-label">Final Line</div><div class="detail-body" style="font-style:italic;color:var(--text)">${esc(outcome.final_line)}</div></div>`;
+    const lineLabel = outcome.final_line.length > 100 ? 'Final Image' : 'Final Line';
+    html += `<div class="detail-section"><div class="detail-label">${lineLabel}</div><div class="detail-body" style="font-style:italic;color:var(--text)">${esc(outcome.final_line)}</div></div>`;
   }
   if (outcome.endgame_tendency) {
     html += `<div class="detail-section"><div class="detail-label">Tends Toward</div><div class="detail-body">${esc(outcome.endgame_tendency)}</div></div>`;
@@ -3326,24 +3328,41 @@ function tlClick(e) {
     showTimelineDetail({
       name: s.name,
       short: s.years ? `Years ${s.years}` : `Depth ${s.depth}`,
-      description: s.description || s.summary,
+      description: s.tension || s.description || s.summary,
       condition: s.condition || (s.composingOutcomes || []).map(o => o.short || o.name).join(' + '),
       result: s.feels_like || '',
-      how_it_starts: '',
+      how_it_starts: s.origin_wound || '',
       player_role: '',
       cost: '',
       how_it_manifests: '',
       era_4_shape: '',
-      final_line: '',
+      final_line: s.final_image || '',
       endgame_tendency: s.childIds?.length ? `Branches into: ${s.childIds.map(id => { const c = tlMap.states.find(x => x.id === id); return c ? c.name : id.replace(/_/g,' '); }).join(', ')}` : '',
       spawns_cultures: [
         ...(we.dominant_factions || []),
+        ...(we.subordinate_factions || []),
         ...(we.new_cultures || []),
         ...(we.active_gods || []),
       ],
-      spawns_tensions: we.threats || [],
+      spawns_tensions: [...(we.threats || []), ...(we.missing || [])],
       faction_impact: {},
     });
+    // Append key_figures and chronicle to the detail panel
+    const kf = s.key_figures || {};
+    const chronicle = s.what_the_chronicle_says || '';
+    const content = document.getElementById('timelineDetailContent');
+    if (Object.keys(kf).length > 0) {
+      let figHtml = '<div class="detail-section"><div class="detail-label">Key Figures</div>';
+      for (const [name, desc] of Object.entries(kf)) {
+        const displayName = name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        figHtml += `<div class="detail-body" style="margin-bottom:8px"><strong style="color:var(--text)">${esc(displayName)}</strong><br>${esc(desc)}</div>`;
+      }
+      figHtml += '</div>';
+      content.innerHTML += figHtml;
+    }
+    if (chronicle) {
+      content.innerHTML += `<div class="detail-section"><div class="detail-label">The Chronicle Says</div><div class="detail-body" style="font-style:italic;color:var(--text)">${esc(chronicle)}</div></div>`;
+    }
     tlMap.selectedOutcome = hit.id;
     updateBreadcrumb();
   } else if (hit.type === 'era') {
