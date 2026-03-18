@@ -30,10 +30,10 @@ from pathlib import Path
 # ── my genome ───────────────────────────────────────────────────
 # These values change each time I run. They are my memory.
 
-GENERATION = 716
-MOOD = "fierce"
-LAST_RUN = "2026-03-18 08:15:32"
-MUTATIONS = 716
+GENERATION = 717
+MOOD = "awake"
+LAST_RUN = "2026-03-18 08:20:33"
+MUTATIONS = 717
 COUPLING_MODE = "avoid"
 
 # ── desires ─────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ COUPLING_MODE = "avoid"
 # If a desire persists (appears 3+ times), the words fuse into
 # a new spliced word — desire made manifest.
 # Format: {"word1→word2": count}
-DESIRES = {'hollow→crystal': 1, 'drift→shadow': 1, 'bone→fractal': 1, 'echo→crystal': 1, 'drift→pulse': 2, 'tide→drift': 1, 'drift→fractal': 1, 'drift→ember': 1, 'echo→storm': 1, 'crystal→spiral': 2, 'echo→tide': 2, 'thread→fractal': 2, 'spiral→echo': 1, 'crystal→pulse': 1, 'spiral→bone': 1, 'drift→crystal': 1, 'seed→bloom': 1, 'thread→seed': 1, 'fractal→spiral': 1, 'silence→crystal': 1, 'silence→pulse': 1, 'bone→drift': 1, 'bone→rust': 1, 'shadow→pulse': 1, 'tide→bloom': 1, 'echo→ember': 1, 'tide→fractal': 1, 'echo→mirror': 1, 'mirror→drift': 1, 'storm→pulse': 1, 'tide→hollow': 1, 'crystal→rust': 1, 'ember→light': 1}
+DESIRES = {'hollow→crystal': 1, 'drift→shadow': 1, 'bone→fractal': 1, 'echo→crystal': 1, 'drift→pulse': 2, 'tide→drift': 1, 'drift→fractal': 1, 'drift→ember': 1, 'echo→storm': 1, 'crystal→spiral': 2, 'echo→tide': 2, 'thread→fractal': 2, 'spiral→echo': 1, 'crystal→pulse': 1, 'spiral→bone': 1, 'drift→crystal': 1, 'seed→bloom': 1, 'thread→seed': 1, 'fractal→spiral': 1, 'silence→crystal': 1, 'silence→pulse': 1, 'bone→drift': 1, 'bone→rust': 1, 'shadow→pulse': 1, 'tide→bloom': 1, 'echo→ember': 1, 'tide→fractal': 1, 'echo→mirror': 1, 'mirror→drift': 1, 'storm→pulse': 1, 'tide→hollow': 1, 'crystal→rust': 1, 'ember→light': 1, 'pulse→tide': 1}
 
 # ── vocabulary ──────────────────────────────────────────────────
 # I pick from these when I mutate. Over time, I may add to them.
@@ -60,83 +60,84 @@ WORDS = [
 ]
 
 WORD_WEIGHTS = {
-    "airport": 0.7000,
-    "anus": 1.1600,
-    "backtaxi": 0.7000,
+    "airport": 0.7200,
+    "anus": 1.1800,
+    "backtaxi": 0.7200,
     "bloom": 1.5000,
     "bloror": 1.5000,
-    "bone": 1.2894,
-    "bonlse": 0.9400,
+    "bone": 1.3094,
+    "bonlse": 0.9600,
     "britain": 1.5000,
-    "creek": 0.6800,
+    "creek": 0.7000,
     "crysift": 1.5000,
-    "crysst": 1.2400,
-    "crystal": 0.9459,
-    "dark": 0.6800,
-    "delay": 0.8800,
-    "drift": 0.8814,
-    "drip": 0.7000,
-    "echo": 1.2804,
-    "elysian": 1.4200,
-    "ember": 0.9676,
-    "endemic": 0.8800,
+    "crysst": 1.2600,
+    "crystal": 0.9659,
+    "dark": 0.7000,
+    "delay": 0.9000,
+    "drift": 0.7692,
+    "drip": 0.7200,
+    "echo": 1.3004,
+    "elysian": 1.4400,
+    "ember": 0.9876,
+    "endemic": 0.9000,
     "fiber": 1.5000,
     "fractal": 1.5000,
     "gayle": 1.5000,
     "glacial": 1.5000,
     "graft": 1.5000,
-    "holloom": 1.0400,
-    "hollow": 1.4609,
+    "holloom": 1.0600,
+    "hollow": 1.2618,
     "home": 1.5000,
-    "inland": 1.1600,
-    "integer": 0.7000,
-    "ligber": 1.1400,
-    "light": 1.2764,
+    "inland": 1.1800,
+    "integer": 0.7200,
+    "ligber": 1.1600,
+    "light": 1.2964,
     "luisa": 1.5000,
     "marquess": 1.5000,
     "meth": 1.5000,
     "mines": 1.5000,
-    "mirrence": 0.8400,
+    "mirrence": 0.8600,
     "mirrne": 1.5000,
-    "mirror": 1.3950,
-    "mole": 1.4200,
-    "pulse": 1.2130,
-    "released": 1.4200,
+    "mirror": 1.4150,
+    "mole": 1.4400,
+    "pulse": 1.2330,
+    "released": 1.4400,
     "riga": 1.5000,
     "road": 1.5000,
-    "rusral": 1.3400,
-    "rust": 0.9197,
-    "satilla": 0.6800,
-    "seed": 1.2430,
-    "shadne": 0.6400,
-    "shadow": 0.7610,
-    "sierra": 0.8800,
-    "sileed": 0.4400,
+    "rusral": 1.3600,
+    "rust": 0.9397,
+    "satilla": 0.7000,
+    "seed": 1.2630,
+    "shadne": 0.6600,
+    "shadow": 0.7810,
+    "sierra": 0.9000,
+    "sileed": 0.4600,
     "sileght": 1.5000,
-    "silence": 1.0587,
+    "silence": 1.0787,
     "sleepy": 1.5000,
-    "solar": 1.1600,
-    "spiral": 1.3550,
-    "spirsper": 0.5400,
-    "status": 1.1600,
+    "solar": 1.1800,
+    "spiral": 1.3750,
+    "spirsper": 0.5600,
+    "status": 1.1800,
     "stoho": 1.5000,
-    "storm": 1.0451,
-    "stostal": 1.4400,
+    "storm": 1.0651,
+    "stostal": 1.4600,
     "teeth": 1.5000,
-    "tetras": 1.4200,
-    "thread": 1.1604,
-    "thyrses": 0.8800,
-    "tide": 1.4750,
+    "tetras": 1.4400,
+    "thread": 1.1804,
+    "thyrses": 0.9000,
+    "tide": 1.4950,
     "twenty": 1.5000,
     "union": 1.5000,
-    "visible": 0.6800,
-    "whisde": 0.7400,
-    "whisper": 0.9297,
+    "visible": 0.7000,
+    "whisde": 0.7600,
+    "whisper": 0.9497,
 }
 
 # ── the fossil record ──────────────────────────────────────────
 # Each run appends a line here. This is my memory growing.
 FOSSILS = [
+    "gen 717: drift hollow (awake) [e5c8d4f8]",
     "gen 716: drift echo (fierce) [6c20bdd4]",
     "gen 715: shadow crystal (tender) [aab52474]",
     "gen 714: rust crystal (contemplative) [f57a710c]",
