@@ -1,35 +1,19 @@
 {
-  "name": "The Ash Tenders",
-  "era": "the_first_era",
-  "values": [
-    "patience",
-    "observation",
-    "neutrality",
-    "survival"
-  ],
-  "naming_pool": "slavic",
-  "archetype_tendencies": [
-    "priest_s_apprentice",
-    "wanderer_s_child"
-  ],
-  "trait_tendencies": [
-    "perceptive",
-    "cautious",
-    "stubborn"
-  ],
-  "worship_tendency": [
-    "the_deep",
-    "the_burn"
-  ],
-  "technology": "pre_bronze",
-  "description": "A small community that lives ON the Ashfield. Not at its edges — on it. They've been there longer than anyone can account for, in stone shelters half-buried in volcanic dust. They tend the vents the way farmers tend fields — reading the steam patterns, predicting eruptions, harvesting minerals deposited by the heat. Other cultures consider them insane. They consider other cultures impatient. They were the first to notice the Ashfield was changing.",
-  "tags": [
-    "small_culture",
-    "ashfield",
-    "neutral",
-    "observers",
-    "first_era"
-  ],
   "id": "the_ash_tenders",
-  "created": "2026-03-17T21:30:45"
+  "name": "The Ash Tenders",
+  "era": "era_1_through_endgame",
+  "values": ["patience", "observation", "boundary-dwelling", "conversation with the inhuman"],
+  "naming_pool": "slavic",
+  "archetype_tendencies": ["priest_s_apprentice", "wanderer_s_child"],
+  "trait_tendencies": ["perceptive", "cautious", "adapted", "cough_resistant"],
+  "worship_tendency": ["the_ashfield_god (relationship, not worship)", "the_burn (the volcanic heat predates the fear-god)"],
+  "technology": "mineral_harvesting",
+  "description": "The Ash Tenders live at the Rim — the boundary zone where the Ashfield god's toxic presence tapers into livable air. Not inside the Ashfield (death) and not outside it (ordinary). At the exact edge where the two meet. They're the mussels on the rim of a brine pool: thriving not despite the toxicity but because of what the toxicity provides.\n\nThe Rim's soil is the richest on the continent — volcanic minerals fed by the Ashfield god's presence. The springs carry compounds that make the Tenders' herbs more potent than anything the healers' guild produces. The crops grow faster here than anywhere. The cost: everyone coughs. The Ash Cough is endemic on the Rim. The longtime residents cough less — adaptation across generations, or the fear-god learning to tolerate the people who tolerate it.\n\nThe Ash Tenders don't worship the Ashfield god. They talk to it. Daily. The way Ossa did for sixty years and Sarai did for twenty. Not prayer — conversation. They describe their day. They describe the world from the human side. The god responds in shifted wind patterns, reduced Cough intensity, the quality of the ash-fall. The Tenders read these signs the way sailors read weather.\n\nOther cultures consider them eccentric at best, insane at worst. The Ash Tenders consider other cultures afraid of what they don't understand. The difference: the Tenders have a relationship with the thing other cultures want to destroy or flee. The relationship is the point. The boundary is the ecosystem.",
+  "historical_figures": {
+    "ossa": "The elder who first understood the Ashfield god was confused, not malicious. Sixty years of conversation. Vindicated when the Age of Questions proved her right — co-opted when everyone wanted her knowledge as a weapon.",
+    "sarai": "Ossa's spiritual successor. Twenty years at the Rim. Wrote the first divine Covenant in blood. The fermentation approach: change the conditions, wait."
+  },
+  "the_boundary_principle": "The Ash Tenders are the living proof that boundaries between extremes are ecosystems, not problems. They don't try to solve the Ashfield — they inhabit the edge of it. The richest life forms at the boundary. Remove the toxicity (through unworship) and the boundary ecosystem dies — the soil loses its minerals, the herbs lose their potency, the Cough stops but so does everything the Cough's proximity provided. The Tenders understand this instinctively: the god is not the enemy. The boundary is the home.",
+  "arc": "Present from Era 1 through the endgame. In the Foundation they're a curiosity. In the Age of Questions they become essential — the only people with a working relationship with a god. In the New Covenant, Sarai formalizes what the Tenders always did informally. In the Silence Falls, if the Ashfield god is unworsipped, the Tenders lose everything — not because the god dies but because the boundary that sustained them dissolves. In the Ember in Ash, if any Tenders survive, they're the people most likely to know how to live at the edge of nothing.",
+  "tags": ["boundary_culture", "ashfield", "divine_relationship", "brine_pool_analogy", "every_era", "fermentation_principle"]
 }
