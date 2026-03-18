@@ -1,0 +1,16 @@
+{
+  "name": "One Eye",
+  "energy_cost": "0",
+  "source": "wound",
+  "special_effect": "All targeted attacks have -10% accuracy. But Sense-based cards gain +1 Insight (you learned to compensate).",
+  "flavor_text": "Depth perception is a luxury. You traded it for a lesson in what a blade can do to a face.",
+  "tags": [
+    "wound",
+    "negative",
+    "permanent",
+    "eye_loss",
+    "compensation"
+  ],
+  "id": "one_eye",
+  "created": "2026-03-17T19:26:28"
+}

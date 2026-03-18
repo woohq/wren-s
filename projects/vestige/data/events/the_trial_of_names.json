@@ -1,0 +1,10 @@
+{
+  "id": "the_trial_of_names",
+  "name": "The Trial of Names",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": ["noble_s_bastard", "priest_s_apprentice"],
+  "faction_present": ["the_solmari_senate"],
+  "text": "In Solmare, children are tested at seven. Not for strength or speed. For memory.\n\nThe Trial of Names is held in the Forum of Echoes, a circular chamber where the acoustics make a whisper carry to every seat. Families attend. Senators attend, when they have nothing more important, which is rarely, but today two of them are present because the Consul's grandson is among the children and appearances must be maintained.\n\nThe test is this: an elder reads a list of forty names. Former senators, poets, generals, traitors. The child must repeat them back. Not in order — in order of importance, as judged by the elder.\n\nThe trick, which nobody tells you, is that there is no correct order. The elder is watching how you CHOOSE to rank them. The child who puts generals first is noted. The child who puts poets first is noted differently. The child who asks 'important to whom?' is noted most carefully of all.\n\nYou are seven. You stand in the Forum and the names wash over you. Forty strangers, all dead, all supposedly mattering. You repeat thirty-six of them. You miss four.\n\nThe elder asks why you ordered them the way you did. You don't have a good answer. You ordered them by how interesting their names sounded. The elder writes something down. You can't see what.\n\nYour father — or the man who might be your father, depending on which story you believe — is not in the audience. Your stepmother is. She watches you the way she watches the household accounts: assessing value.",
+  "tags": ["childhood", "sunward_courts", "political", "education", "test", "noble", "priest"]
+}

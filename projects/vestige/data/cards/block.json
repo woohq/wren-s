@@ -1,0 +1,16 @@
+{
+  "name": "Block",
+  "energy_cost": "1",
+  "source": "attunement",
+  "armor": "5",
+  "target": "self",
+  "flavor_text": "The second thing you learn is that being hit hurts less if you see it coming.",
+  "tags": [
+    "basic",
+    "universal",
+    "defense",
+    "starter"
+  ],
+  "id": "block",
+  "created": "2026-03-17T19:25:49"
+}

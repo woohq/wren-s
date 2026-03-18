@@ -1,0 +1,87 @@
+{
+  "name": "The Broken Oath",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["any"],
+  "trait_requires_any": ["honor_bound", "brave", "stubborn"],
+  "text": "Your friend stole from the forge. Not much — a half-finished blade, barely worth the iron. But the Forge Council doesn't measure theft in value. They measure it in principle.\n\nThey've called a reckoning. Your friend stands in the square, hands behind his back, trying to look like he isn't shaking. The Council Master asks if anyone will speak for him.\n\nThe square is very quiet. Your friend's eyes find yours. He doesn't ask. He doesn't need to. You grew up together. You know what his eyes mean.\n\nSpeaking for him means vouching — if he steals again, YOU bear the punishment. The Council is very specific about this. Your word becomes his leash, and if it breaks, so does your standing.",
+  "choices": [
+    {
+      "text": "Step forward. Speak for him. Your word against his future.",
+      "requires": {"trait_any": ["honor_bound", "brave"]},
+      "effects": {
+        "relationship_change": {"friend": 20},
+        "trait_gain": "oath_burdened",
+        "faction_rep": {"the_forge_council": -5}
+      },
+      "consequence_text": "Your voice doesn't shake. His does, after — when the crowd has gone and it's just you two behind the forge, and he says 'I won't forget this' in a way that could mean gratitude or warning.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_second_theft",
+            "delay": "years",
+            "description": "He steals again. Not from the forge — something bigger, from someone more dangerous. Your oath activates. The Council comes for you."
+          },
+          {
+            "id": "the_oath_repaid",
+            "delay": "same_era",
+            "description": "He doesn't steal again. Years later, when you're the one in trouble, he steps forward for you. The same square. The same silence. His voice doesn't shake either."
+          }
+        ],
+        "world_changes": ["The square remembers. People in Thornwall noticed who stepped forward and who didn't. Vouching for a thief is either the bravest or the stupidest thing you've done. Both interpretations persist."]
+      }
+    },
+    {
+      "text": "Stay silent. He made his choice. You didn't make it for him.",
+      "effects": {
+        "relationship_change": {"friend": -15},
+        "trait_gain": "pragmatic"
+      },
+      "consequence_text": "He doesn't look at you again. Not during the sentencing. Not during the three days in the stockade. Not when he leaves Thornwall with everything he owns in a sack, which isn't much. You hear later he went south. You don't hear anything after that. The silence where his friendship was becomes a room you learn not to enter.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_southern_stranger",
+            "delay": "next_era",
+            "description": "A man arrives in Thornwall from the south. He's done well — merchant's clothes, steady hands, a name people recognize in trade circles. He asks about you by the name he used to call you, which nobody has used since he left."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_exiled_friend",
+            "description": "Your childhood friend who stole from the forge and was exiled. He went south. He survived. What he became depends on whether the south was kind to him or not."
+          }
+        ],
+        "world_changes": ["One fewer person in Thornwall. One more in the south. The scale barely moves. But the empty space where he slept is noticeable for longer than you'd expect."]
+      }
+    },
+    {
+      "text": "Speak — but lie. Claim he was working on a commission you ordered. Cover for him without vouching.",
+      "requires": {"trait": "cunning"},
+      "effects": {
+        "relationship_change": {"friend": 10},
+        "trait_gain": "liar",
+        "knowledge_gain": "deception_works"
+      },
+      "consequence_text": "The lie works. It's a good lie — specific enough to be believable, vague enough to be uncheckable. The Council Master narrows his eyes but accepts it. Your friend walks free. Nobody is bound. But you felt something shift when the words left your mouth. A door opened that you can't close. You now know exactly how easy it is to reshape truth, and that knowledge sits in you like a coal that hasn't decided whether to go out or catch.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_council_masters_memory",
+            "delay": "years",
+            "description": "The Council Master never forgot the commission story. He checked. There was no commission. He's been watching you since. Not with hostility — with the careful attention of a man who recognizes a useful skill and hasn't decided whether it's a threat or a resource."
+          },
+          {
+            "id": "the_friend_who_knows",
+            "delay": "same_era",
+            "description": "Your friend knows you lied for him. He's the only person who knows what you're capable of. That makes him either your closest ally or your biggest liability."
+          }
+        ],
+        "world_changes": ["The Council Master's trust in you shifted. Not broken — recalibrated. He treats you slightly differently. More carefully. The way you handle someone who might be more interesting than they appear."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "choice", "honor", "friendship", "consequence", "forge_council", "chain_root"],
+  "id": "the_broken_oath",
+  "created": "2026-03-17T19:15:52"
+}

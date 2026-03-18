@@ -1,0 +1,24 @@
+{
+  "name": "The Forge Council",
+  "type": "guild",
+  "goal": "Maintain the Iron Holds' independence and the primacy of the craft. The forge is sacred — its techniques are secrets passed master to apprentice, never written.",
+  "territory": [
+    "thornwall"
+  ],
+  "leadership": "Seven master smiths, elected by their peers. Decisions require five of seven. The Council has governed Thornwall for as long as anyone remembers.",
+  "resources": "Iron ore access, master craftsmen, fortified mountain position, trade in high-quality weapons and tools",
+  "worship_generates": "Reverence for craft. The Forge Council is beginning to accumulate Devotion not as individuals but as an institution — the idea of The Forge is becoming something people worship.",
+  "description": "Part trade guild, part government, part religious order. The Forge Council believes that making things is the closest mortals get to divinity. They're not wrong — the accumulated worship of 'the craft' is building toward something. Whether that something is a god or an institution depends on which way belief tips.\n\nBut the Council is not a monolith. Younger smiths who've handled southern steel want to learn from it — they see isolation as stagnation, not strength. The old masters see any outside influence as dilution of techniques that took centuries to develop. Both sides have a point. The young are right that isolation breeds fragility. The old are right that opening the forge to outsiders means losing the thing that makes Thornwall's steel worth stealing.\n\nThe Council's greatest flaw: they conflate craft with identity so completely that any threat to one is a threat to both. A smith who can't forge is nothing. A Thornwall that trades its secrets is nothing. This makes them principled AND brittle — the kind of principled that breaks rather than bends.",
+  "internal_divisions": "Young innovators vs old purists. Smiths who want southern trade routes vs masters who consider southern steel an insult. A quiet faction who wonder if the Forge Council has become more 'council' than 'forge' — bureaucrats wearing aprons.",
+  "acknowledged_flaw": "Conflates craft with identity. Cannot separate who they are from what they make. This makes adaptation feel like self-destruction.",
+  "tags": [
+    "northern",
+    "craft",
+    "political",
+    "guild",
+    "worship_institution",
+    "first_era"
+  ],
+  "id": "the_forge_council",
+  "created": "2026-03-17T18:56:20"
+}

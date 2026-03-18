@@ -1,0 +1,18 @@
+{
+  "name": "Leather Cuirass",
+  "type": "armor",
+  "description": "Boiled leather over a wool shirt. It won't stop a sword. It will make the sword's owner wish they'd hit harder. The difference between 'fatal' and 'survivable' is often exactly this much leather.",
+  "cards_granted": [
+    "tough_hide"
+  ],
+  "rarity": "common",
+  "tags": [
+    "armor",
+    "leather",
+    "common",
+    "starter",
+    "light"
+  ],
+  "id": "leather_cuirass",
+  "created": "2026-03-17T19:33:02"
+}

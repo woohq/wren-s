@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_blacksmith",
+  "name": "The Well (Blacksmith Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["blacksmith_s_child"],
+  "callback_detail": "Seri carries the second bucket without being asked. The silence between you on the walk back.",
+  "text": "The well is further than you thought. Your arm is in a sling — forge accident, nothing serious, but carrying two buckets of water up a hill with one working arm is the kind of task that turns simple into impossible.\n\nYou're about to set the second bucket down and come back for it when Seri appears. She doesn't say anything. She takes the second bucket in the hand that isn't holding her map-notebook, and starts walking.\n\nThe hill is steep. The water is heavy. Neither of you talks. The only sounds are boots on gravel and water sloshing against tin.\n\nHalfway up, she adjusts her grip and her notebook slips. She catches it with her chin, pressing it against her shoulder, still carrying the bucket, still walking. You'd laugh if it wasn't the most stubborn thing you've ever seen.\n\nAt the top, she puts the bucket down and retrieves her notebook from its chin-perch. There's a wet mark on the cover where the bucket handle dripped.\n\n'Thanks,' you say.\n\n'The well is too far,' she says. Which isn't a response to your thanks but is, somehow, exactly the right thing to say.\n\nYou'll remember this when everything else about being twelve fades. Not the words. The silence on the walk up. The way help arrived without being asked and left without being thanked and was, because of that, the purest form of it you'd ever known.",
+  "tags": ["relationship", "childhood_friend", "bonding", "blacksmith", "seri", "shared_trial", "silence"]
+}

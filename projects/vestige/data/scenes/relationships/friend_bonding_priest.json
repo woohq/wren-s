@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_priest",
+  "name": "The Night Library (Priest Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["priest_s_apprentice"],
+  "callback_detail": "The restricted shelf. The book with the torn spine. What was written on page forty-three.",
+  "text": "Sera found the restricted shelf.\n\nNot the one with the locked gate that everyone knows about — the other one. Behind the histories, past the commentaries on the commentaries, there's a section where the spines are turned inward so you can't read the titles. She discovered it by noticing that the dust patterns on the shelf didn't match the books in front of them. Someone had been pulling books from behind.\n\nShe wakes you after midnight. You go because Sera asking you to do something at midnight means it's important, and because you've been curious about the restricted texts since Brother Aldric mentioned them in a lesson and then changed the subject so quickly you could hear the sentence snap.\n\nThe library at night is a different room. The reading lamps are out. Sera has the stolen candle — the one from the sanctuary, which still hasn't been missed, which tells you something about how often anyone actually checks the sanctuary.\n\nShe pulls a book from behind the front row. The spine is torn. Inside, the handwriting is older than anything you've read — cramped, urgent, written by someone who was afraid of being interrupted.\n\nYou read page forty-three together, holding the candle between you, and what's written there changes the shape of every prayer you've ever memorized. Not because it contradicts the Litany. Because it's the version of the Litany from before the edits. The original words, before someone decided they needed improving.\n\nSera closes the book. Puts it back. Turns the spine inward.\n\nNeither of you talks about it for three days. When you finally do, it's in the alcove, in whispers, and the conversation doesn't end so much as pause indefinitely.\n\nYou go back to the shelf twice more that month. Each time, Sera holds the candle. Each time, the original words make the official ones sound slightly less certain.",
+  "tags": ["relationship", "childhood_friend", "bonding", "priest", "sera", "forbidden_knowledge", "doubt_deepens"]
+}

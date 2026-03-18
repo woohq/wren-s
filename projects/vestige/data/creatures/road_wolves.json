@@ -1,0 +1,31 @@
+{
+  "name": "Road Wolves",
+  "danger_level": "medium",
+  "description": "Not real wolves. People stopped calling them that generations ago but the name stuck. They're something the Ashfield made — lean, grey-skinned things with too many teeth and eyes that reflect light that isn't there. They hunt in packs of three to five and they're smart enough to set ambushes. Smart enough to wait for the weakest.",
+  "behavior": "Pack ambush. One draws attention, others flank. Target legs first to prevent escape. Won't attack groups larger than themselves. Flee if the pack leader falls.",
+  "attunement": "body",
+  "body_parts": [
+    "head",
+    "torso",
+    "right_leg",
+    "left_leg"
+  ],
+  "hp_head": "8",
+  "hp_torso": "20",
+  "hp_right_leg": "10",
+  "hp_left_leg": "10",
+  "habitat": [
+    "thornwall",
+    "the_ashfield"
+  ],
+  "tags": [
+    "beast",
+    "pack",
+    "ambush",
+    "first_era",
+    "common",
+    "road_encounter"
+  ],
+  "id": "road_wolves",
+  "created": "2026-03-17T19:32:26"
+}

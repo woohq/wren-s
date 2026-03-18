@@ -1,0 +1,23 @@
+{
+  "name": "The Senn Delta",
+  "region": "The Coastal Lowlands",
+  "terrain": "delta",
+  "climate": "humid",
+  "culture": "the_brackish",
+  "description": "Where the river Senn meets the sea. Mud, reeds, and an unplanned town built on stilts above the tidal flats. Everything smells of salt and fish and commerce. The Brackish built it without permission from anyone, which is either their greatest strength or the reason it floods every spring.",
+  "atmosphere": "Creaking wood, gulls, the slap of water against stilts, shouting in three languages, the smell of drying nets and fresh bread from the one good bakery",
+  "connections": [
+    "the_wander",
+    "solmare"
+  ],
+  "tags": [
+    "settlement",
+    "delta",
+    "trade",
+    "coastal",
+    "mixed_culture",
+    "starting_location"
+  ],
+  "id": "the_senn_delta",
+  "created": "2026-03-17T21:31:58"
+}

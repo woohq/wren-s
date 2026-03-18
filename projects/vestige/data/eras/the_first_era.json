@@ -1,0 +1,15 @@
+{
+  "name": "The First Era",
+  "order": "1",
+  "defining_tension": "Civilizations forming from scattered tribes. The first cities. The first wars. Gods walk closer to the world than they ever will again.",
+  "technology_level": "bronze_age",
+  "description": "The world is young and sharp-edged. People are discovering what it means to live together in numbers larger than a family. Some discoveries are wonderful. Some are terrible. The concept gods are near — you can feel The Deep in every earthquake, The Burn in every forge-fire. Worship gods haven't formed yet. That's about to change.",
+  "tags": [
+    "founding",
+    "early",
+    "bronze",
+    "gods_near"
+  ],
+  "id": "the_first_era",
+  "created": "2026-03-17T18:50:55"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "The Mentor",
+  "type": "mentor",
+  "description": "Someone who sees what you could become and tries to get you there. They're not always right about who you should be. But they're always certain.",
+  "emotional_function": "The model — you follow their path or define yourself by rejecting it",
+  "archetype_tendency": [
+    "blacksmith_s_child",
+    "priest_s_apprentice",
+    "criminal_s_heir"
+  ],
+  "tags": [
+    "formative",
+    "adolescence",
+    "guidance"
+  ],
+  "id": "the_mentor",
+  "created": "2026-03-17T19:00:57"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Orphan of War",
+  "description": "You learned to count by counting the dead. Home is wherever isn't burning tonight. Trust is a luxury you can't afford and can't stop wanting.",
+  "starting_traits": [
+    "survival_focused",
+    "self_reliant",
+    "trust_issues"
+  ],
+  "attunement_tendency": "void",
+  "relationship_tendencies": [
+    "found_family",
+    "absent_parent_memory",
+    "cautious_friend"
+  ],
+  "story_tendency": "the survivor, the one who knows what the world really is",
+  "tags": [
+    "survival",
+    "trauma",
+    "common"
+  ],
+  "id": "orphan_of_war",
+  "created": "2026-03-17T18:45:54"
+}

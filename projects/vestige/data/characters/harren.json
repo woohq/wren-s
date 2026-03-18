@@ -1,0 +1,16 @@
+{
+  "id": "harren",
+  "name": "Harren",
+  "type": "historical_figure",
+  "culture": "the_iron_holds",
+  "era": "the_first_era",
+  "description": "The oldest master on the Forge Council. Hasn't left Thornwall in forty years. His daughter died of a fever that southern medicine could have treated. He knows this. It hasn't changed his position on trade — it's hardened it. He believes accepting help from people who bring guards to a negotiation is the first step to losing everything. Makes the best steel on the mountain. Hasn't taken an apprentice in seven years because none of them meet his standard.",
+  "tags": [
+    "historical_figure",
+    "iron_holds",
+    "forge_council",
+    "elder",
+    "isolationist",
+    "first_era"
+  ]
+}

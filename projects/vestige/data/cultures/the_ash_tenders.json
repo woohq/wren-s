@@ -1,0 +1,35 @@
+{
+  "name": "The Ash Tenders",
+  "era": "the_first_era",
+  "values": [
+    "patience",
+    "observation",
+    "neutrality",
+    "survival"
+  ],
+  "naming_pool": "slavic",
+  "archetype_tendencies": [
+    "priest_s_apprentice",
+    "wanderer_s_child"
+  ],
+  "trait_tendencies": [
+    "perceptive",
+    "cautious",
+    "stubborn"
+  ],
+  "worship_tendency": [
+    "the_deep",
+    "the_burn"
+  ],
+  "technology": "pre_bronze",
+  "description": "A small community that lives ON the Ashfield. Not at its edges — on it. They've been there longer than anyone can account for, in stone shelters half-buried in volcanic dust. They tend the vents the way farmers tend fields — reading the steam patterns, predicting eruptions, harvesting minerals deposited by the heat. Other cultures consider them insane. They consider other cultures impatient. They were the first to notice the Ashfield was changing.",
+  "tags": [
+    "small_culture",
+    "ashfield",
+    "neutral",
+    "observers",
+    "first_era"
+  ],
+  "id": "the_ash_tenders",
+  "created": "2026-03-17T21:30:45"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "the_stranger_at_the_gate",
+  "name": "The Stranger at the Gate",
+  "age": "adulthood",
+  "category": "life",
+  "archetype_filter": ["any"],
+  "text": "She arrives at dusk, alone, on foot, and bleeding.\n\nNot badly — a cut across the forearm, wrapped in cloth that was white before the road happened to it. She doesn't explain and nobody asks, because people who arrive at dusk alone and bleeding have stories, and stories are either dangerous or heartbreaking, and you can't tell which until it's too late.\n\nShe asks for water. Then for a place to sleep. Then, quietly, for someone who knows the mountain paths north — she needs to reach the high passes before the first snow.\n\nNobody volunteers. The northern passes are three days through wolf territory, and the weather is turning, and this woman is a stranger with blood on her sleeve and urgency in her voice.\n\nShe sits by the well and waits. She doesn't plead. She waits the way someone waits who has learned that pleading doesn't work.",
+  "choices": [
+    {
+      "text": "Offer to guide her. You know the passes. The wolves know you.",
+      "requires": {"trait_any": ["brave", "compassionate"]},
+      "effects": {
+        "trait_gain": "guide",
+        "relationship_new": {"type": "stranger_bond", "strength": 10}
+      },
+      "consequence_text": "Three days through the mountains with a stranger who doesn't talk about herself but talks about everything else — the stars, the rock formations, the way the wind changes before a storm. She knows things you don't. By the second night, you're not guiding her so much as walking together.\n\nAt the high pass, she thanks you. Not with words — she puts her hand on your shoulder, and you feel something move through the contact. Not power. Recognition. Like she knows something about you that you don't.\n\nShe disappears into the snow on the other side. You walk home with a feeling in your shoulder that takes weeks to fade.\n\nYou'll meet her again. Not soon. But you will."
+    },
+    {
+      "text": "Give her supplies and directions. The passes are marked. She can make it alone.",
+      "effects": {
+        "trait_gain": "practical_kindness"
+      },
+      "consequence_text": "You pack dried meat, a water skin, and a rough map sketched on hide. She studies the map with the focus of someone who's used to reading terrain. She'll make it. Probably.\n\n'Thank you,' she says. It's the most sincere thing anyone's said to you in months.\n\nShe leaves at dawn. You watch her go until the road curves and she's just a shape, and then just a memory. The supplies cost you a week's provisions. You eat thin for a while. It was worth it. You don't know why, but it was."
+    },
+    {
+      "text": "Ask questions first. Who is she? Why the hurry? Who cut her arm?",
+      "requires": {"trait_any": ["perceptive", "cautious", "cunning"]},
+      "effects": {
+        "knowledge_gain": "stranger_identity"
+      },
+      "consequence_text": "She looks at you for a long time. Deciding. Then she tells you a piece of it — not all, but enough.\n\nShe was a keeper. A guardian of something old, in a place to the south that doesn't have a name anymore. What she guarded was taken. The people who took it are following her. She's not running from them — she's leading them away from the thing they actually want, which is still hidden, which she won't describe, which she says is safer if you don't know about.\n\n'If you help me,' she says, 'they'll know your face. That's not a gift.'\n\nShe's right. It isn't. But now you know something you can't unknow, and the knowing has a weight to it, and the weight is pulling you toward the northern passes whether you choose it or not."
+    }
+  ],
+  "tags": ["adulthood", "choice", "stranger", "mystery", "travel", "universal", "consequence", "recurring_npc"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Parry",
+  "energy_cost": "1",
+  "source": "equipment",
+  "armor": "4",
+  "target": "self",
+  "special_effect": "If enemy attacks this turn: deal 4 damage back to their attacking arm.",
+  "flavor_text": "You don't block the strike. You redirect it. There's a world of difference.",
+  "tags": [
+    "defense",
+    "counter",
+    "sword",
+    "equipment"
+  ],
+  "id": "parry",
+  "created": "2026-03-17T19:33:02"
+}

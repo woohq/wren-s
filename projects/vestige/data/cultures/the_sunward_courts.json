@@ -1,0 +1,35 @@
+{
+  "name": "The Sunward Courts",
+  "era": "the_first_era",
+  "values": [
+    "knowledge",
+    "beauty",
+    "hierarchy",
+    "ambition"
+  ],
+  "naming_pool": "greco_roman",
+  "archetype_tendencies": [
+    "noble_s_bastard",
+    "priest_s_apprentice"
+  ],
+  "trait_tendencies": [
+    "curious",
+    "cunning",
+    "perceptive"
+  ],
+  "worship_tendency": [
+    "the_burn",
+    "the_weave"
+  ],
+  "technology": "bronze_age_advanced",
+  "description": "Coastal city-states built on trade and scholarship. They worship The Burn not as destruction but as inspiration — the divine spark that drives art, philosophy, and conquest. Their courts are beautiful and treacherous. Power flows through lineage, marriage, and the careful management of who owes whom. They write everything down because memory is a weapon and records are ammunition.",
+  "tags": [
+    "southern",
+    "coastal",
+    "scholarly",
+    "political",
+    "first_era"
+  ],
+  "id": "the_sunward_courts",
+  "created": "2026-03-17T18:51:15"
+}

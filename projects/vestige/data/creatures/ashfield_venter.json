@@ -1,0 +1,24 @@
+{
+  "name": "Ashfield Venter",
+  "danger_level": "high",
+  "description": "Where the volcanic vents open, something breathes. Not alive — not exactly. A column of superheated ash and sulfur that moves with intent, drawn toward mortal body heat. Scholars debate whether it's a creature or a phenomenon. The people it's killed don't have an opinion.",
+  "behavior": "Slow, relentless approach. Burns everything it touches. Cannot be fought with physical weapons — only World attunement or running. Drawn to concentrations of people. Disappears at dawn.",
+  "attunement": "world",
+  "body_parts": [
+    "core"
+  ],
+  "hp_torso": "30",
+  "habitat": [
+    "the_ashfield"
+  ],
+  "tags": [
+    "elemental",
+    "fire",
+    "ashfield",
+    "dangerous",
+    "puzzle_fight",
+    "first_era"
+  ],
+  "id": "ashfield_venter",
+  "created": "2026-03-17T19:32:26"
+}

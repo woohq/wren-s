@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_wanderer",
+  "name": "The Fourth Crossing (Wanderer Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["wanderer_s_child"],
+  "callback_detail": "The night on the wrong side of the river. His fire. Your song. The rain that didn't stop either of you.",
+  "text": "The fourth time you find Kael, he's not on the rock. He's on the wrong side of the river.\n\nYour side. Standing at the edge of the Rootwalker camp like he walked a long way to get here and isn't sure what to do now that he's arrived. Your mother sees him and says nothing, which is her way of saying she's noticed and she's decided it's your problem.\n\nHe's carrying a pack. It's too big for him. He's been walking.\n\n'My father left,' he says. Not with emotion. With the flat delivery of someone who's said it enough times that the words have worn smooth. 'My mother sent me to my uncle in the west. I got lost.'\n\nHe didn't get lost. The western road doesn't come anywhere near the Senn. He followed the river because the river is where he'd seen you, three times, and three times is a pattern and patterns are what you hold onto when everything else lets go.\n\nYou don't say this. You build a fire. He sits by it. Your mother brings food without being asked — the Rootwalker way, where feeding someone is less intimate than talking to them and therefore easier to do first.\n\nThat night it rains. You sit under the oilcloth your mother strung between two packs and you teach Kael the first four notes of the Song of the Reed Bend. He's terrible at it. His pitch wanders. But he tries, and trying is its own kind of fluency in a language he didn't grow up speaking.\n\nIn the morning, your mother says he can walk with you to the next crossing. She doesn't say what happens after that. Neither do you.",
+  "tags": ["relationship", "childhood_friend", "bonding", "wanderer", "kael_friend", "river", "rain", "teaching"]
+}

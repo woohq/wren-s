@@ -1,0 +1,22 @@
+{
+  "name": "The Ashfield Awakening",
+  "stage_1": "Strange tremors in the Ashfield. Animals flee. Rootwalker elders say the ground sounds different — not The Deep's usual rumble, but something sharper. A wrongness. Anyone who sleeps on the ash has nightmares of fire with purpose.",
+  "stage_2": "Vents open across the Ashfield, belching not just steam but whispers. Something is forming in the volcanic depths — a worship god, born from the fear of every culture that's ever called the Ashfield cursed. Centuries of dread accumulating into awareness. Refugees from Ashfield settlements arrive at Thornwall with burns that won't heal.",
+  "stage_3": "The Ashfield god manifests. Not The Burn — something new, born from fear of fire rather than fire itself. A god of catastrophe, of the-worst-thing-that-could-happen. It doesn't burn — it threatens to burn, and the fear feeds it. Whole regions evacuate. The Iron Holds debate sealing the mountain passes.",
+  "stage_4": "The Ashfield god is established. A cult forms — people who worship it hoping to be spared. The worship makes it stronger and more personal. It develops opinions. It develops favorites. The volcanic plains are its domain now, and it extends that domain one fear at a time.",
+  "current_stage": "1",
+  "source": "Accumulated fear-worship from centuries of travelers dreading the Ashfield",
+  "affected_regions": [
+    "the_ashfield"
+  ],
+  "description": "A god being born from fear. Not fire — fear of fire. The distinction matters because you can't fight fear with water.",
+  "tags": [
+    "divine",
+    "volcanic",
+    "fear",
+    "escalating",
+    "first_era"
+  ],
+  "id": "the_ashfield_awakening",
+  "created": "2026-03-17T18:55:52"
+}

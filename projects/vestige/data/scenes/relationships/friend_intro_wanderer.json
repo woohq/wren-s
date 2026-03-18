@@ -1,0 +1,11 @@
+{
+  "id": "friend_intro_wanderer",
+  "name": "The Boy at the Crossing (Wanderer Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "introduction",
+  "archetype_filter": ["wanderer_s_child"],
+  "callback_detail": "The flat stone he skipped seven times across the Senn. Nobody else got past four.",
+  "text": "The Rootwalker camps don't stay long enough for friendship. Three days at the Reed Bend, four at the Oxbow, two at the Shallows if the current is fast. You know the faces of a hundred children in a dozen camps and none of them know yours because by the time they've learned it you're gone.\n\nKael is different because he's at three crossings in a row.\n\nYou notice him at the first one — a boy your age sitting on a rock, throwing flat stones at the river. Not skipping them. Throwing them straight down, watching the splash. You don't talk.\n\nAt the second crossing, two weeks later, he's on the same rock. This time he's skipping them. He's bad at it. Two bounces, maybe three. You sit on the bank and watch him fail until he notices you watching.\n\n'You were at the last crossing,' he says.\n\n'You were on that rock,' you say.\n\nAt the third crossing, he's there again. You sit down without being invited. He hands you a stone without being asked. You skip it seven times across the Senn, which is good, and he says nothing, which is better.\n\nThe Rootwalkers move on the next day. You look back from the trail. He's still on the rock. Watching the river do what rivers do, which is leave.",
+  "tags": ["relationship", "childhood_friend", "introduction", "wanderer", "kael_friend", "river", "transience"]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "the_question_that_stays",
+  "name": "The Question That Stays",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["priest_s_apprentice"],
+  "text": "The vigil is supposed to last until dawn. Forty other acolytes kneeling in the temple hall, heads bowed, breathing in unison. You've done this before — eight times now, once for each year of your apprenticeship. The prayers are so familiar they've worn grooves in your tongue.\n\nBut tonight, between the third and fourth recitation, you feel something you weren't taught to feel.\n\nNot the god's presence — that's what the texts describe, a warmth or a pressure or a stillness, depending on whose account you read. This is different. It's like the air in the temple changed pitch. Like the prayers themselves are a door, and something on the other side just leaned against it.\n\nYou look up. No one else has stopped chanting. Brother Aldus at the front of the hall has his eyes closed, his lips moving with the precision of decades. The acolyte to your left — Merrin, who always falls asleep during vigils — is actually awake for once, face blank, mouthing the words.\n\nYou close your eyes again. Try to find it. The sensation slips away like a word on the tip of your tongue.\n\nAfter the vigil, walking back to your cell in the gray before dawn, the question forms. Not a dramatic crisis. Just a quiet thought that won't dissolve:\n\nWhat if the prayers work, but not for the reasons they told you?\n\nYou stop in the corridor. The stone is cold under your feet. Somewhere below, the kitchens are already lighting their fires.\n\nYou've been taught the mechanism — prayer reaches the divine, the divine responds. Simple. Clean. But what you felt wasn't clean. It was complicated and old and it didn't feel like an answer. It felt like a door.\n\nYour mentor will be awake soon. The archives open at dawn.",
+  "choices": [
+    {
+      "text": "Find Brother Aldus before the morning meal. Tell him what you felt.",
+      "requires": {"trait_any": ["curious", "brave"]},
+      "effects": {
+        "trait_gain": "questioner",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "Brother Aldus doesn't answer immediately. He pours himself tea. He pours you tea. He sits with the question for so long you think he's fallen asleep.\n\n'Three of us have felt it,' he says finally. 'In my forty years, three. I was the first. I told my mentor. He said I was arrogant to think I could feel something the texts didn't describe.'\n\nHe looks at you over the rim of his cup. 'I have been waiting twenty years for someone to ask.'\n\nHe doesn't give you answers. He gives you better questions. And he starts watching you — not the way a teacher watches a student, but the way a person watches a door they've been guarding alone.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_mentors_second_lesson",
+            "delay": "same_era",
+            "description": "Brother Aldus begins teaching you things that aren't in the standard curriculum. Things he says the temple knows but doesn't teach apprentices."
+          },
+          {
+            "id": "the_other_two",
+            "delay": "years",
+            "description": "Brother Aldus mentioned two others who felt it. One is dead. The other left the temple years ago. Their name comes up in a context you don't expect."
+          }
+        ],
+        "world_changes": ["Brother Aldus has a student now — someone who felt what he felt. This changes him. He becomes less cautious in his own questioning, more willing to push boundaries. The temple hierarchy notices."]
+      }
+    },
+    {
+      "text": "Return to the temple. Kneel alone. Push through — faith is what you do, not what you feel.",
+      "requires": {"trait_any": ["honor_bound", "compassionate"]},
+      "effects": {
+        "trait_gain": "disciplined",
+        "attunement_hint": "bond"
+      },
+      "consequence_text": "You pray until the sun comes up. Then past it. The kitchen sends someone to check on you at midday. You send them away.\n\nThe doubt doesn't leave. You didn't expect it to. But somewhere between the sixth and seventh hour, you find something else — a steadiness that has nothing to do with whether your question has an answer. You chose this. You keep choosing it. That's the thing they don't teach in the texts: faith isn't belief. It's discipline.\n\nYou stand at sundown. Your knees ache for three days.\n\nBrother Aldus notices. He doesn't ask what happened. He puts your name forward for the Recitation of Names — the most demanding ritual in the temple, usually reserved for senior priests. 'She's ready,' he tells the Prior. He doesn't explain what he means by ready.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_recitation_of_names",
+            "delay": "same_era",
+            "description": "The most demanding ritual in the temple. It takes three days. What happens during it depends on who you are and what you've chosen to believe."
+          }
+        ],
+        "world_changes": ["Your discipline draws attention from the temple hierarchy. In an institution that values obedience, your voluntary suffering reads as devotion. They begin to plan for you."]
+      }
+    },
+    {
+      "text": "Say nothing. Go to the archives at dawn. Look for anyone who described what you felt.",
+      "requires": {"trait_any": ["perceptive", "curious"]},
+      "effects": {
+        "trait_gain": "seeker",
+        "attunement_hint": "void"
+      },
+      "consequence_text": "The archives are cold and smell like dust and binding glue. You start with the canonical commentaries — the ones every apprentice reads. Nothing. The feeling you had isn't in any approved text.\n\nYou go deeper. The restricted shelf requires a key you don't have, but the archivist — an old woman named Sevel who everyone treats as furniture — watches you try the lock and says, 'Third shelf from the left. Behind the genealogies. There's a journal. Blue cover.'\n\nShe goes back to her cataloguing. You find the journal. It's handwritten, old, the binding cracked. The author's name is scratched out — not faded, deliberately removed.\n\nOn the fourteenth page, in handwriting that shakes slightly: 'Tonight during the vigil I felt something the texts do not describe. A pressure. As though the prayers themselves are a mechanism, and the mechanism connects to something larger than what we've been told.'\n\nSomeone has written in the margin, in different ink: 'I felt it too. Year of the low water. —S.'",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_scratched_name",
+            "delay": "same_era",
+            "description": "The name was removed from the journal deliberately. Sevel the archivist knows why. Getting her to tell you will cost something."
+          },
+          {
+            "id": "the_margin_note",
+            "delay": "years",
+            "description": "The person who wrote 'S.' in the margin of the journal. They felt what you felt. They're still alive. They left the temple. Finding them means leaving too."
+          }
+        ],
+        "characters": [
+          {
+            "id": "sevel_the_archivist",
+            "description": "An old woman who everyone treats as furniture. She has been in the archives for forty years. She sees everything and says almost nothing. She gave you the journal on purpose."
+          }
+        ],
+        "world_changes": ["Someone is reading the restricted texts. The archive logs show it. Whether anyone cares depends on who's paying attention."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "faith", "doubt", "formative", "priest", "chain_root", "archetype_specific"],
+  "created": "2026-03-18T04:45:00"
+}

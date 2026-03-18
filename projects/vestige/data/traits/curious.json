@@ -1,0 +1,15 @@
+{
+  "name": "Curious",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Needs to know. Cannot leave a question unanswered.",
+  "attunement_affinity": "world",
+  "dilemma": "You investigate everything. Including things that should be left alone.",
+  "tags": [
+    "personality",
+    "mental",
+    "exploration"
+  ],
+  "id": "curious",
+  "created": "2026-03-17T18:29:03"
+}

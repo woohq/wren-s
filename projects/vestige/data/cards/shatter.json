@@ -1,0 +1,18 @@
+{
+  "name": "Shatter",
+  "energy_cost": "1",
+  "source": "equipment",
+  "damage": "5",
+  "target": "chosen_body_part",
+  "special_effect": "Destroy target's equipped armor card if they have one. The armor breaks before the body does.",
+  "flavor_text": "Everything has a resonant frequency. Hit it right and it comes apart. Your father taught you this about metal. It works on people too.",
+  "tags": [
+    "attack",
+    "utility",
+    "hammer",
+    "equipment",
+    "armor_break"
+  ],
+  "id": "shatter",
+  "created": "2026-03-17T19:33:02"
+}

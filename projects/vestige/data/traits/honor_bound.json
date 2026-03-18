@@ -1,0 +1,15 @@
+{
+  "name": "Honor-Bound",
+  "source": "environmental",
+  "rarity": "common",
+  "description": "Your word is your spine. Break an oath and you break yourself. The Northern Clans carved this into you before you could walk.",
+  "dilemma": "Your oath holds even when the person you swore to doesn't deserve it anymore.",
+  "tags": [
+    "cultural",
+    "northern",
+    "social",
+    "oath"
+  ],
+  "id": "honor_bound",
+  "created": "2026-03-17T18:46:18"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_orphan",
+  "name": "The Fence (Orphan Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["orphan_of_war"],
+  "callback_detail": "The torn shirt from the fence wire. Dex's hand pulling you through. The adults who didn't notice.",
+  "text": "Rule one: stay inside the fence.\n\nBut there's a dog on the other side. Not a camp dog — a real one, someone's pet from before everything, now skinny and shaking and caught in the wire where the fence meets the drainage ditch.\n\nDex sees it first. He's crouched by the fence, and you know what he's thinking because you're thinking it too: the dog is going to die there if nobody helps, and nobody is going to help because rule one exists for reasons nobody explains to children.\n\nYou look at each other. The look lasts about two seconds. That's how long it takes to decide.\n\nDex holds the wire up. You crawl under. The wire catches your shirt and tears it — a long rip from shoulder to hem, the kind that can't be fixed, and this is your only shirt.\n\nThe dog bites you when you try to free it. Not hard — scared, not mean. You bleed a little. Dex reaches through the fence and holds the dog's head while you work the wire loose. His hand is shaking. Yours is bleeding. The dog is crying.\n\nIt takes five minutes. The longest five minutes of your life so far.\n\nThe dog runs when it's free. Doesn't look back. Doesn't thank you. Just runs.\n\nYou crawl back under. Dex examines the tear in your shirt, then takes off his own jacket and hands it to you. It's too big. It smells like the camp — wool and fear and too many people. But it covers the tear.\n\n'The shirt is ruined,' you say.\n\n'The dog is alive,' he says.\n\nThat's the whole argument. You never have it again, because you both already know which side you're on.",
+  "tags": ["relationship", "childhood_friend", "bonding", "orphan", "dex", "shared_trial", "rescue", "rules"]
+}

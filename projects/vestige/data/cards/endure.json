@@ -1,0 +1,19 @@
+{
+  "name": "Endure",
+  "energy_cost": "0",
+  "attunement": "body",
+  "source": "attunement",
+  "stage_required": "awakened",
+  "armor": "3",
+  "target": "self",
+  "special_effect": "Draw 1 card. If below 50% health: gain 3 additional armor.",
+  "flavor_text": "Pain is a message. You've learned to read it without flinching.",
+  "tags": [
+    "defense",
+    "body",
+    "utility",
+    "awakened"
+  ],
+  "id": "endure",
+  "created": "2026-03-17T19:25:49"
+}

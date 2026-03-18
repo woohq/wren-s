@@ -1,0 +1,15 @@
+{
+  "name": "Weakened Grip",
+  "energy_cost": "0",
+  "source": "wound",
+  "special_effect": "Reduces all weapon card damage by 2 for this turn. Drawn automatically — cannot be discarded.",
+  "flavor_text": "Your fingers close, but not all the way. Not anymore.",
+  "tags": [
+    "wound",
+    "negative",
+    "permanent",
+    "hand_injury"
+  ],
+  "id": "weakened_grip",
+  "created": "2026-03-17T19:26:28"
+}

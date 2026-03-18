@@ -1,0 +1,69 @@
+{
+  "id": "the_first_blade",
+  "name": "The First Blade",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["blacksmith_s_child"],
+  "text": "Your father sets a bar of iron on the anvil and steps back. He doesn't give instructions. He's been giving instructions for ten years — the grip, the angle, the heat, the rhythm, the thousand small corrections that turn a kid with a hammer into someone who can make things. Today he just points at the iron and says, 'Make what you want.'\n\nYou've made nails. Hinges. Hooks. A gate latch that your mother uses every day without thinking about it, which your father says is the highest compliment a made thing can receive. But those were assignments. Those had shapes before you started.\n\nThe iron is glowing. The forge is loud in the way you stopped noticing years ago — the roar of the bellows, the hiss of steam, the deep heartbeat of the coals. Your father is leaning against the wall with his arms crossed, not watching exactly, but present.\n\nYou know what you want to make. You've known for weeks, turning the shape over in your head during chores, tracing it on the table with your finger during meals. A blade. Not a sword — you're not ready for swords and you know it. A knife. Simple, functional, balanced. The kind of thing a person carries every day and reaches for without thinking.\n\nThe iron doesn't care what you want. That's the first lesson of the forge: the material has opinions. You can work with them or against them, but you can't ignore them.\n\nYou lift the hammer. The first strike rings true. The second doesn't — you feel the wrongness in your wrist before you see it in the metal. You adjust.\n\nThree hours later, you're holding something that didn't exist this morning.",
+  "choices": [
+    {
+      "text": "Show your father. You want him to see what you made.",
+      "requires": {"trait_any": ["brave", "compassionate"]},
+      "effects": {
+        "trait_gain": "proud_maker",
+        "attunement_hint": "body"
+      },
+      "consequence_text": "You hold it out. The blade isn't perfect — the edge is slightly uneven near the tang, and the balance is a fraction off. You know this. You knew it before he could tell you.\n\nYour father takes it. Turns it over. Runs his thumb along the flat. He doesn't say 'good' or 'needs work' or any of the things he usually says. He holds it up to the light from the forge door and looks at the line of it.\n\n'The edge is off near the tang,' you say, because the silence is getting heavy.\n\n'I know,' he says. 'You do too, which is why it doesn't matter.' He hands it back. 'Who's it for?'\n\nYou hadn't thought about that. You made it because the shape was in your head and it needed to exist. You look at the knife in your hand — your knife, the first thing you made because you wanted to.\n\n'I don't know yet,' you say.\n\nYour father nods like that's the right answer.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_knife_finds_a_purpose",
+            "delay": "same_era",
+            "description": "The knife you made needs an owner. Who you give it to — and why — reveals something about the kind of maker you're becoming. A tool is neutral. The giving is not."
+          }
+        ],
+        "world_changes": ["A blacksmith's child made their first blade. The forge has a second maker now. In Thornwall, this matters more than most places — the forge isn't just a workshop, it's an institution."]
+      }
+    },
+    {
+      "text": "Look at what you made. Really look. Before anyone else sees it, understand what it is.",
+      "requires": {"trait_any": ["perceptive", "curious"]},
+      "effects": {
+        "trait_gain": "self_critical",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "You hold the blade up to the light. The edge is uneven near the tang — you can see it, a slight waver where the metal cooled faster than you expected. The balance is off by a hair. The fuller you tried to put down the center is shallow on the left side.\n\nBut the shape. The shape is right. You can feel it in your hand — the way the weight settles, the way the grip fits your palm like it grew there. You made this. The shape that was in your head is in your hand now, and the distance between those two things is smaller than you expected.\n\nThat's what stops you. Not the flaws — you can see every flaw. What stops you is the gap between what you imagined and what exists. It's small. For a first blade, it's very small.\n\nYour father is still leaning against the wall. You turn the blade over one more time, cataloguing everything you'd do differently. Then you set it on the workbench and say, 'Again.'\n\nHe smiles. You've never seen that particular smile before.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_second_blade",
+            "delay": "same_era",
+            "description": "You made your first blade and immediately wanted to make it better. Your father starts teaching you things he's been holding back — techniques he said you weren't ready for. You were ready. He was waiting for you to know it."
+          }
+        ],
+        "world_changes": ["A blacksmith's child looked at their first blade and said 'again.' In the forge tradition, this is the moment a student becomes a craftsman — not when you make something good, but when you see what you'd change."]
+      }
+    },
+    {
+      "text": "Keep it. Don't show anyone. The first thing you made for yourself stays yours.",
+      "requires": {"trait_any": ["stubborn", "cautious"]},
+      "effects": {
+        "trait_gain": "private_maker",
+        "attunement_hint": "world"
+      },
+      "consequence_text": "You wrap the blade in a scrap of leather and put it in your belt before your father can ask to see it. He raises an eyebrow. You shake your head.\n\n'It's mine,' you say. Not defensive — factual. This thing came out of your hands and your head and three hours of heat and noise. Nobody else gets to hold it yet. Nobody else gets to tell you what's wrong with it.\n\nYour father watches you for a moment. Then he nods — not the approving nod he gives when you follow instructions well, but something more private. Like he's remembering something.\n\n'I still have my first blade,' he says. 'Bottom drawer, left side of the workbench. It's terrible.' He goes back to his own work.\n\nYou don't open the drawer that day. But three days later, when the forge is empty, you do. His first blade IS terrible — lumpy, uneven, the tang too short. But he kept it for twenty years.\n\nYou put yours in the drawer next to it.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_bottom_drawer",
+            "delay": "years",
+            "description": "Two blades in a drawer — your father's first, and yours. Years from now, someone will open that drawer and find them. What they mean depends on what happened to the forge, to your father, and to you."
+          }
+        ],
+        "world_changes": ["A blacksmith's child made something and kept it. In the Iron Holds, where craft is identity, the first thing you make for yourself is the first thing that's truly yours. The drawer now holds two beginnings."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "craft", "formative", "blacksmith", "chain_root", "archetype_specific", "identity", "making"],
+  "created": "2026-03-18T06:15:00"
+}

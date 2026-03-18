@@ -1,0 +1,11 @@
+{
+  "id": "friend_critical_orphan",
+  "name": "Dex Leaves (Orphan Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["orphan_of_war"],
+  "callback_detail": "The jacket returned. The empty sleeping mat. The apple.",
+  "text": "Dex's sleeping mat is empty.\n\nNot moved. Not rearranged. Empty. His blanket — the one you threw at him that first night, the one that started everything — is folded neatly at the foot. On top of it: the jacket he gave you when the fence tore your shirt.\n\nHe's gone. No note. Orphans don't leave notes because notes require paper and paper requires someone who thinks you'll be missed.\n\nThe woman who watches you — the one who isn't your mother — tells you he left before dawn. A man came. An uncle, maybe, or someone claiming to be. Dex went with him without argument.\n\n'He didn't want to wake you,' she says. It's a kind lie. He didn't want to say goodbye because goodbye is a promise and promises are things that break.\n\nYou sit on his empty mat for a long time. The jacket still smells like him.\n\nUnder it, you find a piece of dried apple. The same kind he left on your mat the first morning.\n\nYou eat it. It's all he said.",
+  "tags": ["relationship", "childhood_friend", "critical", "orphan", "dex", "departure", "callback_fence", "callback_apple"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Phantom Pain",
+  "energy_cost": "1",
+  "source": "wound",
+  "damage": "0",
+  "target": "self",
+  "special_effect": "Does nothing. Costs 1 energy. The arm you lost still hurts.",
+  "flavor_text": "The nerve endings don't know the hand is gone. They keep sending messages to a room that's empty.",
+  "tags": [
+    "wound",
+    "negative",
+    "permanent",
+    "limb_loss"
+  ],
+  "id": "phantom_pain",
+  "created": "2026-03-17T19:26:28"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "the_favor",
+  "name": "The Favor",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["criminal_s_heir"],
+  "text": "Your parent owes someone. This isn't new — your parent always owes someone. Debt is the currency of the people who can't use the real one. But this debt is older and heavier, and the person holding it has stopped being patient.\n\nThey don't come themselves. They send a woman with clean hands and a calm voice who sits at your kitchen table and explains what's needed. Young hands. An innocent face. A small delivery to a shop on Thread Street.\n\nYour parent doesn't look at you during the conversation. They look at the table. You know what that means — you've been reading your parent's silences since you could walk. Table-staring means: I can't stop this.\n\nThe job: carry a package to the spice merchant's shop. Put it behind the flour sacks in the back room. Leave without being seen.\n\nYou're fifteen. You know what a planted bag looks like. You know the guards inspect Thread Street shops every market day. You know what happens to merchants who get caught holding stolen goods — you've watched it happen from across the street, your parent's hand on your shoulder, their voice in your ear: 'See? That's what happens when you owe the wrong people and can't pay.'\n\nThe merchant on Thread Street doesn't owe anyone. He sells cinnamon and dried pepper and he gives the neighbor children the broken sticks for free. Someone wants his shop. This is how they'll get it.\n\nYour parent finally looks up. 'It's just a delivery,' they say. You both know it's not.",
+  "choices": [
+    {
+      "text": "Do the job. The debt is real. Your parent needs this. The merchant is a stranger.",
+      "requires": {"trait_any": ["cautious", "stubborn"]},
+      "effects": {
+        "trait_gain": "compromised",
+        "attunement_hint": "void"
+      },
+      "consequence_text": "The back door is unlocked. It's always unlocked — the spice merchant trusts his neighbors. That makes it worse.\n\nYou find the flour sacks. The bag fits behind them like it was measured. You're in and out in ninety seconds. Nobody sees you. You're good at this. That makes it worse too.\n\nThree days later, the guards find the bag. The shop is boarded up by the end of the week. You see the merchant's daughter carrying a box of their things down Thread Street, walking carefully, like the ground might open.\n\nYour parent's debt is paid. They buy you dinner that night — real dinner, at a table with a cloth on it. They don't mention Thread Street. Neither do you. You eat everything on your plate. It tastes like flour.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_daughter_on_thread_street",
+            "delay": "years",
+            "description": "The spice merchant's daughter. She lost everything because of a bag she never saw, placed by a hand she never felt. She's older now. She hasn't forgotten. She's looking for whoever did it — not for revenge, but because she needs to understand why."
+          }
+        ],
+        "world_changes": ["A spice merchant on Thread Street has been framed and ruined. His shop belongs to someone else now. The neighbor children don't get free cinnamon anymore."]
+      }
+    },
+    {
+      "text": "Warn the merchant. Slip a note under the door tonight. Three words: 'check your flour.'",
+      "requires": {"trait_any": ["compassionate", "brave"]},
+      "effects": {
+        "trait_gain": "defiant",
+        "attunement_hint": "bond"
+      },
+      "consequence_text": "You write it on a scrap of cloth with charcoal. You slide it under the back door at midnight. Your hands don't shake. You're surprised by that.\n\nThe next morning, the merchant finds the bag before you can plant it. He burns it in his kitchen stove. He moves his family to a different street within the week — not panicked, but careful. He's smarter than the people who wanted his shop gave him credit for.\n\nThe debt-holder's plan fails. The favor goes unfulfilled.\n\nYour parent pays for this. Not immediately. But a week later they come home with a bruise they won't explain and a quietness that lasts for days. They don't ask if you interfered. They look at you over dinner with something you can't read — it might be pride, it might be fear, it might be both.\n\nThe spice merchant keeps the scrap of cloth. He doesn't know who sent it. But he keeps it.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_unpaid_favor",
+            "delay": "same_era",
+            "description": "The debt-holder knows the Thread Street job was sabotaged. They don't know it was you — yet. But they're looking. And your parent's position just got more precarious."
+          },
+          {
+            "id": "the_cloth_note",
+            "delay": "years",
+            "description": "The spice merchant kept the warning. 'Check your flour,' written in charcoal on cloth. Years later, he shows it to someone and says, 'I don't know who saved me, but I owe them.' Debts run in every direction."
+          }
+        ],
+        "world_changes": ["A warning saved a merchant. A debt grew heavier. The criminal's child chose a side — and learned that choosing has costs that land on the people closest to you."]
+      }
+    },
+    {
+      "text": "Do the job wrong. Put the bag where the guards won't find it. Report back that it's done.",
+      "requires": {"trait_any": ["cunning", "perceptive"]},
+      "effects": {
+        "trait_gain": "improviser",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "You go to the shop. You find the back room. You see the flour sacks, exactly where they said they'd be.\n\nYou put the bag in the ceiling instead. Up through a loose tile, wedged between two beams where no guard would think to check. You report back to the woman with clean hands: done.\n\nMarket day. The guards inspect. They find nothing. The debt-holder is furious — but the favor was technically performed. Your parent delivered. It's not their fault the guards are sloppy.\n\nYou've turned a crisis into a delay. Bought weeks, maybe months. Your parent looks at you sideways for days afterward. They know you did something — they just can't tell what. They're deciding whether that makes you an asset or a liability.\n\nBut the bag is still in the ceiling. Evidence of a crime that hasn't happened yet, sitting above the spice merchant's head like a held breath. You'll need to deal with it. Eventually.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_bag_in_the_ceiling",
+            "delay": "same_era",
+            "description": "The planted bag is still in the spice merchant's ceiling. A crime suspended. You bought time, but time doesn't stay bought. Someone will find it, or you'll need to retrieve it, or the debt-holder will send someone less creative."
+          },
+          {
+            "id": "the_parents_assessment",
+            "delay": "same_era",
+            "description": "Your parent is watching you more carefully now. They've realized you're not just obedient — you're strategic. Whether they train you or fear you depends on what kind of criminal they are."
+          }
+        ],
+        "world_changes": ["A favor was performed and wasn't. A bag sits in a ceiling. The debt is in limbo — not resolved, not refused. In the criminal economy, ambiguity is its own kind of currency."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "moral", "criminal", "formative", "chain_root", "archetype_specific", "loyalty", "consequence"],
+  "created": "2026-03-18T05:45:00"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Priest's Apprentice",
+  "description": "You grew up reciting prayers you didn't write to a god you've never seen. Faith is either the foundation of everything or the most elaborate lie ever told. You're still deciding.",
+  "starting_traits": [
+    "literate",
+    "faithful_or_doubting",
+    "ritual_knowledge"
+  ],
+  "attunement_tendency": "bond",
+  "relationship_tendencies": [
+    "mentor_priest",
+    "institutional_connection",
+    "theological_rival"
+  ],
+  "story_tendency": "the believer tested, the one who asks whether the gods deserve worship",
+  "tags": [
+    "faith",
+    "knowledge",
+    "common"
+  ],
+  "id": "priest_s_apprentice",
+  "created": "2026-03-17T18:45:54"
+}

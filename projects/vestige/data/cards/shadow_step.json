@@ -1,0 +1,17 @@
+{
+  "name": "Shadow Step",
+  "energy_cost": "0",
+  "attunement": "void",
+  "source": "attunement",
+  "stage_required": "awakened",
+  "special_effect": "Gain 2 Stealth. Draw 1 card.",
+  "flavor_text": "You don't move faster. You move between the moments when people look.",
+  "tags": [
+    "utility",
+    "void",
+    "stealth",
+    "awakened"
+  ],
+  "id": "shadow_step",
+  "created": "2026-03-17T19:26:12"
+}

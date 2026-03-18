@@ -1,0 +1,11 @@
+{
+  "id": "friend_intro_noble",
+  "name": "Meeting Callum (Noble Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "introduction",
+  "archetype_filter": ["noble_s_bastard"],
+  "callback_detail": "He shares his tutor's sweetbread under the stairs. The crumbs fall on the marble.",
+  "text": "The legitimate son is supposed to ignore you. That's not a rule anyone stated — it's just understood. You eat in different rooms. You attend different lessons. When guests visit, you're somewhere else.\n\nCallum breaks the rule on a Tuesday.\n\nHe finds you under the east stairs — your hiding spot since you were five — and sits down without asking. He's carrying two sweetbreads from his tutor's desk, stolen with the casual confidence of someone who's never been punished for taking things.\n\n'Here.' He holds one out. His fingers are ink-stained. He's been practicing letters. You haven't — the tutor doesn't teach you.\n\n'Why?' you ask, because in this house, nothing is free.\n\nHe shrugs. The shrug is so genuine it almost hurts. 'You looked hungry. And the stairs are cold.'\n\nYou take the bread. It's still warm. Crumbs fall on the marble between you — two children sitting where they're not supposed to, eating what they're not supposed to, becoming something nobody planned.\n\nHe doesn't know he's the only person in this house who looks at you like you're a person. You don't tell him. Some gifts are too heavy for the person giving them.",
+  "tags": ["relationship", "childhood_friend", "introduction", "noble", "callum", "bonding", "class"]
+}

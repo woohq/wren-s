@@ -1,0 +1,24 @@
+{
+  "name": "The Silence",
+  "type": "concept",
+  "domain": [
+    "death",
+    "ending",
+    "rest",
+    "absence"
+  ],
+  "personality": "Not cruel. Not kind. Inevitable. The Silence doesn't come for you — you come to The Silence. It is the room that's always been there, waiting. It doesn't speak. It doesn't need to. When you finally hear nothing, that's when you've arrived.",
+  "power_manifestation": "Death, stillness, nullification, peace. Blessings manifest as fearlessness and acceptance. Curses manifest as numbness — unable to feel, unable to care, alive but already gone.",
+  "limitations": "Cannot create. Cannot begin. Every act of The Silence is an ending. To give something, it must take something else away first.",
+  "description": "The most feared and most misunderstood god. Mortals build entire religions around avoiding The Silence. But The Silence isn't evil — it's the rest at the end of the sentence. Without it, the words never stop, and that's its own kind of horror.",
+  "tags": [
+    "concept",
+    "primordial",
+    "death",
+    "ending",
+    "silence",
+    "rest"
+  ],
+  "id": "the_silence",
+  "created": "2026-03-17T18:41:35"
+}

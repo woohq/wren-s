@@ -1,0 +1,16 @@
+{
+  "name": "Prophetic Dreams",
+  "source": "inherent",
+  "rarity": "rare",
+  "description": "You dream the future. Not metaphor — literal fragments of what's coming. You wake screaming and can't explain why.",
+  "attunement_affinity": "sense",
+  "dilemma": "You know what's coming. The knowledge costs you sleep, sanity, and the ability to be surprised by joy.",
+  "tags": [
+    "supernatural",
+    "rare",
+    "mental",
+    "curse_and_gift"
+  ],
+  "id": "prophetic_dreams",
+  "created": "2026-03-17T18:46:18"
+}

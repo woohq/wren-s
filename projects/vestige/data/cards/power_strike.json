@@ -1,0 +1,22 @@
+{
+  "name": "Power Strike",
+  "energy_cost": "1",
+  "attunement": "body",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "damage": "10",
+  "target": "chosen_body_part",
+  "upgrade_path": [
+    "heavy_blow",
+    "precise_strike"
+  ],
+  "flavor_text": "You don't think about the technique anymore. Your body remembers.",
+  "tags": [
+    "attack",
+    "body",
+    "melee",
+    "practiced"
+  ],
+  "id": "power_strike",
+  "created": "2026-03-17T19:25:49"
+}

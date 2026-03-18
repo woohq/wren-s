@@ -1,0 +1,19 @@
+{
+  "name": "The Childhood Friend",
+  "type": "friend",
+  "description": "The one who knew you before you were anyone. Before titles, before power, before the world complicated everything. They remember who you were. That's either a comfort or a threat.",
+  "emotional_function": "The mirror — who you are when you're not performing",
+  "archetype_tendency": [
+    "blacksmith_s_child",
+    "orphan_of_war",
+    "noble_s_bastard"
+  ],
+  "tags": [
+    "universal",
+    "childhood",
+    "loyalty",
+    "mirror"
+  ],
+  "id": "the_childhood_friend",
+  "created": "2026-03-17T19:00:57"
+}

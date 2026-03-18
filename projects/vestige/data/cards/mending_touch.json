@@ -1,0 +1,17 @@
+{
+  "name": "Mending Touch",
+  "energy_cost": "1",
+  "attunement": "bond",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "special_effect": "Restore 8 HP to one of your body parts.",
+  "flavor_text": "The pain moves from them to you. You carry it willingly. That's the difference between Bond and theft.",
+  "tags": [
+    "heal",
+    "bond",
+    "support",
+    "practiced"
+  ],
+  "id": "mending_touch",
+  "created": "2026-03-17T19:26:12"
+}

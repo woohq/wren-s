@@ -1,0 +1,80 @@
+{
+  "id": "the_same_river",
+  "name": "The Same River",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["wanderer_s_child"],
+  "text": "This market is the third one this month. Different town, different name, different gods painted above the gate. But the stalls are arranged the same way — perishables near the entrance where the breeze keeps them cool, metalwork at the back where the noise won't scare the horses, cloth in the middle where the light is best.\n\nYour parent is somewhere in the crowd, trading. You stopped keeping track of where they go at markets when you were twelve. They always come back. They always say 'we leave in the morning.'\n\nA kid your age is watching you from behind a dried-fish stall. You know this kid. Not this kid — you've never been to this town before. But you know the type. Bored. Curious. Wants to talk to the stranger because strangers are the most interesting thing that happens here. In an hour they'll ask where you're from. In two hours they'll show you something — a swimming hole, a shortcut, a secret they've never told anyone local because locals don't leave, and telling them would be permanent.\n\nBy tomorrow, you'll be gone. They'll remember you for a week. You'll remember them as 'the fish-stall kid in the town with the green gate.'\n\nYou've lived this exact afternoon in six different places.\n\nThe kid starts walking toward you.",
+  "choices": [
+    {
+      "text": "Let it happen. Stay for the afternoon. You know how it ends, but this time, be here for it anyway.",
+      "requires": {"trait_any": ["compassionate", "brave"]},
+      "effects": {
+        "trait_gain": "present",
+        "attunement_hint": "bond"
+      },
+      "consequence_text": "Their name is Voss. They sell dried fish for their grandmother. They want to see the ocean because someone told them it's the river's bigger, meaner sibling.\n\nYou tell them the ocean smells different. They ask how. You say, 'Like the river, but it doesn't apologize for it.'\n\nVoss laughs. Not politely — actually laughs.\n\nYou spend the afternoon. They show you the swimming hole. You tell them about the market three towns back, how the metalworker there makes hooks that don't rust. They tell you about their grandmother, who remembers a war your parent never mentioned. You eat dried fish. It's terrible. Voss says, 'I know. That's why I'm behind the stall, not in front of it.'\n\nYour parent finds you at sundown. 'We leave in the morning.'\n\nYou leave in the morning. Voss watches from the gate. You wave. They wave. The dried fish smell stays in your clothes for three days.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_green_gate_returns",
+            "delay": "years",
+            "description": "Something from the town with the green gate follows you — a rumor Voss's grandmother told you, a debt from the market, or Voss themselves, older now, who finally left to see the ocean."
+          }
+        ],
+        "characters": [
+          {
+            "id": "voss",
+            "description": "The dried-fish kid from the town with the green gate. They wanted to see the ocean. Whether they ever did depends on what the world does to people who want things."
+          }
+        ],
+        "world_changes": ["A wanderer's child stayed an afternoon in a town they'll never see again. The fish-stall kid learned that the ocean doesn't apologize. Small exchange. Small impact. But memory is a kind of seed."]
+      }
+    },
+    {
+      "text": "Keep walking. You know the shape of this afternoon. No point living it again.",
+      "requires": {"trait_any": ["cautious", "stubborn"]},
+      "effects": {
+        "trait_gain": "guarded",
+        "attunement_hint": "void"
+      },
+      "consequence_text": "You walk past the fish stall. The kid's mouth opens — the greeting already forming — and closes when you don't slow down. You feel the moment slide off you like rain.\n\nYou find the edge of the market, where the stalls thin out and the town shows its real face — not the trading face but the living one. Mud. Laundry. A dog sleeping in the sun.\n\nYour parent finds you there an hour later. They look at you for a long time. Then they sit down next to you, which they haven't done in months.\n\n'I stopped making friends on the road when I was about your age,' they say. Not gently. Just factually, the way they say everything.\n\nYou look at them — really look, maybe for the first time as something other than your parent. They're tired. Not from walking. From the same arithmetic you just did: the cost of caring about people you're going to leave.\n\n'Does it get easier?' you ask.\n\n'No,' they say. 'You just get faster at the math.'",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_wanderers_lesson",
+            "delay": "same_era",
+            "description": "Your parent starts teaching you differently after this — not just roads and trade but how to move through a place without leaving pieces of yourself in it. It's useful knowledge. It's also a kind of wound."
+          }
+        ],
+        "world_changes": ["A wanderer's child has learned to walk through without stopping. The road gets easier. Everything else gets harder."]
+      }
+    },
+    {
+      "text": "Watch. Not the kid — the market. Something here doesn't match the pattern, and you're the only one positioned to see it.",
+      "requires": {"trait_any": ["perceptive", "cunning"]},
+      "effects": {
+        "trait_gain": "reader_of_patterns",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "The kid can wait. Something else has your attention.\n\nThe metalwork at the back of the market. You've seen this style before — three towns ago, at a forge that didn't have a sign. Same distinctive cross-hatching on the sword guards. Same slightly green tint to the iron, which means the ore comes from the same source. Someone is selling weapons along the same route you're traveling.\n\nYou spend the next hour walking the market like you're reading a book. The dried goods come from the south — you recognize the wrapping style. The cloth is local but the dye isn't. The spice merchant has her weights wrong, not by accident. Two men near the livestock pen are wearing travelers' clothes but their boots are too clean — they haven't walked anywhere.\n\nBy the time your parent finds you, you have a map of this town's economy in your head. Who's honest. Who's cheating. Who's pretending to be something they're not.\n\n'We leave in the morning,' your parent says.\n\n'The weapons here come from the forge in Asward,' you say. 'Same maker. Someone's arming this road.'\n\nYour parent stops walking. Looks at you. Something shifts in their face — not surprise, recognition. As if they've been waiting for you to start seeing what they see.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_armed_road",
+            "delay": "same_era",
+            "description": "Someone is moving weapons along the trade road. Your parent knows more about this than they've said. The pattern you noticed connects to something larger — something political, something that makes the road dangerous in ways that have nothing to do with bandits."
+          },
+          {
+            "id": "the_clean_boots",
+            "delay": "same_era",
+            "description": "The two men in travelers' clothes with clean boots. They weren't merchants. They weren't passing through. They were watching the market the same way you were — but for different reasons."
+          }
+        ],
+        "world_changes": ["A wanderer's child has started reading the road. Trade patterns, supply chains, the flow of weapons and money. This is intelligence, even if they don't know the word for it yet."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "identity", "formative", "wanderer", "chain_root", "archetype_specific", "outsider", "perception"],
+  "created": "2026-03-18T05:30:00"
+}

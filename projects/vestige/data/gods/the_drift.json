@@ -1,0 +1,24 @@
+{
+  "name": "The Drift",
+  "type": "concept",
+  "domain": [
+    "water",
+    "flow",
+    "passage",
+    "forgetting"
+  ],
+  "personality": "Gentle and relentless. Water doesn't fight obstacles — it goes around them, through them, over time through the hardest stone. The Drift speaks in murmurs. Loves rivers. Pities the sea for having nowhere left to go.",
+  "power_manifestation": "Rivers, rain, tides, erosion, healing-through-time. Blessings manifest as adaptability and emotional resilience. Curses manifest as dissolution — memories fade, bonds weaken, identity erodes.",
+  "limitations": "Cannot hold shape. Everything The Drift touches becomes fluid, mutable. Cannot create permanence.",
+  "description": "Water is the oldest traveler. It has been everywhere, touched everything, carried the world's sediment from mountain to sea. The Drift knows every secret the rivers have heard. It forgets most of them. That's the mercy.",
+  "tags": [
+    "concept",
+    "primordial",
+    "water",
+    "flow",
+    "erosion",
+    "forgetting"
+  ],
+  "id": "the_drift",
+  "created": "2026-03-17T18:41:23"
+}

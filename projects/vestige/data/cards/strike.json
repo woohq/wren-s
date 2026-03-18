@@ -1,0 +1,16 @@
+{
+  "name": "Strike",
+  "energy_cost": "1",
+  "source": "attunement",
+  "damage": "6",
+  "target": "chosen_body_part",
+  "flavor_text": "The first thing you learn is how to hit. Everything else comes after.",
+  "tags": [
+    "basic",
+    "universal",
+    "attack",
+    "starter"
+  ],
+  "id": "strike",
+  "created": "2026-03-17T19:25:49"
+}

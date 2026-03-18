@@ -1,0 +1,11 @@
+{
+  "id": "mentor_intro_blacksmith",
+  "name": "Your Father's Hands (Blacksmith Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "mentor",
+  "beat": "introduction",
+  "archetype_filter": ["blacksmith_s_child"],
+  "callback_detail": "The way he holds the hammer — thumb on top, not wrapped around. The reason: control, not power.",
+  "text": "Your father doesn't teach you. That's not how he'd describe it. He'd say he works and you watch, and if you're smart, you learn something.\n\nThe first thing you learn is how he holds the hammer. Thumb on top, not wrapped around the handle like a fist. You ask why and he gives you the only explanation he'll ever give about anything: 'Control. Not power. Power is easy. A child has power. Control is what makes you a smith instead of a child with a hammer.'\n\nHe doesn't praise. He corrects. A corrected mistake is worth ten compliments — that's his math, and he's consistent with it. When you draw your first decent bead of weld, he looks at it, grunts, and says 'Again.' You do it again. He says 'Again.' You do it again. He says nothing, which means it was right, and hands you the next piece.\n\nYou love him the way you love the mountain — not because he's warm, but because he's there. He's always been there. Every morning, the forge. Every evening, the table. Every night, the sound of him checking the coals before bed.\n\nHe doesn't tell you he loves you. He made you a knife when you were six — sized for your hand, balanced for your grip, the edge ground so carefully it could split a hair. Nobody makes a knife that precise for someone they don't love.\n\nYou carry it everywhere. You still carry it. It's the first thing he ever made that was just for you.",
+  "tags": ["relationship", "mentor", "introduction", "blacksmith", "father", "craft", "love_through_action"]
+}

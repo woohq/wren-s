@@ -1,0 +1,23 @@
+{
+  "name": "The Deep",
+  "type": "concept",
+  "domain": [
+    "earth",
+    "stone",
+    "foundation",
+    "patience"
+  ],
+  "personality": "Ancient beyond comprehension. Not malicious, not kind — geological. Thinks in millennia. When The Deep speaks (rarely), the ground trembles. Doesn't understand urgency. Everything is temporary to something that old.",
+  "power_manifestation": "Earthquakes, mountain formation, mineral veins. Blessings manifest as unbreakable endurance. Curses manifest as petrification — not death, but eternal stillness.",
+  "limitations": "Cannot act quickly. Every divine action takes days to manifest. Cannot affect anything not touching the ground.",
+  "description": "The oldest god. Not worshipped so much as acknowledged — you don't pray to gravity, but you respect it. The Deep existed before anything walked on the world and will exist after everything stops.",
+  "tags": [
+    "concept",
+    "primordial",
+    "earth",
+    "ancient",
+    "foundation"
+  ],
+  "id": "the_deep",
+  "created": "2026-03-17T18:40:47"
+}

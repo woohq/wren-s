@@ -1,0 +1,19 @@
+{
+  "name": "Solmare",
+  "region": "The Sunward Coast",
+  "terrain": "coast",
+  "climate": "warm",
+  "culture": "the_sunward_courts",
+  "description": "A white-walled city cascading down cliffs to the sea. Terraced gardens. Libraries built into the rock face. The harbor is the largest on the coast — every trade route touches Solmare eventually. The court sits at the highest terrace, looking down on everything. The view is the point.",
+  "atmosphere": "Salt air, warm stone, distant music from the lower terraces, the snap of trade-ship sails, sunlight on white walls so bright it hurts",
+  "tags": [
+    "city",
+    "southern",
+    "coastal",
+    "political",
+    "trade",
+    "starting_location"
+  ],
+  "id": "solmare",
+  "created": "2026-03-17T18:51:38"
+}

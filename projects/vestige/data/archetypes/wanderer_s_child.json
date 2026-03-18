@@ -1,0 +1,23 @@
+{
+  "name": "Wanderer's Child",
+  "description": "You've slept in more beds than you can remember and none of them were yours. Every accent is familiar. Every goodbye is practiced. You belong everywhere and nowhere.",
+  "starting_traits": [
+    "worldly",
+    "adaptable",
+    "rootless"
+  ],
+  "attunement_tendency": "sense",
+  "relationship_tendencies": [
+    "transient_parent",
+    "brief_connections",
+    "outsider_perspective"
+  ],
+  "story_tendency": "the outsider everywhere, the one who sees every culture but belongs to none",
+  "tags": [
+    "travel",
+    "cultural",
+    "common"
+  ],
+  "id": "wanderer_s_child",
+  "created": "2026-03-17T18:45:54"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "The Solmari Senate",
+  "type": "kingdom",
+  "goal": "Control the coastal trade routes and accumulate knowledge. The Senate believes that whoever understands the most controls the most — and they're usually right.",
+  "territory": [
+    "solmare"
+  ],
+  "leadership": "Twelve senators from the old families. The position is hereditary but can be challenged by Trial of Rhetoric — a formal debate where the loser surrenders their seat. Bloodless coups in broad daylight.",
+  "resources": "Trade wealth, naval power, libraries, diplomatic networks, a scholar class that doubles as a spy network",
+  "worship_generates": "Awe-worship toward the institution. The Senate itself radiates an authority that isn't entirely political — centuries of people believing 'the Senate knows best' have given the building itself a faint divine weight.",
+  "description": "The most sophisticated power structure in the First Era. The Senate doesn't conquer with armies — it conquers with trade agreements, information asymmetry, and the quiet certainty that civilization means doing things their way. They're building something that will either become an empire or collapse under its own cleverness.\n\nThe Senate genuinely believes it's improving the world. Southern medicine saves lives. Southern literacy preserves knowledge. Southern trade routes connect isolated peoples. These things are real. But they come with conditions: our medicine, our alphabet, our trade terms. Help that requires you to become more like us isn't charity — it's recruitment. The Senate can't tell the difference, and that blindness is their most dangerous quality.\n\nNot every senator is a schemer. Some are genuine scholars who believe knowledge should be free. Some are idealists who entered politics to make the courts less corrupt and got swallowed by the system. The young senator who argues for fair trade with the Iron Holds isn't naive — they've done the math and know exploitation creates enemies. The old senator who blocks them isn't evil — they remember the last time Solmare showed weakness and the pirates burned the lower terraces.",
+  "internal_divisions": "Idealist senators who want genuine cultural exchange vs pragmatists who see every relationship as a trade advantage. The scholar class is split between those who share knowledge freely and those who weaponize it. A growing populist movement in the lower terraces that thinks the old families have ruled long enough.",
+  "acknowledged_flaw": "Cannot distinguish between helping and assimilating. Genuine generosity is tangled with cultural imperialism so thoroughly that even the Senate's best intentions carry the implicit message: be more like us.",
+  "tags": [
+    "southern",
+    "political",
+    "trade",
+    "knowledge",
+    "scholarly",
+    "first_era"
+  ],
+  "id": "the_solmari_senate",
+  "created": "2026-03-17T18:56:20"
+}

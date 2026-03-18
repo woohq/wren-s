@@ -1,0 +1,19 @@
+{
+  "name": "The Rival",
+  "type": "rival",
+  "description": "Someone whose existence challenges yours. Not an enemy — an equal who chose differently. Every time they succeed, you feel it. Every time they fail, you feel that too.",
+  "emotional_function": "The pressure — they make you better or bitter, and you don't always get to choose which",
+  "archetype_tendency": [
+    "noble_s_bastard",
+    "blacksmith_s_child",
+    "criminal_s_heir"
+  ],
+  "tags": [
+    "tension",
+    "adolescence",
+    "growth",
+    "competition"
+  ],
+  "id": "the_rival",
+  "created": "2026-03-17T19:00:57"
+}

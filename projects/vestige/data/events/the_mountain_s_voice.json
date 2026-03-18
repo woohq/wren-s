@@ -1,0 +1,20 @@
+{
+  "name": "The Mountain's Voice",
+  "age": "childhood",
+  "category": "life",
+  "trait_requires_any": [
+    "brave",
+    "curious"
+  ],
+  "text": "You are eight. The mountain shakes at night — it does that sometimes, and the adults pretend it's normal. But tonight is different. The tremor has a rhythm. Not random. Deliberate. Like something enormous turning in its sleep.\n\nYou slip out of bed and press your palm to the stone floor. It's warm. Not forge-warm — earth-warm. Deeper. The vibration travels up your arm and settles in your chest, and for a moment you can feel the whole mountain. Every tunnel. Every vein of ore. Every pocket of heat where the rock remembers being molten.\n\nThen it stops. The mountain exhales and goes still. Your hand is tingling. You don't sleep for the rest of the night.",
+  "tags": [
+    "childhood",
+    "mountain",
+    "the_deep",
+    "supernatural",
+    "wonder",
+    "attunement_hint"
+  ],
+  "id": "the_mountain_s_voice",
+  "created": "2026-03-17T19:01:25"
+}

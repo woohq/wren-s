@@ -1,0 +1,24 @@
+{
+  "name": "The Weave",
+  "type": "concept",
+  "domain": [
+    "connection",
+    "fate",
+    "pattern",
+    "thread"
+  ],
+  "personality": "Sees everything as part of a pattern. Every person is a thread. Every event is a knot. The Weave doesn't judge threads — it just sees where they connect. Has the unsettling habit of knowing what will happen before it does, and the restraint to usually not say.",
+  "power_manifestation": "Fate, prophecy, connection, coincidence. Blessings manifest as serendipity — being in the right place at the right time. Curses manifest as inescapable destiny — every path leads to the same ending.",
+  "limitations": "Cannot cut a thread. The Weave connects but cannot disconnect. Cannot grant freedom — only show how everything is already bound.",
+  "description": "The god of connection and fate. The closest thing to what the player-god might have been — or might become. The Weave knows the player exists. It has opinions about that. It keeps them to itself.",
+  "tags": [
+    "concept",
+    "primordial",
+    "fate",
+    "connection",
+    "pattern",
+    "player_god_related"
+  ],
+  "id": "the_weave",
+  "created": "2026-03-17T18:41:50"
+}

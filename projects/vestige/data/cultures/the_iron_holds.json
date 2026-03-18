@@ -1,0 +1,35 @@
+{
+  "name": "The Iron Holds",
+  "era": "the_first_era",
+  "values": [
+    "honor",
+    "craft",
+    "endurance",
+    "ancestors"
+  ],
+  "naming_pool": "nordic",
+  "archetype_tendencies": [
+    "blacksmith_s_child",
+    "orphan_of_war"
+  ],
+  "trait_tendencies": [
+    "brave",
+    "stubborn",
+    "honor_bound"
+  ],
+  "worship_tendency": [
+    "the_deep",
+    "the_burn"
+  ],
+  "technology": "iron_working",
+  "description": "Mountain people who worship the forge and the stone beneath it. They believe the earth has a heartbeat and the best steel is hammered in time with it. Hard people, honest people. They don't lie because lies corrode — like rust on a blade. Their children learn to swing a hammer before they learn to read, because reading is for southerners and the dead.",
+  "tags": [
+    "northern",
+    "mountain",
+    "forge",
+    "honor",
+    "first_era"
+  ],
+  "id": "the_iron_holds",
+  "created": "2026-03-17T18:51:15"
+}

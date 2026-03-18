@@ -1,0 +1,21 @@
+{
+  "name": "The Oldwood",
+  "region": "The Northern Reaches",
+  "terrain": "old_growth_forest",
+  "climate": "cold",
+  "description": "A forest older than any settlement. The trees are enormous — wide enough to shelter a family in their roots, tall enough to disappear into low cloud. Nobody claims the Oldwood. Several cultures use it. The Iron Holds hunt here. The Rootwalkers pass through and leave offerings. Something lives in the deeper parts that nobody talks about directly.",
+  "atmosphere": "Silence that isn't empty — it's full of things choosing not to make sound. Filtered green light. The smell of wet bark and old growth. Footsteps absorbed by moss before they finish.",
+  "connections": [
+    "thornwall"
+  ],
+  "tags": [
+    "wilderness",
+    "forest",
+    "ancient",
+    "unclaimed",
+    "mysterious",
+    "hunting_ground"
+  ],
+  "id": "the_oldwood",
+  "created": "2026-03-17T21:31:58"
+}

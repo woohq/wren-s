@@ -1,0 +1,90 @@
+{
+  "id": "the_overheard_arithmetic",
+  "name": "The Overheard Arithmetic",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["noble_s_bastard"],
+  "text": "You're fifteen and you've learned where voices carry in the estate. The east corridor above the study. The servants' stair behind the audience chamber. You didn't learn this on purpose — you just spent years in rooms where nobody thought to check if you were listening.\n\nTonight, your father's voice through the study wall. Talking about you. To someone whose voice you recognize — his steward, the one who handles the accounts and the things that aren't supposed to be accounts.\n\nThey aren't cruel. That's the part that stays. They discuss you the way they'd discuss a trade route — weighing costs, measuring benefits, calculating risk. Your education: expensive but useful. Your blood: valuable in some negotiations, toxic in others. Your name: a liability when spoken too loudly, an asset when whispered to the right people.\n\nYour father says: 'The question isn't whether they're capable. The question is whether acknowledging that capability costs us more than denying it.'\n\nThe steward: 'Then we should decide soon. They're getting old enough to decide for themselves.'\n\nYou're standing in the corridor in the dark. The stone is cold under your feet. Your heart is doing the same arithmetic your father is doing, except from the inside: you are a variable in someone else's equation. You have always been a variable in someone else's equation.\n\nBut you're also standing in a corridor they don't know you can reach, hearing a conversation they don't know you can hear.",
+  "choices": [
+    {
+      "text": "Walk into the study. Let them see your face. Let them know you heard every word.",
+      "requires": {"trait_any": ["brave", "stubborn"]},
+      "effects": {
+        "trait_gain": "acknowledged",
+        "attunement_hint": "body"
+      },
+      "consequence_text": "You open the door. Your father's face does something you've never seen — not surprise, he's too practiced for that, but a recalculation. The steward goes still the way prey goes still.\n\n'I'd like to be part of the conversation about my future,' you say.\n\nYour father looks at you. The silence lasts long enough for the candle to gutter twice. Then he pulls out a chair.\n\nHe doesn't apologize. You didn't expect him to. Instead he does something worse — he treats you like an adult. Lays out the political reality in plain language. Your blood is useful to certain families. Your name is a problem for his legitimate line. Your education was an investment. He's trying to determine the return.\n\nYou sit through all of it. When he's finished, you say, 'What if the return is someone who knows all of that and still walked into this room?'\n\nHe doesn't answer. But the next morning, there's a fourth chair at the family's breakfast table. It wasn't there yesterday.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_fourth_chair",
+            "delay": "same_era",
+            "description": "Your father starts including you in political matters — small ones at first, then less small. He's testing whether your capability is worth the cost. Your legitimate half-sibling watches this happen."
+          },
+          {
+            "id": "the_siblings_calculation",
+            "delay": "years",
+            "description": "Your half-sibling has been watching your rise. They've done their own arithmetic. The answer they arrived at depends on what kind of person they are — and what kind of person you've become."
+          }
+        ],
+        "world_changes": ["A bastard child has been acknowledged at a noble's breakfast table. In court politics, breakfast seating is a declaration. People notice."]
+      }
+    },
+    {
+      "text": "Stay in the corridor. Remember every word. Knowledge they don't know you have is the only advantage you've ever owned.",
+      "requires": {"trait_any": ["cunning", "perceptive"]},
+      "effects": {
+        "trait_gain": "shadow_informed",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "You press your back against the cold stone and listen until they're done. The steward leaves through the main door. Your father sits alone in his study for a long time — you can hear his chair, the occasional sound of a cup being set down.\n\nYou go back to your room and start a ledger. Not on paper — in your head, where nobody can find it. Who knows what about you. Who values which parts. Who is threatened by what you represent. Your father's steward knows the estate accounts. You've just started keeping the accounts nobody writes down.\n\nOver the next weeks, you start listening more carefully. Not just to your father — to the servants, the visitors, the merchants who come through the gate. You learn that the cook knows which council members are in debt. The stable boy knows which horses arrive at night. The seamstress knows whose clothes are getting looser or tighter and what that means.\n\nInformation is the only currency that doesn't require a legitimate name to spend.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_hidden_ledger",
+            "delay": "same_era",
+            "description": "Your shadow network of information is growing. The servants talk to you because you listen and you never repeat. But someone else in the estate deals in secrets too — and they've noticed a new player."
+          },
+          {
+            "id": "the_stewards_errand",
+            "delay": "same_era",
+            "description": "Your father's steward asks you to deliver a message. A small task. Too small for someone with your education. He's testing whether you're useful — or whether you already know too much."
+          }
+        ],
+        "world_changes": ["The servants of the estate have a new confidant. Information flows to you because you're invisible enough to be trusted and sharp enough to be useful. This is a kind of power that doesn't require a title."]
+      }
+    },
+    {
+      "text": "Don't go to your father. Go to the one whose inheritance you threaten — your legitimate half-sibling.",
+      "requires": {"trait_any": ["compassionate", "curious"]},
+      "effects": {
+        "trait_gain": "bridge_builder",
+        "attunement_hint": "bond"
+      },
+      "consequence_text": "Your half-sibling is still awake, reading by candlelight. They startle when you knock. You've never come to their room before. You've barely spoken — two people raised in the same estate, separated by a word on a document neither of you signed.\n\n'They're deciding what to do with me,' you say, sitting on the edge of their bed without being invited. 'I thought you should know before they do.'\n\nYour sibling closes their book. Studies you. You can see the arithmetic happening behind their eyes — the same arithmetic that runs in your father's study, the same arithmetic that runs in your own head. What are you worth. What do you cost. What happens if you're acknowledged. What happens if you're not.\n\nBut then they ask something your father didn't think to ask: 'What do you want?'\n\nNobody has ever asked you that. You don't have an answer ready. The silence between you fills with something that isn't quite trust — it's rawer than that. Two people who've been solving the same equation from opposite sides, realizing for the first time that the equation isn't the only thing that matters.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_siblings_pact",
+            "delay": "same_era",
+            "description": "You and your half-sibling have started talking. Not often, not openly. But something shifted the night you knocked on their door. You're building something between you — alliance, maybe, or just honesty. Either one is dangerous in a political family."
+          },
+          {
+            "id": "the_question_returned",
+            "delay": "years",
+            "description": "Your sibling asked 'what do you want?' and you didn't have an answer. Years later, you do. Whether it's an answer they can live with depends on how far both of you have come."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_half_sibling",
+            "description": "Your father's legitimate child. They were raised with everything you weren't — the name, the table, the inheritance. But they were also raised with the knowledge that you exist, that your blood is the same blood, and that one day this would need to be addressed. They chose to ask what you want. That's worth remembering."
+          }
+        ],
+        "world_changes": ["Two children of the same father have started speaking to each other. In a family where blood is a political instrument, this is either the foundation of something new or the beginning of a very complicated problem."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "political", "identity", "formative", "noble", "chain_root", "archetype_specific", "family"],
+  "created": "2026-03-18T05:15:00"
+}

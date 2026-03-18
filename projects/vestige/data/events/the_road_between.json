@@ -1,0 +1,79 @@
+{
+  "name": "The Road Between",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["any"],
+  "text": "You're fourteen and on the road for the first time without an adult. The errand is simple — deliver a package to the next settlement, half a day's walk. Your father said you were ready. Your mother said nothing, which was louder.\n\nThe road is wider than you expected and emptier than you wanted. Trees crowd both sides. Birds you can't name make sounds you don't like.\n\nYou hear them before you see them. Two men, sitting on a fallen log like they've been waiting. One has a knife. The other has patience, which is worse.\n\n'Nice package,' the one with patience says. 'Heavy?'\n\nYou are fourteen. They are not. The road is very empty. The settlement is still two hours away. Behind you, the same distance home.\n\nYour heart is doing something it's never done before. Not faster — louder. Like it's trying to get your attention.",
+  "choices": [
+    {
+      "text": "Run. You're younger. You might be faster. Drop the package if you have to.",
+      "effects": {
+        "trait_gain": "survivor",
+        "attunement_hint": "void"
+      },
+      "consequence_text": "You run. The package hits the dirt and you don't look back. Branches whip your face. Your lungs burn. You don't know if they're following — you can't hear anything over your own breathing and the blood in your ears.\n\nThey're not following. They wanted the package, not you. You make it to the settlement empty-handed, shaking, and spend an hour sitting behind the inn before you can stand.\n\nYour father doesn't ask what happened to the package. He looks at you — whole, breathing, terrified — and says, 'Good.' Just that. Good.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_package_opens",
+            "delay": "same_era",
+            "description": "The bandits open the package. What was inside changes their situation — and creates a trail back to your father."
+          }
+        ],
+        "world_changes": ["The road between Thornwall and the next settlement becomes known as unsafe. Traders start traveling in pairs."]
+      }
+    },
+    {
+      "text": "Stand your ground. You're carrying a forge hammer in your belt. You've never hit a person with it.",
+      "requires": {"trait_any": ["brave", "stubborn"]},
+      "effects": {
+        "trait_gain": "blooded",
+        "attunement_hint": "body"
+      },
+      "consequence_text": "The hammer feels different when you're not hitting iron. Heavier and lighter at the same time. The man with the knife comes first because the man with patience knows better.\n\nYou don't remember the fight clearly. You remember the sound the hammer made against his arm — not the clang of metal but something softer, something that makes your stomach turn. You remember him screaming. You remember the other man's face changing from patience to calculation to absence as he walks away without looking back.\n\nThe man on the ground is holding his arm and calling you names you've heard before but never deserved until now.\n\nYou deliver the package. Your hands don't stop shaking until the next morning. Something in you is different and you can't tell if it's better or worse.",
+      "spawns": {
+        "events": [
+          {
+            "id": "broken_arm_returns",
+            "delay": "years",
+            "description": "The man whose arm you broke. He healed wrong. He can't work. He's been telling anyone who'll listen about the forge kid with the hammer."
+          },
+          {
+            "id": "the_patient_ones_memory",
+            "delay": "next_era",
+            "description": "The patient man — the one who walked away — remembers your face. He's moved up in the world since then. He's not a roadside bandit anymore. But he remembers the kid who didn't flinch."
+          }
+        ],
+        "characters": [
+          {
+            "id": "broken_arm_man",
+            "description": "The man whose arm you broke with a forge hammer when you were fourteen. His arm healed crooked. He tells the story differently depending on how drunk he is."
+          }
+        ],
+        "world_changes": ["Word spreads about a Thornwall kid who broke a bandit's arm with a forge hammer. The road gets slightly safer. Your reputation precedes you in small ways."]
+      }
+    },
+    {
+      "text": "Talk. You have nothing worth killing for. Make them believe that.",
+      "requires": {"trait_any": ["cunning", "perceptive"]},
+      "effects": {
+        "trait_gain": "silver_tongued",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "You start talking before they finish standing up. You tell them the package is forge slag — waste metal, worthless, being sent to the next settlement for disposal because it's cheaper than dumping it.\n\nIt's not true. But you say it the way your father says things — flat, certain, bored. The man with patience studies you. He's deciding whether you're lying. You hold his gaze and think about nothing, because thinking about the truth will put it on your face.\n\n'Slag,' he repeats.\n\n'Slag,' you confirm. 'If you want it, carry it yourself. It's heavy.'\n\nHe waves you on. You walk past them at a normal pace even though every nerve in your body is screaming. You don't run. Running would tell them you lied.\n\nYou deliver the package. Your father asks how the road was. 'Quiet,' you say. It's the second lie of the day and already easier than the first.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_lie_discovered",
+            "delay": "same_era",
+            "description": "The bandits eventually learn the package wasn't slag. They come looking for the kid who lied to their faces. Not for revenge — for recruitment. That kind of nerve is worth money."
+          }
+        ],
+        "world_changes": ["The patient man tells others about a kid from Thornwall who lied with a dead face and walked through two armed men without flinching. In certain circles, this is a recommendation."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "choice", "danger", "first_encounter", "road", "universal", "formative", "chain_root"],
+  "id": "the_road_between",
+  "created": "2026-03-17T19:20:00"
+}

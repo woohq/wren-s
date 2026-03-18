@@ -1,0 +1,16 @@
+{
+  "name": "Blooded",
+  "source": "experiential",
+  "rarity": "common",
+  "description": "You've killed someone. The first time changes something — a door opens that you can't close. Violence is no longer theoretical.",
+  "attunement_affinity": "body",
+  "dilemma": "You can do it again. That's the easy part. The hard part is deciding when 'can' should become 'do.'",
+  "tags": [
+    "combat",
+    "violence",
+    "experiential",
+    "threshold"
+  ],
+  "id": "blooded",
+  "created": "2026-03-17T20:16:05"
+}

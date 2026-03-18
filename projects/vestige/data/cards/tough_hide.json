@@ -1,0 +1,17 @@
+{
+  "name": "Tough Hide",
+  "energy_cost": "0",
+  "source": "equipment",
+  "armor": "2",
+  "target": "self",
+  "special_effect": "Passive — always in effect while armor is equipped. Reduces first hit each turn by 2.",
+  "flavor_text": "It's not much. It's enough.",
+  "tags": [
+    "defense",
+    "passive",
+    "armor",
+    "equipment"
+  ],
+  "id": "tough_hide",
+  "created": "2026-03-17T19:33:02"
+}

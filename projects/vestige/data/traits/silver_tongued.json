@@ -1,0 +1,16 @@
+{
+  "name": "Silver-Tongued",
+  "source": "experiential",
+  "rarity": "uncommon",
+  "description": "Words come easy. Too easy. You learned that truth is a shape and you can bend it without breaking.",
+  "attunement_affinity": "sense",
+  "dilemma": "People believe you. Even when they shouldn't. Especially when they shouldn't.",
+  "tags": [
+    "social",
+    "speech",
+    "deception",
+    "experiential"
+  ],
+  "id": "silver_tongued",
+  "created": "2026-03-17T20:16:05"
+}

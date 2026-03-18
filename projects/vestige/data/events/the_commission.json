@@ -1,0 +1,100 @@
+{
+  "id": "the_commission",
+  "name": "The Commission",
+  "age": "adulthood",
+  "category": "life",
+  "archetype_filter": ["blacksmith_s_child"],
+  "text": "The Solmari merchant arrives at the forge with a drawing on vellum and a purse heavy enough to change your life.\n\nHe wants a blade. Not iron — he's brought his own steel, southern steel, and a small vial of something that glows faintly blue. 'Work this into the edge,' he says. 'My employer wants a blade that doesn't just cut. She wants a blade that remembers what it cuts.'\n\nYou don't know what's in the vial. It smells like ozone and regret. Your father would have asked questions. Your father would have said no to anything he didn't understand.\n\nThe purse sits on the anvil between you. It's enough to repair the roof. Enough to buy new bellows. Enough to stop worrying about winter for the first time in three years.\n\nThe merchant smiles. It's the kind of smile that has nothing behind it.",
+  "choices": [
+    {
+      "text": "Take the commission. The forge needs this. You'll figure out the vial as you work.",
+      "effects": {
+        "trait_gain": "pragmatic",
+        "faction_rep": {"the_solmari_senate": 10}
+      },
+      "consequence_text": "The steel is beautiful to work — responsive, eager, as if it wants to be shaped. The blue substance fuses with the edge during the final quench, and the blade hums at a frequency you've never heard from metal.\n\nYou deliver it. The merchant pays. The roof gets fixed. The bellows get replaced.\n\nMonths later, you hear a rumor from the south: a Solmari noble killed three people with a blade that left wounds that couldn't heal. You don't know if it's your blade. You don't ask. The not-knowing is a room you visit at night when you can't sleep.",
+      "spawns": {
+        "artifacts": [
+          {
+            "id": "the_remembering_blade",
+            "description": "A sword that remembers what it cuts. Wounds it inflicts don't heal naturally. Made with southern steel and a blue substance nobody in Thornwall has seen before. Your maker's mark is on the tang."
+          }
+        ],
+        "events": [
+          {
+            "id": "the_blades_reputation",
+            "delay": "years",
+            "description": "The blade has a name now. People in the south call it the Grieving Edge. A scholar traces the maker's mark back to Thornwall. Someone is coming to ask you questions."
+          },
+          {
+            "id": "the_merchants_return",
+            "delay": "same_era",
+            "description": "The merchant comes back. He has another vial. This time the purse is bigger. This time you know what you'd be making."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_noble_with_the_blade",
+            "description": "The Solmari noble who commissioned the blade through the merchant. She uses it. She's not what you expected — not a warrior, not a killer. A politician who needed something that makes threats credible without having to carry them out. The blade sits on her desk like a letter opener. Everyone in the room knows what it can do."
+          }
+        ],
+        "world_changes": ["A new type of weapon exists in the world — one forged with the blue substance. Other smiths will eventually try to replicate it. The Forge Council will have opinions about that."]
+      }
+    },
+    {
+      "text": "Refuse. Your father wouldn't have made a weapon he didn't understand, and neither will you.",
+      "requires": {"trait_any": ["honor_bound", "stubborn"]},
+      "effects": {
+        "trait_gain": "principled",
+        "faction_rep": {"the_forge_council": 5}
+      },
+      "consequence_text": "The merchant's smile doesn't change. 'Your loss,' he says, and takes his steel and his vial and his purse to the next forge down the mountain.\n\nWinter is hard. The roof leaks. The old bellows wheeze.\n\nBut your hands are clean. That matters more on some days than others. On the worst days, it barely matters at all. On the best days, it's the only thing that does.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_other_smiths_blade",
+            "delay": "years",
+            "description": "The merchant found another smith. The blade was made. The wounds still don't heal. But the maker's mark isn't yours. The question becomes: does it matter that it wasn't your hands, when you could have stopped it by doing it right?"
+          },
+          {
+            "id": "harrens_approval",
+            "delay": "same_era",
+            "description": "Old Harren heard you turned down the southern commission. He hasn't looked at you like that before. He still doesn't take you as an apprentice. But he starts leaving his forge door open when he works on the difficult pieces. That's as close as Harren gets to an invitation."
+          }
+        ],
+        "world_changes": ["Your reputation in Thornwall shifts — the smith who turned down southern money. Some think you're principled. Some think you're a fool. The distinction depends on how cold the winter gets."]
+      }
+    },
+    {
+      "text": "Take the steel, refuse the vial. Make the best sword you can from honest metal.",
+      "requires": {"trait_any": ["cunning", "perceptive"]},
+      "effects": {
+        "trait_gain": "negotiator"
+      },
+      "consequence_text": "The merchant frowns. Negotiations follow — an hour of them, careful and exhausting. You end up with half the purse for a blade made from his steel but without the blue substance.\n\nThe sword you make is the finest you've ever produced. The southern steel sings under your hammer. You put your mark on the tang — your mark, not your father's. The first blade that's entirely yours.\n\nThe merchant takes it south. No rumors follow. You fix half the roof and learn to live with the draft on the other side.",
+      "spawns": {
+        "artifacts": [
+          {
+            "id": "the_southern_blade",
+            "description": "A fine sword made from southern steel by northern hands. No enchantment. No mystery. Just excellent craft. Your mark is on the tang — the first blade that's entirely yours."
+          }
+        ],
+        "events": [
+          {
+            "id": "the_blades_journey",
+            "delay": "years",
+            "description": "Your honest blade ends up in the hands of someone who matters. Not through violence — through trade, inheritance, chance. The blade carries your mark into a story you never anticipated."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_merchant_remembers",
+            "description": "The merchant remembers the smith who negotiated him down and produced something beautiful from honest steel. He tells other merchants. Your reputation in the south is quiet but specific: the one who wouldn't compromise but would bargain."
+          }
+        ],
+        "world_changes": ["The merchant still has the vial. He'll find someone else to use it. The blue-substance blade will exist in the world — just not with your mark on it."]
+      }
+    }
+  ],
+  "tags": ["adulthood", "choice", "craft", "moral", "money", "consequence", "blacksmith", "solmari", "chain_root"]
+}

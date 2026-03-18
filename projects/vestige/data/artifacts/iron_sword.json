@@ -1,0 +1,20 @@
+{
+  "name": "Iron Sword",
+  "type": "weapon",
+  "description": "Plain iron. No engravings. No history. Your father made a hundred of these. But this one is yours — the balance is right, the grip is worn to your hand, and the edge holds longer than it should because you ground it yourself.",
+  "cards_granted": [
+    "slash",
+    "parry"
+  ],
+  "rarity": "common",
+  "tags": [
+    "weapon",
+    "sword",
+    "iron",
+    "common",
+    "starter",
+    "melee"
+  ],
+  "id": "iron_sword",
+  "created": "2026-03-17T19:33:02"
+}

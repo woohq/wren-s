@@ -1,0 +1,19 @@
+{
+  "name": "The Name on the Wall",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": [
+    "noble_s_bastard"
+  ],
+  "text": "You find the family tree in the east hall. You weren't supposed to — the door is usually locked, and today it wasn't, and you are seven and seven-year-olds don't understand locked doors as a concept so much as an insult.\n\nThe tree is painted on the wall in gold leaf and careful ink. Names branching upward like roots in reverse. You find your father's name near the top, connected by a thick line to your stepmother. Below them: your half-siblings, each name in the same careful hand.\n\nYou search for yours. You search for a long time.\n\nIt's not there.\n\nThere's a mark — a small one, at the edge of the branch, where your father's line splits. Not a name. A dot. Like someone started to write something and stopped.\n\nYou touch the dot. The paint is smooth. You wonder how old you were when they decided a dot was enough.",
+  "tags": [
+    "childhood",
+    "noble",
+    "identity",
+    "exclusion",
+    "formative",
+    "emotional"
+  ],
+  "id": "the_name_on_the_wall",
+  "created": "2026-03-17T19:06:03"
+}

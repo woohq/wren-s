@@ -1,0 +1,23 @@
+{
+  "name": "Criminal's Heir",
+  "description": "Your first word was 'quiet' and your second was 'run.' The law is a story the powerful tell. You know the real story — the one written in back alleys and whispered debts.",
+  "starting_traits": [
+    "street_smart",
+    "loyalty_tested",
+    "morally_flexible"
+  ],
+  "attunement_tendency": "void",
+  "relationship_tendencies": [
+    "criminal_mentor",
+    "loyalty_test_friend",
+    "tension_with_law"
+  ],
+  "story_tendency": "the one who knows the system is rigged and must decide whether to play it or break it",
+  "tags": [
+    "criminal",
+    "moral",
+    "common"
+  ],
+  "id": "criminal_s_heir",
+  "created": "2026-03-17T18:45:54"
+}

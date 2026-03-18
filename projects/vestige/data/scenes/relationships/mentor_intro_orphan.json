@@ -1,0 +1,11 @@
+{
+  "id": "mentor_intro_orphan",
+  "name": "The Woman Who Isn't Your Mother (Orphan Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "mentor",
+  "beat": "introduction",
+  "archetype_filter": ["orphan_of_war"],
+  "callback_detail": "Her hand on your back during the screaming. The weight of it. The specific pressure that means 'I'm here.'",
+  "text": "She told you her name once. Maret. You don't use it. In the camp, names are for people who plan to stay, and nobody in the camp plans to stay. She's 'the woman' or, when you're feeling honest with yourself, 'the one who watches me.'\n\nShe isn't your mother. She said that the first day, clearly, firmly, like a fence she was building between you. 'I'm not your mother. But I'm here.' The fence has held for two years. You don't cross it. Neither does she.\n\nBut she teaches you. Not with lessons — with behavior. She shows you how to ration. How to read weather. How to tell which strangers are safe (none of them, but some are less dangerous than others). How to sleep with one ear open. How to carry grief without letting it slow you down.\n\nAt night, when someone screams, she puts her hand on your back. She doesn't move it. She doesn't rub circles or squeeze or do any of the things a mother would do. She just presses — a flat, firm, constant pressure between your shoulder blades that says: I'm here. Whatever that sound is, I'm here.\n\nYou don't know what she was before the war. A teacher, maybe. A soldier. Someone who learned to keep people alive in places where living is an act of defiance.\n\nShe never asks you to love her. She never asks you for anything. And because of that — because the fence is real and the hand is real and the teaching is real and the asking is absent — you trust her more than you've trusted anything since the world caught fire.",
+  "tags": ["relationship", "mentor", "introduction", "orphan", "maret", "guardian", "trust", "fence"]
+}

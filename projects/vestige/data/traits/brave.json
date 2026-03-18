@@ -1,0 +1,15 @@
+{
+  "name": "Brave",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Faces things head-on. Cannot look away from a challenge.",
+  "attunement_affinity": "body",
+  "dilemma": "You CAN charge in. Which means you sometimes WILL when you shouldn't.",
+  "tags": [
+    "personality",
+    "physical",
+    "combat_relevant"
+  ],
+  "id": "brave",
+  "created": "2026-03-17T18:29:03"
+}

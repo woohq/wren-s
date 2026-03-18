@@ -1,0 +1,195 @@
+{
+  "id": "the_southern_offer",
+  "name": "The Southern Offer",
+  "age": "adulthood",
+  "category": "world",
+  "archetype_filter": [
+    "any"
+  ],
+  "faction_present": [
+    "the_forge_council"
+  ],
+  "era_filter": [
+    "the_first_era"
+  ],
+  "historical_inspiration": "Meiji Restoration (forced opening of Japan), Silk Road establishment, British trade missions to Qing China, Perry's Black Ships. The universal dynamic: a connected power offering trade to an isolated one. Both sides have genuine motivations and genuine blind spots.",
+  "text": "The Solmari delegation arrives at Thornwall's gate in spring, when the mountain passes clear. Twelve people: two senators, four scholars, and six guards wearing armor that's lighter than anything the Holds have ever produced.\n\nThey bring gifts. Southern wine. Books — actual books, with binding and pages, a technology Thornwall has never seen. A bolt of silk so fine the apprentices are afraid to touch it. And a map. A map of the known world, with Thornwall on it. A small dot near the top, labeled in the southern script that nobody here can read.\n\nSenator Lyris speaks to the Forge Council with the practiced warmth of someone who negotiates for a living. The offer is simple: open a trade route. Southern goods — medicine, books, textiles, engineered tools — in exchange for northern ore and steel. The Senate will fund the road. Both sides benefit.\n\nThe Forge Council retires to deliberate. The arguments are predictable and fierce.\n\nOld Master Harren, who hasn't left Thornwall in forty years: 'They brought guards. To a trade negotiation. They brought guards.'\n\nYoung Master Kael, who handled the silk: 'They brought medicine, Harren. Medicine that could have saved your daughter last winter.'\n\nThe silence after that remark lasts a very long time.\n\nYou're not on the Council. But the Council has noticed you — your word carries weight now, whether you sought it or not. Master Harren catches your eye across the hall. So does Master Kael. Both want your voice. Both think they know what you'll say.",
+  "choices": [
+    {
+      "text": "Speak for the trade. Isolation has cost lives. The medicine alone is worth the risk.",
+      "effects": {
+        "faction_rep": {
+          "the_solmari_senate": 15,
+          "the_forge_council": -10
+        },
+        "trait_gain": "bridge_builder",
+        "world_state": "trade_route_opened"
+      },
+      "consequence_text": "The trade route opens by summer. Southern medicine arrives. Three children survive the autumn fever who wouldn't have. Books follow — and with books, questions. Young smiths read about southern metallurgy and want to experiment. Old masters watch their apprentices reading and feel something slipping.\n\nWithin two years, Thornwall has a southern quarter. Within five, half the population can read. Within ten, someone proposes writing down the forge techniques — the sacred secrets that have always been oral, master to apprentice, hand to hand.\n\nHarren dies before the vote. Kael votes yes. The techniques are written. The secrets aren't secrets anymore.\n\nWhether this is progress or desecration depends on who you ask. Both answers are true.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_first_southern_quarter",
+            "delay": "years",
+            "description": "The southern quarter grows. A street, then a district. Southern script appears on shop signs. Children speak two languages. The old masters don't visit that part of town."
+          },
+          {
+            "id": "the_technique_debate",
+            "delay": "years",
+            "description": "A young smith proposes writing down the forge techniques. For preservation, she says. For betrayal, Harren says. The Council vote is the most divisive in living memory."
+          },
+          {
+            "id": "the_first_bridge_child",
+            "delay": "next_era",
+            "description": "A child born to a northern smith and a southern scholar. She belongs to both traditions and neither. She'll define what the next generation means."
+          }
+        ],
+        "characters": [
+          {
+            "id": "kael_the_innovator",
+            "description": "A young smith who learned southern metallurgy and combined it with northern techniques. The Council doesn't know whether to honor him or exile him. His work is extraordinary."
+          }
+        ],
+        "factions": [
+          {
+            "id": "the_true_forge",
+            "delay": "next_era",
+            "description": "The purists who left Thornwall when the techniques were written down. They retreated to the deep mountains. They keep the old ways. They don't trade. They consider Thornwall fallen."
+          }
+        ],
+        "cultures": [
+          {
+            "id": "bridge_folk",
+            "delay": "next_era",
+            "description": "The mixed-culture children of the trade quarter. They speak both languages. They belong to both worlds and neither."
+          }
+        ],
+        "world_changes": [
+          "Medicine arrives. Three children survive the autumn fever who wouldn't have. Books arrive. Questions follow."
+        ]
+      }
+    },
+    {
+      "text": "Speak against it. The guards tell you everything you need to know about the Senate's intentions.",
+      "requires": {
+        "trait_any": [
+          "cautious",
+          "honor_bound",
+          "stubborn"
+        ]
+      },
+      "effects": {
+        "faction_rep": {
+          "the_solmari_senate": -15,
+          "the_forge_council": 10
+        },
+        "trait_gain": "isolationist",
+        "world_state": "trade_route_rejected"
+      },
+      "consequence_text": "The delegation leaves politely. Senator Lyris smiles the same empty smile on the way out. The road doesn't get built.\n\nThornwall remains Thornwall. The forges burn as they always have. The secrets stay secret. The children who would have lived with southern medicine die as children have always died — and nobody knows what was possible because nobody saw the alternative.\n\nBut ten years later, the southern 'trade outpost' appears at the base of the mountain anyway. Not in Thornwall — beside it. Just close enough to trade with the young smiths who slip down the mountain at night. Just far enough to technically respect the Council's refusal.\n\nHarren was right about the guards. But he was wrong about what they were guarding against. The Senate doesn't need to conquer Thornwall. They just need to wait.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_foot_grows",
+            "delay": "years",
+            "description": "The trade post at the mountain's base grows. The Senate didn't need permission. It's technically not in Thornwall. Young smiths slip down at night."
+          },
+          {
+            "id": "the_night_smiths",
+            "delay": "years",
+            "description": "A network of young Thornwall smiths who trade with the Foot in secret. They call themselves practical. The Council calls them traitors. Both are half right."
+          },
+          {
+            "id": "the_forced_opening",
+            "delay": "next_era",
+            "description": "What Thornwall wouldn't give willingly, the next generation couldn't refuse. The opening came — not as trade but as necessity, during a crisis that isolation couldn't survive."
+          }
+        ],
+        "factions": [
+          {
+            "id": "the_foot_settlement",
+            "delay": "years",
+            "description": "The unofficial town at the mountain's base. Half southern traders, half northern dissidents. A culture of defiance and commerce that answers to nobody."
+          }
+        ],
+        "world_changes": [
+          "The passes close. The road doesn't get built. Children who would have lived with southern medicine die the way children have always died — and nobody knows what was possible."
+        ]
+      }
+    },
+    {
+      "text": "Propose conditions. Trade the ore, never the techniques. Let them in, but on Thornwall's terms.",
+      "requires": {
+        "trait_any": [
+          "cunning",
+          "perceptive"
+        ]
+      },
+      "effects": {
+        "trait_gain": "negotiator",
+        "world_state": "trade_route_conditional"
+      },
+      "consequence_text": "The negotiations take three months. The final agreement is seventeen clauses long — the first written document in Thornwall's history, which is ironic given that it was written to prevent southern influence.\n\nOre and finished goods go south. Medicine and textiles come north. No scholars permitted in the forges. No southern writing systems taught in Thornwall schools. No permanent southern residents above the trade quarter.\n\nIt works. For a generation. The trade quarter grows. The medicine saves lives. The secrets stay secret.\n\nThen a Thornwall girl marries a southern merchant's son, and their child grows up speaking both languages and belonging to neither culture, and the walls you built in a contract start to dissolve the way all walls dissolve — not through force, but through love and children and the simple human refusal to stay on one side of a line.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_treaty_holds",
+            "delay": "years",
+            "description": "Seventeen clauses. Both sides follow them. The trade quarter stays contained. The forges stay closed. It works."
+          },
+          {
+            "id": "the_mixed_marriage",
+            "delay": "years",
+            "description": "A Thornwall girl and a southern merchant's son. The treaty doesn't address marriage. Nobody thought it needed to. The walls you built in a contract start to dissolve."
+          },
+          {
+            "id": "the_treaty_generation",
+            "delay": "next_era",
+            "description": "The children who grew up under the treaty don't understand the old arguments. They just live in a world where both cultures exist and the line between them is a street, not a wall."
+          }
+        ],
+        "artifacts": [
+          {
+            "id": "the_thornwall_treaty",
+            "description": "Seventeen clauses on treated hide. The first written document in Thornwall's history. Ironic — it was written to prevent southern influence, using a southern technology."
+          }
+        ],
+        "world_changes": [
+          "Ore goes south. Medicine comes north. The secrets stay secret. For a generation."
+        ]
+      }
+    },
+    {
+      "text": "Say nothing. This is the Council's decision, not yours.",
+      "effects": {
+        "world_state": "trade_route_npc_decided"
+      },
+      "consequence_text": "The Council votes without you. Four to three: conditional acceptance. A compromise nobody is happy with, which is either the definition of fairness or the definition of failure.\n\nThe trade route opens cautiously. You watch from the forge, hammering, as southern carts begin the long climb up the mountain road that wasn't there last year. The sound of hammering and the sound of cart wheels mix together, and neither one drowns the other out.\n\nSome things change. Some things don't. The mountain is still the mountain. The forge is still the forge. But the world has gotten larger, and Thornwall has to decide what it means to be a small place in a big world — a question it never had to answer before.\n\nYou chose not to choose. That's also a choice. The world noticed.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_resentful_compromise",
+            "delay": "years",
+            "description": "The four-three vote left everyone unhappy. Trade exists but nobody trusts it. Southern merchants complain about restrictions. Northern masters complain about concessions. The compromise satisfies nobody, which might be its only achievement."
+          }
+        ],
+        "world_changes": [
+          "You chose not to choose. The Council decided without you. The world moved at the pace of a committee vote. Some things change. Most things don't. The mountain is still the mountain."
+        ]
+      }
+    }
+  ],
+  "cascade_notes": "This event's outcome shapes the next 3-5 eras. Opened trade = cultural blending, eventual schism (Old North / Bridge Folk). Rejected = delayed contact, eventual forced opening. Conditional = generation of stability, then gradual erosion. NPC-decided = unpredictable, based on faction dynamics. The player who encounters the consequences in future runs can trace them back to this moment.",
+  "tags": [
+    "world",
+    "adulthood",
+    "trade",
+    "cultural_contact",
+    "iron_holds",
+    "sunward_courts",
+    "branching",
+    "cascade_seed",
+    "historical_inspiration",
+    "chain_root"
+  ]
+}

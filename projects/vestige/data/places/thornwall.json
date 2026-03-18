@@ -1,0 +1,18 @@
+{
+  "name": "Thornwall",
+  "region": "The Northern Reaches",
+  "terrain": "mountains",
+  "climate": "cold",
+  "culture": "the_iron_holds",
+  "description": "A settlement built into the side of a mountain, where the forges never cool. The walls are iron-reinforced stone — not for beauty, but because the mountain shakes sometimes and anything less would crumble. Smoke rises from a dozen chimneys at all hours. The sound of hammers is the town's heartbeat.",
+  "atmosphere": "Iron smoke, cold wind, the rhythmic ring of hammers, orange forge-light spilling from doorways at night, the mountain humming beneath your feet",
+  "tags": [
+    "settlement",
+    "northern",
+    "forge",
+    "mountain",
+    "starting_location"
+  ],
+  "id": "thornwall",
+  "created": "2026-03-17T18:51:38"
+}

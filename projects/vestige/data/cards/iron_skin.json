@@ -1,0 +1,19 @@
+{
+  "name": "Iron Skin",
+  "energy_cost": "1",
+  "attunement": "body",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "armor": "8",
+  "target": "self",
+  "special_effect": "Retain half armor next turn",
+  "flavor_text": "Your skin doesn't harden. It just decides that this isn't enough to break it.",
+  "tags": [
+    "defense",
+    "body",
+    "fortify",
+    "practiced"
+  ],
+  "id": "iron_skin",
+  "created": "2026-03-17T19:25:49"
+}

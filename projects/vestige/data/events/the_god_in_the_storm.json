@@ -1,0 +1,25 @@
+{
+  "name": "The God in the Storm",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": [
+    "any"
+  ],
+  "trait_requires_any": [
+    "perceptive",
+    "prophetic_dreams",
+    "curious"
+  ],
+  "text": "The storm comes wrong. The sky goes green instead of grey and the air tastes of copper and every adult in the settlement stops what they're doing and looks up.\n\nLightning hits the old tree in the square. Not once — seven times. Between the fourth and fifth strike, you see something in the light. Not a shape exactly. A suggestion of one. Like looking at the sun and seeing the afterimage, except the afterimage is looking back.\n\nThen it's over. The tree is burning. The sky is blue.\n\nYou'll spend years trying to describe what you saw. You'll never manage it. The closest you'll get is telling someone it was like catching a thought before it finished forming — something that was about to be real but hadn't quite arrived.\n\nNobody else mentions it. You stop bringing it up after the third time someone looks at you like you're making it up.",
+  "tags": [
+    "childhood",
+    "divine",
+    "supernatural",
+    "the_weave",
+    "formative",
+    "perception",
+    "rare"
+  ],
+  "id": "the_god_in_the_storm",
+  "created": "2026-03-17T19:06:33"
+}

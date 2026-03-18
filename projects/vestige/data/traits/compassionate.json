@@ -1,0 +1,15 @@
+{
+  "name": "Compassionate",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Feels others' pain as their own. Cannot walk past suffering without stopping.",
+  "attunement_affinity": "bond",
+  "dilemma": "You heal everyone. Including the ones who will use that healing to hurt you.",
+  "tags": [
+    "personality",
+    "social",
+    "healing"
+  ],
+  "id": "compassionate",
+  "created": "2026-03-17T18:46:18"
+}

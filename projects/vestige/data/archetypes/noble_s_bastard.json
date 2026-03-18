@@ -1,0 +1,23 @@
+{
+  "name": "Noble's Bastard",
+  "description": "Born with one foot in power and one in the gutter. You know the court's language but not its warmth. Your blood opens doors your name closes.",
+  "starting_traits": [
+    "educated",
+    "stigmatized",
+    "politically_aware"
+  ],
+  "attunement_tendency": "world",
+  "relationship_tendencies": [
+    "rival_legitimate_heir",
+    "complicated_parent",
+    "mentor_from_shadows"
+  ],
+  "story_tendency": "the outsider with inside knowledge, the one who must earn what others inherit",
+  "tags": [
+    "political",
+    "identity",
+    "common"
+  ],
+  "id": "noble_s_bastard",
+  "created": "2026-03-17T18:45:54"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "The First Burn",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": [
+    "blacksmith_s_child"
+  ],
+  "text": "You are six. Your father is working the forge — the big one, the one he saves for commissions. You've been told to stay back. You always stay back. But today the metal is singing. You've never heard it do that before — a high, clear note as the hammer falls, like the iron is answering your father's rhythm.\n\nYou reach out. Not to touch the metal — you know better. But your hand passes through the heat-shimmer above the anvil and something happens. The air pushes back. Not painful. Warm. Familiar. Like the forge recognizes you.\n\nYour father sees you and his face does something complicated — fear and pride at the same time. He puts down the hammer.",
+  "tags": [
+    "childhood",
+    "forge",
+    "blacksmith",
+    "first_contact",
+    "attunement_hint",
+    "formative"
+  ],
+  "id": "the_first_burn",
+  "created": "2026-03-17T19:01:25"
+}

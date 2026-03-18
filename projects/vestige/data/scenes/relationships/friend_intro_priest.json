@@ -1,0 +1,11 @@
+{
+  "id": "friend_intro_priest",
+  "name": "The Other Apprentice (Priest Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "introduction",
+  "archetype_filter": ["priest_s_apprentice"],
+  "callback_detail": "The candle she stole from the sanctuary. The way she grinned when she lit it in the dormitory.",
+  "text": "There are four apprentices. You, Sera, Tommin who sleeps through morning prayers, and the quiet boy from the coast whose name you keep forgetting because he keeps changing it.\n\nSera is the one who argues.\n\nNot with you — with the texts. She reads a passage about The Burn's mercy and says 'but what about the people who burned' and Brother Aldric's eye twitches in a way that means she's asked a good question he doesn't want to answer in front of the class.\n\nYou find her after lessons in the library alcove, reading something she's not supposed to be reading. She doesn't hide it when you sit down. That's how you know she's decided to trust you — not because she said so, but because the book stayed open.\n\n'Do you believe it?' she asks. Not which part. All of it.\n\nYou think about Brother Aldric's still hands during prayer. You think about the question you're afraid to ask out loud.\n\n'I don't know,' you say.\n\n'Good,' she says. 'The ones who are sure are the dangerous ones.'\n\nShe steals a candle from the sanctuary that night and lights it in the dormitory. Not as rebellion. As experiment. She wants to see if The Burn's fire feels different from ordinary fire.\n\nIt doesn't. She grins anyway.",
+  "tags": ["relationship", "childhood_friend", "introduction", "priest", "sera", "doubt", "questioning"]
+}

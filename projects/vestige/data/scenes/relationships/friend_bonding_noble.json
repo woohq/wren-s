@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_noble",
+  "name": "The Locked Room (Noble Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["noble_s_bastard"],
+  "callback_detail": "Callum's laugh in the dark. The way it echoed in the wine cellar. The relief that followed.",
+  "text": "It's Callum's fault. He wanted to show you the old wine cellar — the one beneath the east wing that nobody uses because the door sticks. What he didn't mention is that the door sticks from the INSIDE.\n\nThe lock catches. The click is small and final.\n\nYou're eleven years old, in the dark, in a cellar that smells of dust and old oak, and nobody knows you're here because you're both supposed to be in lessons you're both supposed to be attending separately.\n\nCallum tries the door. Then tries it harder. Then kicks it, which accomplishes nothing except making his foot hurt.\n\n'This is your fault,' you say.\n\n'Completely,' he agrees.\n\nThe dark is very dark. You can't see his face. You can hear him breathing.\n\n'Callum.'\n\n'Yeah?'\n\n'Are you scared?'\n\nA pause. Then: 'Terrified. You?'\n\n'Terrified.'\n\nAnother pause. Then he laughs. It's a small, stupid, helpless laugh — the laugh of someone who knows the situation is ridiculous and has decided to find it funny instead of frightening. The laugh bounces off the cellar walls and comes back changed, fuller, like the room is laughing with him.\n\nYou laugh too. You can't help it.\n\nYou spend four hours in that cellar. By the time a servant finds you, you've invented a card game using old wine labels, argued about whether ghosts are real (he says yes, you say no, neither of you is certain), and learned something about each other that daylight never would have shown you: that you're both afraid of the same things, and that fear shared is fear halved.\n\nThe wine cellar becomes your place after that. You fix the lock yourselves. You never tell anyone.",
+  "tags": ["relationship", "childhood_friend", "bonding", "noble", "callum", "shared_trial", "laughter", "dark"]
+}

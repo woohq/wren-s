@@ -1,0 +1,17 @@
+{
+  "name": "Blacksmith's Child",
+  "description": "Born to the forge. Craft in the blood. The smell of iron and sweat is home.",
+  "starting_traits": [
+    "physically_capable",
+    "familiar_with_craft"
+  ],
+  "attunement_tendency": "body",
+  "story_tendency": "the maker, the pragmatist, the one who builds",
+  "tags": [
+    "craft",
+    "physical",
+    "common"
+  ],
+  "id": "blacksmith_s_child",
+  "created": "2026-03-17T18:29:04"
+}

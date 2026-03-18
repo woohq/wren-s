@@ -1,0 +1,18 @@
+{
+  "name": "Reinforce",
+  "energy_cost": "1",
+  "attunement": "bond",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "special_effect": "Target equipment card is immune to destruction for 3 turns. +2 armor.",
+  "flavor_text": "You pour yourself into the steel and the steel holds. It holds because you asked.",
+  "tags": [
+    "defense",
+    "bond",
+    "equipment",
+    "support",
+    "practiced"
+  ],
+  "id": "reinforce",
+  "created": "2026-03-17T19:26:12"
+}

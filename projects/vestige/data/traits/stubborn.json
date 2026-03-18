@@ -1,0 +1,15 @@
+{
+  "name": "Stubborn",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Will not bend. Will not break. Will stand in the rain arguing with the sky.",
+  "attunement_affinity": "body",
+  "dilemma": "Persistence wins when patience is the answer. Persistence kills when flexibility is.",
+  "tags": [
+    "personality",
+    "physical",
+    "endurance"
+  ],
+  "id": "stubborn",
+  "created": "2026-03-17T18:46:18"
+}

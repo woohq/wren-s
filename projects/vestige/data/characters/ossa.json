@@ -1,0 +1,16 @@
+{
+  "id": "ossa",
+  "name": "Ossa",
+  "type": "historical_figure",
+  "culture": "the_ash_tenders",
+  "era": "the_first_era",
+  "description": "An Ash Tender elder who claims to have spoken with the Ashfield. Not spoken to — spoken with. A conversation, she says, in heat and pressure and the rhythm of steam through stone. She says the Ashfield is confused. Becoming something it doesn't know how to be. Most people think Ossa is mad. The Ash Tenders treat her like a weather vane — not always right, but worth checking.",
+  "tags": [
+    "historical_figure",
+    "ash_tenders",
+    "elder",
+    "mystic",
+    "ashfield",
+    "first_era"
+  ]
+}

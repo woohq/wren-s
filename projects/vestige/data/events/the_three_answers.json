@@ -1,0 +1,45 @@
+{
+  "id": "the_three_answers",
+  "name": "The Three Answers",
+  "age": "adulthood",
+  "category": "world",
+  "archetype_filter": ["any"],
+  "historical_inspiration": "Hundred Schools of Thought (Warring States China). When society fractures, philosophy flourishes — competing answers to 'what went wrong?' Confucianism (virtue/duty), Legalism (law/force), Mohism (universal love). Each school was a genuine attempt to fix a broken world. Our version: three responses to crisis, each legitimate, each incomplete.",
+  "text": "The crisis came. Whether it was the Ash Cough, or the southern expansion, or simply the weight of too many people wanting too many things — by the time anyone thought to name it, it was already everywhere. Trust between the cultures had cracked. Trade slowed. Borders hardened. People who'd shared market squares for years started locking doors at night.\n\nAnd from the crack, three ideas grew.\n\nIn Thornwall, the Iron Doctrine: that the answer is craft. Make things well. Make them honestly. If every person built what they built with care, the world would hold together because its parts would be sound. The Forge Council endorses this without quite calling it philosophy. They just call it work.\n\nIn Solmare, the Consul's Proposition: that the answer is knowledge. Understand the crisis. Map its causes. Trace the failure to its root and excise it with precision. The Senate funds scholars to study why trust broke, and the scholars produce three hundred pages of analysis and no one reads past the summary, but the summary is excellent.\n\nAlong the river, the Rootwalkers don't write anything down. But a singer named Vaya composes a new riversong — the Song of the Cracked Stone — and it spreads from camp to camp in a week. The song says: trust broke because people stopped moving. When you stay in one place, you start to think your place is the world. Walk. See what others see. The stone that cracks is the one that forgot it was once part of a river.\n\nThree answers. None of them wrong. None of them complete.",
+  "choices": [
+    {
+      "text": "The Iron Doctrine speaks to you. Build well. The rest follows.",
+      "effects": {
+        "trait_gain": "iron_doctrine",
+        "faction_rep": {"the_forge_council": 10}
+      },
+      "consequence_text": "You apprentice yourself more deeply to the craft. The hammer becomes a kind of prayer. There's a clarity in making things that argument can't touch — the weld holds or it doesn't, the blade cuts or it doesn't, and no amount of rhetoric changes the metal's answer.\n\nBut you notice, over time, that the finest sword can't mend a broken friendship. And the most honest forge still needs ore from somewhere else."
+    },
+    {
+      "text": "The Consul's Proposition makes sense. Understand the problem before you try to fix it.",
+      "effects": {
+        "trait_gain": "scholar_of_crisis",
+        "faction_rep": {"the_solmari_senate": 10}
+      },
+      "consequence_text": "You read the summary. Then the full report. Then the sources the report drew from. The scholars are right — the crisis has identifiable causes, traceable failures, predictable patterns. Understanding it makes you feel less helpless.\n\nBut understanding a flood doesn't stop you from drowning in it. And the scholars, you notice, are studying the crisis from inside dry buildings."
+    },
+    {
+      "text": "Vaya's song stays with you. The stone that cracks is the one that forgot the river.",
+      "effects": {
+        "trait_gain": "walker",
+        "knowledge_gain": "song_of_cracked_stone"
+      },
+      "consequence_text": "You learn the Song of the Cracked Stone. It takes a week — the melody is simple but the rhythm is tricky, designed to match the pace of walking, so you can't learn it sitting down.\n\nThe song makes you want to move. Not away from the crisis — through it. To see what the other side looks like from where they're standing.\n\nBut walking doesn't build walls, and sometimes walls are what you need."
+    },
+    {
+      "text": "None of these. Or all of them. The answer isn't one idea.",
+      "requires": {"trait_any": ["perceptive", "curious"]},
+      "effects": {
+        "trait_gain": "synthesist"
+      },
+      "consequence_text": "You carry pieces of all three and commit to none. The smiths think you're undecided. The scholars think you're shallow. The singers think you're afraid to move.\n\nMaybe they're all right. But you've noticed something none of them have: they're each describing the same elephant from different angles, and the elephant doesn't care which part of it you're touching."
+    }
+  ],
+  "cascade_notes": "Each choice aligns the character with a philosophical tradition that echoes through future eras. Iron Doctrine becomes the foundation of northern conservatism. The Consul's Proposition evolves into the Senate's justification for intervention. The Song of the Cracked Stone becomes a Rootwalker anthem of resistance. The synthesist path is the rarest and the one most likely to create something new.",
+  "tags": ["world", "adulthood", "philosophy", "crisis", "cultural", "three_factions", "cascade_seed", "historical_inspiration"]
+}

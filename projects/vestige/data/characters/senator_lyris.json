@@ -1,0 +1,16 @@
+{
+  "id": "senator_lyris",
+  "name": "Senator Lyris",
+  "type": "historical_figure",
+  "culture": "the_sunward_courts",
+  "era": "the_first_era",
+  "description": "The senator who led the delegation to Thornwall. Genuinely believes trade improves lives. Also genuinely incapable of seeing how improvement looks from the other side. Brought guards because the mountain roads are dangerous, not as a threat — but she's experienced enough to know how they'd be read and brought them anyway. Sponsors two orphanages. Has never visited either one.",
+  "tags": [
+    "historical_figure",
+    "sunward_courts",
+    "senate",
+    "diplomat",
+    "complex",
+    "first_era"
+  ]
+}

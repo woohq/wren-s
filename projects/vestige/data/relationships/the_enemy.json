@@ -1,0 +1,18 @@
+{
+  "name": "The Enemy",
+  "type": "enemy",
+  "description": "Not a rival. Rivals respect you. An enemy wants to unmake what you've built. They have reasons — everyone has reasons — but their reasons end with you losing everything.",
+  "emotional_function": "The opposition — they define what you're fighting for by threatening to take it",
+  "archetype_tendency": [
+    "noble_s_bastard",
+    "orphan_of_war"
+  ],
+  "tags": [
+    "adult",
+    "conflict",
+    "stakes",
+    "danger"
+  ],
+  "id": "the_enemy",
+  "created": "2026-03-17T19:00:57"
+}

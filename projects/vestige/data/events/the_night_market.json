@@ -1,0 +1,19 @@
+{
+  "name": "The Night Market",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": [
+    "any"
+  ],
+  "text": "Once a year, when the traders come, the market stays open after dark. Lanterns on strings. Foreign smells — spices you can't name, oils that make the air shimmer, something roasting that's definitely not from any animal you've seen.\n\nYou're supposed to be in bed. You're not.\n\nThe crowd is a forest of legs and elbows. Someone is singing in a language that makes your teeth vibrate. A woman with ink-dark hands is drawing something on a man's arm — not a picture, a pattern, and it's glowing faintly. She catches you staring and winks.\n\nA Rootwalker boy about your age is sitting on a barrel, eating something wrapped in a leaf. He holds out a second one without looking at you. 'Take it. It's better if you don't ask what it is.'\n\nYou take it. He's right.",
+  "tags": [
+    "childhood",
+    "universal",
+    "night_market",
+    "wonder",
+    "cultural_contact",
+    "rootwalker"
+  ],
+  "id": "the_night_market",
+  "created": "2026-03-17T19:05:47"
+}

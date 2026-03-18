@@ -1,0 +1,11 @@
+{
+  "id": "mentor_intro_noble",
+  "name": "The Tutor in the Shadows (Noble Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "mentor",
+  "beat": "introduction",
+  "archetype_filter": ["noble_s_bastard"],
+  "callback_detail": "Voss's habit of standing in doorways instead of entering. Always positioned between you and the exit.",
+  "text": "Voss isn't your tutor. Officially. Your stepmother's children have tutors — paid scholars with credentials and clean robes. You have Voss, who appeared in the servants' hall one autumn and never left, and who teaches you things that aren't in any curriculum.\n\nHe teaches you to read a room before you enter it. Who's standing near whom. Who's avoiding whom. Where the doors are and which ones lock from the inside. 'Information,' he says, 'is the only currency that doesn't devalue when you spend it.'\n\nHe stands in doorways. Never inside the room, never fully outside. Always in the threshold, positioned between you and the exit. You don't understand why until much later — he's teaching you by example. The doorway is the safest place: you can see everything and leave instantly.\n\nHe doesn't tell you his history. You piece it together: the scars on his knuckles, the way he counts exits, the languages he slips into when he's tired. He's been something dangerous. Now he's teaching a bastard child how to survive a house that doesn't want them.\n\n'Why?' you ask him once. 'Why me?'\n\nHe doesn't answer. He just teaches you three more ways to open a lock without a key and tells you to practice until your fingers remember the shapes.\n\nYou stop asking why. It doesn't change what he teaches you, and the teaching is what matters.",
+  "tags": ["relationship", "mentor", "introduction", "noble", "voss", "spy", "survival", "mystery"]
+}

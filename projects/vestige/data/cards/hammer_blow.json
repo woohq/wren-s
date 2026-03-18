@@ -1,0 +1,18 @@
+{
+  "name": "Hammer Blow",
+  "energy_cost": "2",
+  "source": "equipment",
+  "damage": "12",
+  "target": "chosen_body_part",
+  "special_effect": "If target body part is below 50% HP: deal 18 instead. The hammer finds the crack.",
+  "flavor_text": "A forge hammer doesn't cut. It breaks. The difference is theological.",
+  "tags": [
+    "attack",
+    "melee",
+    "hammer",
+    "equipment",
+    "heavy"
+  ],
+  "id": "hammer_blow",
+  "created": "2026-03-17T19:33:02"
+}

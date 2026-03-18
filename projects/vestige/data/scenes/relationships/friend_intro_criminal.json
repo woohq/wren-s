@@ -1,0 +1,11 @@
+{
+  "id": "friend_intro_criminal",
+  "name": "The Lookout (Criminal Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "introduction",
+  "archetype_filter": ["criminal_s_heir"],
+  "callback_detail": "The whistle she uses — two short, one long. Means 'clear.' You hear it in your sleep sometimes.",
+  "text": "Mira is the lookout before you're the lookout.\n\nShe's a year older, half a head taller, and she can stand so still in a doorway that people walk past without seeing her. Your uncle says she has the gift. You don't know what the gift is yet, but you want it, because Mira has it and Mira is the most competent person you've ever met.\n\nShe teaches you the whistles. Two short, one long: clear. One long, two short: trouble. Three short: run. You practice until you can do them without moving your lips, which is harder than it sounds and harder than it looks.\n\n'Why are you helping me?' you ask.\n\n'Because you're the new lookout,' she says. 'And if you're bad at it, I'm the one who gets caught.'\n\nIt's the most practical reason for friendship you've ever heard. You respect it. In the world your uncle built, every relationship has a function. Mira's function is keeping you alive. Your function is keeping her uncaught. Neither of you calls it friendship. You don't need to. The whistles say it for you.",
+  "tags": ["relationship", "childhood_friend", "introduction", "criminal", "mira", "practical", "survival"]
+}

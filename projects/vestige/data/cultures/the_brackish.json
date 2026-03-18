@@ -1,0 +1,32 @@
+{
+  "name": "The Brackish",
+  "era": "the_first_era",
+  "values": [
+    "trade",
+    "pragmatism",
+    "independence",
+    "hospitality"
+  ],
+  "naming_pool": "mixed",
+  "archetype_tendencies": [
+    "criminal_s_heir",
+    "wanderer_s_child"
+  ],
+  "trait_tendencies": [
+    "cunning",
+    "silver_tongued",
+    "perceptive"
+  ],
+  "technology": "bronze_age",
+  "description": "Where the river Senn meets the sea, a delta town grew from the mud. Not Sunward. Not Rootwalker. Not anything, really — just people who found a useful place and stayed. The Brackish are a trading culture built on the fact that river goods need to become sea goods and someone has to handle the transfer. They speak three languages badly, owe loyalty to nobody, and will trade with anyone who has something worth carrying. The Senate considers them an unofficial outpost. The Rootwalkers consider them settled traitors. The Brackish consider themselves realistic.",
+  "tags": [
+    "small_culture",
+    "delta",
+    "trade",
+    "mixed",
+    "neutral",
+    "first_era"
+  ],
+  "id": "the_brackish",
+  "created": "2026-03-17T21:30:45"
+}

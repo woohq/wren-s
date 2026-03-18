@@ -1,0 +1,19 @@
+{
+  "name": "The High Vents",
+  "region": "The Ashfield",
+  "terrain": "volcanic_highland",
+  "climate": "extreme",
+  "culture": "the_ash_tenders",
+  "description": "The center of the Ashfield, where the volcanic vents cluster thickest. The Ash Tenders have their shelters here — half-buried stone huts sealed with mineral paste that hardens in the heat. The air shimmers constantly. The ground is warm underfoot even in winter. This is where Ossa claims the Ashfield spoke to her.",
+  "atmosphere": "Sulfur, constant low hiss of venting steam, the ground vibrating beneath your feet, heat that comes from below not above, mineral deposits that catch light in colors that don't belong in rock",
+  "tags": [
+    "settlement",
+    "ashfield",
+    "volcanic",
+    "dangerous",
+    "ash_tenders",
+    "spiritual"
+  ],
+  "id": "the_high_vents",
+  "created": "2026-03-17T21:31:58"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "friend_critical_blacksmith",
+  "name": "Seri's Map (Blacksmith Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["blacksmith_s_child"],
+  "callback_detail": "The finished map. Your name written in the corner. The space between staying and leaving.",
+  "text": "Seri's map is finished.\n\nNot the ash-drawings from the forge vent. The real one — the one she's been working on for three years in a leather-bound journal she never lets anyone see. Every building in Thornwall, every path, every forge and well and alley, drawn with a precision that makes your chest ache because you know what it means.\n\nShe's leaving.\n\nYou find her at the well — the well that's too far up the hill, the one you carried water from with a broken arm while she carried the second bucket in silence. She's sitting on the stone rim, the finished map open on her knees.\n\n'The Sunward Courts,' she says, not looking up. 'They have a cartographer's guild. They'll take me. I applied three months ago.'\n\nThree months. She's known for three months and didn't tell you.\n\n'You didn't say anything.'\n\n'I didn't know how.'\n\nThe silence between you is not the comfortable kind. It's the kind that has a crack down the middle, and the crack is shaped like every day she kept this secret while you kept building a future that included her.\n\nShe holds the map out to you. In the bottom corner, in her careful handwriting: your name. Not as a dedication. As a location. You're on her map of Thornwall, marked with a small dot near the forge, the same way she marks everything that matters.\n\n'I put you on it,' she says. 'I put everything that matters on it. And now I'm leaving everything that matters.'",
+  "choices": [
+    {
+      "text": "\"Then take me off the map. If you're leaving, don't carry me with you.\"",
+      "effects": {"relationship_change": {"friend": -10}, "trait_gain": "pride_wounded"},
+      "consequence_text": "Her hand tightens on the journal. She doesn't take you off the map. You know she won't. But the words sit between you like the crack in the silence, and when she leaves at the end of the month, the goodbye is careful and polite and nothing like what it should have been.\n\nYou don't hear from her for two years. When her first letter arrives — a single page, no return address, just a drawing of a coastal cliff with your name in the corner — you hold it for a long time before you open it."
+    },
+    {
+      "text": "\"Show me. Show me where you're going.\"",
+      "effects": {"relationship_change": {"friend": 15}, "knowledge_gain": "sunward_courts_geography"},
+      "consequence_text": "She pulls out a second map — the Sunward Coast, drawn from descriptions in trade-books, incomplete and hungry for real detail. She points to Solmare. You've never seen the sea. In her drawing, it looks endless.\n\nYou spend the last month learning the names of places you've never been. She teaches you. It's the most she's ever talked.\n\nThe day she leaves, you walk her to the mountain pass. She doesn't look back."
+    },
+    {
+      "text": "Say nothing. Take the map. Hold it like it's the last warm thing in the world.",
+      "effects": {"relationship_change": {"friend": 10}, "trait_gain": "quiet_grief"},
+      "consequence_text": "You hold the map.\n\nSeri watches you not-speak. She's waiting for something — anger, sadness, a reason to stay. You don't give her any of those. The well taught you something about helping without being asked. Letting someone leave is its own kind of that.\n\nShe goes. The map stays. You hang it in the forge, next to your father's tools."
+    }
+  ],
+  "tags": ["relationship", "childhood_friend", "critical", "blacksmith", "seri", "departure", "callback_well"]
+}

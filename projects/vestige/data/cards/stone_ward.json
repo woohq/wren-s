@@ -1,0 +1,20 @@
+{
+  "name": "Stone Ward",
+  "energy_cost": "2",
+  "attunement": "world",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "armor": "12",
+  "target": "self",
+  "special_effect": "Create 1 Rubble token (can be launched for 5 damage as a free action)",
+  "flavor_text": "The earth remembers being a wall. You just remind it.",
+  "tags": [
+    "defense",
+    "world",
+    "earth",
+    "utility",
+    "practiced"
+  ],
+  "id": "stone_ward",
+  "created": "2026-03-17T19:26:12"
+}

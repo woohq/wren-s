@@ -1,0 +1,16 @@
+{
+  "name": "Deathless",
+  "source": "inherent",
+  "rarity": "rare",
+  "description": "You survive what should kill you. Once per life, the final blow doesn't land. You don't know why. Neither does The Silence.",
+  "attunement_affinity": "body",
+  "dilemma": "You can't die easily. But other gods notice someone who cheats death. And the people around you start to wonder what you are.",
+  "tags": [
+    "supernatural",
+    "rare",
+    "physical",
+    "divine_attention"
+  ],
+  "id": "deathless",
+  "created": "2026-03-17T18:46:18"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "the_empty_prayer",
+  "name": "The Empty Prayer",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": ["priest_s_apprentice"],
+  "faction_present": ["the_solmari_senate"],
+  "text": "Brother Aldric prays at dawn. You know this because you're supposed to be praying with him, and instead you're watching.\n\nHis lips move. The words are the Litany of Embers — you've memorized it, all forty-three lines, because memorizing is what you're good at and understanding is what you're still working on. The Litany asks The Burn to light the path, to purify the uncertain, to consume what is false and leave what is true. It's a fine prayer. The words fit together well. Aldric wrote most of them himself.\n\nBut today you're watching his hands. They're clasped in the formal way — left over right, thumbs touching — and they're completely still. Aldric's hands are never still. When he teaches, they move. When he's excited about a passage, they move. When he's angry, which is rare, they move differently.\n\nDuring prayer, they stop. And you've started to wonder if the stillness means concentration or if it means something else.\n\nAfter the Litany, you ask him. Not the question you're actually asking. A safer version.\n\n'Brother Aldric, how do you know the prayer is heard?'\n\nHe gives you the answer from the Texts. Something about faith as its own evidence. You've read that passage. It didn't help then either.\n\nWhat you wanted to ask was: do YOU believe it's heard? But that question has edges, and you're seven, and you've already learned that questions with edges get you extra chores instead of extra answers.\n\nSo you nod. And the next morning you watch his hands again. Still still. You start keeping a count of how many mornings you watch before you figure out what the stillness means.\n\nYou haven't finished counting yet.",
+  "tags": ["childhood", "priest", "faith", "doubt", "prayer", "observation", "aldric"]
+}

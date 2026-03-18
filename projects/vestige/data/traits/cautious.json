@@ -1,0 +1,14 @@
+{
+  "name": "Cautious",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Reads the room before entering it. Survives by not being noticed.",
+  "attunement_affinity": "void",
+  "dilemma": "You see danger everywhere. Sometimes the danger is missing the opportunity.",
+  "tags": [
+    "personality",
+    "survival"
+  ],
+  "id": "cautious",
+  "created": "2026-03-17T18:29:03"
+}

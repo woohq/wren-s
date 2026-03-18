@@ -1,0 +1,11 @@
+{
+  "id": "friend_intro_orphan",
+  "name": "Meeting Dex (Orphan Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "introduction",
+  "archetype_filter": ["orphan_of_war"],
+  "callback_detail": "The blanket fort in the corner of the refugee tent. Both of you fit inside. Barely.",
+  "text": "The refugee tent holds forty people and smells like wet wool and fear. You've been here nine days. You've learned the layout — the good sleeping spots, the bad ones, which adults still have their minds and which ones stare at walls.\n\nThe boy in the corner hasn't spoken to anyone. He's about your age, maybe a year older, with a bruise on his jaw that's going yellow at the edges. He arrived three days after you, alone, carrying nothing.\n\nYou don't introduce yourself. In the camp, introductions feel like promises, and promises are things that break.\n\nWhat happens is simpler: it rains. The tent leaks. The corner where he sleeps gets the worst of it. You have an extra blanket — the woman who watches you, the one who isn't your mother, gave it to you because you're small and she worries.\n\nYou throw the blanket at him. Not to him — at him. Because kindness in the camp needs to look like accident or people take advantage.\n\nHe catches it. Looks at you. Doesn't say thank you — thank you is also a promise.\n\nBut the next morning, you wake up to find a piece of dried apple on your sleeping mat. You don't know where he got it. You don't ask.\n\nThat's how it starts. Not with words. With blankets and apples and the mutual understanding that you're both too young for this and neither of you is going to say it out loud.",
+  "tags": ["relationship", "childhood_friend", "introduction", "orphan", "dex", "survival", "silent_bonding"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Thornwall Hammer",
+  "type": "weapon",
+  "description": "Not a war hammer. A forge hammer, the kind every Thornwall child learns to swing before they learn to read. Heavy, balanced for downward strikes, and absolutely devastating to anything that isn't an anvil. Or is.",
+  "cards_granted": [
+    "hammer_blow",
+    "shatter"
+  ],
+  "rarity": "uncommon",
+  "tags": [
+    "weapon",
+    "hammer",
+    "forge",
+    "thornwall",
+    "melee",
+    "craft"
+  ],
+  "id": "thornwall_hammer",
+  "created": "2026-03-17T19:33:02"
+}

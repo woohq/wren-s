@@ -1,0 +1,28 @@
+{
+  "name": "Desperate Man",
+  "danger_level": "low",
+  "description": "Not a monster. A person. Starving, armed with a rusty knife, and past the point where morality is a luxury. He doesn't want to hurt you. He wants to eat tomorrow. That distinction matters less than you'd think when the knife is out.",
+  "behavior": "Threatens first. Fights sloppy if you resist — fear and hunger, not skill. Will take whatever you drop and run. If you offer food willingly, breaks down crying.",
+  "attunement": "body",
+  "body_parts": [
+    "head",
+    "torso",
+    "right_arm",
+    "left_arm",
+    "legs"
+  ],
+  "hp_head": "5",
+  "hp_torso": "12",
+  "hp_right_arm": "6",
+  "hp_left_arm": "6",
+  "tags": [
+    "human",
+    "bandit",
+    "moral_choice",
+    "low_threat",
+    "universal",
+    "sad"
+  ],
+  "id": "desperate_man",
+  "created": "2026-03-17T19:32:26"
+}

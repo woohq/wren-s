@@ -1,0 +1,23 @@
+{
+  "name": "The Burn",
+  "type": "concept",
+  "domain": [
+    "fire",
+    "change",
+    "consumption",
+    "renewal"
+  ],
+  "personality": "Hungry and joyful. The Burn doesn't destroy — it transforms. Fire isn't death, it's the fastest form of change. Speaks in crackling urgency. Loves mortals because they burn so brightly and so briefly.",
+  "power_manifestation": "Flame, forge-heat, fever, inspiration. Blessings manifest as passionate drive and creative fire. Curses manifest as uncontrollable burning — of body, of mind, of bridges.",
+  "limitations": "Cannot preserve anything. Every act of The Burn changes what it touches. Cannot create stillness or stability.",
+  "description": "The god of fire exists because fire exists. But worship makes The Burn personal — a fire-god feared by farmers is wrathful. A fire-god loved by smiths is generous. The same concept, wearing different faces depending on who's looking.",
+  "tags": [
+    "concept",
+    "primordial",
+    "fire",
+    "change",
+    "transformation"
+  ],
+  "id": "the_burn",
+  "created": "2026-03-17T18:41:10"
+}

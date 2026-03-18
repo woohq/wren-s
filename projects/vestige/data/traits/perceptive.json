@@ -1,0 +1,15 @@
+{
+  "name": "Perceptive",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Notices the thing nobody else saw. The twitch. The pause. The wrong word.",
+  "attunement_affinity": "sense",
+  "dilemma": "You see everything. Including the things people were trying to hide from you for good reason.",
+  "tags": [
+    "personality",
+    "mental",
+    "observation"
+  ],
+  "id": "perceptive",
+  "created": "2026-03-17T18:46:18"
+}

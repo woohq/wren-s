@@ -1,0 +1,11 @@
+{
+  "id": "friend_bonding_criminal",
+  "name": "The Bad Job (Criminal Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "bonding",
+  "archetype_filter": ["criminal_s_heir"],
+  "callback_detail": "Running through the tannery district. The smell. Her hand grabbing your collar when you almost turned the wrong way.",
+  "text": "The job goes wrong because jobs go wrong. That's the first lesson. The second lesson is that when a job goes wrong, the person next to you matters more than the plan.\n\nYou're supposed to be watching the back door while your uncle's people work inside. Mira is on the roof. The whistles are ready. Everything is in place.\n\nThen the door opens from the inside and a man you don't recognize walks out carrying a lantern and looking directly at you.\n\nYou freeze. The whistles leave your head entirely. The man takes a step toward you and says something you can't hear because your blood is too loud.\n\nMira's whistle cuts through it. Three short. Run.\n\nYou run. Not the way you came — that's the first instinct and the wrong one. Mira drops from the roof and grabs your collar as you almost turn down a dead-end alley. She pulls you left, through the tannery district where the smell is so bad nobody lingers, around the back of the dye works, and into a gap between two buildings that shouldn't be wide enough for a person but is, barely, if you hold your breath.\n\nYou hold your breath for a long time. Mira's shoulder is pressed against yours. You can feel her heartbeat through the contact. It's fast but steady. Yours is fast and not steady at all.\n\nWhen it's safe — when it's been quiet long enough that quiet means empty and not waiting — she says: 'You froze.'\n\n'I froze.'\n\n'Next time, don't.'\n\nThat's the whole conversation. But her hand stayed on your collar three seconds longer than it needed to, and in the language of people who survive by not saying what they mean, three seconds is a paragraph.",
+  "tags": ["relationship", "childhood_friend", "bonding", "criminal", "mira", "escape", "trust_through_crisis"]
+}

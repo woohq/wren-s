@@ -1,0 +1,10 @@
+{
+  "id": "the_tremor_festival",
+  "name": "The Tremor Festival",
+  "age": "any",
+  "category": "world",
+  "archetype_filter": ["any"],
+  "faction_present": ["the_forge_council"],
+  "text": "Every year, on the anniversary of the last great earthquake, Thornwall holds the Tremor Festival. It's part memorial, part dare, part prayer. The forges go cold — the only day of the year the hammers stop — and the entire settlement climbs to the Ridge, the highest point above the town, to watch the Ashfield.\n\nThey're watching for light. The old stories say that during the great tremor, the Ashfield glowed — not fire, not lava, but something between. A light that moved with purpose. The elders call it 'The Deep dreaming' and say that seeing it means the mountain approves of the year's work.\n\nMost years, there's nothing. Just ash and wind and a night of drinking on a cold ridge. But this year, as the sun drops behind the peaks and the Ashfield goes dark, something flickers.\n\nNot light. Not exactly. More like the darkness getting deeper in one place and shallower in another, as if the ground is breathing through its skin.\n\nThe crowd goes quiet. The forge masters exchange looks. The children push to the front. You're standing near the edge of the Ridge, and you can feel it through your boots — a vibration so deep it's below sound, below hearing, a frequency your bones know but your ears don't.\n\nSomething is waking up in the Ashfield. The festival-goers think it's The Deep. But you've felt The Deep before, and this is different. This is newer. Hungrier. This is something that's learning what it is.",
+  "tags": ["world", "festival", "thornwall", "the_deep", "ashfield_awakening", "foreshadowing", "universal", "stage_1"]
+}

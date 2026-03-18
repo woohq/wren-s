@@ -1,0 +1,15 @@
+{
+  "id": "vaya",
+  "name": "Vaya",
+  "type": "historical_figure",
+  "culture": "the_rootwalkers",
+  "era": "the_first_era",
+  "description": "The singer who composed the Song of the Cracked Stone. Fifty, sharp-eyed, walks with a limp from a fall crossing the Ashfield twenty years ago. The fall is why she started composing — three months recovering with nothing to do but listen. Not a leader. The Rootwalkers don't have leaders. But her songs spread faster than anyone else's, and that is its own kind of authority.",
+  "tags": [
+    "historical_figure",
+    "rootwalker",
+    "singer",
+    "independent",
+    "first_era"
+  ]
+}

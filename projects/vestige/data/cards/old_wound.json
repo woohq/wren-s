@@ -1,0 +1,15 @@
+{
+  "name": "Old Wound",
+  "energy_cost": "0",
+  "source": "wound",
+  "special_effect": "30% chance each turn to cost 1 energy for nothing. The wound flares at the worst moments.",
+  "flavor_text": "It healed. The scar is smooth. But the body remembers, and sometimes the memory is louder than the present.",
+  "tags": [
+    "wound",
+    "negative",
+    "permanent",
+    "scar"
+  ],
+  "id": "old_wound",
+  "created": "2026-03-17T19:26:28"
+}

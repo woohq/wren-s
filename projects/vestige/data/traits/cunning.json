@@ -1,0 +1,15 @@
+{
+  "name": "Cunning",
+  "source": "inherent",
+  "rarity": "common",
+  "description": "Three moves ahead. Sees the angle before the conversation starts.",
+  "attunement_affinity": "void",
+  "dilemma": "You outsmart everyone. Nobody trusts someone that clever.",
+  "tags": [
+    "personality",
+    "mental",
+    "deception"
+  ],
+  "id": "cunning",
+  "created": "2026-03-17T18:46:18"
+}

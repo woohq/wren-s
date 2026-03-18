@@ -1,0 +1,29 @@
+{
+  "id": "friend_critical_noble",
+  "name": "Callum's Inheritance (Noble Variant)",
+  "scene_type": "relationship",
+  "relationship_type": "childhood_friend",
+  "beat": "critical",
+  "archetype_filter": ["noble_s_bastard"],
+  "callback_detail": "The letter sealed with the family crest. The wine cellar key left under the east stairs.",
+  "text": "Callum's father is dying.\n\nThe house knows before the announcement. Servants whisper. Meals are late. Your stepmother wears her serious face like armor. Callum stops coming to the wine cellar.\n\nWhen the old man finally goes — quietly, in his sleep, which is better than he deserved — the succession is immediate. Callum is the heir. The REAL heir. The one whose name is on the wall in gold leaf, connected by a thick line to everything that matters.\n\nHe finds you under the east stairs. Your old hiding spot. He's wearing new clothes that don't fit right — not in size, in meaning. He looks like a boy wearing his father's coat.\n\n'I need to talk to you,' he says. He's holding a letter. Sealed with the family crest — the real one, the one that opens doors.\n\n'The Senate is pressing for an alliance. Marriage. To the Consul's daughter.' He doesn't look at you. 'If I accept, it changes everything. The house gets trade rights. The debts disappear. Mother stops worrying.'\n\nHe pauses.\n\n'And you get legitimized. Part of the deal. The Consul's daughter has conditions — she wants the household clean. No bastards in the shadows. You'd have a name. A real one. On the wall.'\n\nHe's offering you the thing you've wanted your entire life. Your name. On the wall. In gold. And all it costs is Callum marrying someone he's never met for reasons that have nothing to do with love.\n\nHe holds out the wine cellar key. He's been carrying it since you were eleven.\n\n'I don't know what to do,' he says. And for the first time, his laugh isn't in the dark. His fear is in the open. And you can't halve it this time because you're part of the equation.",
+  "choices": [
+    {
+      "text": "\"Take the deal. I want my name. I've waited long enough.\"",
+      "effects": {"trait_gain": "legitimized", "relationship_change": {"friend": -5}},
+      "consequence_text": "The word 'legitimized' doesn't feel like you expected. It feels like a transaction — because it is one. Your name appears on the wall three weeks later. Gold leaf. Careful hand. You stand in front of it for a long time, touching the letters, and feel... not nothing. But not what you dreamed.\n\nCallum marries the Consul's daughter. She's intelligent and cold and treats him like an investment. At the wedding, he catches your eye across the hall and smiles the way he used to in the cellar — small, helpless, finding the funny in the frightening.\n\nYou have a name now. He lost something harder to spell."
+    },
+    {
+      "text": "\"Don't do it for me. I won't be someone's condition.\"",
+      "effects": {"trait_gain": "self_determined", "relationship_change": {"friend": 20}},
+      "consequence_text": "The relief on his face is so sudden it looks like pain. He puts the key in your hand — the wine cellar key, the one from when you were eleven, from the dark and the laughter and the fear halved.\n\n'Keep it,' he says. 'Whatever happens, the cellar is still ours.'\n\nHe turns down the marriage. The Senate is displeased. The debts don't disappear. Your name stays off the wall.\n\nBut on quiet evenings, you still sit in the cellar with wine labels and arguments about ghosts, and the friendship that started with stolen sweetbread under the stairs holds the weight of everything the world tries to pile on top of it.\n\nYour name isn't on the wall. But it's in a place that matters more."
+    },
+    {
+      "text": "\"What do YOU want? Forget the house. Forget my name. What does Callum want?\"",
+      "requires": {"trait_any": ["perceptive", "compassionate"]},
+      "effects": {"relationship_change": {"friend": 15}},
+      "consequence_text": "He stares at you. Nobody has asked him that — not his mother, not the Senate, not the servants who now bow to him. What does Callum want?\n\n'I want to go back to the cellar,' he says. 'I want to be eleven and scared and laughing about it. I want my father to not be dead and the Senate to not exist and the wall to not matter.'\n\nHe's crying. Callum, who found the funny in every dark room, is crying in the daylight for the first time you've ever seen.\n\nYou don't fix it. You can't. But you sit with him under the east stairs — the same stairs, the same cold marble — and let him be something the heir of a great house is never allowed to be in front of anyone else: a boy who misses his father.\n\nThe decision can wait. The grief can't."
+    }
+  ],
+  "tags": ["relationship", "childhood_friend", "critical", "noble", "callum", "succession", "identity", "callback_cellar"]
+}

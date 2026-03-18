@@ -1,0 +1,23 @@
+{
+  "name": "The River Tongue",
+  "type": "criminal",
+  "goal": "Protect Rootwalker interests by any means. Smuggling, information brokering, and the occasional theft from cultures that have more than they need. The River Tongue exists because the settled peoples write laws that assume everyone stays put.",
+  "territory": [
+    "the_wander"
+  ],
+  "leadership": "No leader. A network of contacts, each knowing only two or three others. The River Tongue is an idea more than an organization — and that makes it nearly impossible to kill.",
+  "resources": "Information networks, smuggling routes, knowledge of every culture's secrets (because Rootwalkers travel through all of them), loyalty born from shared marginalization",
+  "description": "Not a thieves' guild — a survival network. When you have no land, no written law, and every settled culture treats you as a vagrant, you build your own systems. The River Tongue moves goods, people, and secrets along the river routes. Some of what they do is criminal by settled law. All of it is necessary by Rootwalker ethics.\n\nBut the River Tongue isn't purely noble either. Some of what moves through the network is genuinely stolen — not from the wealthy, but from border merchants who are barely getting by themselves. The information they broker sometimes gets people killed. And the network's decentralized structure means nobody can stop a cell that goes too far, because nobody knows which cells exist.\n\nThe settled peoples' complaints aren't entirely wrong: Rootwalkers DO use roads they don't help maintain. They DO cross borders without permission. They DO benefit from the infrastructure of societies they refuse to join. The Rootwalker response — that the roads were built on land that was everyone's before it was someone's — is historically true and practically irrelevant to the farmer whose cart was stolen last Tuesday.\n\nThe deepest division: elders who remember when the River Tongue was purely defensive, and younger members who've started to enjoy the power that comes with being feared. When survival becomes identity, the line between 'we must do this' and 'we want to do this' erodes. Some Rootwalkers have crossed it without noticing.",
+  "internal_divisions": "Defensive old guard vs aggressive younger members who enjoy the power. Elders who want to settle vs those who consider settlement a cultural death. Rootwalkers who've married into settled communities and live between worlds, trusted by neither side.",
+  "acknowledged_flaw": "The survival justification covers genuine harm. Not everything the River Tongue does is necessary. Some of it is revenge wearing the mask of justice. The decentralized structure that protects them also means no one can rein in members who go too far.",
+  "tags": [
+    "nomadic",
+    "criminal",
+    "network",
+    "survival",
+    "information",
+    "first_era"
+  ],
+  "id": "the_river_tongue",
+  "created": "2026-03-17T18:56:20"
+}

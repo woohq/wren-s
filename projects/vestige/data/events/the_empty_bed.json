@@ -1,0 +1,80 @@
+{
+  "id": "the_empty_bed",
+  "name": "The Empty Bed",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": ["orphan_of_war"],
+  "text": "You've been sleeping in the barn for three weeks. The woman who owns the farm hasn't told you to leave. She leaves food on the fence post every morning — bread, sometimes cheese, once an apple that was mostly brown. She never watches you take it. You've checked.\n\nHer name is Maren. You know this because the neighbor calls it across the fence. You haven't introduced yourself and she hasn't asked. This arrangement — food, shelter, silence — is the closest thing to safety you've had in two years.\n\nToday she knocks on the barn door. She has never knocked before.\n\n'There's a bed in the house,' she says. She stands in the doorway with her hands at her sides, not wringing them, not reaching out. Just standing. 'My son's bed. He died in the war. It's been empty since.'\n\nShe says this the way people say things they've practiced — not rehearsed-smooth but rehearsed-careful, every word considered.\n\nYou know about her son. The neighbors talk. He went to fight. He didn't come back. They say he was brave, which is what people say about dead soldiers they don't remember well.\n\nYou don't know which side he fought on. You don't know if it matters.\n\nMaren is offering you a dead boy's bed. She's offering it to the absence she can't stop seeing, and you happen to be the right shape. You know this. You've been the right shape for people's grief before.\n\nBut the bed is real. And the barn is cold. And you are so tired of sleeping with your shoes on.",
+  "choices": [
+    {
+      "text": "Take off your shoes. Go inside.",
+      "requires": {"trait_any": ["compassionate", "brave"]},
+      "effects": {
+        "trait_gain": "trusting",
+        "attunement_hint": "bond"
+      },
+      "consequence_text": "The bed is softer than anything you've touched in two years. You lie in the dark and listen to the house settle — wood instead of hay, a clock ticking in another room, Maren moving in the kitchen below.\n\nYou don't sleep the first night. You lie with your shoes beside the bed — not on, beside, that's the compromise — and wait for the thing that always comes. The sound. The smoke. The reason to run.\n\nIt doesn't come.\n\nThe second night you sleep four hours. The third, six. By the end of the week you've stopped counting.\n\nMaren starts leaving the food on the kitchen table instead of the fence post. She still doesn't watch you eat. But there are two plates now.",
+      "spawns": {
+        "events": [
+          {
+            "id": "marens_son",
+            "delay": "same_era",
+            "description": "Maren starts to talk about her son. Small things at first — what he liked to eat, how he fixed the gate. But something about his death doesn't match the neighbors' story. The truth, when it surfaces, will test whether the trust you're building can hold weight."
+          },
+          {
+            "id": "two_plates",
+            "delay": "years",
+            "description": "You stayed. The farm became a home. Maren became something you don't have a word for — not mother, not friend, something the war created that didn't exist before. When trouble comes to the farm, it comes to both of you."
+          }
+        ],
+        "characters": [
+          {
+            "id": "maren",
+            "description": "A farmer who lost her son to the war and offered his bed to a stranger the right age and the right shape for grief. She isn't kind because she's good — she's kind because the alternative is an empty house and a gate nobody fixes. The kindness is real. The reason for it is complicated."
+          }
+        ],
+        "world_changes": ["An orphan has stopped sleeping with their shoes on. A farmer has someone at her table. Two people, broken by the same war, building something in the gap."]
+      }
+    },
+    {
+      "text": "'What was his name?' Don't move toward the house. Not yet.",
+      "requires": {"trait_any": ["perceptive", "curious"]},
+      "effects": {
+        "trait_gain": "careful_trust",
+        "attunement_hint": "sense"
+      },
+      "consequence_text": "Maren pauses. Not the practiced pause — a real one. Then she says his name. She says he was seventeen. She says he liked fixing things that were broken, which is a specific thing to like, and you file it away. She says he went to fight because he believed it mattered, and she says this without saying whether she agreed.\n\n'Which side?' you ask. Not because you care about sides. Because you need to know if she knows.\n\nShe looks at you. 'Does it matter?'\n\nYou think about this for a long time. 'I don't know yet,' you say.\n\nYou sleep in the barn that night. But you leave the door open.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_sons_letter",
+            "delay": "same_era",
+            "description": "Maren's son wrote letters home. She keeps them in a box under his bed. You find them, or she shows you. What he wrote about the war — what he saw, what he did — connects to something larger than one soldier's story."
+          }
+        ],
+        "world_changes": ["An orphan asked a question before accepting kindness. The barn door is open now — not trust, but the possibility of trust. The difference matters."]
+      }
+    },
+    {
+      "text": "Tell her no. Pack what little you have. Walk out before the offer gets heavier.",
+      "requires": {"trait_any": ["stubborn", "cautious"]},
+      "effects": {
+        "trait_gain": "unmoored",
+        "attunement_hint": "void"
+      },
+      "consequence_text": "'Thank you,' you say, which costs you more than she'll know. Then you walk down the road with your shoes on and your pack over one shoulder and the taste of her bread still in your teeth.\n\nYou don't look back. You've looked back before. It doesn't help.\n\nThe road is familiar. The road has never offered you a dead boy's bed. The road has never asked you to be the right shape for someone else's grief. The road just goes.\n\nThree miles out, you stop. Not because you've changed your mind. Your body just stopped walking and you don't know why.\n\nYou stand there for a long time. Then you keep going.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_knock_remembered",
+            "delay": "years",
+            "description": "Nobody knocks on a barn door. That kind of care is hard to walk away from and harder to forget. Somewhere down the road, someone else will offer you something. What you do with it will depend on how much of Maren's knock you still carry."
+          }
+        ],
+        "world_changes": ["An orphan chose the road over a bed. A farmer is alone again. The war keeps taking things — not with violence anymore, but with the distances it taught people to keep."]
+      }
+    }
+  ],
+  "tags": ["adolescence", "survival", "trust", "formative", "orphan", "chain_root", "archetype_specific", "war", "found_family"],
+  "created": "2026-03-18T06:00:00"
+}

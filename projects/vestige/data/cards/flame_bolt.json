@@ -1,0 +1,20 @@
+{
+  "name": "Flame Bolt",
+  "energy_cost": "1",
+  "attunement": "world",
+  "source": "attunement",
+  "stage_required": "practiced",
+  "damage": "6",
+  "target": "chosen_body_part",
+  "special_effect": "Apply 3 Burn (damage over time, 1 damage per turn for 3 turns)",
+  "flavor_text": "Fire isn't yours. You just asked nicely and it said yes.",
+  "tags": [
+    "attack",
+    "world",
+    "ranged",
+    "fire",
+    "practiced"
+  ],
+  "id": "flame_bolt",
+  "created": "2026-03-17T19:26:12"
+}

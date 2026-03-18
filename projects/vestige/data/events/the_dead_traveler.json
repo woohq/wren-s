@@ -1,0 +1,99 @@
+{
+  "id": "the_dead_traveler",
+  "name": "The Dead Traveler",
+  "age": "adolescence",
+  "category": "life",
+  "archetype_filter": [
+    "any"
+  ],
+  "text": "You find the body on the road. Not looking for it. Just walking, and then not walking, because there's a person lying in the ditch and they're not sleeping.\n\nA man. Middle-aged. A pack beside him, half open, as if he was reaching for something when he stopped reaching. No visible wounds. No blood. His face is calm, which is the wrong word, but the right one hasn't been invented for what a dead face looks like when death came without a fight.\n\nYou've never seen a dead person before. You thought it would be more dramatic. Instead it's quiet. The birds are still singing. The road is still a road. The world didn't pause. You're the only one who stopped.\n\nHis pack has food, a water skin, a folding knife with a good edge, and a letter he never delivered. The letter is addressed to someone in the next town. You can't read the name clearly — the ink ran in last night's rain.\n\nNobody is watching. The food is good. The knife is better than yours.",
+  "choices": [
+    {
+      "text": "Take what you need. He doesn't.",
+      "effects": {
+        "trait_gain": "practical"
+      },
+      "consequence_text": "You take the food and the knife. You leave the letter. Carrying a dead man's last words feels different from carrying his provisions, though you couldn't explain why if someone asked.\n\nThe knife is good. You use it for years. Sometimes you wonder who he was. Mostly you don't.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_travelers_knife",
+            "delay": "years",
+            "description": "The knife you took from the dead man. Good edge. You use it for years. One day someone recognizes it. They knew the man who carried it before you."
+          }
+        ],
+        "world_changes": [
+          "A dead man on the road. Nobody investigated. Nobody will. The world is full of stories that end in ditches."
+        ]
+      }
+    },
+    {
+      "text": "Deliver the letter. Someone is waiting for him.",
+      "requires": {
+        "trait_any": [
+          "compassionate",
+          "curious"
+        ]
+      },
+      "effects": {
+        "trait_gain": "dutiful"
+      },
+      "consequence_text": "The letter goes to a woman in the next town. His wife. She opens the door and knows before you speak. Something in your face, or something she's been expecting.\n\nShe reads the letter in front of you. You watch her face change and you don't look away, because looking away would be easy, and you owe this woman the difficulty of seeing what the letter does to her.\n\nShe thanks you. She closes the door. You stand outside for a while, not sure why you're still standing there, until you realize you're waiting for something that isn't going to come — a sense that you did the right thing. It doesn't arrive. You walk home carrying the absence of it.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_widows_door",
+            "delay": "years",
+            "description": "The woman whose husband you brought news of. She remembers your face. Years later, when you need help in that town, her door is the one that opens."
+          },
+          {
+            "id": "the_letter_contents",
+            "delay": "same_era",
+            "description": "You never read the letter. But you wonder. What does a man write to his wife when he doesn't know it's the last thing he'll write? The not-reading becomes its own kind of respect — or its own kind of cowardice."
+          }
+        ],
+        "characters": [
+          {
+            "id": "the_travelers_wife",
+            "description": "She knew before you spoke. She lives in the next town. She has his face in her memory and yours in her doorway, and the two are linked now in a way neither of you chose."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Bury him. Nobody should lie in a ditch.",
+      "requires": {
+        "trait_any": [
+          "compassionate",
+          "honor_bound"
+        ]
+      },
+      "effects": {
+        "trait_gain": "grave_digger"
+      },
+      "consequence_text": "It takes two hours. The ground is harder than you expected. Your hands blister before you're half done.\n\nYou don't know his name. You don't know his prayers. You put him in the ground and cover him and stand there with dirt under your fingernails and nothing to say. So you say nothing. The birds fill the silence for you.\n\nYou take the letter. You take the knife. You leave the food because it feels wrong to eat a dead man's lunch over his grave. You deliver the letter the next day.\n\nFor the rest of your life, you notice ditches.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_unmarked_grave",
+            "delay": "next_era",
+            "description": "Someone finds the grave. No marker, no name. They build a small cairn because an unmarked grave in the road bothers them the way it bothered you. Generations later, the cairn has become a waypoint. Travelers leave stones. Nobody remembers who's buried there. The kindness outlived the name."
+          }
+        ],
+        "world_changes": [
+          "A grave on the road. Unmarked. The letter delivered a day late. For the rest of your life, you notice ditches."
+        ]
+      }
+    }
+  ],
+  "tags": [
+    "adolescence",
+    "death",
+    "choice",
+    "universal",
+    "moral",
+    "first_death",
+    "coming_of_age",
+    "chain_root"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "The Counting Game",
+  "age": "childhood",
+  "category": "life",
+  "archetype_filter": [
+    "orphan_of_war"
+  ],
+  "text": "The refugee camp has rules. Rule one: stay inside the fence. Rule two: don't take food that isn't yours. Rule three: if someone screams at night, don't go looking.\n\nYou learn to count by counting things that matter. Not numbers in a book — supplies. Seven blankets for twelve children. Four days of bread. Two adults who still look like they know what they're doing.\n\nThe woman who watches you isn't your mother. She told you that the first day, clearly, like it was important you knew. 'I'm not your mother. But I'm here.' She said it like an apology and a promise in the same breath.\n\nAt night, when someone screams, she puts her hand on your back. She doesn't say anything. She doesn't need to. The hand says: I'm here. The hand says: rule three exists for a reason. The hand says: this is not forever, even if it feels like it is.\n\nYou learn to count by counting the days until something changes. You get to forty-three before you stop counting.",
+  "tags": [
+    "childhood",
+    "orphan",
+    "war",
+    "survival",
+    "found_family",
+    "formative",
+    "emotional"
+  ],
+  "id": "the_counting_game",
+  "created": "2026-03-17T19:06:18"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "The Ashfield",
+  "region": "The Northern Reaches",
+  "terrain": "volcanic_plains",
+  "climate": "harsh",
+  "description": "A vast plain of volcanic ash and black rock. Nothing grows here naturally, but the soil beneath the ash is the richest in the world — those who dig deep enough find it. The Ashfield is where The Burn and The Deep argue: fire meets stone, and the land can't decide which one won.",
+  "atmosphere": "Grey dust, sulfur smell, distant vents of steam, black rock that cuts bare feet, silence so complete you hear your own blood",
+  "tags": [
+    "wilderness",
+    "dangerous",
+    "volcanic",
+    "ash",
+    "contested_ground"
+  ],
+  "id": "the_ashfield",
+  "created": "2026-03-17T18:51:38"
+}

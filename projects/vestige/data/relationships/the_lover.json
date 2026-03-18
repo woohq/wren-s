@@ -1,0 +1,17 @@
+{
+  "name": "The Lover",
+  "type": "lover",
+  "description": "The person who makes you stupid. Not metaphorically — literally reduces your capacity for rational thought. You'd do things for them you'd never do for yourself. That's the danger and the gift.",
+  "emotional_function": "The vulnerability — the one person who can destroy you without raising a hand",
+  "archetype_tendency": [
+    "any"
+  ],
+  "tags": [
+    "adult",
+    "vulnerability",
+    "emotional",
+    "stakes"
+  ],
+  "id": "the_lover",
+  "created": "2026-03-17T19:00:57"
+}

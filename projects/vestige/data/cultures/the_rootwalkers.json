@@ -1,0 +1,36 @@
+{
+  "name": "The Rootwalkers",
+  "era": "the_first_era",
+  "values": [
+    "freedom",
+    "adaptation",
+    "stories",
+    "movement"
+  ],
+  "naming_pool": "nomadic",
+  "archetype_tendencies": [
+    "wanderer_s_child",
+    "criminal_s_heir"
+  ],
+  "trait_tendencies": [
+    "cautious",
+    "perceptive",
+    "cunning"
+  ],
+  "worship_tendency": [
+    "the_drift",
+    "the_weave"
+  ],
+  "technology": "pre_bronze",
+  "description": "Nomadic people who follow the river Senn in a year-long circuit. They carry no written language — their knowledge is encoded in riversongs: melodies tied to specific locations along the route. Each bend in the river has a song. Each song contains the history, resources, dangers, and social law of that place. Singing the songs in sequence IS navigation — a Rootwalker who knows the songs can walk from the mountain source to the coastal marshes without ever being lost.\n\nThe riversongs are the Rootwalkers' library. Elders teach them to children through repetition, rhythm, and walking — you learn the song of a place by BEING in that place while it's sung. Losing a song means losing that place's knowledge forever. When an elder dies before teaching, a section of the river goes silent.\n\nRootwalkers don't build because building means staying, and staying means dying when the river moves on. Other cultures call them thieves. They call themselves free. They believe The Drift carries the dead to the sea and the living to wherever they need to be. The river knows the way. The songs remember what the river forgets.",
+  "knowledge_system": "riversongs — location-encoded oral tradition. Each place has a song containing its history, resources, dangers, and law. Navigation = singing the correct sequence. Losing a song = losing a place's knowledge.",
+  "tags": [
+    "nomadic",
+    "river",
+    "oral_tradition",
+    "free",
+    "first_era"
+  ],
+  "id": "the_rootwalkers",
+  "created": "2026-03-17T18:51:15"
+}
