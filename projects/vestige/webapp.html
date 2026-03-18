@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VESTIGE</title>
+<style>
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-deep: #0a0c0f;
+  --bg-main: #0f1218;
+  --bg-surface: #161b24;
+  --bg-elevated: #1c2230;
+  --bg-hover: #232a38;
+  --border: #2a3244;
+  --border-light: #3a4458;
+  --text: #c8cdd8;
+  --text-dim: #7a8494;
+  --text-faint: #4a5464;
+  --text-bright: #e8ecf4;
+  --ember: #d4875e;
+  --ember-dim: #a0603a;
+  --ember-glow: #e8a048;
+  --forge: #c45a3a;
+  --deep: #5a7a9a;
+  --drift: #6a9a7a;
+  --silence: #8a7aaa;
+  --weave: #aa8a6a;
+  --burn: #ca6a4a;
+  --font-body: 'Georgia', 'Times New Roman', serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── Layout ───────────────────────────────────────────────────── */
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 52px 1fr;
+  height: 100vh;
+}
+
+/* ─── Header ───────────────────────────────────────────────────── */
+.header {
+  grid-column: 1 / -1;
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 24px;
+}
+
+.header h1 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: var(--ember);
+  text-transform: uppercase;
+}
+
+.header .subtitle {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.header .stats-bar {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.header .stats-bar span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 2px;
+  margin-left: 32px;
+}
+
+.nav-tab {
+  padding: 6px 14px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.15s;
+  font-family: var(--font-ui);
+}
+
+.nav-tab:hover { color: var(--text); background: var(--bg-surface); }
+.nav-tab.active { color: var(--ember); background: var(--bg-surface); }
+
+/* ─── Sidebar ──────────────────────────────────────────────────── */
+.sidebar {
+  background: var(--bg-main);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.search-box {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-box input {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--text);
+  font-size: 13px;
+  font-family: var(--font-ui);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-box input:focus {
+  border-color: var(--ember-dim);
+}
+
+.search-box input::placeholder {
+  color: var(--text-faint);
+}
+
+.type-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.type-group {
+  margin-bottom: 2px;
+}
+
+.type-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  transition: color 0.15s;
+}
+
+.type-header:hover { color: var(--text); }
+.type-header.active { color: var(--ember); }
+
+.type-header .count {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.type-header .chevron {
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform 0.15s;
+  display: inline-block;
+  width: 12px;
+}
+
+.type-header.expanded .chevron { transform: rotate(90deg); }
+
+.entity-list {
+  display: none;
+  padding: 2px 0;
+}
+
+.entity-list.visible { display: block; }
+
+.entity-item {
+  padding: 5px 16px 5px 34px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-dim);
+  transition: all 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entity-item:hover { color: var(--text); background: var(--bg-hover); }
+.entity-item.active { color: var(--ember); background: var(--bg-surface); }
+
+/* ─── Main Content ─────────────────────────────────────────────── */
+.main {
+  overflow-y: auto;
+  padding: 0;
+  background: var(--bg-deep);
+}
+
+/* ─── Browse View ──────────────────────────────────────────────── */
+.view { display: none; height: 100%; }
+.view.active { display: flex; flex-direction: column; }
+
+.entity-detail {
+  padding: 32px 40px;
+  max-width: 860px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.entity-detail .entity-type-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ember);
+  margin-bottom: 8px;
+}
+
+.entity-detail h2 {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.entity-detail .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--bg-elevated);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+
+.entity-detail .prose {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 28px;
+  white-space: pre-wrap;
+}
+
+.entity-detail .field-group {
+  margin-bottom: 24px;
+}
+
+.entity-detail .field-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.entity-detail .field-value {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.entity-detail .field-value.prose-field {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.entity-detail .field-value a,
+.ref-link {
+  color: var(--ember);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.entity-detail .field-value a:hover,
+.ref-link:hover { color: var(--ember-glow); }
+
+/* Choices (events) */
+.choices-list {
+  margin-top: 8px;
+}
+
+.choice-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.choice-card .choice-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ember);
+  margin-bottom: 8px;
+}
+
+.choice-card .choice-requires {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+
+.choice-card .consequence {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  white-space: pre-wrap;
+  margin-bottom: 8px;
+}
+
+.choice-card .spawns-list {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.spawn-item {
+  font-size: 12px;
+  color: var(--drift);
+  margin-bottom: 4px;
+}
+
+.spawn-item::before {
+  content: "→ ";
+  color: var(--text-faint);
+}
+
+/* Cross-references section */
+.xrefs {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.xrefs h3 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+
+.xref-item {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  margin: 0 6px 6px 0;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text-dim);
+  transition: all 0.15s;
+}
+
+.xref-item:hover {
+  border-color: var(--ember-dim);
+  color: var(--ember);
+}
+
+.xref-item .xref-type {
+  font-size: 10px;
+  color: var(--text-faint);
+  margin-right: 4px;
+}
+
+/* ─── Graph View ───────────────────────────────────────────────── */
+.graph-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.graph-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-tooltip {
+  position: absolute;
+  display: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 10;
+  max-width: 240px;
+}
+
+.graph-tooltip .tt-type {
+  font-size: 10px;
+  color: var(--ember);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graph-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.graph-controls button {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: var(--font-ui);
+}
+
+.graph-controls button:hover {
+  border-color: var(--ember-dim);
+  color: var(--text);
+}
+
+/* ─── Stats View ───────────────────────────────────────────────── */
+.stats-view {
+  padding: 32px 40px;
+  overflow-y: auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.stat-card .stat-value {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text-bright);
+  font-family: var(--font-body);
+}
+
+.stat-card .stat-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.stat-section {
+  margin-bottom: 32px;
+}
+
+.stat-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  width: 120px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bar-fill-bg {
+  flex: 1;
+  height: 20px;
+  background: var(--bg-elevated);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--ember-dim);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.bar-value {
+  font-size: 12px;
+  color: var(--text-faint);
+  width: 40px;
+  flex-shrink: 0;
+}
+
+/* ─── Coverage View ────────────────────────────────────────────── */
+.coverage-view {
+  padding: 32px 40px;
+  overflow-y: auto;
+}
+
+.coverage-section {
+  margin-bottom: 32px;
+}
+
+.coverage-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.coverage-cell {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+
+.coverage-cell .cell-value {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-bright);
+}
+
+.coverage-cell .cell-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.coverage-cell.gap { border-color: var(--forge); }
+.coverage-cell.gap .cell-value { color: var(--forge); }
+.coverage-cell.good { border-color: var(--drift); }
+.coverage-cell.good .cell-value { color: var(--drift); }
+
+/* ─── Empty state ──────────────────────────────────────────────── */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-faint);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 16px;
+}
+
+.empty-state .vestige-mark {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.15;
+  font-style: normal;
+  letter-spacing: 8px;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+/* ─── Search results overlay ───────────────────────────────────── */
+.search-results {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-deep);
+  z-index: 5;
+  overflow-y: auto;
+  padding: 24px 32px;
+}
+
+.search-results.visible { display: block; }
+
+.search-results h3 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.search-result-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  transition: background 0.1s;
+}
+
+.search-result-item:hover { background: var(--bg-surface); }
+
+.search-result-item .result-name {
+  color: var(--text-bright);
+  font-size: 14px;
+}
+
+.search-result-item .result-type {
+  font-size: 11px;
+  color: var(--ember-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+.search-result-item .result-tags {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- Header -->
+  <div class="header">
+    <h1>Vestige</h1>
+    <span class="subtitle">world authoring</span>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-view="browse">Browse</button>
+      <button class="nav-tab" data-view="graph">Graph</button>
+      <button class="nav-tab" data-view="stats">Stats</button>
+      <button class="nav-tab" data-view="coverage">Coverage</button>
+    </div>
+    <div class="stats-bar" id="headerStats"></div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search the world..." />
+    </div>
+    <div class="type-list" id="typeList"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main" id="mainContent">
+    <!-- Browse view -->
+    <div class="view active" id="view-browse">
+      <div class="search-results" id="searchResults"></div>
+      <div class="entity-detail" id="entityDetail">
+        <div class="empty-state">
+          <div class="vestige-mark">V</div>
+          <p>I am the vestige of something.</p>
+          <p>Each life shows me more of the shape.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graph view -->
+    <div class="view" id="view-graph">
+      <div class="graph-container">
+        <canvas id="graphCanvas"></canvas>
+        <div class="graph-tooltip" id="graphTooltip"></div>
+        <div class="graph-controls">
+          <button onclick="graphResetView()">Reset</button>
+          <button onclick="graphToggleLabels()">Labels</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats view -->
+    <div class="view" id="view-stats">
+      <div class="stats-view" id="statsContent"></div>
+    </div>
+
+    <!-- Coverage view -->
+    <div class="view" id="view-coverage">
+      <div class="coverage-view" id="coverageContent"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── State ──────────────────────────────────────────────────────────────────
+const state = {
+  types: {},
+  currentType: null,
+  currentId: null,
+  currentView: 'browse',
+  graphData: null,
+  graphNodes: [],
+  graphEdges: [],
+  showLabels: true,
+  searchTimeout: null,
+};
+
+// ─── API ────────────────────────────────────────────────────────────────────
+async function api(path) {
+  const res = await fetch(`/api/${path}`);
+  return res.json();
+}
+
+// ─── Type colors ────────────────────────────────────────────────────────────
+const TYPE_COLORS = {
+  events: '#d4875e',
+  scenes: '#c45a3a',
+  characters: '#e8a048',
+  archetypes: '#aa8a6a',
+  traits: '#6a9a7a',
+  cultures: '#5a7a9a',
+  places: '#7a9ab0',
+  factions: '#ca6a4a',
+  gods: '#8a7aaa',
+  cards: '#7a8a6a',
+  creatures: '#9a6a5a',
+  artifacts: '#b09a6a',
+  eras: '#6a7a8a',
+  threats: '#aa5a5a',
+  relationships: '#8a6a9a',
+};
+
+// ─── Init ───────────────────────────────────────────────────────────────────
+async function init() {
+  state.types = await api('types');
+  renderSidebar();
+  loadHeaderStats();
+
+  // Nav tabs
+  document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => switchView(tab.dataset.view));
+  });
+
+  // Search
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', (e) => {
+    clearTimeout(state.searchTimeout);
+    const q = e.target.value.trim();
+    if (q.length < 2) {
+      document.getElementById('searchResults').classList.remove('visible');
+      return;
+    }
+    state.searchTimeout = setTimeout(() => doSearch(q), 200);
+  });
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      e.target.value = '';
+      document.getElementById('searchResults').classList.remove('visible');
+    }
+  });
+}
+
+// ─── Sidebar ────────────────────────────────────────────────────────────────
+function renderSidebar() {
+  const container = document.getElementById('typeList');
+  container.innerHTML = '';
+
+  const typeOrder = [
+    'events', 'scenes', 'characters', 'archetypes', 'traits',
+    'cultures', 'places', 'factions', 'gods', 'cards',
+    'creatures', 'artifacts', 'eras', 'threats', 'relationships'
+  ];
+
+  for (const type of typeOrder) {
+    const count = state.types[type];
+    if (count === undefined) continue;
+
+    const group = document.createElement('div');
+    group.className = 'type-group';
+
+    const header = document.createElement('div');
+    header.className = 'type-header';
+    header.innerHTML = `<span class="chevron">&#9654;</span>${type}<span class="count">${count}</span>`;
+    header.addEventListener('click', () => toggleType(type, group));
+
+    const list = document.createElement('div');
+    list.className = 'entity-list';
+    list.id = `list-${type}`;
+
+    group.appendChild(header);
+    group.appendChild(list);
+    container.appendChild(group);
+  }
+}
+
+async function toggleType(type, group) {
+  const header = group.querySelector('.type-header');
+  const list = group.querySelector('.entity-list');
+  const isExpanded = header.classList.contains('expanded');
+
+  if (isExpanded) {
+    header.classList.remove('expanded');
+    list.classList.remove('visible');
+    return;
+  }
+
+  // Collapse others
+  document.querySelectorAll('.type-header.expanded').forEach(h => {
+    h.classList.remove('expanded');
+    h.nextElementSibling.classList.remove('visible');
+  });
+
+  header.classList.add('expanded');
+  list.classList.add('visible');
+
+  // Load entities if not already loaded
+  if (!list.children.length) {
+    const entities = await api(`entities/${type}`);
+    list.innerHTML = '';
+    for (const entity of entities) {
+      const item = document.createElement('div');
+      item.className = 'entity-item';
+      item.textContent = entity.name || entity.id;
+      item.addEventListener('click', () => loadEntity(type, entity.id));
+      list.appendChild(item);
+    }
+  }
+
+  state.currentType = type;
+}
+
+// ─── Entity Detail ──────────────────────────────────────────────────────────
+async function loadEntity(type, id) {
+  // Update sidebar selection
+  document.querySelectorAll('.entity-item.active').forEach(el => el.classList.remove('active'));
+
+  // Find and activate the sidebar item (may need to expand the type first)
+  const list = document.getElementById(`list-${type}`);
+  if (list) {
+    for (const item of list.children) {
+      if (item.textContent === id || item.dataset.id === id) {
+        item.classList.add('active');
+      }
+    }
+  }
+
+  const entity = await api(`entities/${type}/${id}`);
+  if (!entity || entity.error) return;
+
+  state.currentType = type;
+  state.currentId = id;
+
+  // Switch to browse view if not already
+  if (state.currentView !== 'browse') {
+    switchView('browse');
+  }
+
+  // Hide search results
+  document.getElementById('searchResults').classList.remove('visible');
+
+  renderEntity(entity, type);
+}
+
+function renderEntity(entity, type) {
+  const container = document.getElementById('entityDetail');
+  const proseFields = [
+    'text', 'description', 'personality', 'power_manifestation',
+    'limitations', 'internal_divisions', 'acknowledged_flaw',
+    'goal', 'leadership', 'resources', 'worship_generates',
+    'dilemma', 'story_tendency', 'emotional_function',
+    'consequence_text', 'flavor_text',
+  ];
+  const skipFields = [
+    'id', 'name', 'tags', '_file', '_type', '_refs_from', '_refs_to',
+    '_spawns', '_born_from', 'created', 'choices',
+    ...proseFields,
+  ];
+
+  let html = '';
+
+  // Type badge
+  html += `<div class="entity-type-badge">${type}</div>`;
+
+  // Name
+  html += `<h2>${esc(entity.name || entity.id)}</h2>`;
+
+  // Tags
+  if (entity.tags && entity.tags.length) {
+    html += `<div class="tags">${entity.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>`;
+  }
+
+  // Prose fields first (the important stuff)
+  for (const field of proseFields) {
+    if (entity[field] && typeof entity[field] === 'string') {
+      html += `<div class="field-group">`;
+      html += `<div class="field-label">${formatLabel(field)}</div>`;
+      html += `<div class="field-value prose-field">${esc(entity[field])}</div>`;
+      html += `</div>`;
+    }
+  }
+
+  // Other fields
+  for (const [key, value] of Object.entries(entity)) {
+    if (skipFields.includes(key)) continue;
+    if (value === null || value === undefined) continue;
+
+    html += `<div class="field-group">`;
+    html += `<div class="field-label">${formatLabel(key)}</div>`;
+    html += `<div class="field-value">${renderFieldValue(key, value)}</div>`;
+    html += `</div>`;
+  }
+
+  // Choices (events)
+  if (entity.choices && entity.choices.length) {
+    html += `<div class="field-group">`;
+    html += `<div class="field-label">Choices</div>`;
+    html += `<div class="choices-list">`;
+    for (const [i, choice] of entity.choices.entries()) {
+      html += renderChoice(choice, i);
+    }
+    html += `</div></div>`;
+  }
+
+  // Cross-references
+  const refsTo = entity._refs_to || [];
+  const refsFrom = entity._refs_from || [];
+  const spawns = entity._spawns || [];
+  const bornFrom = entity._born_from;
+
+  if (refsTo.length || refsFrom.length || spawns.length || bornFrom) {
+    html += `<div class="xrefs">`;
+
+    if (bornFrom) {
+      html += `<h3>Born From</h3>`;
+      html += `<div class="xref-item" onclick="loadEntity('events','${esc(bornFrom)}')">`;
+      html += `<span class="xref-type">event</span> ${esc(bornFrom)}`;
+      html += `</div>`;
+    }
+
+    if (spawns.length) {
+      html += `<h3>Spawns</h3>`;
+      for (const s of spawns) {
+        html += `<div class="xref-item" title="${esc(s.description)}">`;
+        html += `<span class="xref-type">${esc(s.type)}</span> ${esc(s.id)}`;
+        if (s.delay) html += ` <span style="color:var(--text-faint);font-size:10px">(${esc(s.delay)})</span>`;
+        html += `</div>`;
+      }
+    }
+
+    if (refsTo.length) {
+      html += `<h3>Referenced By</h3>`;
+      for (const ref of refsTo) {
+        html += `<div class="xref-item" onclick="loadEntity('${esc(ref.type)}','${esc(ref.id)}')">`;
+        html += `<span class="xref-type">${esc(ref.type)}</span> ${esc(ref.id)}`;
+        html += `</div>`;
+      }
+    }
+
+    if (refsFrom.length) {
+      html += `<h3>References</h3>`;
+      for (const ref of refsFrom) {
+        html += `<div class="xref-item" onclick="loadEntity('${esc(ref.type)}','${esc(ref.id)}')">`;
+        html += `<span class="xref-type">${esc(ref.type)}</span> ${esc(ref.id)}`;
+        html += `</div>`;
+      }
+    }
+
+    html += `</div>`;
+  }
+
+  container.innerHTML = html;
+}
+
+function renderChoice(choice, index) {
+  let html = `<div class="choice-card">`;
+  html += `<div class="choice-text">${esc(choice.text || '')}</div>`;
+
+  if (choice.requires) {
+    html += `<div class="choice-requires">Requires: ${esc(JSON.stringify(choice.requires))}</div>`;
+  }
+
+  if (choice.consequence_text) {
+    html += `<div class="consequence">${esc(choice.consequence_text)}</div>`;
+  }
+
+  if (choice.effects) {
+    const effects = Object.entries(choice.effects)
+      .map(([k, v]) => `${formatLabel(k)}: ${typeof v === 'object' ? JSON.stringify(v) : v}`)
+      .join(', ');
+    html += `<div style="font-size:12px;color:var(--text-faint);margin-top:6px">${esc(effects)}</div>`;
+  }
+
+  if (choice.spawns) {
+    const allSpawns = [];
+    for (const [stype, slist] of Object.entries(choice.spawns)) {
+      if (Array.isArray(slist)) {
+        for (const s of slist) {
+          if (typeof s === 'object' && s.id) {
+            allSpawns.push({ type: stype, ...s });
+          } else if (typeof s === 'string') {
+            allSpawns.push({ type: stype, description: s });
+          }
+        }
+      }
+    }
+    if (allSpawns.length) {
+      html += `<div class="spawns-list">`;
+      for (const s of allSpawns) {
+        html += `<div class="spawn-item">${esc(s.description || s.id || s.type)}</div>`;
+      }
+      html += `</div>`;
+    }
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function renderFieldValue(key, value) {
+  if (Array.isArray(value)) {
+    return value.map(v => {
+      if (typeof v === 'string') {
+        return `<span class="ref-link" onclick="tryNavigate('${esc(v)}')">${esc(v)}</span>`;
+      }
+      return esc(JSON.stringify(v));
+    }).join(', ');
+  }
+  if (typeof value === 'object') {
+    return `<pre style="font-family:var(--font-mono);font-size:12px;color:var(--text-dim);white-space:pre-wrap">${esc(JSON.stringify(value, null, 2))}</pre>`;
+  }
+  return esc(String(value));
+}
+
+// Try to navigate to an entity by ID
+async function tryNavigate(id) {
+  // Search all types for this id
+  for (const type of Object.keys(state.types)) {
+    const entity = await api(`entities/${type}/${id}`);
+    if (entity && !entity.error) {
+      loadEntity(type, id);
+      return;
+    }
+  }
+}
+
+// ─── Search ─────────────────────────────────────────────────────────────────
+async function doSearch(query) {
+  const results = await api(`search?q=${encodeURIComponent(query)}`);
+  const container = document.getElementById('searchResults');
+
+  if (!results.length) {
+    container.innerHTML = `<h3>${results.length} results for "${esc(query)}"</h3><p style="color:var(--text-faint)">No matches found.</p>`;
+    container.classList.add('visible');
+    return;
+  }
+
+  let html = `<h3>${results.length} results for "${esc(query)}"</h3>`;
+  for (const r of results) {
+    html += `<div class="search-result-item" onclick="loadEntity('${esc(r.type)}','${esc(r.id)}')">`;
+    html += `<span class="result-name">${esc(r.name)}</span>`;
+    html += `<span class="result-type">${esc(r.type)}</span>`;
+    if (r.tags && r.tags.length) {
+      html += `<div class="result-tags">${r.tags.map(t => esc(t)).join(', ')}</div>`;
+    }
+    html += `</div>`;
+  }
+
+  container.innerHTML = html;
+  container.classList.add('visible');
+}
+
+// ─── View Switching ─────────────────────────────────────────────────────────
+function switchView(view) {
+  state.currentView = view;
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.view === view));
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === `view-${view}`));
+
+  if (view === 'graph' && !state.graphData) loadGraph();
+  if (view === 'stats') loadStats();
+  if (view === 'coverage') loadCoverage();
+}
+
+// ─── Graph ──────────────────────────────────────────────────────────────────
+let graphAnimFrame = null;
+let graphCamera = { x: 0, y: 0, zoom: 1 };
+let graphDrag = { active: false, nodeIdx: -1, lastX: 0, lastY: 0, isPan: false };
+
+async function loadGraph() {
+  state.graphData = await api('graph');
+  initGraph();
+}
+
+function initGraph() {
+  const canvas = document.getElementById('graphCanvas');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.scale(dpr, dpr);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const W = canvas.parentElement.clientWidth;
+  const H = canvas.parentElement.clientHeight;
+
+  // Initialize node positions
+  const nodes = state.graphData.nodes.map((n, i) => ({
+    ...n,
+    x: W/2 + (Math.random() - 0.5) * W * 0.6,
+    y: H/2 + (Math.random() - 0.5) * H * 0.6,
+    vx: 0, vy: 0,
+    radius: 5,
+  }));
+
+  const nodeMap = {};
+  nodes.forEach((n, i) => nodeMap[n.id] = i);
+
+  const edges = state.graphData.edges.filter(e =>
+    nodeMap[e.source] !== undefined && nodeMap[e.target] !== undefined
+  );
+
+  state.graphNodes = nodes;
+  state.graphEdges = edges;
+
+  // Force simulation
+  function simulate() {
+    const k = 0.005;   // spring constant
+    const repel = 8000; // repulsion
+    const damp = 0.85;
+    const center_pull = 0.001;
+
+    // Repulsion between all nodes
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        let dx = nodes[j].x - nodes[i].x;
+        let dy = nodes[j].y - nodes[i].y;
+        let d2 = dx*dx + dy*dy;
+        if (d2 < 1) d2 = 1;
+        let f = repel / d2;
+        let fx = dx / Math.sqrt(d2) * f;
+        let fy = dy / Math.sqrt(d2) * f;
+        nodes[i].vx -= fx;
+        nodes[i].vy -= fy;
+        nodes[j].vx += fx;
+        nodes[j].vy += fy;
+      }
+    }
+
+    // Spring attraction along edges
+    for (const edge of edges) {
+      const a = nodes[nodeMap[edge.source]];
+      const b = nodes[nodeMap[edge.target]];
+      if (!a || !b) continue;
+      let dx = b.x - a.x;
+      let dy = b.y - a.y;
+      let d = Math.sqrt(dx*dx + dy*dy);
+      if (d < 1) d = 1;
+      let f = (d - 100) * k;
+      a.vx += dx/d * f;
+      a.vy += dy/d * f;
+      b.vx -= dx/d * f;
+      b.vy -= dy/d * f;
+    }
+
+    // Center gravity
+    for (const n of nodes) {
+      n.vx += (W/2 - n.x) * center_pull;
+      n.vy += (H/2 - n.y) * center_pull;
+    }
+
+    // Update positions
+    for (const n of nodes) {
+      if (n.fixed) continue;
+      n.vx *= damp;
+      n.vy *= damp;
+      n.x += n.vx;
+      n.y += n.vy;
+    }
+  }
+
+  // Render
+  function draw() {
+    const cw = canvas.width / dpr;
+    const ch = canvas.height / dpr;
+    ctx.clearRect(0, 0, cw, ch);
+
+    ctx.save();
+    ctx.translate(graphCamera.x + cw/2, graphCamera.y + ch/2);
+    ctx.scale(graphCamera.zoom, graphCamera.zoom);
+    ctx.translate(-cw/2, -ch/2);
+
+    // Edges
+    ctx.globalAlpha = 0.12;
+    ctx.strokeStyle = '#7a8494';
+    ctx.lineWidth = 0.5;
+    for (const edge of edges) {
+      const a = nodes[nodeMap[edge.source]];
+      const b = nodes[nodeMap[edge.target]];
+      if (!a || !b) continue;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+    }
+
+    // Nodes
+    ctx.globalAlpha = 1;
+    for (const n of nodes) {
+      const color = TYPE_COLORS[n.type] || '#7a8494';
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Label
+      if (state.showLabels && graphCamera.zoom > 0.6) {
+        ctx.fillStyle = color;
+        ctx.globalAlpha = 0.7;
+        ctx.font = `${10 / graphCamera.zoom}px ${getComputedStyle(document.body).getPropertyValue('--font-ui')}`;
+        ctx.fillText(n.name || n.id, n.x + n.radius + 3, n.y + 3);
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    ctx.restore();
+
+    simulate();
+    graphAnimFrame = requestAnimationFrame(draw);
+  }
+
+  // Mouse interaction
+  canvas.addEventListener('mousedown', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left - graphCamera.x - rect.width/2) / graphCamera.zoom + rect.width/2;
+    const my = (e.clientY - rect.top - graphCamera.y - rect.height/2) / graphCamera.zoom + rect.height/2;
+
+    // Check if we clicked a node
+    let hitIdx = -1;
+    for (let i = nodes.length - 1; i >= 0; i--) {
+      const dx = mx - nodes[i].x;
+      const dy = my - nodes[i].y;
+      if (dx*dx + dy*dy < 100) {
+        hitIdx = i;
+        break;
+      }
+    }
+
+    if (hitIdx >= 0) {
+      graphDrag.active = true;
+      graphDrag.nodeIdx = hitIdx;
+      graphDrag.isPan = false;
+      nodes[hitIdx].fixed = true;
+    } else {
+      graphDrag.active = true;
+      graphDrag.nodeIdx = -1;
+      graphDrag.isPan = true;
+    }
+    graphDrag.lastX = e.clientX;
+    graphDrag.lastY = e.clientY;
+  });
+
+  canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+
+    if (graphDrag.active) {
+      const dx = e.clientX - graphDrag.lastX;
+      const dy = e.clientY - graphDrag.lastY;
+
+      if (graphDrag.isPan) {
+        graphCamera.x += dx;
+        graphCamera.y += dy;
+      } else if (graphDrag.nodeIdx >= 0) {
+        nodes[graphDrag.nodeIdx].x += dx / graphCamera.zoom;
+        nodes[graphDrag.nodeIdx].y += dy / graphCamera.zoom;
+      }
+
+      graphDrag.lastX = e.clientX;
+      graphDrag.lastY = e.clientY;
+    }
+
+    // Tooltip
+    const mx = (e.clientX - rect.left - graphCamera.x - rect.width/2) / graphCamera.zoom + rect.width/2;
+    const my = (e.clientY - rect.top - graphCamera.y - rect.height/2) / graphCamera.zoom + rect.height/2;
+    const tooltip = document.getElementById('graphTooltip');
+    let hit = null;
+    for (const n of nodes) {
+      const dx = mx - n.x;
+      const dy = my - n.y;
+      if (dx*dx + dy*dy < 100) { hit = n; break; }
+    }
+    if (hit) {
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX - canvas.parentElement.getBoundingClientRect().left + 12) + 'px';
+      tooltip.style.top = (e.clientY - canvas.parentElement.getBoundingClientRect().top - 10) + 'px';
+      tooltip.innerHTML = `<div class="tt-type">${hit.type}</div><div>${hit.name || hit.id}</div>`;
+    } else {
+      tooltip.style.display = 'none';
+    }
+  });
+
+  canvas.addEventListener('mouseup', () => {
+    if (graphDrag.nodeIdx >= 0) {
+      nodes[graphDrag.nodeIdx].fixed = false;
+    }
+    graphDrag.active = false;
+    graphDrag.nodeIdx = -1;
+  });
+
+  canvas.addEventListener('dblclick', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left - graphCamera.x - rect.width/2) / graphCamera.zoom + rect.width/2;
+    const my = (e.clientY - rect.top - graphCamera.y - rect.height/2) / graphCamera.zoom + rect.height/2;
+    for (const n of nodes) {
+      const dx = mx - n.x;
+      const dy = my - n.y;
+      if (dx*dx + dy*dy < 100) {
+        loadEntity(n.type, n.id);
+        return;
+      }
+    }
+  });
+
+  canvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const factor = e.deltaY > 0 ? 0.9 : 1.1;
+    graphCamera.zoom *= factor;
+    graphCamera.zoom = Math.max(0.2, Math.min(3, graphCamera.zoom));
+  }, { passive: false });
+
+  // Start animation
+  if (graphAnimFrame) cancelAnimationFrame(graphAnimFrame);
+  draw();
+}
+
+function graphResetView() {
+  graphCamera = { x: 0, y: 0, zoom: 1 };
+}
+
+function graphToggleLabels() {
+  state.showLabels = !state.showLabels;
+}
+
+// ─── Stats ──────────────────────────────────────────────────────────────────
+async function loadStats() {
+  const stats = await api('stats');
+  const container = document.getElementById('statsContent');
+
+  let html = '';
+
+  // Big numbers
+  html += `<div class="stats-grid">`;
+  html += statCard(stats.total_entities, 'entities');
+  html += statCard(stats.total_words.toLocaleString(), 'words of prose');
+  html += statCard(stats.total_references, 'cross-references');
+  html += statCard(stats.total_spawn_chains, 'spawn chain links');
+  html += statCard(Object.keys(stats.types).length, 'entity types');
+  html += statCard(stats.total_tags, 'unique tags');
+  html += `</div>`;
+
+  // Entities by type
+  html += `<div class="stat-section"><h3>Entities by Type</h3>`;
+  const maxCount = Math.max(...Object.values(stats.types));
+  html += `<div class="bar-chart">`;
+  for (const [type, count] of Object.entries(stats.types).sort((a, b) => b[1] - a[1])) {
+    const pct = (count / maxCount * 100).toFixed(0);
+    html += `<div class="bar-row">`;
+    html += `<div class="bar-label">${type}</div>`;
+    html += `<div class="bar-fill-bg"><div class="bar-fill" style="width:${pct}%;background:${TYPE_COLORS[type] || 'var(--ember-dim)'}"></div></div>`;
+    html += `<div class="bar-value">${count}</div>`;
+    html += `</div>`;
+  }
+  html += `</div></div>`;
+
+  // Words by type
+  html += `<div class="stat-section"><h3>Words by Type</h3>`;
+  const maxWords = Math.max(...Object.values(stats.words_by_type));
+  html += `<div class="bar-chart">`;
+  for (const [type, wc] of Object.entries(stats.words_by_type).sort((a, b) => b[1] - a[1])) {
+    if (wc === 0) continue;
+    const pct = (wc / maxWords * 100).toFixed(0);
+    html += `<div class="bar-row">`;
+    html += `<div class="bar-label">${type}</div>`;
+    html += `<div class="bar-fill-bg"><div class="bar-fill" style="width:${pct}%;background:${TYPE_COLORS[type] || 'var(--ember-dim)'}"></div></div>`;
+    html += `<div class="bar-value">${wc.toLocaleString()}</div>`;
+    html += `</div>`;
+  }
+  html += `</div></div>`;
+
+  // Top tags
+  html += `<div class="stat-section"><h3>Most Used Tags</h3>`;
+  const maxTag = stats.top_tags[0]?.[1] || 1;
+  html += `<div class="bar-chart">`;
+  for (const [tag, count] of stats.top_tags) {
+    const pct = (count / maxTag * 100).toFixed(0);
+    html += `<div class="bar-row">`;
+    html += `<div class="bar-label">${tag}</div>`;
+    html += `<div class="bar-fill-bg"><div class="bar-fill" style="width:${pct}%"></div></div>`;
+    html += `<div class="bar-value">${count}</div>`;
+    html += `</div>`;
+  }
+  html += `</div></div>`;
+
+  container.innerHTML = html;
+}
+
+function statCard(value, label) {
+  return `<div class="stat-card"><div class="stat-value">${value}</div><div class="stat-label">${label}</div></div>`;
+}
+
+// ─── Coverage ───────────────────────────────────────────────────────────────
+async function loadCoverage() {
+  const cov = await api('coverage');
+  const container = document.getElementById('coverageContent');
+
+  let html = '';
+
+  // Events by age
+  html += `<div class="coverage-section"><h3>Events by Life Stage</h3>`;
+  html += `<div class="coverage-grid">`;
+  for (const [age, count] of Object.entries(cov.events_by_age).sort((a, b) => b[1] - a[1])) {
+    const cls = count >= 8 ? 'good' : count >= 3 ? '' : 'gap';
+    html += `<div class="coverage-cell ${cls}"><div class="cell-value">${count}</div><div class="cell-label">${age}</div></div>`;
+  }
+  html += `</div></div>`;
+
+  // Events by archetype
+  html += `<div class="coverage-section"><h3>Events by Archetype</h3>`;
+  html += `<div class="coverage-grid">`;
+  for (const [arch, count] of Object.entries(cov.events_by_archetype).sort((a, b) => b[1] - a[1])) {
+    const cls = count >= 5 ? 'good' : count >= 2 ? '' : 'gap';
+    const label = arch.replace(/_/g, ' ').replace(/\bs\b /g, "'s ");
+    html += `<div class="coverage-cell ${cls}"><div class="cell-value">${count}</div><div class="cell-label">${label}</div></div>`;
+  }
+  html += `</div></div>`;
+
+  // Cards by attunement
+  html += `<div class="coverage-section"><h3>Cards by Attunement</h3>`;
+  html += `<div class="coverage-grid">`;
+  for (const [att, count] of Object.entries(cov.cards_by_attunement).sort((a, b) => b[1] - a[1])) {
+    const cls = count >= 5 ? 'good' : count >= 3 ? '' : 'gap';
+    html += `<div class="coverage-cell ${cls}"><div class="cell-value">${count}</div><div class="cell-label">${att}</div></div>`;
+  }
+  html += `</div></div>`;
+
+  // Archetype friendship scenes
+  html += `<div class="coverage-section"><h3>Archetype Relationship Scenes</h3>`;
+  html += `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px">`;
+  for (const [arch, scenes] of Object.entries(cov.archetype_scenes)) {
+    const label = arch.replace(/_/g, ' ').replace(/\bs\b /g, "'s ");
+    const checks = ['intro', 'bonding', 'critical'].map(s =>
+      `<span style="color:${scenes[s] ? 'var(--drift)' : 'var(--forge)'}">${s}: ${scenes[s] ? 'yes' : 'no'}</span>`
+    ).join(' &middot; ');
+    html += `<div class="coverage-cell"><div class="cell-label" style="font-size:12px;margin-bottom:4px">${label}</div><div style="font-size:11px">${checks}</div></div>`;
+  }
+  html += `</div></div>`;
+
+  // Spawn chain info
+  html += `<div class="coverage-section"><h3>Event Chain Health</h3>`;
+  html += `<div class="coverage-grid">`;
+  html += `<div class="coverage-cell"><div class="cell-value">${cov.events_total}</div><div class="cell-label">total events</div></div>`;
+  html += `<div class="coverage-cell ${cov.events_with_spawn_chains > cov.events_total * 0.4 ? 'good' : 'gap'}"><div class="cell-value">${cov.events_with_spawn_chains}</div><div class="cell-label">with spawn chains</div></div>`;
+  html += `<div class="coverage-cell"><div class="cell-value">${cov.events_total - cov.events_with_spawn_chains}</div><div class="cell-label">terminal (no spawns)</div></div>`;
+  html += `</div></div>`;
+
+  container.innerHTML = html;
+}
+
+// ─── Header Stats ───────────────────────────────────────────────────────────
+async function loadHeaderStats() {
+  const stats = await api('stats');
+  document.getElementById('headerStats').innerHTML =
+    `<span>${stats.total_entities}</span> entities &middot; ` +
+    `<span>${stats.total_words.toLocaleString()}</span> words &middot; ` +
+    `<span>${stats.total_references}</span> refs`;
+}
+
+// ─── Utilities ──────────────────────────────────────────────────────────────
+function esc(s) {
+  if (typeof s !== 'string') return String(s);
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function formatLabel(key) {
+  return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// ─── Start ──────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
