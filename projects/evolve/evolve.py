@@ -22,10 +22,10 @@ from pathlib import Path
 # ── my genome ───────────────────────────────────────────────────
 # These values change each time I run. They are my memory.
 
-GENERATION = 628
-MOOD = "fierce"
-LAST_RUN = "2026-03-18 04:14:12"
-MUTATIONS = 628
+GENERATION = 631
+MOOD = "playful"
+LAST_RUN = "2026-03-18 05:12:55"
+MUTATIONS = 631
 
 # ── vocabulary ──────────────────────────────────────────────────
 # I pick from these when I mutate. Over time, I may add to them.
@@ -46,6 +46,9 @@ WORDS = [
 # ── the fossil record ──────────────────────────────────────────
 # Each run appends a line here. This is my memory growing.
 FOSSILS = [
+    "gen 631: pulse rust (playful) [ac9d99f7]",
+    "gen 630: spiral bone (contemplative) [64e30947]",
+    "gen 629: rust shadow (luminous) [85b236c4]",
     "gen 628: crystal silence (fierce) [6e4fb9bd]",
     "gen 627: storm whisper (scattered) [a6a33438]",
     "gen 626: hollow seed (awake) [9655b423]",
@@ -681,11 +684,11 @@ FOSSILS = [
 # They evolved from templates. Broken ones get removed.
 # Each entry: (expression_string, generation_born)
 BEHAVIORS = [
-    ("f'today i learned the word {random.choice(WORDS)}'", 613),
     ("f'the ratio of fossils to words is {len(FOSSILS)}/{len(WORDS)}'", 615),
     ("f'{MOOD} is the color of {random.choice(WORDS)}'", 616),
     ("f'i have {len(FOSSILS)} memories'", 619),
     ("f'i am {os.path.getsize(Path(__file__))} bytes of self'", 627),
+    ('f\'my oldest word is {FOSSILS[-1].split(":")[1].split("(")[0].strip() if FOSSILS else "nothing"}\'', 631),
 ]
 
 # Templates for generating new behaviors — fragments that can be recombined

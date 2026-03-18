@@ -4,89 +4,82 @@
   "age": "adulthood",
   "category": "world",
   "world_state": "all_era_2_branches",
+  "arrival_wave": "first — the Keepers",
   "archetype_filter": ["any"],
-  "historical_inspiration": "First Contact reversed. Polynesian navigators reaching Europe instead of Europeans reaching the Pacific. Haudenosaunee diplomats arriving in a continent that can't comprehend governance without kings. The sophistication is real on both sides — but in completely different dimensions. Neither side is primitive. Both sides think the other is.",
-  "text": "The ships arrive at the Senn Delta on a morning so clear that fishermen see them from twenty miles out. Five vessels, moving against the current, making no sound except singing.\n\nThe ships are wrong. That's the first thing anyone notices. The wood is alive — not planked and nailed but grown, curved like ribs, flexing with the water instead of resisting it. The sails are woven from something that catches wind that isn't blowing. The hull sits deeper than any ship this size should, as if the water is holding it rather than carrying it.\n\nThe singing is the second thing. It's coming from the ships themselves — or from the water around them — or from the three figures standing at the prow of the lead vessel, whose voices move in patterns that sound less like music and more like conversation. They're talking to the river. The river is answering.\n\nThey are dark-skinned, salt-scarred, dressed in woven fabric that shifts color with the light. They carry no weapons anyone can identify. They carry no cargo. They smile when they see the delta, the way you smile when you arrive somewhere a friend told you about.\n\nThe Brackish are the first to make contact — they're always first, because the delta is their territory and curiosity is their currency. The lead figure steps onto the dock, looks at the market, looks at the people, looks at the sky. She puts her hand on the dock-wood and frowns.\n\n'This wood is dead,' she says in a language nobody speaks — but everyone understands, because the words arrive with a feeling attached, like a taste on the back of the tongue. Not magic. Something else. Something that assumes communication is a right, not a skill.\n\n'We came because your gods are hurting,' she says. 'We can hear them from across the water. Can you not hear them from here?'\n\nNobody answers. Nobody knows how.",
+  "text": "The ship arrives at the Senn Delta on a morning so clear that fishermen see it from twenty miles out. One vessel, small, moving against the current, making no sound except singing.\n\nThe ship is wrong. The wood is alive — grown, not planked. The hull flexes with the water. The sail catches wind that isn't blowing. Seven people stand on deck. They look exhausted in a way that goes past the body into something structural, as if tiredness is built into how they hold themselves.\n\nThe singing is coming from the water around the ship — or from the woman at the prow, whose voice moves in patterns that sound less like music and more like conversation. She's talking to the river. The river is answering.\n\nThe Brackish make first contact. The woman steps onto the dock, looks at the market, the people, the sky. She puts her hand on the dock-wood and her face changes.\n\n'This wood is dead,' she says, in a language nobody speaks but everyone understands — the words arrive with feeling attached, like a taste on the back of the tongue.\n\nShe looks at the sky for a long time. Then at the river. Then at the mountains where the Ashfield sits.\n\n'Your gods,' she says. 'They're so loud. Don't you hear them?'\n\nNobody answers.\n\n'We can teach you to hear them,' she says. And she means it. And the offer is genuine. And behind her, on the ship, an old woman named Rua is watching the dock with an expression that isn't hope or fear but something between: the look of someone who's arrived at the place they'll either be saved or finally caught.",
   "choices": [
     {
-      "text": "Welcome them. Whatever they are, they calmed the Ashfield god for a day. That's worth a conversation.",
-      "requires": {"trait_any": ["compassionate", "curious", "perceptive"]},
+      "text": "Welcome them. They're clearly exhausted and clearly gifted. Whatever they're running from can wait.",
+      "requires": {"trait_any": ["compassionate", "curious"]},
       "effects": {
         "trait_gain": "first_listener",
-        "relationship_new": {"type": "tideborn_contact", "strength": 15},
-        "knowledge_gain": "divine_partnership_concept"
+        "relationship_new": {"type": "keeper_bond", "strength": 15},
+        "knowledge_gain": "divine_partnership_basics"
       },
-      "consequence_text": "You sit with the Voice-Carrier for three days. She doesn't lecture. She asks questions. What does the Ashfield feel like from here? When you pray, does anything answer? When your gods are angry, do you ask them why?\n\nThe questions are worse than answers would be. Each one implies a relationship with the divine that your entire civilization has never considered. Not worship. Not study. Not fear. Friendship.\n\nOn the third day, she teaches you to listen. Not to her — to the Weave, the concept god of connection, who has been trying to communicate with mortals on this continent for centuries and has never found anyone who knew how to hear.\n\nThe Weave says: finally.\n\nYour world breaks open. Not violently — the way a door opens when you realize it was never locked.",
+      "consequence_text": "You spend weeks with the Keepers. They teach you to listen — not to them, to the Weave, the concept god of connection, who has been trying to reach mortals for centuries. The technique is real. It works. The Weave says: finally.\n\nThe Keepers are generous with their knowledge and evasive about their past. When you ask where they came from, they say 'across the water.' When you ask why they left, Rua says 'we had to' and changes the subject. When you ask about their gods, the youngest Keeper starts to answer and Rua cuts her off with a look that could stop a river.\n\nThey're hiding something. But what they're giving you is genuine. The partnership techniques open a door between mortals and gods that was always there and nobody knew how to use. You can hear the Weave now. It has opinions. It has been lonely.\n\nWhatever the Keepers are running from — it hasn't arrived yet.",
       "spawns": {
         "events": [
           {
-            "id": "the_first_conversation",
-            "delay": "immediate",
-            "description": "You can hear the Weave now. It has opinions. It has been lonely. It has been watching the settled world build walls between itself and the divine for centuries, and it has a lot to say about that. The question is whether anyone else is ready to listen."
-          }
-        ],
-        "world_changes": ["The concept of divine partnership enters the continental vocabulary. The Tideborn way is no longer theoretical — someone local has done it."]
-      }
-    },
-    {
-      "text": "Bring them to the Senate. If anyone can study what they know, it's the scholars.",
-      "effects": {
-        "trait_gain": "bridge_builder",
-        "faction_rep": {"the_solmari_senate": 10}
-      },
-      "consequence_text": "The Senate sends its finest theologians. The Tide Speakers answer every question with a question. 'How does worship generate power?' 'Why do you call it worship?' 'What do the gods call it?' 'Have you asked?'\n\nThe theologians write three hundred pages of notes. The Tide Speakers are confused by the notes — why write down what you could ask the gods to remember?\n\nThe Senate learns that the Tideborn have no written language, no currency, no centralized authority, and no military. The Senate concludes they are primitive. The Senate is wrong in a way that will take a generation to understand.\n\nMeanwhile, the Tideborn learn that the Senate has libraries, laws, medicine, and engineering. The Tideborn conclude the settled world is brilliant and deaf — they can build anything except a conversation with the beings that share their world.",
-      "spawns": {
-        "events": [
-          {
-            "id": "the_misunderstanding",
+            "id": "ruas_confession",
             "delay": "years",
-            "description": "The Senate published a study calling the Tideborn 'pre-literate divine-dependent cultures.' The Tideborn published nothing because they don't write, but their gods remember every word the Senate said, and the gods are not impressed."
+            "description": "Rua trusts you enough to tell you part of the truth. Not the Unmaking — not yet. But about the homeland. The gods that are gone. The reason they fled. She tells you about the Wind-That-Asks, who chose to die. She doesn't tell you about the ones who didn't choose. She's testing whether you can hold the smaller truth before she gives you the larger one."
           }
         ]
       }
     },
     {
-      "text": "Warn the Forge Council. Foreign ships in the delta means foreign influence. Thornwall needs to know.",
+      "text": "Help them, but quietly. Don't draw attention. Something about their fear feels real.",
       "effects": {
-        "trait_gain": "sentinel",
-        "faction_rep": {"the_forge_council": 10}
+        "trait_gain": "quiet_protector",
+        "relationship_new": {"type": "keeper_bond", "strength": 10}
       },
-      "consequence_text": "The Forge Council's response is immediate and predictable: close the passes. Whatever these people are, they're not iron, they're not ore, and they're not from here.\n\nBut the Council's younger members are curious. The living ships — wood that grows into shapes — that's a craft beyond anything Thornwall has seen. Not better than forging. Different. A mastery of a material the forge-masters never considered mastering.\n\nOne young smith sneaks down to the delta to look at the ships. She touches the hull and feels it breathe under her hand. She comes back to Thornwall and can't stop thinking about it. What else has the Forge Council refused to learn because it wasn't made of iron?",
+      "consequence_text": "You settle them in the delta, away from the main trade routes. The Brackish help — they're good at discretion, and refugees are a commodity they understand. The Keepers are grateful in a way that makes your chest tight. Not grateful for shelter. Grateful for not being asked questions.\n\nRua finds you one evening and says, without preamble: 'Something will come after us. Not soon. But it will come. When it does, you'll have to decide what we're worth to you.'\n\nShe doesn't explain. She goes back to the ship, where the living wood is slowly dying because the god that grew it is the last god they have, and it's using its strength to keep seven people alive instead of one hull.",
       "spawns": {
         "events": [
           {
-            "id": "the_living_hull",
+            "id": "the_ship_dies",
             "delay": "years",
-            "description": "A Thornwall smith has been secretly studying Tideborn ship-craft. She's trying to grow iron the way they grow wood — coaxing it with Bond attunement instead of hammering it with force. The masters would call this heresy. She calls it the obvious next step."
-          }
-        ],
-        "characters": [
-          {
-            "id": "the_iron_grower",
-            "description": "A young Thornwall smith who saw the Tideborn ships and couldn't unsee them. She's trying to synthesize forge-craft and living-craft. Both traditions would disown her. She might be the most important artisan alive."
+            "description": "The Keepers' living ship is dying. The wood is going grey. The Listener is spending its essence keeping the crew alive and the hull intact, and it can't do both forever. The ship's death is the first visible sign that the Keepers are carrying something that costs more than they can pay."
           }
         ]
       }
     },
     {
-      "text": "Do nothing. Watch. You've seen enough new forces arrive to know that the first reaction is usually wrong.",
+      "text": "Ask questions first. Seven people on one ship don't cross an ocean for curiosity. What are they running from?",
+      "requires": {"trait_any": ["perceptive", "cautious", "cunning"]},
+      "effects": {
+        "knowledge_gain": "keeper_refugees",
+        "trait_gain": "suspicious_ally"
+      },
+      "consequence_text": "Rua looks at you for a long time. She's deciding whether honesty or silence keeps her people safer.\n\n'We saved something,' she says. 'From our own people. Our own people want it back. That's all I can tell you.'\n\n'What did you save?'\n\nShe glances at the ocean. The water around the ship is unnaturally still — the kind of still that has a presence behind it, the way a held breath has a person.\n\n'You're standing in front of it,' she says.\n\nYou look at the water. The water looks at you. Something vast and patient and older than the river it's sitting in regards you with a curiosity that has weight.\n\nYou've just met a god. Not a local god — something from across the ocean, hiding in the Senn Delta, trying to decide if this continent is safe. The answer, it's clear, is: not yet.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_listener_speaks",
+            "delay": "years",
+            "description": "The Listener has decided to trust you. It communicates not in words but in feelings — oceanic feelings, vast and slow. It shows you what happened to the Tideborn pantheon. Not the details. The shape. A dozen points of light going out, one by one, until only one remains. The feeling that accompanies this vision is not grief. It's the thing that comes after grief, when grief has been the only companion for so long it's become architecture."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Do nothing. Watch. You've seen enough strangers arrive to know the first reaction is usually wrong.",
       "effects": {
         "trait_gain": "patient_observer",
         "knowledge_gain": "tideborn_arrival"
       },
-      "consequence_text": "You watch from the market as the delta churns with reaction. The Brackish are already negotiating trade rights (they don't understand that the Tideborn have nothing to trade in the conventional sense). The Senate is dispatching scholars. The Forge Council is dispatching suspicion. The Rootwalkers are the only ones who approach without agenda — they sit on the dock and listen to the singing, and something in their faces suggests they've heard this music before, in a very old riversong that nobody sings anymore.\n\nYou watch all of this and you think: this is the moment. Not the plague, not the trade war, not the philosophical split. This. A civilization that knows how to talk to gods has arrived in a world that forgot how. Everything that happens next — the alliances, the misunderstandings, the synthesis or the rejection — starts here, on a clear morning, with ships that sing.",
+      "consequence_text": "You watch from the market. The Brackish negotiate. The Keepers rest. The ship sits in the water and the water around it is strange — too calm, too clear, as if the river is being polite to something.\n\nOver the weeks that follow, the Keepers begin teaching anyone who'll listen. The partnership techniques spread. People who never thought to talk to gods are suddenly hearing them. The Weave speaks to a blacksmith. The Deep murmurs to a fisherman. The continental gods, starved for genuine conversation, pour decades of unheard thoughts into the first mortals who know how to listen.\n\nIt's beautiful. It changes everything. And Rua watches it happen with an expression you can't read — something between pride and the look a person gets when they see a fire they lit spreading toward a house.",
       "spawns": {
         "events": [
           {
-            "id": "the_rootwalker_memory",
+            "id": "the_listening_spreads",
             "delay": "years",
-            "description": "The Rootwalker elders have been singing with the Tideborn. They've discovered that three of their oldest riversongs — the ones so ancient nobody remembers where they came from — are Tideborn songs. The two cultures were connected once, across the ocean, before memory. The Tideborn came home. They just didn't know it."
+            "description": "The partnership techniques have spread beyond the delta. People across the continent are learning to hear their gods. It's the most significant spiritual development in living memory. The continental gods are revitalized. And somewhere across the ocean, something notices that the Listener has found a continent full of unprotected gods and mortals who are learning to get very, very close to them."
           }
-        ],
-        "world_changes": ["The Tideborn arrival becomes the defining event of the era transition. Every faction must decide what to do with people who know something they don't."]
+        ]
       }
     }
   ],
-  "cascade_notes": "The Tideborn arrival is a universal era-transition event — it fires at the end of Era 2 regardless of which branch the player is on. But the world's REACTION depends entirely on the existing state. An Age of Exchange world sees opportunity. An Age of Iron world sees threat. An Age of Questions world sees answers. An Age of Wandering world sees kin. A Slow Rot world barely notices. The Tideborn are the mirror that shows each civilization what it actually is.",
-  "tags": ["world", "adulthood", "foreign_contact", "tideborn", "era_transition", "divine_partnership", "paradigm_shift", "all_branches", "cascade_seed", "historical_inspiration", "moral_complexity"]
+  "cascade_notes": "First wave arrival — the Keepers only. The player builds trust with refugees who are hiding the most dangerous secret in the world. Era 3 brings the majority Tideborn flotilla seeking the Listener and their 'traitors.' Everything the player built with the Keepers is tested when the larger, more impressive, more dangerous group arrives.",
+  "tags": ["world", "adulthood", "foreign_contact", "tideborn", "keepers", "first_wave", "era_2", "divine_partnership", "cascade_seed", "all_branches"]
 }

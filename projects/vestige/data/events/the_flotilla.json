@@ -1,0 +1,71 @@
+{
+  "id": "the_flotilla",
+  "name": "The Flotilla",
+  "age": "adulthood",
+  "category": "world",
+  "world_state": "all_era_3_branches",
+  "arrival_wave": "second — the majority",
+  "requires_prior": "the_ships_that_sing",
+  "archetype_filter": ["any"],
+  "text": "Thirty-two ships.\n\nYou count them from the cliffs above the Senn Delta, where three years ago one small vessel arrived carrying seven exhausted refugees and a god hiding in the water. Now the horizon is full of living wood.\n\nThe ships are larger than the Keepers' vessel. Healthier. The wood gleams. The sails billow with stolen wind. And on every deck, figures who move with a confidence the Keepers never had — straight-backed, bright-eyed, carrying themselves like people who've never had to run from anything.\n\nThey're singing. All of them. Hundreds of voices in a harmony so complex it reshapes the river's current. Fish surface. Birds land on the rigging. The Senn Delta, which has heard the Keepers' quiet songs for three years, is now drowning in music.\n\nRua is beside you on the cliff. She hasn't moved since the first sail appeared. Her hands are shaking.\n\n'That's Makeo's grandson at the front,' she says. 'Taiu. He carries more of the old gods in his blood than anyone alive. He can calm a hurricane with his voice. He's the kindest person I've ever met.'\n\nShe pauses.\n\n'He doesn't know what he is.'\n\nThe flotilla reaches the delta. Taiu steps onto the dock — the same dock where the Keeper woman touched the dead wood three years ago. He puts his hand on it and the wood GROWS. Shoots of green push through grey planks. The dock creaks with sudden life. The crowd gasps.\n\nTaiu smiles. It's a genuine smile. He looks at the gathered continental peoples and says, in that same feeling-language the Keepers used:\n\n'We've come a long way to find our family. We've missed them very much.'\n\nBehind him, stepping off the second ship, an elder whose eyes are scanning the crowd — not for the Keepers. For the water. For the Listener. You recognize the look. It's the same focus a hunter has when tracking something they've been chasing for a very long time.\n\nRua sees the elder too. Her shaking stops. Something worse replaces it: stillness.",
+  "choices": [
+    {
+      "text": "Stand with Rua. Whatever's about to happen, the Keepers trusted you first.",
+      "requires": {"trait_any": ["brave", "honor_bound"]},
+      "effects": {
+        "relationship_change": {"keeper_bond": 20},
+        "faction_rep": {"tideborn_majority": -15},
+        "trait_gain": "keeper_ally"
+      },
+      "consequence_text": "You stand beside Rua on the cliff and you don't go down to greet the flotilla. In the political language of the delta, that's a statement. The Brackish notice. The other continental factions notice. Taiu notices.\n\nHe looks up at the cliff. He sees Rua. His smile doesn't change — it deepens, the way a smile deepens when someone sees a person they genuinely love and genuinely intend to bring home whether they want to come or not.\n\n'Aunt Rua,' he calls up. 'We've been so worried.'\n\nRua says nothing. Her jaw is set. Beside her, in the water of the delta, something vast holds very, very still.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_negotiation",
+            "delay": "immediate",
+            "description": "Taiu wants to talk. He's reasonable, warm, and patient. He doesn't understand why the Keepers fled. He genuinely believes his people's history is one of divine love and transcendence. Convincing him otherwise means destroying the story that holds his identity together. Not convincing him means the inner circle elders get closer to the Listener every day."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Greet Taiu. The flotilla is larger and more powerful than the Keepers. Pragmatism matters.",
+      "effects": {
+        "relationship_change": {"keeper_bond": -10},
+        "faction_rep": {"tideborn_majority": 15},
+        "trait_gain": "pragmatic_diplomat"
+      },
+      "consequence_text": "You go down to the dock. Taiu greets you with warmth that feels genuine because it is. He asks about the continent, the peoples, the gods. He's fascinated by the Ashfield god — a newborn divine consciousness, born from fear. 'We can help with that,' he says, and he means it.\n\nThe flotilla begins settling. They're better at everything than the Keepers — more skilled, more generous, more impressive. The continental factions gravitate toward them naturally. The Keepers, who were your allies for three years, watch from the margins as their own people replace them.\n\nRua finds you that night. 'You chose the larger group,' she says. Not angry. Tired. 'Everyone does. That's how Makeo won too. He was always the more impressive option.'\n\nShe walks away. Behind her, in the delta, the water is darker than it should be. The Listener is sinking deeper. Hiding.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_inner_circle_moves",
+            "delay": "years",
+            "description": "The inner circle elders have identified the Ashfield god as a candidate. Weakened, confused, already in pain — it would be easy. They begin preparations that look like partnership rituals but aren't. Only someone who knows the difference — someone Rua taught — would recognize the Unmaking's opening stages."
+          }
+        ]
+      }
+    },
+    {
+      "text": "Reveal what you know. Tell everyone — the continental factions, Taiu, all of it. The Unmaking. The dead gods. Everything.",
+      "requires": {"knowledge_gain": "keeper_refugees"},
+      "effects": {
+        "trait_gain": "truth_teller",
+        "world_state": "unmaking_revealed"
+      },
+      "consequence_text": "You tell them. Standing on the cliff above the delta, with the flotilla gleaming below and the Keepers trembling beside you and every faction leader within earshot — you tell them about the Unmaking. About the Tideborn homeland with no gods. About the 'gifts' in Tideborn blood. About what the inner circle wants with the Listener.\n\nThe silence afterward is the loudest thing you've ever heard.\n\nTaiu's face goes through four expressions in three seconds: confusion, denial, anger, and then something worse — the flicker of recognition. He's felt it. Some part of him has always known the divine fragments in his blood came from somewhere. He just never asked where.\n\nThe inner circle elders don't deny it. They don't confirm it either. They look at Rua with an expression that says: you've killed us all.\n\nRua looks at you with an expression that says: maybe. Or maybe I've saved every god on this continent. We'll see.",
+      "spawns": {
+        "events": [
+          {
+            "id": "the_reckoning_of_taiu",
+            "delay": "immediate",
+            "description": "Taiu demands the truth from the inner circle. The truth breaks him. He carries the consumed essence of gods who didn't choose to die, and he's been calling their death a gift his entire life. What he does with this knowledge — whether he rejects the Unmaking, tries to undo it, or decides his ancestors were right all along — defines the next era."
+          }
+        ],
+        "world_changes": ["The Unmaking is public knowledge. Every faction on the continent now knows gods can be deliberately killed and their power harvested. This knowledge cannot be unknown."]
+      }
+    }
+  ],
+  "cascade_notes": "The second wave — the majority flotilla — recontextualizes everything from Era 2's Keeper arrival. The player's relationship with the Keepers is tested. Taiu is the key figure: warm, powerful, ignorant of the truth, and the person who will define the Tideborn's future on this continent. The inner circle is the immediate threat, but Taiu's reaction to the truth is the long-term one.",
+  "tags": ["world", "adulthood", "foreign_contact", "tideborn", "majority", "second_wave", "era_3", "unmaking", "cascade_seed", "all_branches", "moral_complexity"]
+}

@@ -1,17 +1,43 @@
 {
   "name": "The Tide Speakers",
-  "type": "diplomatic_mission",
-  "era": "era_2_late",
+  "type": "two_factions_in_conflict",
+  "era": "era_2_and_3",
   "world_state": "all_branches",
-  "goal": "Understand what's happening to the divine ecology on this continent. New gods are being born (The Scale, the Ashfield god). Old patterns are breaking. The Tideborn gods sent them to investigate — and if necessary, to intervene. Not through force. Through conversation.",
-  "territory": ["coastal_arrival", "the_senn_delta"],
-  "leadership": "Three Voice-Carriers — priests who speak for their gods not as intermediaries but as translators. Each carries a different divine perspective: the Ocean-Who-Listens (patience, depth), the Wind-That-Asks (curiosity, change), and the Root-Below-Water (connection, cost). Decisions require all three voices to agree, which means the gods themselves must agree.",
-  "resources": "Living ships (Bond-attuned grown wood), divine partnership (their gods actively protect and advise them), oceanic knowledge (navigation, marine ecology, weather-reading), a fundamentally different paradigm for relating to the divine. No military resources. No written records. No currency.",
-  "worship_generates": "Nothing — and that's the point. The Tideborn don't generate Devotion in the way the settled world understands it. Their relationship with their gods is reciprocal, not extractive. They give attention, respect, and honest feedback. Their gods give protection, knowledge, and honest feedback. The transaction isn't worship — it's friendship. The settled world's theologians can't categorize this and it terrifies them.",
-  "description": "The Tide Speakers are not an invasion force. They're a diplomatic mission — three priests and forty crew on five living ships, arriving at the Senn Delta because that's where the currents told them the disturbance was strongest.\n\nThey don't understand money. They don't understand borders. They don't understand why the Forge Council won't let them enter Thornwall — they asked politely and explained their purpose. They don't understand why the Senate wants to study them instead of talking to them. They don't understand why the Rootwalkers are the only people on this continent who make any sense.\n\nWhat they DO understand, immediately and viscerally: the gods here are suffering. The Ashfield god is a newborn screaming in a language nobody speaks. The Scale is being shaped by people who don't know they're shaping it. The five concept gods are ancient and tired and nobody has asked them how they feel in centuries. The player-god is rebuilding from nothing, alone, in a world that doesn't know how to help.\n\nThe Tide Speakers' first act on the continent is to sit at the edge of the Ashfield and sing to the god there. Not worship. Not unworship. A lullaby. Something nobody has tried because nobody on this continent thinks of gods as things that might need comfort.\n\nThe Ashfield god stops screaming for three hours. The plague cases drop to zero for a day.\n\nThen it starts again, because a lullaby isn't a cure. But for one day, everyone saw what a different relationship with the divine could look like.\n\nThat day changes everything.",
-  "internal_divisions": "The Ocean-Who-Listens wants to stay and help — this continent needs what the Tideborn know. The Wind-That-Asks wants to learn and leave — this continent's problems aren't theirs. The Root-Below-Water says the two positions are the same problem: you can't help people who don't understand what help looks like. First you have to teach them to hear their own gods. That takes generations.",
-  "acknowledged_flaw": "They assume their way is better. It might be — for small, mobile communities with personal divine relationships. But it hasn't been tested at scale, with standing armies, with cities of ten thousand, with gods born from accumulated fear rather than deliberate partnership. Their sophistication is real. Their arrogance about it is also real.",
-  "tags": ["foreign", "diplomatic", "divine_partnership", "tideborn", "era_2_late", "contact_event", "paradigm_shift", "all_branches"],
+  "arrival_structure": {
+    "era_2": "The Keepers of the Last Tide arrive — 7 people, 1 ship, 1 god. They present themselves as scholars and refugees. They teach safe divine partnership techniques. They don't explain what they're running from.",
+    "era_3": "The majority Tideborn arrive — dozens of ships, hundreds of people, Makeo's descendants leading. They say they've come to retrieve their wayward kin. They're warm, skilled, generous — and the inner circle is carrying a ritual that can kill gods."
+  },
+
+  "the_keepers": {
+    "name": "Keepers of the Last Tide",
+    "type": "refugee_resistance",
+    "size": "7 people (originally 9, 2 died in the crossing)",
+    "goal": "Protect the Listener. Find allies on this continent who will help them resist the majority when they inevitably follow. Teach safe partnership techniques to build goodwill and establish trust before the truth comes out.",
+    "what_they_offer": "Genuine divine partnership techniques. The ability to hear gods, negotiate with them, build reciprocal relationships. This is safe. This works. This is not the Unmaking.",
+    "what_they_hide": "The Unmaking exists. Their people killed their own gods with it. The majority is coming. The Listener is the last one. Rua knows the Unmaking ritual herself — learned it so she could recognize the preparation.",
+    "key_figure_rua": "Keeper elder. 60 years old. Carried the Listener across the ocean. Knows which of the Tideborn gods consented to the Unmaking and which didn't — she carries that list in her memory because it's the only proof of what really happened. She's the most morally compromised member of the Keepers: she learned the god-killing ritual to protect against it, which means she could perform it. She's a weapon pretending to be a shield. She knows this.",
+    "internal_tension": "Some Keepers want to warn the continental peoples immediately. Others argue that revealing the Unmaking's existence makes it more likely someone here will try to learn it. Rua is paralyzed between both positions."
+  },
+
+  "the_majority": {
+    "name": "The Tideborn Flotilla",
+    "type": "cultural_expedition",
+    "size": "Hundreds, arriving in Era 3. Dozens of ships.",
+    "goal": "Retrieve the Keepers and the Listener. Publicly: 'our lost kin need to come home.' Privately: the inner circle (Makeo's descendants) wants the Listener because it's the last god they haven't consumed. The inner circle doesn't frame it as consumption — they frame it as 'completing the transcendence.' The casual members of the flotilla genuinely just want their people back.",
+    "what_they_offer": "Everything the Keepers offer plus MORE — more divine gifts on display, more impressive techniques, more people, more resources. They're dazzling. The continental factions will prefer them to the Keepers because they look stronger.",
+    "what_they_hide": "The Unmaking. The inner circle carries it. Most of the flotilla doesn't know it exists. The youth carry divine gifts in their blood and believe they're inherited blessings. The elders know those 'blessings' are the stripped essence of murdered gods.",
+    "key_figure_descendant": "Makeo's grandson. Name TBD. The flotilla's leader. Carries more divine fragments than anyone alive — he can calm storms, read deep currents, speak to marine life. He's warm, competent, and genuinely believes the gods 'chose to become part of us.' He doesn't know about the gods who didn't choose. He's the best advertisement for why the Unmaking might be transcendence rather than murder. He's also the person the inner circle is grooming to perform the Unmaking on the Listener, and he doesn't know that either.",
+    "the_inner_circle": "5-6 elders who know the Unmaking and carry it as sacred duty. They believe they're honoring Makeo's vision. Some of them have doubts. All of them are too invested to stop. They've crossed an ocean to finish what Makeo started."
+  },
+
+  "continental_impact": {
+    "era_2_keepers_arrive": "The continent meets the Keepers and sees: helpful strangers with amazing techniques. Trust builds. The player can form deep relationships with Rua and the Keepers. The Listener may begin communicating with continental gods. The Keepers become embedded in whatever world state exists — valuable allies in the Age of Exchange, mysterious scholars in the Age of Questions, spiritual kin to the Rootwalkers in the Age of Wandering.",
+    "era_3_majority_arrives": "Everything changes. The Keepers' fear makes sense now. The majority arrives looking for their 'lost kin' and the continental factions must choose: hand over the Keepers (the people they've come to trust), protect them (and antagonize a much larger foreign power), or try to mediate a conflict they don't understand. The inner circle begins quietly assessing continental gods for the Unmaking.",
+    "the_reveal": "At some point, through player investigation or Rua's confession or an inner circle member's mistake, the Unmaking becomes known. The continental reaction depends on the world state: the Age of Questions sees a theological weapon. The Age of Iron sees a military threat. The Age of Exchange sees leverage. The Rootwalkers see the death of everything they believe about divine relationships.",
+    "the_choice": "The player must decide: is the Unmaking a tool, a weapon, a crime, or a mercy? Some continental gods might WANT it — the Ashfield god, born from fear, might prefer dissolution into a loving people over an eternity of being fed dread. The Silence might want it because silence is the endpoint of all things. The Burn might want to unmake a rival. The question isn't whether the Unmaking is evil. The question is who gets to decide."
+  },
+
+  "tags": ["foreign", "divided", "tideborn", "two_waves", "era_2_and_3", "divine_consumption", "unmaking_ritual", "contact_event", "all_branches", "moral_complexity"],
   "id": "the_tide_speakers",
   "created": "2026-03-19T01:30:00"
 }
